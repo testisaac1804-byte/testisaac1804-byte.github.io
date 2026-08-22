@@ -223,7 +223,11 @@ function getNode(path){
   var node=mhdTree.tree;
   for(var i=0;i<path.length;i++){
     if(!node)return null;
-    node=node[path[i]];
+    var seg = path[i];
+    if(node[seg] !== undefined){ node = node[seg]; }
+    else if(node[seg + '/'] !== undefined){ node = node[seg + '/']; }
+    else if(node[seg.replace(/\/$/,'')] !== undefined){ node = node[seg.replace(/\/$/,'')]; }
+    else return null;
   }
   return node;
 }
@@ -243,8 +247,9 @@ function renderFiles(){
   for(var k in node){
     if(k.startsWith('_'))continue;
     if(q&&k.toLowerCase().indexOf(q)===-1)continue;
-    if(k.endsWith('/')){
-      dirs.push([k.slice(0,-1), node[k]]);
+    var isDir = (typeof node[k] === 'object' && node[k] !== null);
+    if(isDir){
+      dirs.push([k.endsWith('/') ? k.slice(0,-1) : k, node[k]]);
     }else{
       files.push([k, node[k]]);
     }
