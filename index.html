@@ -267,7 +267,8 @@ function renderFiles(){
   for(var i=0;i<files.length;i++){
     var info=files[i][1];
     var icon=getIcon(files[i][0]);
-    h+='<div class="row">'+
+    var filePath='/'+mhdPath.join('')+files[i][0];
+    h+='<div class="row" onclick="openFile(\''+esc(filePath)+'\')" style="cursor:pointer">'+
       '<span>'+icon+'</span><span class="fname">'+escHtml(files[i][0])+'</span>'+
       '<span class="fsize">'+fmtSize(info.s)+'</span>'+
       '<span class="fdate">'+info.m+'</span></div>';
@@ -351,6 +352,21 @@ function syncNow(){
       window.open('http://localhost:8540','_blank');
       btn.textContent='🔄 Sync Now';
       btn.disabled=false;
+    });
+}
+
+function openFile(path){
+  // Try local sync server first, fall back to direct path
+  var enc = encodeURIComponent(path);
+  fetch('http://localhost:8540/file?path=' + enc)
+    .then(function(r){ return r.blob(); })
+    .then(function(blob){
+      var url = URL.createObjectURL(blob);
+      window.open(url, '_blank');
+    })
+    .catch(function(){
+      // Fallback: try opening the raw path
+      window.open(path, '_blank');
     });
 }
 
