@@ -26,6 +26,38 @@ a:hover .url{opacity:1}
 a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--ag);border:1px solid rgba(16,185,129,0.2);font-weight:600;flex-shrink:0}
 #themeBtn{position:fixed;top:16px;right:16px;padding:6px 12px;border-radius:9999px;border:1px solid var(--bd);background:var(--sf);color:var(--t3);cursor:pointer;font-family:inherit;font-size:12px}
 #themeBtn:hover{color:var(--t1)}
+
+/* ── Macintosh HD section ──────────────────────────────── */
+.mhd-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.mhd-drive{display:flex;gap:16px;margin:12px 0;flex-wrap:wrap}
+.mhd-drive .stat{background:var(--sf);border:1px solid var(--bd);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--t3)}
+.mhd-drive .stat b{display:block;color:var(--t1);font-size:16px;font-weight:700}
+.mhd-drive .stat .pct{color:var(--ac);font-size:18px;font-weight:800}
+.mhd-bar{height:6px;border-radius:3px;background:var(--sf);margin:8px 0 16px;overflow:hidden}
+.mhd-bar .fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#6366f1,#8b5cf6);transition:width .5s}
+.mhd-sync{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;border:1px solid var(--bd);background:var(--sf);color:var(--t2);cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;transition:all .15s}
+.mhd-sync:hover{background:rgba(99,102,241,0.1);border-color:rgba(99,102,241,0.3);color:var(--ab)}
+.mhd-sync:disabled{opacity:0.4;cursor:default}
+.mhd-synced{font-size:11px;color:var(--t3);margin-top:4px}
+.mhd-search{width:100%;padding:10px 14px;border-radius:10px;border:1px solid var(--bd);background:var(--sf);color:var(--t1);font-family:inherit;font-size:14px;margin:12px 0;outline:none}
+.mhd-search:focus{border-color:rgba(99,102,241,0.4)}
+.mhd-breadcrumb{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--t3);margin-bottom:10px;flex-wrap:wrap}
+.mhd-breadcrumb span{cursor:pointer;padding:2px 6px;border-radius:4px;transition:all .15s}
+.mhd-breadcrumb span:hover{color:var(--ab);background:rgba(99,102,241,0.08)}
+.mhd-breadcrumb .sep{opacity:0.3;cursor:default}
+.mhd-breadcrumb .sep:hover{background:transparent;color:var(--t3)}
+.mhd-files{max-height:500px;overflow-y:auto;border:1px solid var(--bd);border-radius:10px;background:var(--sf)}
+.mhd-files .row{display:flex;align-items:center;gap:8px;padding:8px 14px;font-size:13px;cursor:pointer;transition:all .1s;border-bottom:1px solid var(--bd)}
+.mhd-files .row:last-child{border-bottom:none}
+.mhd-files .row:hover{background:rgba(99,102,241,0.06)}
+.mhd-files .row .fname{flex:1;color:var(--t2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mhd-files .row .fsize{font-size:11px;color:var(--t3);font-family:monospace;flex-shrink:0;min-width:60px;text-align:right}
+.mhd-files .row .fdate{font-size:11px;color:var(--t3);font-family:monospace;flex-shrink:0;display:none}
+@media(min-width:500px){.mhd-files .row .fdate{display:block}}
+.mhd-files .row.dir .fname{color:var(--ab);font-weight:500}
+.mhd-loading{text-align:center;padding:40px;color:var(--t3)}
+.mhd-empty{text-align:center;padding:40px;color:var(--t3);font-size:13px}
+.mhd-error{text-align:center;padding:40px;color:#ef4444;font-size:13px}
 </style></head><body>
 
 <button id="themeBtn" onclick="toggleTheme()">🌙</button>
@@ -68,6 +100,19 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
   <span class="url">/portfolio/projects/mac-simulator.html</span>
 </a>
 
+<h2>🖥️ Isaac's Macintosh HD</h2>
+<div class="mhd-header">
+  <div>
+    <div class="mhd-drive" id="mhdDrive"></div>
+    <div class="mhd-bar"><div class="fill" id="mhdBar" style="width:0%"></div></div>
+  </div>
+  <button class="mhd-sync" id="mhdSyncBtn" onclick="syncNow()" title="Run sync on your Mac">🔄 Sync Now</button>
+</div>
+<div class="mhd-synced" id="mhdSynced">Loading…</div>
+<input class="mhd-search" id="mhdSearch" placeholder="🔍 Search files…" oninput="doSearch()">
+<div class="mhd-breadcrumb" id="mhdBreadcrumb"></div>
+<div class="mhd-files" id="mhdFiles"><div class="mhd-loading">⏳ Loading file tree…</div></div>
+
 <h2>📁 Browse All Files</h2>
 <a href="/portfolio/cad/"><span class="icon">📐</span><span class="label">CAD — 59 files</span><span class="url">/portfolio/cad/</span></a>
 <a href="/portfolio/demos/"><span class="icon">🎮</span><span class="label">Demos — 47 files</span><span class="url">/portfolio/demos/</span></a>
@@ -94,6 +139,12 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
   <span class="url">localhost:8530</span>
   <span class="badge">local</span>
 </a>
+<a href="http://localhost:8540" target="_blank">
+  <span class="icon">🖥️</span>
+  <span class="label">Macintosh HD Sync</span>
+  <span class="url">localhost:8540</span>
+  <span class="badge">local</span>
+</a>
 
 <h2>🔗 Links</h2>
 <a href="https://github.com/testisaac1804-byte" target="_blank">
@@ -108,6 +159,7 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
 </a>
 
 <script>
+// ── Theme toggle ─────────────────────────────────────────
 function toggleTheme(){
   var h=document.documentElement, d=h.getAttribute('data-theme')!=='light';
   h.setAttribute('data-theme',d?'light':'dark');
@@ -118,5 +170,191 @@ function toggleTheme(){
   var t=localStorage.getItem('isaac-theme');
   if(t==='light'){document.documentElement.setAttribute('data-theme','light');document.getElementById('themeBtn').textContent='☀️'}
 })();
+
+// ── Macintosh HD ─────────────────────────────────────────
+var mhdTree = null;
+var mhdPath = [];
+var mhdSearch = '';
+
+function fmtSize(bytes){
+  if(bytes==null)return'';
+  if(bytes<1024)return bytes+' B';
+  if(bytes<1048576)return (bytes/1024).toFixed(1)+' KB';
+  if(bytes<1073741824)return (bytes/1048576).toFixed(1)+' MB';
+  return (bytes/1073741824).toFixed(1)+' GB';
+}
+
+function loadMHD(){
+  var x=new XMLHttpRequest();
+  x.open('GET','/macintosh-hd.json');
+  x.onload=function(){
+    if(x.status===200){
+      try{
+        mhdTree=JSON.parse(x.responseText);
+        renderDrive();
+        renderFiles();
+        document.getElementById('mhdSynced').textContent='Last synced: '+mhdTree.last_synced+' · '+mhdTree.total_files.toLocaleString()+' files · scan took '+mhdTree.scan_time_sec+'s';
+      }catch(e){
+        document.getElementById('mhdFiles').innerHTML='<div class="mhd-error">❌ Failed to parse file tree</div>';
+      }
+    }else{
+      document.getElementById('mhdFiles').innerHTML='<div class="mhd-error">❌ Failed to load file tree (HTTP '+x.status+')</div>';
+    }
+  };
+  x.onerror=function(){
+    document.getElementById('mhdFiles').innerHTML='<div class="mhd-error">⚠️ No sync data yet. Run Sync Now to index your Mac.</div>';
+  };
+  x.send();
+}
+
+function renderDrive(){
+  var d=mhdTree.drive;
+  if(!d||!d.total)return;
+  var pct=parseInt(d.pct)||0;
+  document.getElementById('mhdDrive').innerHTML=
+    '<div class="stat"><b>'+d.total+'</b>Total</div>'+
+    '<div class="stat"><b>'+d.used+'</b>Used</div>'+
+    '<div class="stat"><b>'+d.avail+'</b>Free</div>'+
+    '<div class="stat"><b class="pct">'+d.pct+'</b>Used</div>';
+  document.getElementById('mhdBar').style.width=pct+'%';
+}
+
+function getNode(path){
+  var node=mhdTree.tree;
+  for(var i=0;i<path.length;i++){
+    if(!node)return null;
+    node=node[path[i]];
+  }
+  return node;
+}
+
+function renderFiles(){
+  var node=getNode(mhdPath);
+  var el=document.getElementById('mhdFiles');
+
+  if(!node){
+    el.innerHTML='<div class="mhd-empty">📂 Empty directory</div>';
+    renderBreadcrumb();
+    return;
+  }
+
+  // Flatten: separate dirs and files
+  var dirs=[], files=[], q=mhdSearch.toLowerCase();
+  for(var k in node){
+    if(k.startsWith('_'))continue;
+    if(q&&k.toLowerCase().indexOf(q)===-1)continue;
+    if(k.endsWith('/')){
+      dirs.push([k.slice(0,-1), node[k]]);
+    }else{
+      files.push([k, node[k]]);
+    }
+  }
+  dirs.sort(function(a,b){return a[0].toLowerCase()<b[0].toLowerCase()?-1:1});
+  files.sort(function(a,b){return a[0].toLowerCase()<b[0].toLowerCase()?-1:1});
+
+  if(dirs.length===0&&files.length===0){
+    el.innerHTML='<div class="mhd-empty">📂 No matching files</div>';
+    renderBreadcrumb();
+    return;
+  }
+
+  var h='';
+  for(var i=0;i<dirs.length;i++){
+    h+='<div class="row dir" onclick="enterDir(\''+esc(dirs[i][0])+'\')">'+
+      '<span>📁</span><span class="fname">'+escHtml(dirs[i][0])+'/</span>'+
+      '<span class="fsize"></span><span class="fdate"></span></div>';
+  }
+  for(var i=0;i<files.length;i++){
+    var info=files[i][1];
+    var icon=getIcon(files[i][0]);
+    h+='<div class="row">'+
+      '<span>'+icon+'</span><span class="fname">'+escHtml(files[i][0])+'</span>'+
+      '<span class="fsize">'+fmtSize(info.s)+'</span>'+
+      '<span class="fdate">'+info.m+'</span></div>';
+  }
+  el.innerHTML=h;
+  renderBreadcrumb();
+}
+
+function getIcon(name){
+  var ext=name.split('.').pop().toLowerCase();
+  var map={py:'🐍',js:'📜',html:'🌐',css:'🎨',json:'📋',md:'📝',txt:'📄',pdf:'📕',
+           png:'🖼️',jpg:'🖼️',jpeg:'🖼️',gif:'🖼️',svg:'🖼️',webp:'🖼️',
+           mp4:'🎬',mp3:'🎵',wav:'🎵',mov:'🎬',
+           zip:'📦',gz:'📦',tar:'📦',dmg:'💿',iso:'💿',
+           f3d:'📐',step:'📐',stp:'📐',stl:'📐',obj:'📐',fz3:'📐',
+           ino:'🔌',cpp:'⚙️',c:'⚙️',h:'⚙️',swift:'🦅',
+           sh:'💻',command:'💻',bat:'💻',
+           pptx:'📊',pptx:'📊',docx:'📝',xlsx:'📊',
+           ipynb:'📓',sql:'🗄️',db:'🗄️',sqlite:'🗄️',
+           yml:'⚙️',yaml:'⚙️',toml:'⚙️',cfg:'⚙️',ini:'⚙️',
+           log:'📋',csv:'📊',tsv:'📊'};
+  return map[ext]||'📄';
+}
+
+function esc(s){return s.replace(/'/g,"\\'").replace(/"/g,'\\"');}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function enterDir(name){
+  mhdPath.push(name+'/');
+  mhdSearch='';
+  document.getElementById('mhdSearch').value='';
+  renderFiles();
+}
+
+function goUp(){
+  mhdPath.pop();
+  renderFiles();
+}
+
+function goTo(idx){
+  mhdPath=mhdPath.slice(0,idx+1);
+  renderFiles();
+}
+
+function renderBreadcrumb(){
+  var el=document.getElementById('mhdBreadcrumb');
+  var h='<span onclick="mhdPath=[];renderFiles()">🖥️ Macintosh HD</span>';
+  var p='';
+  for(var i=0;i<mhdPath.length;i++){
+    var name=mhdPath[i].replace(/\/$/,'');
+    p+=mhdPath[i];
+    h+='<span class="sep">▸</span><span onclick="goTo('+i+')">'+escHtml(name)+'</span>';
+  }
+  el.innerHTML=h;
+}
+
+function doSearch(){
+  mhdSearch=document.getElementById('mhdSearch').value;
+  renderFiles();
+}
+
+function syncNow(){
+  var btn=document.getElementById('mhdSyncBtn');
+  btn.disabled=true;
+  btn.textContent='⏳ Syncing…';
+  // Try fetch, fall back to opening the local server page
+  fetch('http://localhost:8540/sync')
+    .then(function(r){return r.json()})
+    .then(function(d){
+      if(d.ok){
+        btn.textContent='✅ Synced!';
+        setTimeout(function(){btn.textContent='🔄 Sync Now';btn.disabled=false;},3000);
+        loadMHD();
+      }else{
+        btn.textContent='❌ Failed';
+        btn.disabled=false;
+      }
+    })
+    .catch(function(){
+      // Local server not reachable — open in new tab
+      window.open('http://localhost:8540','_blank');
+      btn.textContent='🔄 Sync Now';
+      btn.disabled=false;
+    });
+}
+
+// Load on startup
+loadMHD();
 </script>
 </body></html>
