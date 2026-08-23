@@ -269,6 +269,10 @@ h1 {
   <!-- Submit -->
   <button class="submit-btn" id="submitBtn" onclick="U.submit()">Send for Review</button>
 
+  <!-- Hidden iframe + form for CORS-free submission -->
+  <iframe name="uploadFrame" id="uploadFrame" style="display:none"></iframe>
+  <form id="uploadForm" method="POST" target="uploadFrame" style="display:none"></form>
+
   <!-- Progress -->
   <div class="progress-wrap" id="progressWrap">
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
@@ -469,7 +473,7 @@ U.submit = function() {
   reader.onload = function() {
     document.getElementById('progressFill').style.width = '50%';
     document.getElementById('progressText').textContent = 'Uploading...';
-    U.sendToServer(reader.result);
+    U.submitForm(reader.result);
   };
   reader.onerror = function() {
     U.showStatus('error', 'Failed to read file. Please try again.');
@@ -478,7 +482,7 @@ U.submit = function() {
   reader.readAsDataURL(U.file);
 };
 
-U.sendToServer = function(dataUrl) {
+U.submitForm = function(dataUrl) {
   var name = document.getElementById('senderName').value.trim();
   var email = document.getElementById('senderEmail').value.trim();
   var notes = document.getElementById('notes').value.trim();
@@ -487,68 +491,66 @@ U.sendToServer = function(dataUrl) {
     if (U.TECH_TYPES[i].id === U.selectedTech) { techName = U.TECH_TYPES[i].name; break; }
   }
 
-  var payload = {
-    fileName: U.file.name,
-    fileSize: U.file.size,
-    fileType: U.file.type || 'application/octet-stream',
-    fileData: dataUrl,
-    tech: U.selectedTech,
-    techName: techName,
-    senderName: name,
-    senderEmail: email,
-    notes: notes,
-    timestamp: new Date().toISOString()
-  };
+  // Build hidden form fields and submit to iframe (CORS-free)
+  var form = document.getElementById('uploadForm');
+  form.action = U.API_URL;
+  form.innerHTML = '';
+  U.addField(form, 'fileName', U.file.name);
+  U.addField(form, 'fileSize', String(U.file.size));
+  U.addField(form, 'fileData', dataUrl);
+  U.addField(form, 'tech', U.selectedTech);
+  U.addField(form, 'techName', techName);
+  U.addField(form, 'senderName', name);
+  U.addField(form, 'senderEmail', email);
+  U.addField(form, 'notes', notes);
+  form.submit();
 
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', U.API_URL, true);
-  xhr.setRequestHeader('Content-Type', 'text/plain'); // Avoid CORS preflight
-  xhr.timeout = 120000; // 2 min timeout
+  document.getElementById('progressFill').style.width = '80%';
+  document.getElementById('progressText').textContent = 'Processing...';
 
-  xhr.upload.onprogress = function(e) {
-    if (e.lengthComputable) {
-      var pct = 50 + (e.loaded / e.total) * 45;
-      document.getElementById('progressFill').style.width = Math.min(pct, 95) + '%';
-    }
-  };
-
-  xhr.onload = function() {
-    document.getElementById('progressFill').style.width = '100%';
-    document.getElementById('progressText').textContent = 'Done!';
-    try {
-      var resp = JSON.parse(xhr.responseText);
-      if (resp.success) {
-        U.showStatus('success', '✅ File sent successfully! I\'ll review it and email you at ' + email + ' within 24 hours.');
-        U.file = null;
-        document.getElementById('fileInfo').classList.remove('show');
-        document.getElementById('dropzone').classList.remove('has-file');
-        document.getElementById('fileInput').value = '';
-        document.getElementById('notes').value = '';
-        U.selectedTech = null;
-        var cards = document.querySelectorAll('.tech-card');
-        for (var i = 0; i < cards.length; i++) cards[i].classList.remove('selected');
-        U.newVerify();
-      } else {
-        U.showStatus('error', 'Server error: ' + (resp.error || 'Unknown error'));
-      }
-    } catch(e) {
-      U.showStatus('error', 'Unexpected server response. Please try again later.');
-    }
+  // Timeout fallback
+  U._submitTimeout = setTimeout(function() {
+    U.showStatus('error', 'Request timed out. The server may be busy — please try again.');
     U.resetButton();
-  };
-
-  xhr.onerror = function() {
-    U.showStatus('error', 'Network error — could not reach the server. Check your connection and try again.');
-    U.resetButton();
-  };
-
-  xhr.ontimeout = function() {
-    U.showStatus('error', 'Upload timed out. The file may be too large or the server is busy.');
-    U.resetButton();
-  };
-
-  xhr.send(JSON.stringify(payload));
+  }, 120000);
 };
+
+U.addField = function(form, name, value) {
+  var input = document.createElement('input');
+  input.type = 'hidden';
+  input.name = name;
+  input.value = value;
+  form.appendChild(input);
+};
+
+// Listen for postMessage response from the iframe
+window.addEventListener('message', function(e) {
+  // Accept messages from any google.com origin (Apps Script runs on multiple subdomains)
+  if (e.origin.indexOf('google.com') === -1 && e.origin.indexOf('googleusercontent.com') === -1) return;
+  if (!e.data || typeof e.data.success === 'undefined') return;
+
+  clearTimeout(U._submitTimeout);
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('progressText').textContent = 'Done!';
+
+  if (e.data.success) {
+    var email = document.getElementById('senderEmail').value.trim();
+    U.showStatus('success', '✅ File sent successfully! I\'ll review it and email you at ' + email + ' within 24 hours.');
+    U.file = null;
+    document.getElementById('fileInfo').classList.remove('show');
+    document.getElementById('dropzone').classList.remove('has-file');
+    document.getElementById('fileInput').value = '';
+    document.getElementById('notes').value = '';
+    U.selectedTech = null;
+    var cards = document.querySelectorAll('.tech-card');
+    for (var i = 0; i < cards.length; i++) cards[i].classList.remove('selected');
+    U.newVerify();
+  } else {
+    U.showStatus('error', 'Server error: ' + (e.data.error || 'Unknown error'));
+    U.newVerify();
+  }
+  U.resetButton();
+});
 
 // ===== Helpers =====
 U.formatSize = function(bytes) {
