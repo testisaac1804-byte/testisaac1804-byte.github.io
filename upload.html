@@ -270,7 +270,7 @@ h1 {
   <button class="submit-btn" id="submitBtn" onclick="U.submit()">Send for Review</button>
 
   <!-- Hidden iframe + form for CORS-free submission -->
-  <iframe name="uploadFrame" id="uploadFrame" style="display:none"></iframe>
+  <iframe name="uploadFrame" id="uploadFrame" style="display:none" onload="U.onFrameLoad()"></iframe>
   <form id="uploadForm" method="POST" target="uploadFrame" style="display:none"></form>
 
   <!-- Progress -->
@@ -491,6 +491,9 @@ U.submitForm = function(dataUrl) {
     if (U.TECH_TYPES[i].id === U.selectedTech) { techName = U.TECH_TYPES[i].name; break; }
   }
 
+  // Reset the iframe to trigger a fresh onload
+  document.getElementById('uploadFrame').src = 'about:blank';
+
   // Build hidden form fields and submit to iframe (CORS-free)
   var form = document.getElementById('uploadForm');
   form.action = U.API_URL;
@@ -503,6 +506,9 @@ U.submitForm = function(dataUrl) {
   U.addField(form, 'senderName', name);
   U.addField(form, 'senderEmail', email);
   U.addField(form, 'notes', notes);
+
+  // Mark that we're expecting a response
+  U._expecting = true;
   form.submit();
 
   document.getElementById('progressFill').style.width = '80%';
@@ -512,7 +518,31 @@ U.submitForm = function(dataUrl) {
   U._submitTimeout = setTimeout(function() {
     U.showStatus('error', 'Request timed out. The server may be busy — please try again.');
     U.resetButton();
-  }, 120000);
+    U._expecting = false;
+  }, 30000);
+};
+
+// Called when the iframe finishes loading the Apps Script response
+U.onFrameLoad = function() {
+  if (!U._expecting) return;
+  U._expecting = false;
+  clearTimeout(U._submitTimeout);
+
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('progressText').textContent = 'Done!';
+
+  var email = document.getElementById('senderEmail').value.trim();
+  U.showStatus('success', '✅ File sent! I\'ll review it and email you at ' + email + ' within 24 hours.');
+  U.file = null;
+  document.getElementById('fileInfo').classList.remove('show');
+  document.getElementById('dropzone').classList.remove('has-file');
+  document.getElementById('fileInput').value = '';
+  document.getElementById('notes').value = '';
+  U.selectedTech = null;
+  var cards = document.querySelectorAll('.tech-card');
+  for (var i = 0; i < cards.length; i++) cards[i].classList.remove('selected');
+  U.newVerify();
+  U.resetButton();
 };
 
 U.addField = function(form, name, value) {
@@ -522,35 +552,6 @@ U.addField = function(form, name, value) {
   input.value = value;
   form.appendChild(input);
 };
-
-// Listen for postMessage response from the iframe
-window.addEventListener('message', function(e) {
-  // Accept messages from any google.com origin (Apps Script runs on multiple subdomains)
-  if (e.origin.indexOf('google.com') === -1 && e.origin.indexOf('googleusercontent.com') === -1) return;
-  if (!e.data || typeof e.data.success === 'undefined') return;
-
-  clearTimeout(U._submitTimeout);
-  document.getElementById('progressFill').style.width = '100%';
-  document.getElementById('progressText').textContent = 'Done!';
-
-  if (e.data.success) {
-    var email = document.getElementById('senderEmail').value.trim();
-    U.showStatus('success', '✅ File sent successfully! I\'ll review it and email you at ' + email + ' within 24 hours.');
-    U.file = null;
-    document.getElementById('fileInfo').classList.remove('show');
-    document.getElementById('dropzone').classList.remove('has-file');
-    document.getElementById('fileInput').value = '';
-    document.getElementById('notes').value = '';
-    U.selectedTech = null;
-    var cards = document.querySelectorAll('.tech-card');
-    for (var i = 0; i < cards.length; i++) cards[i].classList.remove('selected');
-    U.newVerify();
-  } else {
-    U.showStatus('error', 'Server error: ' + (e.data.error || 'Unknown error'));
-    U.newVerify();
-  }
-  U.resetButton();
-});
 
 // ===== Helpers =====
 U.formatSize = function(bytes) {
