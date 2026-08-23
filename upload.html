@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Model Upload — Isaac's Fabrication Service</title>
+<style>
+:root {
+  --bg: #0d0d0d;
+  --surface: #161616;
+  --surface2: #1e1e1e;
+  --border: #2a2a2a;
+  --text: #e4e4e4;
+  --text2: #999;
+  --accent: #3b82f6;
+  --accent2: #2563eb;
+  --green: #22c55e;
+  --red: #ef4444;
+  --orange: #f59e0b;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59,130,246,0.08), transparent);
+  pointer-events: none;
+}
+.container {
+  width: 100%;
+  max-width: 560px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 32px;
+  position: relative;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+}
+.subtitle {
+  color: var(--text2);
+  font-size: 14px;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+/* Drop Zone */
+.dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 36px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--surface2);
+  margin-bottom: 8px;
+  position: relative;
+}
+.dropzone.drag-over { border-color: var(--accent); background: rgba(59,130,246,0.06); }
+.dropzone.has-file { border-color: var(--green); border-style: solid; }
+.dropzone-icon { font-size: 40px; margin-bottom: 10px; display: block; }
+.dropzone-text { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.dropzone-hint { font-size: 12px; color: var(--text2); }
+.dropzone input[type=file] { display: none; }
+
+/* File info bar */
+.file-info {
+  display: none;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  align-items: center;
+  gap: 10px;
+}
+.file-info.show { display: flex; }
+.file-info .icon { font-size: 24px; flex-shrink: 0; }
+.file-info .details { flex: 1; min-width: 0; }
+.file-info .name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-info .size { font-size: 11px; color: var(--text2); }
+.file-info .remove-btn {
+  background: none; border: 1px solid var(--border); color: var(--text2);
+  font-size: 12px; padding: 4px 10px; border-radius: 6px; cursor: pointer;
+  flex-shrink: 0; transition: all 0.15s;
+}
+.file-info .remove-btn:hover { border-color: var(--red); color: var(--red); }
+
+/* Supported types */
+.supported-types { margin-bottom: 20px; }
+.supported-types .label { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.type-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.type-badge {
+  font-size: 11px; padding: 4px 10px; border-radius: 20px;
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text2);
+  font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+}
+
+/* Tech selector */
+.tech-section { margin-bottom: 20px; }
+.tech-section .label { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.tech-card {
+  background: var(--surface2); border: 2px solid var(--border); border-radius: var(--radius-sm);
+  padding: 12px; cursor: pointer; transition: all 0.15s; text-align: center;
+  user-select: none;
+}
+.tech-card:hover { border-color: var(--text2); }
+.tech-card.selected { border-color: var(--accent); background: rgba(59,130,246,0.08); }
+.tech-card .icon { font-size: 22px; display: block; margin-bottom: 4px; }
+.tech-card .name { font-size: 12px; font-weight: 600; }
+.tech-card .desc { font-size: 10px; color: var(--text2); margin-top: 2px; }
+
+/* Form fields */
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.form-group input, .form-group textarea {
+  width: 100%; padding: 10px 14px; background: var(--surface2); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); color: var(--text); font-size: 14px; font-family: inherit;
+  transition: border-color 0.15s; outline: none;
+}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--accent); }
+.form-group textarea { resize: vertical; min-height: 80px; }
+
+/* Verification */
+.verify-section {
+  background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 16px; margin-bottom: 20px;
+}
+.verify-section .verify-title { font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+.verify-row { display: flex; align-items: center; gap: 10px; }
+.verify-question { font-size: 14px; font-weight: 600; white-space: nowrap; }
+.verify-row input {
+  width: 80px; padding: 8px 12px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; color: var(--text); font-size: 14px; text-align: center; outline: none;
+}
+.verify-row input:focus { border-color: var(--accent); }
+.verify-error { color: var(--red); font-size: 11px; margin-top: 6px; display: none; }
+
+/* Hidden honeypot */
+.hp-field { position: absolute; left: -9999px; opacity: 0; pointer-events: none; tab-index: -1; }
+
+/* Submit */
+.submit-btn {
+  width: 100%; padding: 14px; background: var(--accent); border: none; border-radius: var(--radius-sm);
+  color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.15s;
+  font-family: inherit;
+}
+.submit-btn:hover { background: var(--accent2); }
+.submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Status messages */
+.status {
+  display: none; padding: 12px 16px; border-radius: var(--radius-sm); margin-top: 16px;
+  font-size: 13px; font-weight: 500; text-align: center;
+}
+.status.success { display: block; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: var(--green); }
+.status.error { display: block; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: var(--red); }
+.status.loading { display: block; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.3); color: var(--accent); }
+
+/* Progress bar */
+.progress-wrap { display: none; margin-top: 12px; }
+.progress-wrap.show { display: block; }
+.progress-bar {
+  height: 4px; background: var(--border); border-radius: 2px; overflow: hidden;
+}
+.progress-fill { height: 100%; background: var(--accent); width: 0%; transition: width 0.3s; border-radius: 2px; }
+.progress-text { font-size: 11px; color: var(--text2); margin-top: 4px; text-align: center; }
+
+/* Footer */
+.footer { text-align: center; margin-top: 20px; font-size: 11px; color: var(--text2); }
+.footer a { color: var(--text2); }
+
+/* Spinner */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--text2); border-top-color: var(--text); border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; margin-right: 6px; }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container { padding: 24px 18px; }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>📦 3D Model Upload</h1>
+  <p class="subtitle">Upload your 3D model or CAD file for fabrication. I'll review it and get back to you with a quote.</p>
+
+  <!-- Hidden honeypot -->
+  <div class="hp-field">
+    <label for="hp_website">Website</label>
+    <input type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off">
+  </div>
+
+  <!-- Drop Zone -->
+  <div class="dropzone" id="dropzone" onclick="U.browse()">
+    <span class="dropzone-icon">📁</span>
+    <div class="dropzone-text">Drop your file here or click to browse</div>
+    <div class="dropzone-hint">Max 20MB per file</div>
+    <input type="file" id="fileInput" onchange="U.handleFile(this.files[0])" accept=".stl,.obj,.step,.stp,.iges,.igs,.3mf,.amf,.fbx,.glb,.gltf,.blend,.skp,.ply,.3ds,.dae,.x3d,.wrl,.off,.dxf,.dwg,.sldprt,.sldasm,.ipt,.iam,.catpart,.catproduct,.svg,.ai,.eps,.pdf,.zip,.rar,.7z,.gcode,.nc,.f3d,.f3z,.scad,.jt,.prt,.asm,.x_t,.x_b,.sat,.sab,.model,.exp">
+  </div>
+
+  <!-- File info -->
+  <div class="file-info" id="fileInfo">
+    <span class="icon">📄</span>
+    <div class="details">
+      <div class="name" id="fileName">-</div>
+      <div class="size" id="fileSize">-</div>
+    </div>
+    <button class="remove-btn" onclick="U.removeFile()">Remove</button>
+  </div>
+
+  <!-- Supported types -->
+  <div class="supported-types">
+    <div class="label">Supported File Types</div>
+    <div class="type-badges" id="typeBadges"></div>
+  </div>
+
+  <!-- Technology type -->
+  <div class="tech-section">
+    <div class="label">Technology / Process Needed</div>
+    <div class="tech-grid" id="techGrid"></div>
+  </div>
+
+  <!-- Contact info -->
+  <div class="form-group">
+    <label>Your Name *</label>
+    <input type="text" id="senderName" placeholder="John Smith" maxlength="100">
+  </div>
+  <div class="form-group">
+    <label>Your Email *</label>
+    <input type="email" id="senderEmail" placeholder="you@example.com" maxlength="200">
+  </div>
+  <div class="form-group">
+    <label>Notes / Instructions</label>
+    <textarea id="notes" placeholder="Material preferences, quantity, dimensions, deadlines, or any special requests..." maxlength="2000"></textarea>
+  </div>
+
+  <!-- Verification -->
+  <div class="verify-section">
+    <div class="verify-title">🤖 Human Verification</div>
+    <div class="verify-row">
+      <span class="verify-question" id="verifyQuestion">-</span>
+      <span>=</span>
+      <input type="number" id="verifyAnswer" placeholder="?" onkeydown="if(event.key==='Enter')U.submit()">
+    </div>
+    <div class="verify-error" id="verifyError">Incorrect answer — please try again.</div>
+  </div>
+
+  <!-- Submit -->
+  <button class="submit-btn" id="submitBtn" onclick="U.submit()">Send for Review</button>
+
+  <!-- Progress -->
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-text" id="progressText">Uploading...</div>
+  </div>
+
+  <!-- Status -->
+  <div class="status" id="statusMsg"></div>
+
+  <div class="footer">
+    Your file will be sent securely. I'll review it and respond by email.
+  </div>
+</div>
+
+<script>
+// ===== Namespace =====
+var U = {};
+
+// ===== Config =====
+// Replace this with your deployed Google Apps Script URL
+U.API_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+U.MAX_SIZE = 20 * 1024 * 1024; // 20MB
+U.MIN_TIME = 3; // seconds before submit allowed
+
+// ===== State =====
+U.file = null;
+U.selectedTech = null;
+U.loadStart = 0;
+U.verifyA = 0;
+U.verifyB = 0;
+U.verifyAnswer = 0;
+
+// ===== File types =====
+U.FILE_TYPES = [
+  'STL','OBJ','STEP','STP','IGES','IGS','3MF','AMF','FBX','GLB','GLTF',
+  'BLEND','SKP','PLY','3DS','DAE','X3D','WRL','OFF','DXF','DWG',
+  'SLDPRT','SLDASM','IPT','IAM','CATPART','CATPRODUCT',
+  'SVG','AI','EPS','PDF','ZIP','RAR','7Z','GCODE','NC',
+  'F3D','F3Z','SCAD','JT','PRT','ASM','X_T','X_B','SAT','SAB'
+];
+
+// ===== Tech types =====
+U.TECH_TYPES = [
+  { id: 'fdm', name: 'FDM 3D Print', desc: 'PLA, PETG, ABS, TPU', icon: '🖨️' },
+  { id: 'sla', name: 'SLA / Resin', desc: 'High detail, smooth finish', icon: '💎' },
+  { id: 'cnc3', name: 'CNC 3-Axis', desc: 'Aluminum, wood, plastic', icon: '⚙️' },
+  { id: 'cnc5', name: 'CNC 5-Axis', desc: 'Complex geometry, metals', icon: '🔧' },
+  { id: 'laser_cut', name: 'Laser Cut', desc: 'Acrylic, wood, MDF', icon: '💡' },
+  { id: 'laser_engrave', name: 'Laser Engrave', desc: 'Marking, etching', icon: '✨' },
+  { id: 'scan', name: '3D Scanning', desc: 'Object → digital model', icon: '📷' },
+  { id: 'pcb', name: 'PCB Fab', desc: 'Circuit board manufacturing', icon: '🔌' },
+  { id: 'injection', name: 'Injection Mold', desc: 'Mass production', icon: '🏭' },
+  { id: 'other', name: 'Other / Not Sure', desc: 'I need advice', icon: '❓' }
+];
+
+// ===== Init =====
+U.init = function() {
+  // Render type badges
+  var badges = '';
+  for (var i = 0; i < U.FILE_TYPES.length; i++) {
+    badges += '<span class="type-badge">.' + U.FILE_TYPES[i].toLowerCase() + '</span>';
+  }
+  document.getElementById('typeBadges').innerHTML = badges;
+
+  // Render tech cards
+  var cards = '';
+  for (var i = 0; i < U.TECH_TYPES.length; i++) {
+    var t = U.TECH_TYPES[i];
+    cards += '<div class="tech-card" onclick="U.selectTech(\'' + t.id + '\', this)" id="tc_' + t.id + '">' +
+      '<span class="icon">' + t.icon + '</span>' +
+      '<span class="name">' + t.name + '</span>' +
+      '<span class="desc">' + t.desc + '</span>' +
+    '</div>';
+  }
+  document.getElementById('techGrid').innerHTML = cards;
+
+  // Generate verification
+  U.newVerify();
+
+  // Drag and drop
+  var dz = document.getElementById('dropzone');
+  dz.addEventListener('dragover', function(e) { e.preventDefault(); dz.classList.add('drag-over'); });
+  dz.addEventListener('dragleave', function() { dz.classList.remove('drag-over'); });
+  dz.addEventListener('drop', function(e) {
+    e.preventDefault();
+    dz.classList.remove('drag-over');
+    if (e.dataTransfer.files.length > 0) U.handleFile(e.dataTransfer.files[0]);
+  });
+
+  U.loadStart = Date.now();
+};
+
+// ===== File handling =====
+U.handleFile = function(file) {
+  if (!file) return;
+  var ext = file.name.split('.').pop().toLowerCase();
+  var allowed = U.FILE_TYPES.map(function(t){ return t.toLowerCase(); });
+  if (allowed.indexOf(ext) === -1) {
+    U.showStatus('error', 'Unsupported file type: .' + ext + '. Please upload a supported format.');
+    return;
+  }
+  if (file.size > U.MAX_SIZE) {
+    U.showStatus('error', 'File too large (' + U.formatSize(file.size) + '). Max 20MB.');
+    return;
+  }
+  U.file = file;
+  document.getElementById('fileName').textContent = file.name;
+  document.getElementById('fileSize').textContent = U.formatSize(file.size);
+  document.getElementById('fileInfo').classList.add('show');
+  document.getElementById('dropzone').classList.add('has-file');
+  document.getElementById('statusMsg').className = 'status';
+};
+
+U.removeFile = function() {
+  U.file = null;
+  document.getElementById('fileInfo').classList.remove('show');
+  document.getElementById('dropzone').classList.remove('has-file');
+  document.getElementById('fileInput').value = '';
+  document.getElementById('statusMsg').className = 'status';
+};
+
+U.browse = function() {
+  document.getElementById('fileInput').click();
+};
+
+// ===== Tech selection =====
+U.selectTech = function(id, el) {
+  var cards = document.querySelectorAll('.tech-card');
+  for (var i = 0; i < cards.length; i++) cards[i].classList.remove('selected');
+  if (U.selectedTech === id) {
+    U.selectedTech = null;
+  } else {
+    U.selectedTech = id;
+    el.classList.add('selected');
+  }
+};
+
+// ===== Verification =====
+U.newVerify = function() {
+  U.verifyA = Math.floor(Math.random() * 10) + 1;
+  U.verifyB = Math.floor(Math.random() * 10) + 1;
+  U.verifyAnswer = U.verifyA + U.verifyB;
+  document.getElementById('verifyQuestion').textContent = U.verifyA + ' + ' + U.verifyB + ' =';
+  document.getElementById('verifyAnswer').value = '';
+  document.getElementById('verifyError').style.display = 'none';
+};
+
+// ===== Submit =====
+U.submit = function() {
+  // Validation
+  if (!U.file) { U.showStatus('error', 'Please upload a file first.'); return; }
+  if (!U.selectedTech) { U.showStatus('error', 'Please select a technology type.'); return; }
+  var name = document.getElementById('senderName').value.trim();
+  var email = document.getElementById('senderEmail').value.trim();
+  if (!name) { U.showStatus('error', 'Please enter your name.'); return; }
+  if (!email) { U.showStatus('error', 'Please enter your email.'); return; }
+  if (!U.isValidEmail(email)) { U.showStatus('error', 'Please enter a valid email address.'); return; }
+
+  // Honeypot check
+  var hp = document.getElementById('hp_website').value;
+  if (hp) { U.showStatus('success', 'Submitted successfully! You\'ll hear back soon.'); return; } // Silently ignore bots
+
+  // Math verification
+  var answer = parseInt(document.getElementById('verifyAnswer').value, 10);
+  if (answer !== U.verifyAnswer) {
+    document.getElementById('verifyError').style.display = 'block';
+    U.newVerify();
+    return;
+  }
+
+  // Time check (minimum 3 seconds from page load)
+  var elapsed = (Date.now() - U.loadStart) / 1000;
+  if (elapsed < U.MIN_TIME) {
+    U.showStatus('error', 'Please wait a moment before submitting.');
+    return;
+  }
+
+  // Clear errors
+  document.getElementById('verifyError').style.display = 'none';
+  document.getElementById('statusMsg').className = 'status';
+
+  // Show progress
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  document.getElementById('progressWrap').classList.add('show');
+  document.getElementById('progressFill').style.width = '20%';
+  document.getElementById('progressText').textContent = 'Reading file...';
+
+  // Read file as base64
+  var reader = new FileReader();
+  reader.onprogress = function(e) {
+    if (e.lengthComputable) {
+      var pct = 20 + (e.loaded / e.total) * 30;
+      document.getElementById('progressFill').style.width = pct + '%';
+    }
+  };
+  reader.onload = function() {
+    document.getElementById('progressFill').style.width = '50%';
+    document.getElementById('progressText').textContent = 'Uploading...';
+    U.sendToServer(reader.result);
+  };
+  reader.onerror = function() {
+    U.showStatus('error', 'Failed to read file. Please try again.');
+    U.resetButton();
+  };
+  reader.readAsDataURL(U.file);
+};
+
+U.sendToServer = function(dataUrl) {
+  var name = document.getElementById('senderName').value.trim();
+  var email = document.getElementById('senderEmail').value.trim();
+  var notes = document.getElementById('notes').value.trim();
+  var techName = '';
+  for (var i = 0; i < U.TECH_TYPES.length; i++) {
+    if (U.TECH_TYPES[i].id === U.selectedTech) { techName = U.TECH_TYPES[i].name; break; }
+  }
+
+  var payload = {
+    fileName: U.file.name,
+    fileSize: U.file.size,
+    fileType: U.file.type || 'application/octet-stream',
+    fileData: dataUrl,
+    tech: U.selectedTech,
+    techName: techName,
+    senderName: name,
+    senderEmail: email,
+    notes: notes,
+    timestamp: new Date().toISOString()
+  };
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', U.API_URL, true);
+  xhr.setRequestHeader('Content-Type', 'text/plain'); // Avoid CORS preflight
+  xhr.timeout = 120000; // 2 min timeout
+
+  xhr.upload.onprogress = function(e) {
+    if (e.lengthComputable) {
+      var pct = 50 + (e.loaded / e.total) * 45;
+      document.getElementById('progressFill').style.width = Math.min(pct, 95) + '%';
+    }
+  };
+
+  xhr.onload = function() {
+    document.getElementById('progressFill').style.width = '100%';
+    document.getElementById('progressText').textContent = 'Done!';
+    try {
+      var resp = JSON.parse(xhr.responseText);
+      if (resp.success) {
+        U.showStatus('success', '✅ File sent successfully! I\'ll review it and email you at ' + email + ' within 24 hours.');
+        U.file = null;
+        document.getElementById('fileInfo').classList.remove('show');
+        document.getElementById('dropzone').classList.remove('has-file');
+        document.getElementById('fileInput').value = '';
+        document.getElementById('notes').value = '';
+        U.selectedTech = null;
+        var cards = document.querySelectorAll('.tech-card');
+        for (var i = 0; i < cards.length; i++) cards[i].classList.remove('selected');
+        U.newVerify();
+      } else {
+        U.showStatus('error', 'Server error: ' + (resp.error || 'Unknown error'));
+      }
+    } catch(e) {
+      U.showStatus('error', 'Unexpected server response. Please try again later.');
+    }
+    U.resetButton();
+  };
+
+  xhr.onerror = function() {
+    U.showStatus('error', 'Network error — could not reach the server. Check your connection and try again.');
+    U.resetButton();
+  };
+
+  xhr.ontimeout = function() {
+    U.showStatus('error', 'Upload timed out. The file may be too large or the server is busy.');
+    U.resetButton();
+  };
+
+  xhr.send(JSON.stringify(payload));
+};
+
+// ===== Helpers =====
+U.formatSize = function(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+};
+
+U.isValidEmail = function(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+};
+
+U.showStatus = function(type, msg) {
+  var el = document.getElementById('statusMsg');
+  el.className = 'status ' + type;
+  el.textContent = msg;
+  document.getElementById('progressWrap').classList.remove('show');
+};
+
+U.resetButton = function() {
+  var btn = document.getElementById('submitBtn');
+  btn.disabled = false;
+  btn.textContent = 'Send for Review';
+};
+
+// Start
+U.init();
+</script>
+</body>
+</html>
