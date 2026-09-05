@@ -26,6 +26,13 @@ a:hover .url{opacity:1}
 a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,129,0.1);color:var(--ag);border:1px solid rgba(16,185,129,0.2);font-weight:600;flex-shrink:0}
 #themeBtn{position:fixed;top:16px;right:16px;padding:6px 12px;border-radius:9999px;border:1px solid var(--bd);background:var(--sf);color:var(--t3);cursor:pointer;font-family:inherit;font-size:12px}
 #themeBtn:hover{color:var(--t1)}
+#igcseSyncBtn{position:fixed;top:16px;right:56px;padding:6px 12px;border-radius:9999px;border:1px solid var(--bd);background:var(--sf);color:var(--t3);cursor:pointer;font-family:inherit;font-size:12px;font-weight:600}
+#igcseSyncBtn:hover{color:var(--ag);border-color:rgba(16,185,129,0.4)}
+#igcseSyncBtn:disabled{opacity:0.5;cursor:default}
+#igcseSyncMsg{position:fixed;top:44px;right:56px;font-size:11px;color:var(--t3);display:none;max-width:340px;text-align:right}
+#igcseSyncMsg.on{display:block}
+#igcseSyncMsg.ok{color:var(--ag)}
+#igcseSyncMsg.err{color:var(--ar)}
 
 /* ── Macintosh HD section ──────────────────────────────── */
 .mhd-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
@@ -61,6 +68,8 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
 </style></head><body>
 
 <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+<button id="igcseSyncBtn" onclick="igcseSyncHome()" title="Sync IGCSE folders (igcse books, igcse things, science booklet) to GitHub — requires the local sync server">🔄 Sync IGCSE Files</button>
+<div id="igcseSyncMsg"></div>
 
 <h1>Isaac<span> Chan</span></h1>
 <p class="sub">Island School · Y10 · Hong Kong</p>
@@ -428,5 +437,19 @@ function openFile(path){
 
 // Load on startup
 loadMHD();
+
+function igcseSyncHome(){
+  var btn=document.getElementById('igcseSyncBtn'),msg=document.getElementById('igcseSyncMsg');
+  btn.disabled=true;msg.className='on';msg.textContent='⏳ Syncing IGCSE files…';
+  fetch('http://localhost:8541/sync').then(function(r){return r.text()}).then(function(t){
+    msg.className='on ok';
+    msg.textContent='✅ '+t.split('\n').filter(function(l){return l.indexOf('pushed')>-1}).join(' · ')||'✅ done';
+    setTimeout(function(){msg.className=''},8000);
+  }).catch(function(){
+    msg.className='on err';
+    msg.textContent='⚠️ Sync server offline — run igcse-sync-server.py';
+    setTimeout(function(){msg.className=''},8000);
+  }).finally(function(){btn.disabled=false});
+}
 </script>
 </body></html>
