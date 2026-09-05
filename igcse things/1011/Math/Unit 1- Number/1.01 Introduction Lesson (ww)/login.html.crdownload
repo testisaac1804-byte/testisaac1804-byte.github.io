@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/img/logos/dr-frost-maths-black.svg"/><link rel="preload" as="image" href="/img/logos/google.svg"/><link rel="preload" as="image" href="/img/logos/microsoft.svg"/><link rel="preload" as="image" href="/img/illustrations/students-at-desks.svg"/><title>Log In to Dr Frost Maths | Teachers &amp; Students</title><meta name="description" content="Access your Dr Frost Maths account. Teachers can set work and track progress; students can practise questions and master maths concepts."/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"/><link rel="icon" href="/favicon.ico"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials"/><link rel="modulepreload" href="/assets/entry.client-tHn9w_pG.js"/><link rel="modulepreload" href="/assets/jsx-runtime-DI7wNVj9.js"/><link rel="modulepreload" href="/assets/module-BPlYMtyX.js"/><link rel="modulepreload" href="/assets/index-BkURKSav.js"/><link rel="modulepreload" href="/assets/index-Cq8aARws.js"/><link rel="modulepreload" href="/assets/chunk-JPUPSTYD-AUSJFKDW.js"/><link rel="modulepreload" href="/assets/chunk-LFPYN7LY-CXveqWpV.js"/><link rel="modulepreload" href="/assets/exports-CgCi-mdC.js"/><link rel="modulepreload" href="/assets/_commonjsHelpers-EUccoM8q.js"/><link rel="modulepreload" href="/assets/root-B0ci8Dih.js"/><link rel="modulepreload" href="/assets/PageLayout-V3zbJdTK.js"/><link rel="modulepreload" href="/assets/errors-ClckTDhc.js"/><link rel="modulepreload" href="/assets/styles-D9EM_pqV.js"/><link rel="modulepreload" href="/assets/actions-BtCWxEDy.js"/><link rel="modulepreload" href="/assets/button-link-DPBgKywH.js"/><link rel="modulepreload" href="/assets/utils-C96OUgvC.js"/><link rel="modulepreload" href="/assets/benefits-BryTr7vB.js"/><link rel="modulepreload" href="/assets/loader-CgQDuvgK.js"/><link rel="modulepreload" href="/assets/styled-link-DROAnlQz.js"/><link rel="modulepreload" href="/assets/circle-check-big-DDRWDYBl.js"/><link rel="modulepreload" href="/assets/bundle-mjs-CHgIezPV.js"/><link rel="modulepreload" href="/assets/octagon-alert-B607TNf3.js"/><link rel="modulepreload" href="/assets/message-square-more-Cvc2azpo.js"/><link rel="modulepreload" href="/assets/grant-role-CpDX3nD3.js"/><link rel="modulepreload" href="/assets/dayjs.min-CLo1pyx_.js"/><link rel="modulepreload" href="/assets/relativeTime-BLekZ34L.js"/><link rel="modulepreload" href="/assets/utils-BndbbhCd.js"/><link rel="modulepreload" href="/assets/strings-BLBM0Ixc.js"/><link rel="modulepreload" href="/assets/types-D2BQerJ2.js"/><link rel="modulepreload" href="/assets/badge-check-CV_RNHMm.js"/><link rel="modulepreload" href="/assets/lock-DoGE475b.js"/><link rel="modulepreload" href="/assets/require-anonymous-B5LdHJI5.js"/><link rel="modulepreload" href="/assets/auth-D7abqHTf.js"/><link rel="modulepreload" href="/assets/auth-BlxyXAxA.js"/><link rel="modulepreload" href="/assets/illustration-CVoXxKiN.js"/><link rel="modulepreload" href="/assets/arrow-left-BKHOHAU4.js"/><link rel="modulepreload" href="/assets/login-TgTeu6CM.js"/><link rel="modulepreload" href="/assets/turnstile-DtWEeLgM.js"/><link rel="modulepreload" href="/assets/utils-BDz69A_q.js"/><link rel="modulepreload" href="/assets/conform-C_T7EobF.js"/><link rel="modulepreload" href="/assets/provider-icon-CBQnAshV.js"/><link rel="modulepreload" href="/assets/submit-button-BTsfu3-y.js"/><link rel="modulepreload" href="/assets/hooks-CL565oP9.js"/><link rel="modulepreload" href="/assets/parse-DBKxGnAI.js"/><link rel="modulepreload" href="/assets/email-delivery-tracking-DD_70iEJ.js"/><link rel="modulepreload" href="/assets/use-hydrated-ClztXfM8.js"/><link rel="modulepreload" href="/assets/ComboInput-7K60GXFb.js"/><link rel="modulepreload" href="/assets/Command-DDe8LT_2.js"/><link rel="modulepreload" href="/assets/dom-BmRPyN40.js"/><link rel="modulepreload" href="/assets/circle-question-mark-CUYw3q6y.js"/><link rel="modulepreload" href="/assets/link-DAkoltcF.js"/><link rel="modulepreload" href="/assets/message-circle-question-mark-DErtSxSA.js"/><link rel="modulepreload" href="/assets/websocket-connection-_21NRf_t.js"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap"/><link rel="stylesheet" href="/assets/app-DpJe9PFi.css"/><script nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13">window.ENV = {"DF_BASE_URL":"https://www.drfrost.org","MODE":"production","POSTHOG_KEY":"phc_wu5uBJqblldYE2xTOYYttsQaxd9dDHex41m4VV5QET2","POSTHOG_URL":"https://sonic.drfrost.org","SENTRY_DSN":"https://a0e18a6d7daf7a0e590285170647aa4f@o4510674642862080.ingest.de.sentry.io/4510697363079248","SENTRY_ENVIRONMENT":"production","TURNSTILE_ENABLED":"0","TURNSTILE_SITE_KEY":"0x4AAAAAAA3a-E4RxPSU5apS"}</script></head><body><div role="progressbar" aria-hidden="true" class="fixed inset-x-0 top-0 left-0 z-global h-1"><div style="width:0%" class="bg-info-emphasis h-full transition-all ease-out duration-0 opacity-0"></div></div><div><div class="grid min-h-svh lg:grid-cols-2"><div class="flex flex-col items-center gap-8 p-4 md:gap-12 md:p-6 lg:gap-16"><div class="flex h-5 w-full justify-start"><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap border text-sm duration-300 transition disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-support-7 underline-offset-4 font-medium border-none shadow-none hover:shadow-none hover:underline h-auto p-0 rounded-xs" href="/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>Home</a></div><div class="flex w-full max-w-xl flex-1 flex-col gap-8 md:gap-12"><div class="flex flex-col items-center gap-4 lg:gap-6"><div><h1 class="sr-only">Dr Frost Maths</h1><img src="/img/logos/dr-frost-maths-black.svg" alt="Dr Frost Maths logo" class="h-auto w-60 md:w-70 lg:w-80"/></div><h2 class="max-w-4/5 text-center text-xl font-semibold text-balance lg:max-w-120 lg:text-2xl lg:font-bold">Login to continue your mathematical journey!</h2></div><div class="flex flex-1 flex-col gap-12 lg:justify-between"><div class="flex flex-col gap-6"><div class="grid gap-8 md:gap-6"><form class="grid gap-8 md:gap-6" id="_R_9kn35_" noValidate="" data-discover="true" action="/login?index" method="post"><input type="hidden" name="redirectTo"/><input type="hidden" name="idempotencyKey" value="998daebd-5d4c-498f-b29f-b76a29481bab"/><div class="grid gap-4"><div class="flex w-full min-w-0 flex-col items-start gap-2"><label class="text-sm font-medium leading-[130%] peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="_R_9kn35_-username"><span>Email or username</span></label><div class="group bg-background border-border focus-within:ring-focus flex h-10 w-full overflow-hidden rounded-lg border shadow-xs focus-within:ring-1 has-disabled:cursor-not-allowed has-disabled:opacity-50"><input aria-invalid="false" class="peer file:text-foreground placeholder:text-focus flex-1 bg-transparent px-4 py-3 text-base leading-[130%] transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none disabled:cursor-not-allowed md:text-sm" id="_R_9kn35_-username" autoComplete="username" name="username"/></div></div><div class="flex w-full min-w-0 flex-col items-start gap-2"><label class="text-sm font-medium leading-[130%] peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="_R_9kn35_-password"><span>Password</span></label><div class="group bg-background border-border focus-within:ring-focus flex h-10 w-full overflow-hidden rounded-lg border shadow-xs focus-within:ring-1 has-disabled:cursor-not-allowed has-disabled:opacity-50"><input aria-invalid="false" class="peer file:text-foreground placeholder:text-focus flex-1 bg-transparent px-4 py-3 text-base leading-[130%] transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none disabled:cursor-not-allowed md:text-sm rounded-r-none border-r-0 pr-3" id="_R_9kn35_-password" type="password" autoComplete="current-password" name="password"/><div class="flex items-center rounded-r-lg bg-transparent py-3 pr-3"><button aria-label="Show password" class="focus-visible:ring-focus flex items-center rounded-sm bg-transparent p-1 focus-visible:ring-2 focus-visible:outline-hidden disabled:cursor-not-allowed" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-off text-focus size-5" aria-hidden="true"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path><path d="m2 2 20 20"></path></svg></button></div></div></div><div class="flex items-center justify-end gap-2"><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap border text-sm duration-300 transition disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-secondary font-bold underline underline-offset-4 border-none shadow-none hover:text-secondary-emphasis hover:shadow-none h-auto p-0 rounded-xs" href="/login/recover" data-discover="true">Having trouble logging in?</a></div></div><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg border text-sm font-semibold duration-300 transition disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:shadow-md text-primary-foreground bg-primary-muted border-primary hover:bg-primary h-10 px-2 xs:px-8" type="submit">Login</button></form><div class="flex items-center gap-7"><div class="bg-border h-px flex-1"></div><span class="text-support-3 flex-none font-light uppercase">or</span><div class="bg-border h-px flex-1"></div></div><div class="flex flex-col gap-4 sm:flex-row sm:items-center"><form class="flex flex-1 flex-col" data-discover="true" action="/auth/google" method="post"><input type="hidden" name="redirectToOnError" value="/login"/><input type="hidden" name="redirectToOnSuccess" value="/dashboard"/><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg border text-sm font-semibold duration-300 transition disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:shadow-md text-foreground bg-background border-border hover:border-support-3 hover:bg-support-min h-10 px-2 xs:px-8" type="submit"><img src="/img/logos/google.svg" alt="Google icon" class="size-5"/>Login with <!-- -->Google</button></form><form class="flex flex-1 flex-col" data-discover="true" action="/auth/microsoft" method="post"><input type="hidden" name="redirectToOnError" value="/login"/><input type="hidden" name="redirectToOnSuccess" value="/dashboard"/><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg border text-sm font-semibold duration-300 transition disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:shadow-md text-foreground bg-background border-border hover:border-support-3 hover:bg-support-min h-10 px-2 xs:px-8" type="submit"><img src="/img/logos/microsoft.svg" alt="Microsoft icon" class="size-5"/>Login with <!-- -->Microsoft</button></form></div></div></div><div class="flex items-center justify-center gap-2"><p class="text-sm">Don&#x27;t have an account?</p><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap border text-sm duration-300 transition disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-secondary font-bold underline underline-offset-4 border-none shadow-none hover:text-secondary-emphasis hover:shadow-none h-auto p-0 rounded-xs" href="/registration" data-discover="true">Sign up</a></div></div></div></div><div class="px-8 bg-primary/30 hidden lg:block"><div class="grid h-svh place-items-center"><img src="/img/illustrations/students-at-desks.svg" alt="Illustration of two mathematics students sat at desks in a classroom." class="w-full max-w-3/4"/></div></div></div></div><script nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13">((storageKey2, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({ key }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(storageKey2) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(storageKey2);
+    }
+  })("react-router-scroll-positions", null)</script><script nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13">window.__reactRouterContext = {"basename":"/","future":{"unstable_optimizeDeps":false,"unstable_subResourceIntegrity":false,"unstable_trailingSlashAwareDataRequests":false,"unstable_previewServerPrerendering":false,"v8_middleware":true,"v8_splitRouteModules":false,"v8_viteEnvironmentApi":false},"routeDiscovery":{"mode":"lazy","manifestPath":"/__manifest"},"ssr":true,"isSpaMode":false};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13" type="module" async="">;
+import * as route0 from "/assets/root-B0ci8Dih.js";
+import * as route1 from "/assets/require-anonymous-B5LdHJI5.js";
+import * as route2 from "/assets/auth-D7abqHTf.js";
+import * as route3 from "/assets/login-TgTeu6CM.js";
+  window.__reactRouterManifest = {
+  "entry": {
+    "module": "/assets/entry.client-tHn9w_pG.js",
+    "imports": [
+      "/assets/jsx-runtime-DI7wNVj9.js",
+      "/assets/module-BPlYMtyX.js",
+      "/assets/index-BkURKSav.js",
+      "/assets/index-Cq8aARws.js",
+      "/assets/chunk-JPUPSTYD-AUSJFKDW.js",
+      "/assets/chunk-LFPYN7LY-CXveqWpV.js",
+      "/assets/exports-CgCi-mdC.js",
+      "/assets/_commonjsHelpers-EUccoM8q.js"
+    ],
+    "css": []
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": true,
+      "module": "/assets/root-B0ci8Dih.js",
+      "imports": [
+        "/assets/jsx-runtime-DI7wNVj9.js",
+        "/assets/module-BPlYMtyX.js",
+        "/assets/index-BkURKSav.js",
+        "/assets/index-Cq8aARws.js",
+        "/assets/chunk-JPUPSTYD-AUSJFKDW.js",
+        "/assets/chunk-LFPYN7LY-CXveqWpV.js",
+        "/assets/exports-CgCi-mdC.js",
+        "/assets/_commonjsHelpers-EUccoM8q.js",
+        "/assets/PageLayout-V3zbJdTK.js",
+        "/assets/errors-ClckTDhc.js",
+        "/assets/styles-D9EM_pqV.js",
+        "/assets/actions-BtCWxEDy.js",
+        "/assets/button-link-DPBgKywH.js",
+        "/assets/utils-C96OUgvC.js",
+        "/assets/benefits-BryTr7vB.js",
+        "/assets/loader-CgQDuvgK.js",
+        "/assets/styled-link-DROAnlQz.js",
+        "/assets/circle-check-big-DDRWDYBl.js",
+        "/assets/bundle-mjs-CHgIezPV.js",
+        "/assets/octagon-alert-B607TNf3.js",
+        "/assets/message-square-more-Cvc2azpo.js",
+        "/assets/grant-role-CpDX3nD3.js",
+        "/assets/dayjs.min-CLo1pyx_.js",
+        "/assets/relativeTime-BLekZ34L.js",
+        "/assets/utils-BndbbhCd.js",
+        "/assets/strings-BLBM0Ixc.js",
+        "/assets/types-D2BQerJ2.js",
+        "/assets/badge-check-CV_RNHMm.js",
+        "/assets/lock-DoGE475b.js"
+      ],
+      "css": []
+    },
+    "layouts/require-anonymous": {
+      "id": "layouts/require-anonymous",
+      "parentId": "root",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/require-anonymous-B5LdHJI5.js",
+      "imports": [
+        "/assets/chunk-LFPYN7LY-CXveqWpV.js",
+        "/assets/jsx-runtime-DI7wNVj9.js",
+        "/assets/index-BkURKSav.js",
+        "/assets/_commonjsHelpers-EUccoM8q.js"
+      ],
+      "css": []
+    },
+    "auth-layout-anonymous": {
+      "id": "auth-layout-anonymous",
+      "parentId": "layouts/require-anonymous",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/auth-D7abqHTf.js",
+      "imports": [
+        "/assets/auth-BlxyXAxA.js",
+        "/assets/chunk-LFPYN7LY-CXveqWpV.js",
+        "/assets/index-BkURKSav.js",
+        "/assets/_commonjsHelpers-EUccoM8q.js",
+        "/assets/jsx-runtime-DI7wNVj9.js",
+        "/assets/styles-D9EM_pqV.js",
+        "/assets/bundle-mjs-CHgIezPV.js",
+        "/assets/button-link-DPBgKywH.js",
+        "/assets/PageLayout-V3zbJdTK.js",
+        "/assets/index-Cq8aARws.js",
+        "/assets/illustration-CVoXxKiN.js",
+        "/assets/arrow-left-BKHOHAU4.js"
+      ],
+      "css": []
+    },
+    "routes/auth/login": {
+      "id": "routes/auth/login",
+      "parentId": "auth-layout-anonymous",
+      "path": "login",
+      "index": true,
+      "hasAction": true,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/login-TgTeu6CM.js",
+      "imports": [
+        "/assets/chunk-LFPYN7LY-CXveqWpV.js",
+        "/assets/jsx-runtime-DI7wNVj9.js",
+        "/assets/PageLayout-V3zbJdTK.js",
+        "/assets/index-BkURKSav.js",
+        "/assets/actions-BtCWxEDy.js",
+        "/assets/styles-D9EM_pqV.js",
+        "/assets/turnstile-DtWEeLgM.js",
+        "/assets/utils-BDz69A_q.js",
+        "/assets/conform-C_T7EobF.js",
+        "/assets/button-link-DPBgKywH.js",
+        "/assets/provider-icon-CBQnAshV.js",
+        "/assets/submit-button-BTsfu3-y.js",
+        "/assets/hooks-CL565oP9.js",
+        "/assets/parse-DBKxGnAI.js",
+        "/assets/types-D2BQerJ2.js",
+        "/assets/email-delivery-tracking-DD_70iEJ.js",
+        "/assets/index-Cq8aARws.js",
+        "/assets/_commonjsHelpers-EUccoM8q.js",
+        "/assets/bundle-mjs-CHgIezPV.js",
+        "/assets/grant-role-CpDX3nD3.js",
+        "/assets/use-hydrated-ClztXfM8.js",
+        "/assets/chunk-JPUPSTYD-AUSJFKDW.js",
+        "/assets/strings-BLBM0Ixc.js",
+        "/assets/utils-BndbbhCd.js",
+        "/assets/ComboInput-7K60GXFb.js",
+        "/assets/Command-DDe8LT_2.js",
+        "/assets/dom-BmRPyN40.js",
+        "/assets/loader-CgQDuvgK.js",
+        "/assets/circle-question-mark-CUYw3q6y.js",
+        "/assets/styled-link-DROAnlQz.js",
+        "/assets/link-DAkoltcF.js",
+        "/assets/message-circle-question-mark-DErtSxSA.js",
+        "/assets/message-square-more-Cvc2azpo.js",
+        "/assets/websocket-connection-_21NRf_t.js"
+      ],
+      "css": []
+    },
+    "routes/marketing/home": {
+      "id": "routes/marketing/home",
+      "parentId": "root",
+      "path": "/",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "/assets/home-CTLpSjrE.js",
+      "imports": [
+        "/assets/chunk-LFPYN7LY-CXveqWpV.js",
+        "/assets/jsx-runtime-DI7wNVj9.js",
+        "/assets/page-CylQJSYk.js",
+        "/assets/index-BkURKSav.js",
+        "/assets/_commonjsHelpers-EUccoM8q.js",
+        "/assets/PageLayout-V3zbJdTK.js",
+        "/assets/index-Cq8aARws.js",
+        "/assets/bundle-mjs-CHgIezPV.js",
+        "/assets/dayjs.min-CLo1pyx_.js",
+        "/assets/styles-D9EM_pqV.js",
+        "/assets/users-CG3B6ee1.js",
+        "/assets/user-U9GNpl4I.js",
+        "/assets/timer-Cs0gnWta.js",
+        "/assets/settings-1D_VKGz3.js",
+        "/assets/refresh-cw-Bb7TlZGg.js",
+        "/assets/mail-CHrcWTC0.js",
+        "/assets/list-DDqsFS8i.js",
+        "/assets/list-checks-Clx4Lik8.js",
+        "/assets/link-DAkoltcF.js",
+        "/assets/key-round-BRz-Lpr7.js",
+        "/assets/download-DjYksdOo.js",
+        "/assets/calendar-DcyWrxla.js",
+        "/assets/badge-question-mark-CopIuIc0.js",
+        "/assets/arrow-right-Tk6WIj8S.js",
+        "/assets/styled-link-DROAnlQz.js",
+        "/assets/button-link-DPBgKywH.js",
+        "/assets/utils-BndbbhCd.js",
+        "/assets/strings-BLBM0Ixc.js",
+        "/assets/types-D2BQerJ2.js",
+        "/assets/menu-CqawmIEl.js",
+        "/assets/utils-C96OUgvC.js",
+        "/assets/relativeTime-BLekZ34L.js",
+        "/assets/chunk-JPUPSTYD-AUSJFKDW.js",
+        "/assets/arrow-left-BKHOHAU4.js",
+        "/assets/external-link-DAom0fMt.js",
+        "/assets/play-2uc1qbWV.js",
+        "/assets/book-open-check-DwNIex0d.js",
+        "/assets/circle-check-big-DDRWDYBl.js"
+      ],
+      "css": [
+        "/assets/page-CVuONdbL.css"
+      ]
+    }
+  },
+  "url": "/assets/manifest-29b51cea.js",
+  "version": "29b51cea"
+};
+  window.__reactRouterRouteModules = {"root":route0,"layouts/require-anonymous":route1,"auth-layout-anonymous":route2,"routes/auth/login":route3};
+
+import("/assets/entry.client-tHn9w_pG.js");</script><section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section><!--$?--><template id="B:0"></template><!--/$--><script nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13" id="_R_">requestAnimationFrame(function(){$RT=performance.now()});</script><div hidden id="S:0"><script nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13">window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_33\":-5,\"_34\":-5},\"loaderData\",{\"_3\":4,\"_26\":27},\"root\",{\"_5\":6,\"_22\":-5,\"_23\":-5,\"_24\":25},\"ENV\",{\"_7\":8,\"_9\":10,\"_11\":12,\"_13\":14,\"_15\":16,\"_17\":10,\"_18\":19,\"_20\":21},\"DF_BASE_URL\",\"https://www.drfrost.org\",\"MODE\",\"production\",\"POSTHOG_KEY\",\"phc_wu5uBJqblldYE2xTOYYttsQaxd9dDHex41m4VV5QET2\",\"POSTHOG_URL\",\"https://sonic.drfrost.org\",\"SENTRY_DSN\",\"https://a0e18a6d7daf7a0e590285170647aa4f@o4510674642862080.ingest.de.sentry.io/4510697363079248\",\"SENTRY_ENVIRONMENT\",\"TURNSTILE_ENABLED\",\"0\",\"TURNSTILE_SITE_KEY\",\"0x4AAAAAAA3a-E4RxPSU5apS\",\"toast\",\"userWithSubscriptionContext\",\"cspNonce\",\"6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13\",\"routes/auth/login\",{\"_28\":-5,\"_29\":30,\"_31\":-7,\"_32\":-7},\"alert\",\"idempotencyKey\",\"998daebd-5d4c-498f-b29f-b76a29481bab\",\"providerError\",\"redirectTo\",\"actionData\",\"errors\"]\n");</script><!--$?--><template id="B:1"></template><!--/$--></div><script nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13">$RB=[];$RV=function(a){$RT=performance.now();for(var b=0;b<a.length;b+=2){var c=a[b],e=a[b+1];null!==e.parentNode&&e.parentNode.removeChild(e);var f=c.parentNode;if(f){var g=c.previousSibling,h=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d||"/&"===d)if(0===h)break;else h--;else"$"!==d&&"$?"!==d&&"$~"!==d&&"$!"!==d&&"&"!==d||h++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;e.firstChild;)f.insertBefore(e.firstChild,c);g.data="$";g._reactRetry&&requestAnimationFrame(g._reactRetry)}}a.length=0};
+$RC=function(a,b){if(b=document.getElementById(b))(a=document.getElementById(a))?(a.previousSibling.data="$~",$RB.push(a,b),2===$RB.length&&("number"!==typeof $RT?requestAnimationFrame($RV.bind(null,$RB)):(a=performance.now(),setTimeout($RV.bind(null,$RB),2300>a&&2E3<a?2300-a:$RT+300-a)))):b.parentNode.removeChild(b)};$RC("B:0","S:0")</script><div hidden id="S:1"><script nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13">window.__reactRouterContext.streamController.close();</script></div><script nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13">$RC("B:1","S:1")</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" nonce="6692ad87b0d8d251eb18587a7ab2dd5224749cf10e9168c5cc91393235bb3b13" data-cf-beacon='{"version":"2024.11.0","token":"65deeeabd2574b06a068deaa8a911b8d"}' crossorigin="anonymous"></script>
+</body></html>

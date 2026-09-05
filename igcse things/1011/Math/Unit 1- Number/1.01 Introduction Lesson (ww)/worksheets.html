@@ -1,0 +1,308 @@
+
+<!DOCTYPE HTML>
+<html lang="en-GB">
+<head>
+    <title>Dr Frost Learning</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Description" content="Dr Frost provides an online learning platform, teaching resources, videos and a bank of exam questions, all for free.">
+    <meta name="keywords"
+          content="DFM,DrFrostMaths,Dr Frost,maths,mathematics,homework,maths homework,teaching resources,maths teaching,timestables,Tiffin,ukmt,Edexcel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://www.drfrost.org/images/share/dr-frost-share-default.png"/>
+    <meta property="og:description" content="Dr Frost provides an online learning platform, teaching resources, videos and a bank of exam questions, all for free."/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start":
+            new Date().getTime(), event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src =
+          "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MFCL766M");</script>
+
+    <!-- MathJax global setup -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['||', '||']],
+          packages: {'[+]': ['cancel', 'color']}
+        },
+        svg: {
+          scale: 1,
+          minScale: .5,
+          fontCache: 'local'
+        },
+        loader: {load: ['[tex]/cancel', '[tex]/color']}
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" src="js/mathjax/es5/tex-chtml.js"></script>
+
+    <!-- Global DFL data object -->
+    <script>
+      ((DFL)=>{
+        DFL.googleClientId = "135148077126-9hsh04irq0741q6bt6ieluthuqn9ldki.apps.googleusercontent.com";
+        DFL.isUnsubscribedTeacher = false;
+        DFL.posthogKey = "phc_wu5uBJqblldYE2xTOYYttsQaxd9dDHex41m4VV5QET2";
+        DFL.posthogUrl = "https://sonic.drfrost.org";
+      })(window.DFL = window.DFL || {});
+    </script>
+
+    <!-- External tools -->
+    <script src="/js/desmos/v1.9.3/calculator.js"></script>
+
+
+<script defer src="js/dfm5.d965ad4d73eb61a7816e.js"></script><link href="css/dfm5.a6010bd19e58e87a2716.css" rel="stylesheet">
+
+</head>
+
+
+<body >
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFCL766M"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<div id="pad-bar"></div>
+<div id="top-bar" class='top-bar-light'>
+  <div class="top-bar-group">
+    <button id='mainmenu-button'>
+        <img src='/images/menu_grip_white.svg'>
+        <span>Menu</span>
+    </button>
+
+    <a id="logo" href="/">
+        <img id='top-bar-logo-full' src="/images/logos/dr-frost-maths-white-yellow.svg" alt="Dr Frost Maths logo" />
+        <img id='top-bar-logo-minimal' src="/images/logos/df-white.svg" alt="Dr Frost logo" />
+    </a>
+
+    <form action="#" onsubmit="return false;" id="search-form">
+      <input type="text">
+    </form>
+  </div>
+
+  <ul id="account-menu"></ul>
+</div>
+<div id="search-results-new">
+    <span id='close-search-button'>
+        &times;
+    </span>
+    <ul id='search-header-new-type'>
+        <li><a id='search-results-new-tab-skills' href='#search-results-new-skills'>Skills (0)</a></li>
+        <li><a id='search-results-new-tab-downloadables' href='#search-results-new-downloadables'>Downloadables (0)</a></li>
+        <li><a id='search-results-new-tab-users' href='#search-results-new-users'>Users (0)</a></li>
+    </ul>
+    <div id="search-results-new-skills"></div>
+    <div id="search-results-new-downloadables">
+        <ul></ul>
+    </div>
+    <div id="search-results-new-users">
+        <ul></ul>
+    </div>
+    <div id="search-noresults">There were no results for your search.</div>
+</div>
+<div id='sidemenu'></div>
+
+<div class="cookie-consent__container">
+    <div class="cookie-consent__overlay"></div>
+    <div class="cookie-consent__dialog">
+        <div class="cookie-consent__header">
+            <h2 class="cookie-consent__title">We value your privacy</h2>
+            <p class="cookie-consent__subtitle">Let's make your experience better together!</p>
+        </div>
+
+        <div class="cookie-consent__content">
+            <p class="cookie-consent__description">
+                We use cookies to help our site work properly and to understand how you use it. This helps us improve your experience.
+            </p>
+
+            <div class="cookie-consent__types">
+                <div class="cookie-consent__type">
+                    <div class="cookie-consent__icon cookie-consent__icon--success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div class="cookie-consent__type-content">
+                        <h3 class="cookie-consent__type-title">Essential Cookies (Always Active)</h3>
+                        <p class="cookie-consent__type-description">Required for the site to function and remember your preferences.</p>
+                    </div>
+                </div>
+
+                <div class="cookie-consent__type">
+                    <div class="cookie-consent__icon cookie-consent__icon--info">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="20" x2="12" y2="10"></line>
+                            <line x1="18" y1="20" x2="18" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="16"></line>
+                        </svg>
+                    </div>
+                    <div class="cookie-consent__type-content">
+                        <h3 class="cookie-consent__type-title">Optional Cookies (Your Choice)</h3>
+                        <p class="cookie-consent__type-description">Help us analyse usage and provide video content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cookie-consent__buttons">
+          <button class="new-style-button new-style-button-simple cookie-consent__button cookie-consent__reject">Reject optional cookies</button>
+          <button class="new-style-button new-style-button-simple cookie-consent__button cookie-consent__accept">Accept optional cookies</button>
+        </div>
+
+        <div class="cookie-consent__footer">
+            <a href="/cookies" target="_blank" class="styled-link">View our Cookie Policy</a>
+        </div>
+    </div>
+</div>
+
+<div id="page">
+
+<script>
+   var preloadState = {"wid":1961443};
+</script>
+
+<script defer src="js/worksheets.417ae6c2826baf2b1fb7.js"></script><link href="css/worksheets.b74f46a75bcd72800684.css" rel="stylesheet">
+
+<div id="worksheets-browser" style="display: none;" data-unsubscribed-message="Your school needs an active subscription to create and manage custom worksheets">
+   <div id="worksheets-left">
+      <ul id='worksheets-menu'></ul>
+   </div>
+
+   <div id="worksheets-main-container">
+      <div id='worksheets-main-menu' class="restricted restricted-interactive restricted-hide">
+         <span><button id='worksheets-main-add'><img src='/images/plus_icon.svg'>New</button></span>
+         <span><button id='worksheets-main-home' class='empty'>
+               <div><span class="mobile-hide">My</span> Home <span class="mobile-hide">Folder</span></div>
+            </button></span>
+         <div id='worksheets-main-actionbuttons'>
+            <button id='worksheets-main-delete'>Delete</button>
+            <button id='worksheets-main-move'>Move</button>
+            <button id='worksheets-main-edit'>Edit</button>
+         </div>
+         <button class="mobile-tree-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-tree-icon lucide-list-tree">
+               <path d="M8 5h13" />
+               <path d="M13 12h8" />
+               <path d="M13 19h8" />
+               <path d="M3 10a2 2 0 0 0 2 2h3" />
+               <path d="M3 5v12a2 2 0 0 0 2 2h3" />
+            </svg>
+         </button>
+      </div>
+
+      <div id='worksheets-directory-container'>
+         <div id='worksheets-directory-menu'>
+            <button id='worksheets-directory-up'><img src='/images/arrow_back.svg'></button>
+            <div id='worksheets-directory-titles'>
+               <h1>-</h1>
+               <p class="notes">-</p>
+            </div>
+            <button class="mobile-tree-toggle limited-only">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-tree-icon lucide-list-tree">
+                  <path d="M8 5h13" />
+                  <path d="M13 12h8" />
+                  <path d="M13 19h8" />
+                  <path d="M3 10a2 2 0 0 0 2 2h3" />
+                  <path d="M3 5v12a2 2 0 0 0 2 2h3" />
+               </svg>
+            </button>
+         </div>
+         <select id='worksheets-directory-sort'>
+            <option value='date'>Sort: Last Updated</option>
+            <option value='name'>Sort: Alphabetically</option>
+         </select>
+         <ul id='worksheets-directory'><ul>
+      </div>
+   </div>
+</div>
+
+
+
+
+<div id="worksheets-workspace" style="display: none;">
+
+   <div id="template-container">
+      <div id="template-menu">
+        <div id="template-title-and-arrow">
+          <button id='back-arrow-template'><img src='/images/arrow_back.svg'></button>
+          <div id="template-titles">
+            <div id="template-access"><input id='template-directory' type='hidden'></div>
+            <h1>New Template</h1>
+          </div>
+        </div>
+         <div id="template-menu-buttons">
+            <button id='button-templategenerate'>Generate</button>
+         </div>
+      </div>
+      <div id='template-furthermenu'>
+         <select id='template-moreoptions'></select>
+      </div>
+
+      <ul id="template-questions">
+         <li id='template-addquestion-button'><button>+</button></li>
+      </ul>
+   </div>
+   <div id="worksheet-container">
+      <div id="worksheet-menu">
+         <div id="title-and-back-button">
+            <button id='back-arrow'><img src='/images/arrow_back.svg'></button>
+            <div id='worksheet-titles'>
+               <input type='hidden' id='worksheet-directory'>
+               <h1>Worksheet Title</h1>
+            </div>
+         </div>
+         <div id="worksheet-menu-buttons">
+            <div id="worksheet-menu-teacher">
+               <span class="restricted" data-unsubscribed-message="Your school needs an active subscription to set worksheet tasks.">
+                  <button id='button-setaswork'>Set as Task</button>
+               </span>
+               <span class="restricted" data-unsubscribed-message="Your school needs an active subscription to save and edit worksheets.">
+                  <button id='button-save' class='empty-invert' disabled>Save</button>
+               </span>
+               <span class="restricted" data-unsubscribed-message="Your school needs an active subscription to save and edit worksheets.">
+                  <button id='button-saveas' class='empty-invert'>Save As</button>
+               </span>
+               <button id='button-export' class='empty-invert'>Download</button>
+            </div>
+            <div id="worksheet-menu-student">
+               <button id='button-practise'>Practise This Worksheet</button>
+            </div>
+            <button id='button-fullscreen' class='empty-noborder mobile-hide'><img src='/images/fullscreen_icon.svg'></button>
+         </div>
+      </div>
+      <div id='worksheet-furthermenu'>
+         <div id='worksheet-vieworedit'><ul>
+            <li><a href='#mode-view'>View</a></li>
+            <li class="restricted" data-unsubscribed-message="Your school needs an active subscription to customise worksheets."><a href='#mode-edit'>Edit</a></li>
+         </ul></div>
+         <select id='worksheet-moreoptions' class="restricted restricted-hide"></select>
+         <span id='worksheet-totalmarks'>Total Marks: <strong>0</strong></span>
+      </div>
+      <ul id="worksheet-questions">
+         <li id='worksheet-addquestion-button'>
+            <button id='add-examquestion'>+<span>Exam Question</span></button>
+            <button id='add-keyskillquestion'>+<span>Generated Question</span></button>
+         </li>
+      </ul>
+   </div>
+</div>
+
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"65deeeabd2574b06a068deaa8a911b8d"}' crossorigin="anonymous"></script>
+</body>
+
+</html>
