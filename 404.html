@@ -2,10 +2,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0;url=/">
 <title>Redirecting…</title>
+<script>
+(function(){
+  var p = window.location.pathname;              // e.g. /classweb/6b.html
+  var known = ['/classweb/','/backup/','/images/','/album/','/equipment/','/_v/',
+               '/0913/','/student_work/','/student_works/','/news_local/',
+               '/style.css','/imgload.js','/slow-stream-sw.js','/favicon.ico',
+               '/index.html','/news.html','/works.html','/guestbook.html',
+               '/notice_920704.html','/album_920704.html','/map_0915.html',
+               '/school.html','/activities.html','/internal.html','/maintain.html',
+               '/repair_0705.html','/hces-quest-guide/','/hces-quest-site/'];
+  var hit = null;
+  for (var i=0;i<known.length;i++){
+    if (p.indexOf(known[i]) === 0){ hit = known[i]; break; }
+  }
+  if (hit){
+    // Forward mirror-like paths into the mirror subpath
+    window.location.replace('/hces-quest-site' + p);
+  } else {
+    window.location.replace('/');
+  }
+})();
+</script>
 </head>
 <body>
-<p>Redirecting to <a href="/">homepage</a>…</p>
+<p>Redirecting…</p>
 </body>
 </html>
