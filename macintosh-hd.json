@@ -1,5 +1,5 @@
 {
-  "last_synced": "2026-09-16 12:23:47 UTC",
+  "last_synced": "2026-09-16 18:19:51 UTC",
   "hostname": "Original name: MacBook Air",
   "drive": {
     "total": "460Gi",
@@ -7,8 +7,8 @@
     "avail": "41Gi",
     "pct": "23%"
   },
-  "total_files": 29458,
-  "scan_time_sec": 1.2,
+  "total_files": 29381,
+  "scan_time_sec": 6.9,
   "tree": {
     "\ud83c\udfe0 Home": {
       "ai-girlfriend/": {
@@ -21222,12 +21222,20 @@
             "a1-export-dxf.mp4": {
               "s": 11151398,
               "m": "2026-09-15 10:21"
+            },
+            "a2-upload-drop.mp4": {
+              "s": 10560310,
+              "m": "2026-09-16 14:40"
             }
           },
           "shots/": {
             "a1-export-dxf.png": {
               "s": 87061,
               "m": "2026-09-15 10:32"
+            },
+            "a2-upload-drop.png": {
+              "s": 236003,
+              "m": "2026-09-16 14:41"
             }
           },
           "DAJA-A6-Pro-20W-Guide.html": {
@@ -29778,8 +29786,8 @@
             "m": "2026-09-16 12:21"
           },
           "macintosh-hd.json": {
-            "s": 1694152,
-            "m": "2026-09-05 05:56"
+            "s": 5162893,
+            "m": "2026-09-16 12:23"
           },
           "upload.html": {
             "s": 21796,
@@ -30727,8 +30735,8 @@
           },
           "nas/": {
             "index.html": {
-              "s": 297,
-              "m": "2026-09-16 12:12"
+              "s": 289,
+              "m": "2026-09-16 16:11"
             }
           },
           "notes/": {
@@ -30828,12 +30836,12 @@
             "m": "2026-09-07 10:55"
           },
           "index.html": {
-            "s": 26632,
-            "m": "2026-09-16 00:25"
+            "s": 26600,
+            "m": "2026-09-16 12:54"
           },
           "macintosh-hd.json": {
-            "s": 1694152,
-            "m": "2026-08-22 17:04"
+            "s": 5162893,
+            "m": "2026-09-16 12:54"
           },
           "upload.html": {
             "s": 21796,
@@ -30841,329 +30849,583 @@
           }
         },
         "nelson-econ-worksheets/": {
-          "adultsquirms.pdf": {
-            "s": 80833,
-            "m": "2026-09-16 12:22"
-          },
-          "barbielaborforce.pdf": {
-            "s": 1091701,
-            "m": "2026-09-16 12:22"
-          },
-          "business_costs__notes_.pdf": {
-            "s": 94908,
-            "m": "2026-09-16 12:22"
-          },
-          "buying_selling_handout_1.pdf": {
-            "s": 281026,
-            "m": "2026-09-16 12:22"
-          },
-          "calculating_costs.pdf": {
-            "s": 103925,
-            "m": "2026-09-16 12:22"
-          },
-          "capstone_lesson16_visual.pdf": {
-            "s": 26215,
-            "m": "2026-09-16 12:22"
-          },
-          "capstone_lesson1_visual.pdf": {
-            "s": 37430,
-            "m": "2026-09-16 12:22"
-          },
-          "capstone_lesson2_visual.pdf": {
-            "s": 17245,
-            "m": "2026-09-16 12:22"
-          },
-          "capstone_lesson3_visual.pdf": {
-            "s": 20224,
-            "m": "2026-09-16 12:22"
-          },
-          "capstone_lesson6_visual.pdf": {
-            "s": 43383,
-            "m": "2026-09-16 12:22"
-          },
-          "capstone_lesson8_visual.pdf": {
-            "s": 25086,
-            "m": "2026-09-16 12:22"
-          },
-          "capstone_lesson9_visual.pdf": {
-            "s": 32002,
-            "m": "2026-09-16 12:22"
-          },
-          "ch1_exercise02.pdf": {
-            "s": 77604,
-            "m": "2026-09-16 12:22"
-          },
-          "ch1_exercise03-04.pdf": {
-            "s": 74985,
-            "m": "2026-09-16 12:22"
-          },
-          "ch1_exercise05-06.pdf": {
-            "s": 136720,
-            "m": "2026-09-16 12:22"
-          },
-          "ch1_exercise07.pdf": {
-            "s": 139214,
-            "m": "2026-09-16 12:22"
-          },
-          "ch1_exercise08.pdf": {
-            "s": 111730,
-            "m": "2026-09-16 12:22"
-          },
-          "changes_in_supply__c_.pdf": {
-            "s": 108359,
-            "m": "2026-09-16 12:22"
-          },
-          "checkbook_balance_handouts.pdf": {
-            "s": 1114301,
-            "m": "2026-09-16 12:22"
-          },
-          "closing_the_output_gap__c_.pdf": {
-            "s": 331872,
-            "m": "2026-09-16 12:22"
-          },
-          "conflict___cooperation_student_2.pdf": {
-            "s": 1326033,
-            "m": "2026-09-16 12:22"
-          },
-          "decision_making.pdf": {
-            "s": 114435,
-            "m": "2026-09-16 12:22"
-          },
-          "demand_survey.pdf": {
-            "s": 73626,
-            "m": "2026-09-16 12:22"
-          },
-          "determining_elasticity__c_.pdf": {
-            "s": 85991,
-            "m": "2026-09-16 12:22"
-          },
-          "diplomacy_student_materials_1.pdf": {
-            "s": 884865,
-            "m": "2026-09-16 12:23"
-          },
-          "economic_systems_homework.pdf": {
-            "s": 1612934,
-            "m": "2026-09-16 12:23"
-          },
-          "economists.pdf": {
-            "s": 81634,
-            "m": "2026-09-16 12:23"
-          },
-          "elasticity_of_demand__notes_.pdf": {
-            "s": 77967,
-            "m": "2026-09-16 12:23"
-          },
-          "elasticity_of_demand_homework.pdf": {
-            "s": 81967,
-            "m": "2026-09-16 12:23"
-          },
-          "equilibrium__notes_.pdf": {
-            "s": 86840,
-            "m": "2026-09-16 12:23"
-          },
-          "equilibrium_graphing_practice_-_document_for_website.pdf": {
-            "s": 42090,
-            "m": "2026-09-16 12:23"
-          },
-          "equilibrium_homework.pdf": {
-            "s": 146290,
-            "m": "2026-09-16 12:23"
-          },
-          "equilibrium_in_the_news__c_.pdf": {
-            "s": 151298,
-            "m": "2026-09-16 12:23"
-          },
-          "financial_fluctuations.pdf": {
-            "s": 199863,
-            "m": "2026-09-16 12:23"
-          },
-          "financial_freedom_color_final_-_fcee.pdf": {
-            "s": 8103132,
-            "m": "2026-09-16 12:23"
-          },
-          "g9_7-12_moneymatters1.pdf": {
-            "s": 1008309,
-            "m": "2026-09-16 12:23"
-          },
-          "govt___economy_2_student.pdf": {
-            "s": 2137665,
-            "m": "2026-09-16 12:23"
-          },
-          "govt_spending_4_student.pdf": {
-            "s": 1189002,
-            "m": "2026-09-16 12:23"
-          },
-          "how_to_really_be_a_millionaire.pdf": {
-            "s": 158330,
-            "m": "2026-09-16 12:23"
-          },
-          "identifying_market_structure.pdf": {
-            "s": 67219,
-            "m": "2026-09-16 12:23"
-          },
-          "interest_groups_3_student.pdf": {
-            "s": 700697,
-            "m": "2026-09-16 12:23"
-          },
-          "international_influence_student_3.pdf": {
-            "s": 1334074,
-            "m": "2026-09-16 12:23"
-          },
-          "international_organizations_student_materials_4.pdf": {
-            "s": 1374874,
-            "m": "2026-09-16 12:23"
-          },
-          "investment_worksheet.pdf": {
-            "s": 17120,
-            "m": "2026-09-16 12:23"
-          },
-          "is_this_a_monopoly__c_.pdf": {
-            "s": 876888,
-            "m": "2026-09-16 12:23"
-          },
-          "is_this_perfect_competition__c_.pdf": {
-            "s": 373008,
-            "m": "2026-09-16 12:23"
-          },
-          "law_of_demand__notes_.pdf": {
-            "s": 89048,
-            "m": "2026-09-16 12:23"
-          },
-          "law_of_demand_homework.pdf": {
-            "s": 86920,
-            "m": "2026-09-16 12:23"
-          },
-          "law_of_supply__notes_.pdf": {
-            "s": 88370,
-            "m": "2026-09-16 12:23"
-          },
-          "law_of_supply_homework.pdf": {
-            "s": 88127,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_1.pdf": {
-            "s": 137716,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_10.pdf": {
-            "s": 130939,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_11.pdf": {
-            "s": 129530,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_12.pdf": {
-            "s": 130985,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_13.pdf": {
-            "s": 130415,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_14.pdf": {
-            "s": 130896,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_15.pdf": {
-            "s": 124015,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_16.pdf": {
-            "s": 127043,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_17.pdf": {
-            "s": 133497,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_18.pdf": {
-            "s": 129472,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_19.pdf": {
-            "s": 132363,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_2.pdf": {
-            "s": 131641,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_20.pdf": {
-            "s": 142017,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_21.pdf": {
-            "s": 132153,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_22.pdf": {
-            "s": 135088,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_23.pdf": {
-            "s": 132748,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_24.pdf": {
-            "s": 134767,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_25.pdf": {
-            "s": 135744,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_26.pdf": {
-            "s": 132196,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_27.pdf": {
-            "s": 131459,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_28.pdf": {
-            "s": 132366,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_29.pdf": {
-            "s": 140950,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_3.pdf": {
-            "s": 130752,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_30.pdf": {
-            "s": 82940,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_31.pdf": {
-            "s": 90882,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_32.pdf": {
-            "s": 89789,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_33.pdf": {
-            "s": 83238,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_34.pdf": {
-            "s": 83309,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_35.pdf": {
-            "s": 91487,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_4.pdf": {
-            "s": 139984,
-            "m": "2026-09-16 12:23"
-          },
-          "lesson_5.pdf": {
-            "s": 131815,
-            "m": "2026-09-16 12:23"
+          "_00 Review/": {
+            "review_sheet.pdf": {
+              "s": 135529,
+              "m": "2026-09-16 12:24"
+            }
+          },
+          "_03 Supply and Demand/": {
+            "changes_in_supply__c_.pdf": {
+              "s": 108359,
+              "m": "2026-09-16 12:22"
+            },
+            "demand_survey.pdf": {
+              "s": 73626,
+              "m": "2026-09-16 12:22"
+            },
+            "determining_elasticity__c_.pdf": {
+              "s": 85991,
+              "m": "2026-09-16 12:22"
+            },
+            "elasticity_of_demand__notes_.pdf": {
+              "s": 77967,
+              "m": "2026-09-16 12:23"
+            },
+            "elasticity_of_demand_homework.pdf": {
+              "s": 81967,
+              "m": "2026-09-16 12:23"
+            },
+            "equilibrium__notes_.pdf": {
+              "s": 86840,
+              "m": "2026-09-16 12:23"
+            },
+            "equilibrium_homework.pdf": {
+              "s": 146290,
+              "m": "2026-09-16 12:23"
+            },
+            "equilibrium_in_the_news__c_.pdf": {
+              "s": 151298,
+              "m": "2026-09-16 12:23"
+            },
+            "law_of_demand__notes_.pdf": {
+              "s": 89048,
+              "m": "2026-09-16 12:23"
+            },
+            "law_of_demand_homework.pdf": {
+              "s": 86920,
+              "m": "2026-09-16 12:23"
+            },
+            "law_of_supply__notes_.pdf": {
+              "s": 88370,
+              "m": "2026-09-16 12:23"
+            },
+            "law_of_supply_homework.pdf": {
+              "s": 88127,
+              "m": "2026-09-16 12:23"
+            },
+            "market_graph_puzzle.pdf": {
+              "s": 70845,
+              "m": "2026-09-16 12:23"
+            },
+            "price_ceilings_and_price_floors__notes_.pdf": {
+              "s": 221519,
+              "m": "2026-09-16 12:24"
+            },
+            "price_ceilings_and_price_floors_homework.pdf": {
+              "s": 253126,
+              "m": "2026-09-16 12:24"
+            },
+            "price_controls__c_.pdf": {
+              "s": 224597,
+              "m": "2026-09-16 12:24"
+            },
+            "the_market__notes_.pdf": {
+              "s": 73810,
+              "m": "2026-09-16 12:24"
+            },
+            "the_market_homework.pdf": {
+              "s": 75334,
+              "m": "2026-09-16 12:24"
+            }
+          },
+          "_04 Market Structures/": {
+            "business_costs__notes_.pdf": {
+              "s": 94908,
+              "m": "2026-09-16 12:22"
+            },
+            "calculating_costs.pdf": {
+              "s": 103925,
+              "m": "2026-09-16 12:22"
+            },
+            "identifying_market_structure.pdf": {
+              "s": 67219,
+              "m": "2026-09-16 12:23"
+            },
+            "is_this_a_monopoly__c_.pdf": {
+              "s": 876888,
+              "m": "2026-09-16 12:23"
+            },
+            "is_this_perfect_competition__c_.pdf": {
+              "s": 373008,
+              "m": "2026-09-16 12:23"
+            },
+            "monopolistic_competition__notes_.pdf": {
+              "s": 145189,
+              "m": "2026-09-16 12:23"
+            },
+            "monopoly_profits__c_.pdf": {
+              "s": 138948,
+              "m": "2026-09-16 12:23"
+            },
+            "oligopoly__notes_.pdf": {
+              "s": 126961,
+              "m": "2026-09-16 12:24"
+            },
+            "oligopoly_strategy.pdf": {
+              "s": 62611,
+              "m": "2026-09-16 12:24"
+            },
+            "perfect_competition__notes_.pdf": {
+              "s": 76192,
+              "m": "2026-09-16 12:24"
+            },
+            "profit_maximization__c_.pdf": {
+              "s": 114969,
+              "m": "2026-09-16 12:24"
+            },
+            "revenue_and_profit__notes_.pdf": {
+              "s": 248790,
+              "m": "2026-09-16 12:24"
+            },
+            "the_basics_of_monopoly__notes_.pdf": {
+              "s": 130390,
+              "m": "2026-09-16 12:24"
+            },
+            "the_logic_of_monopoly__notes_.pdf": {
+              "s": 190277,
+              "m": "2026-09-16 12:24"
+            },
+            "the_students_dilemma.pdf": {
+              "s": 148607,
+              "m": "2026-09-16 12:24"
+            }
+          },
+          "_09 Financial Sector/": {
+            "closing_the_output_gap__c_.pdf": {
+              "s": 331872,
+              "m": "2026-09-16 12:22"
+            },
+            "financial_fluctuations.pdf": {
+              "s": 199863,
+              "m": "2026-09-16 12:23"
+            },
+            "loanable_funds_market.pdf": {
+              "s": 112947,
+              "m": "2026-09-16 12:23"
+            },
+            "monetary_neutrality__c_.pdf": {
+              "s": 431423,
+              "m": "2026-09-16 12:23"
+            },
+            "money_basics__c_.pdf": {
+              "s": 94435,
+              "m": "2026-09-16 12:23"
+            },
+            "money_homework.pdf": {
+              "s": 150646,
+              "m": "2026-09-16 12:23"
+            },
+            "money_velocity__c_.pdf": {
+              "s": 129231,
+              "m": "2026-09-16 12:23"
+            },
+            "my_fed_district__c_.pdf": {
+              "s": 202329,
+              "m": "2026-09-16 12:23"
+            },
+            "notes__b___monetary_policy_i_.pdf": {
+              "s": 90960,
+              "m": "2026-09-16 12:24"
+            },
+            "notes__b___monetary_policy_ii_.pdf": {
+              "s": 537815,
+              "m": "2026-09-16 12:24"
+            },
+            "notes__b___money_.pdf": {
+              "s": 231221,
+              "m": "2026-09-16 12:24"
+            },
+            "notes__b___the_federal_reserve_.pdf": {
+              "s": 112898,
+              "m": "2026-09-16 12:24"
+            },
+            "notes__savings_and_investment_.pdf": {
+              "s": 172962,
+              "m": "2026-09-16 12:24"
+            },
+            "notes__the_financial_system_.pdf": {
+              "s": 152395,
+              "m": "2026-09-16 12:24"
+            },
+            "risk_and_reward__c_.pdf": {
+              "s": 60375,
+              "m": "2026-09-16 12:24"
+            },
+            "savings_and_investment_homework.pdf": {
+              "s": 92355,
+              "m": "2026-09-16 12:24"
+            },
+            "savings_equals_investment.pdf": {
+              "s": 52357,
+              "m": "2026-09-16 12:24"
+            },
+            "stock_market_game.pdf": {
+              "s": 66302,
+              "m": "2026-09-16 12:24"
+            },
+            "the_federal_reserve_note.pdf": {
+              "s": 728621,
+              "m": "2026-09-16 12:24"
+            },
+            "the_money_market__c_.pdf": {
+              "s": 178985,
+              "m": "2026-09-16 12:24"
+            },
+            "the_money_multiplier__a_.pdf": {
+              "s": 111260,
+              "m": "2026-09-16 12:24"
+            }
+          },
+          "_other/": {
+            "adultsquirms.pdf": {
+              "s": 80833,
+              "m": "2026-09-16 12:22"
+            },
+            "barbielaborforce.pdf": {
+              "s": 1091701,
+              "m": "2026-09-16 12:22"
+            },
+            "buying_selling_handout_1.pdf": {
+              "s": 281026,
+              "m": "2026-09-16 12:22"
+            },
+            "capstone_lesson16_visual.pdf": {
+              "s": 26215,
+              "m": "2026-09-16 12:22"
+            },
+            "capstone_lesson1_visual.pdf": {
+              "s": 37430,
+              "m": "2026-09-16 12:22"
+            },
+            "capstone_lesson2_visual.pdf": {
+              "s": 17245,
+              "m": "2026-09-16 12:22"
+            },
+            "capstone_lesson3_visual.pdf": {
+              "s": 20224,
+              "m": "2026-09-16 12:22"
+            },
+            "capstone_lesson6_visual.pdf": {
+              "s": 43383,
+              "m": "2026-09-16 12:22"
+            },
+            "capstone_lesson8_visual.pdf": {
+              "s": 25086,
+              "m": "2026-09-16 12:22"
+            },
+            "capstone_lesson9_visual.pdf": {
+              "s": 32002,
+              "m": "2026-09-16 12:22"
+            },
+            "ch1_exercise02.pdf": {
+              "s": 77604,
+              "m": "2026-09-16 12:22"
+            },
+            "ch1_exercise03-04.pdf": {
+              "s": 74985,
+              "m": "2026-09-16 12:22"
+            },
+            "ch1_exercise05-06.pdf": {
+              "s": 136720,
+              "m": "2026-09-16 12:22"
+            },
+            "ch1_exercise07.pdf": {
+              "s": 139214,
+              "m": "2026-09-16 12:22"
+            },
+            "ch1_exercise08.pdf": {
+              "s": 111730,
+              "m": "2026-09-16 12:22"
+            },
+            "checkbook_balance_handouts.pdf": {
+              "s": 1114301,
+              "m": "2026-09-16 12:22"
+            },
+            "conflict___cooperation_student_2.pdf": {
+              "s": 1326033,
+              "m": "2026-09-16 12:22"
+            },
+            "decision_making.pdf": {
+              "s": 114435,
+              "m": "2026-09-16 12:22"
+            },
+            "diplomacy_student_materials_1.pdf": {
+              "s": 884865,
+              "m": "2026-09-16 12:23"
+            },
+            "economic_systems_homework.pdf": {
+              "s": 1612934,
+              "m": "2026-09-16 12:23"
+            },
+            "economists.pdf": {
+              "s": 81634,
+              "m": "2026-09-16 12:23"
+            },
+            "equilibrium_graphing_practice_-_document_for_website.pdf": {
+              "s": 42090,
+              "m": "2026-09-16 12:23"
+            },
+            "financial_freedom_color_final_-_fcee.pdf": {
+              "s": 8103132,
+              "m": "2026-09-16 12:23"
+            },
+            "g9_7-12_moneymatters1.pdf": {
+              "s": 1008309,
+              "m": "2026-09-16 12:23"
+            },
+            "govt___economy_2_student.pdf": {
+              "s": 2137665,
+              "m": "2026-09-16 12:23"
+            },
+            "govt_spending_4_student.pdf": {
+              "s": 1189002,
+              "m": "2026-09-16 12:23"
+            },
+            "how_to_really_be_a_millionaire.pdf": {
+              "s": 158330,
+              "m": "2026-09-16 12:23"
+            },
+            "interest_groups_3_student.pdf": {
+              "s": 700697,
+              "m": "2026-09-16 12:23"
+            },
+            "international_influence_student_3.pdf": {
+              "s": 1334074,
+              "m": "2026-09-16 12:23"
+            },
+            "international_organizations_student_materials_4.pdf": {
+              "s": 1374874,
+              "m": "2026-09-16 12:23"
+            },
+            "investment_worksheet.pdf": {
+              "s": 17120,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_1.pdf": {
+              "s": 137716,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_10.pdf": {
+              "s": 130939,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_11.pdf": {
+              "s": 129530,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_12.pdf": {
+              "s": 130985,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_13.pdf": {
+              "s": 130415,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_14.pdf": {
+              "s": 130896,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_15.pdf": {
+              "s": 124015,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_16.pdf": {
+              "s": 127043,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_17.pdf": {
+              "s": 133497,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_18.pdf": {
+              "s": 129472,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_19.pdf": {
+              "s": 132363,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_2.pdf": {
+              "s": 131641,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_20.pdf": {
+              "s": 142017,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_21.pdf": {
+              "s": 132153,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_22.pdf": {
+              "s": 135088,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_23.pdf": {
+              "s": 132748,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_24.pdf": {
+              "s": 134767,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_25.pdf": {
+              "s": 135744,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_26.pdf": {
+              "s": 132196,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_27.pdf": {
+              "s": 131459,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_28.pdf": {
+              "s": 132366,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_29.pdf": {
+              "s": 140950,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_3.pdf": {
+              "s": 130752,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_30.pdf": {
+              "s": 82940,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_31.pdf": {
+              "s": 90882,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_32.pdf": {
+              "s": 89789,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_33.pdf": {
+              "s": 83238,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_34.pdf": {
+              "s": 83309,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_35.pdf": {
+              "s": 91487,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_4.pdf": {
+              "s": 139984,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_5.pdf": {
+              "s": 131815,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_6.pdf": {
+              "s": 133407,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_7.pdf": {
+              "s": 130285,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_8.pdf": {
+              "s": 134066,
+              "m": "2026-09-16 12:23"
+            },
+            "lesson_9.pdf": {
+              "s": 131726,
+              "m": "2026-09-16 12:23"
+            },
+            "market_economy_1_student.pdf": {
+              "s": 2813014,
+              "m": "2026-09-16 12:23"
+            },
+            "multimillion_homes.pdf": {
+              "s": 3827680,
+              "m": "2026-09-16 12:23"
+            },
+            "my_money_handbookl.pdf": {
+              "s": 17857234,
+              "m": "2026-09-16 12:23"
+            },
+            "propaganda_4_student.pdf": {
+              "s": 726386,
+              "m": "2026-09-16 12:24"
+            },
+            "propaganda_gallery_walk_4.pdf": {
+              "s": 1124626,
+              "m": "2026-09-16 12:24"
+            },
+            "public_sphere_1_student.pdf": {
+              "s": 994233,
+              "m": "2026-09-16 12:24"
+            },
+            "recession.pdf": {
+              "s": 3608172,
+              "m": "2026-09-16 12:24"
+            },
+            "resume_action_words.pdf": {
+              "s": 17042,
+              "m": "2026-09-16 12:24"
+            },
+            "role_of_media_2_student.pdf": {
+              "s": 949722,
+              "m": "2026-09-16 12:24"
+            },
+            "saving_and_investing.pdf": {
+              "s": 228510,
+              "m": "2026-09-16 12:24"
+            },
+            "savingsaccount.pdf": {
+              "s": 281562,
+              "m": "2026-09-16 12:24"
+            },
+            "savingslabels.pdf": {
+              "s": 37004,
+              "m": "2026-09-16 12:24"
+            },
+            "taxation_3_student.pdf": {
+              "s": 2243272,
+              "m": "2026-09-16 12:24"
+            },
+            "the_economic_way_of_thinking.pdf": {
+              "s": 126988,
+              "m": "2026-09-16 12:24"
+            },
+            "the_pursuit_of_happyness.pdf": {
+              "s": 324942,
+              "m": "2026-09-16 12:24"
+            },
+            "theeconomicsofzookeeping.pdf": {
+              "s": 3095483,
+              "m": "2026-09-16 12:24"
+            },
+            "what_is_economics_really_about.pdf": {
+              "s": 288399,
+              "m": "2026-09-16 12:24"
+            },
+            "worksheets.pdf": {
+              "s": 2211654,
+              "m": "2026-09-16 12:24"
+            },
+            "youthsquirms.pdf": {
+              "s": 79239,
+              "m": "2026-09-16 12:24"
+            }
+          },
+          "_manifest.txt": {
+            "s": 23818,
+            "m": "2026-09-16 12:24"
+          },
+          "_README.md": {
+            "s": 1345,
+            "m": "2026-09-16 12:26"
           }
         },
         "news-photos/": {
@@ -42870,6 +43132,10 @@
         "root-abuse-reports.txt": {
           "s": 2743,
           "m": "2026-08-06 04:25"
+        },
+        "Screen Recording 2026-09-16 at 10.39.36\u202fPM.mov": {
+          "s": 10560310,
+          "m": "2026-09-16 14:40"
         },
         "Screenshot 2026-06-14 at 5.15.26\u202fPM.png": {
           "s": 40985,
@@ -119205,8 +119471,8 @@
             "m": "2026-09-05 11:38"
           },
           "_sync.log": {
-            "s": 66335,
-            "m": "2026-09-15 20:14"
+            "s": 71346,
+            "m": "2026-09-16 13:35"
           },
           "_sync.py": {
             "s": 3714,
@@ -129265,8 +129531,8 @@
             "IsaacDrop/": {
               "client/": {
                 "index.html": {
-                  "s": 54324,
-                  "m": "2026-09-14 13:17"
+                  "s": 61891,
+                  "m": "2026-09-16 14:57"
                 }
               },
               "cloud/": {
@@ -129275,8 +129541,8 @@
                   "m": "2026-09-15 11:34"
                 },
                 "deploy.sh": {
-                  "s": 1362,
-                  "m": "2026-09-15 11:53"
+                  "s": 972,
+                  "m": "2026-09-16 14:19"
                 },
                 "migrate_kv.sh": {
                   "s": 825,
@@ -129286,9 +129552,13 @@
                   "s": 2326,
                   "m": "2026-09-16 12:18"
                 },
+                "reset_hash.js": {
+                  "s": 579,
+                  "m": "2026-09-16 12:34"
+                },
                 "worker.js": {
-                  "s": 42131,
-                  "m": "2026-09-16 00:10"
+                  "s": 47517,
+                  "m": "2026-09-16 13:03"
                 },
                 "wrangler.toml": {
                   "s": 198,
@@ -129313,8 +129583,8 @@
               },
               "server/": {
                 "main.py": {
-                  "s": 39772,
-                  "m": "2026-09-14 12:58"
+                  "s": 40345,
+                  "m": "2026-09-16 12:48"
                 }
               },
               "IsaacDrop-AutoStart.command": {
