@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>IGCSE Revision Hub · Isaac Chan</title>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0b0d12">
+<meta name="description" content="IGCSE revision hub — notes, past papers and resources by subject (Biology, Chemistry, Physics, Economics, Maths, English, DT and more).">
+<meta property="og:title" content="IGCSE Revision Hub · Isaac Chan">
+<meta property="og:description" content="Notes, past papers and resources by subject.">
+<meta property="og:image" content="/og-image.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0d12;--card:#12151d;--bd:#252b38;--t1:#e8ebf2;--t2:#9aa4b8;--t3:#6b7488;--ab:#7170ff}
+body{background:var(--bg);color:var(--t1);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:28px 18px 80px}
+.wrap{max-width:1000px;margin:0 auto}
+h1{font-size:26px;letter-spacing:-.02em}
+.sub{color:var(--t3);font-size:13px;margin:4px 0 22px}
+.back{display:inline-block;color:var(--t2);text-decoration:none;font-size:13px;margin-bottom:18px;border:1px solid var(--bd);padding:6px 12px;border-radius:8px}
+.back:hover{border-color:var(--ab);color:var(--t1)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 18px}
+.card h2{font-size:16px;margin-bottom:3px}
+.card .code{color:var(--t3);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
+.links{display:flex;flex-wrap:wrap;gap:7px}
+.links a{display:inline-flex;align-items:center;gap:5px;background:#171b25;border:1px solid var(--bd);color:var(--t2);text-decoration:none;font-size:12.5px;padding:6px 11px;border-radius:8px}
+.links a:hover{border-color:var(--ab);color:#fff;background:rgba(99,102,241,.14)}
+.links a.notes{border-color:rgba(61,220,151,.4);color:#8ff0c4}
+.miss{color:var(--t3);font-size:12px;font-style:italic}
+footer{margin-top:34px;color:var(--t3);font-size:12px;text-align:center}
+@media print{body{background:#fff;color:#000}.card{border-color:#ccc}.back{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="/">← Home</a>
+<h1>📚 IGCSE Revision Hub</h1>
+<div class="sub">Notes, past papers and resources, by subject. Everything opens in the browser — nothing to download first.</div>
+<div class="grid" id="grid"></div>
+<footer>Built by Isaac · <a href="/tools/" style="color:var(--t2)">Workshop Tools</a> · <a href="/portfolio/" style="color:var(--t2)">Portfolio</a></footer>
+</div>
+<script>
+var SUBJ = [
+ {n:"Biology", c:"DAB / Double Award", notes:"/notes/Biology-IGCSE-Notes.html", res:"/portfolio/igcse things/1011/Biology/", pp:"/portfolio/past papers/Biology/", pe:"/portfolio/pearson-igcse-resources/Biology/"},
+ {n:"Chemistry", c:"IGCSE", notes:"/notes/Chemistry-IGCSE-Notes.html", res:"/portfolio/igcse things/1011/Chemistry/", pp:"/portfolio/past papers/Chemistry/"},
+ {n:"Physics", c:"Double Award", notes:"/notes/Physics-IGCSE-Notes.html", res:"/portfolio/igcse things/1011/Physics/", pe:"/portfolio/pearson-igcse-resources/Science/"},
+ {n:"Economics", c:"0455", notes:"/notes/Economics-IGCSE-Notes.html", res:"/portfolio/igcse things/1011/Economics/", pp:"/portfolio/past papers/Economics/", pe:"/portfolio/pearson-igcse-resources/Economics/"},
+ {n:"Mathematics", c:"Edexcel", res:"/portfolio/igcse things/1011/Math/", pp:"/portfolio/past papers/Mathematics/", pp2:"/portfolio/past papers/Mathematics Additional/", pe:"/portfolio/pearson-igcse-resources/Maths/"},
+ {n:"English (FLE)", c:"0500 First Language", res:"/portfolio/igcse things/1011/English/", pp:"/portfolio/past papers/English First Language/", pe:"/portfolio/pearson-igcse-resources/English/"},
+ {n:"Design & Technology", c:"DT", res:"/portfolio/igcse things/1011/DT/", extra:"/portfolio/isaac-dt/", extraL:"DT site"},
+ {n:"Chinese", c:"中文", res:"/portfolio/igcse things/1011/Chinese/"},
+ {n:"Physical Education", c:"PE", res:"/portfolio/igcse things/1011/PE/"},
+ {n:"Global Perspectives", c:"GP", miss:true},
+ {n:"Science booklets", c:"general", extra:"/science booklet/", extraL:"Booklets"}
+];
+var g = document.getElementById("grid"), h = "";
+SUBJ.forEach(function (s) {
+  h += '<div class="card"><h2>' + s.n + '</h2><div class="code">' + s.c + '</div><div class="links">';
+  if (s.notes) h += '<a class="notes" href="' + s.notes + '">📝 Notes</a>';
+  if (s.res) h += '<a href="' + s.res + '">📁 Resources</a>';
+  if (s.pp) h += '<a href="' + s.pp + '">📄 Past papers</a>';
+  if (s.pp2) h += '<a href="' + s.pp2 + '">📄 Additional Maths</a>';
+  if (s.pe) h += '<a href="' + s.pe + '">🎯 Pearson</a>';
+  if (s.extra) h += '<a href="' + s.extra + '">🔗 ' + s.extraL + '</a>';
+  if (s.miss) h += '<span class="miss">no resources uploaded yet</span>';
+  h += '</div></div>';
+});
+g.innerHTML = h;
+</script>
+</body>
+</html>

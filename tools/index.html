@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Workshop Tools — Calculators · Isaac Chan</title>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0b0d12">
+<meta name="description" content="Free workshop calculators: laser settings, gear ratios, resistor codes, beam deflection, filament cost, CNC feeds and speeds.">
+<meta property="og:title" content="Workshop Tools — Isaac Chan">
+<meta property="og:description" content="Laser, gear, resistor, beam, filament and CNC calculators.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/og-image.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0d12;--card:#12151d;--card2:#171b25;--bd:#252b38;--t1:#e8ebf2;--t2:#9aa4b8;--t3:#6b7488;--ab:#7170ff;--ok:#3ddc97;--warn:#ffb454}
+body{background:var(--bg);color:var(--t1);font:15px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;padding:28px 18px 80px}
+.wrap{max-width:960px;margin:0 auto}
+h1{font-size:26px;letter-spacing:-.02em;margin-bottom:4px}
+.sub{color:var(--t3);font-size:13px;margin-bottom:22px}
+.back{display:inline-block;color:var(--t2);text-decoration:none;font-size:13px;margin-bottom:18px;border:1px solid var(--bd);padding:6px 12px;border-radius:8px}
+.back:hover{border-color:var(--ab);color:var(--t1)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tab{background:var(--card);border:1px solid var(--bd);color:var(--t2);padding:8px 14px;border-radius:20px;font-size:13px;cursor:pointer}
+.tab:hover{border-color:var(--ab)}
+.tab.on{background:var(--ab);border-color:var(--ab);color:#fff}
+.panel{display:none;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:22px}
+.panel.on{display:block}
+.panel h2{font-size:17px;margin-bottom:4px}
+.panel .hint{color:var(--t3);font-size:12.5px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+label{display:block;font-size:12px;color:var(--t2);margin-bottom:5px}
+input,select{width:100%;background:var(--card2);border:1px solid var(--bd);color:var(--t1);padding:9px 11px;border-radius:8px;font-size:14px;font-family:inherit}
+input:focus,select:focus{outline:none;border-color:var(--ab)}
+.out{margin-top:18px;background:var(--card2);border:1px solid var(--bd);border-left:3px solid var(--ok);border-radius:10px;padding:14px 16px}
+.out .big{font-size:24px;font-weight:600;letter-spacing:-.01em}
+.out .lbl{color:var(--t3);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.out .row{display:flex;justify-content:space-between;padding:4px 0;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.04)}
+.out .row:last-child{border:none}
+.out .row span:last-child{color:var(--t1);font-variant-numeric:tabular-nums}
+.note{margin-top:14px;font-size:12px;color:var(--t3)}
+footer{margin-top:36px;color:var(--t3);font-size:12px;text-align:center}
+@media print{.tabs,.back{display:none}.panel{display:block!important;border:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="/">← Home</a>
+<h1>🔧 Workshop Tools</h1>
+<div class="sub">Calculators I use in the workshop and for DT — laser, gears, electronics, structures, printing, CNC.</div>
+<div class="tabs" id="tabs"></div>
+<div id="panels"></div>
+<footer>Built by Isaac · <a href="/portfolio/" style="color:var(--t2)">Portfolio</a> · <a href="/quests/" style="color:var(--t2)">Quest Hub</a></footer>
+</div>
+<script src="/tools/tools.js"></script>
+</body>
+</html>
