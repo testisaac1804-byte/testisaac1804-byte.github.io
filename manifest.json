@@ -1,0 +1,21 @@
+{
+  "name": "Isaac Chan — Projects & Resources",
+  "short_name": "Isaac",
+  "description": "Isaac's project portfolio, CAD/3D-print libraries, laser resources, IGCSE notes and interactive demos.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d0e12",
+  "theme_color": "#6366f1",
+  "orientation": "any",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Portfolio", "url": "/portfolio/" },
+    { "name": "DT Site", "url": "/isaac-dt/" },
+    { "name": "NAS", "url": "/nas/" },
+    { "name": "Science Booklets", "url": "/science%20booklet/" }
+  ]
+}

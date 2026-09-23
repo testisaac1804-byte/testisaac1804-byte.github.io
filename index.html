@@ -5,6 +5,21 @@
 <meta property="og:title" content="Isaac Chan">
 <meta property="og:description" content="Portfolio, projects, apps, and all files.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://isaac1804.com/">
+<meta property="og:site_name" content="Isaac Chan">
+<meta property="og:image" content="https://isaac1804.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Isaac Chan — Projects & Resources">
+<meta name="twitter:description" content="422 projects & libraries: CAD, 3D print, laser, IGCSE notes and demos.">
+<meta name="twitter:image" content="https://isaac1804.com/og-image.png">
+<link rel="canonical" href="https://isaac1804.com/">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Isaac">
 <meta name="theme-color" content="#050508">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -223,6 +238,12 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
 </a>
 
 <h2>🧩 解謎任務 Quest</h2>
+<a href="/quests/">
+  <span class="icon">🗺️</span>
+  <span class="label">Quest Hub — 三個解謎網站總覽（孩子回家／溪埕國小／邺山彼处）+ 完整攻略</span>
+  <span class="url">/quests/</span>
+  <span class="badge">new</span>
+</a>
 <a href="/hces-quest-guide/">
   <span class="icon">🔍</span>
   <span class="label">溪埕國小解謎網站攻略 — 完整指南：HTTP 狀態碼解析、全秘密路徑地圖、逐步攻略、密碼與鑰匙、人物表</span>
@@ -599,6 +620,14 @@ function igcseSyncHome(){
     msg.textContent='⚠️ Sync server offline — run igcse-sync-server.py';
     setTimeout(function(){msg.className=''},8000);
   }).finally(function(){btn.disabled=false});
+}
+</script>
+<script>
+/* PWA: register the service worker (offline access + installable) */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(function () {});
+  });
 }
 </script>
 </body></html>

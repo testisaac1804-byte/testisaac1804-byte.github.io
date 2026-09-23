@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Local-only endpoints referenced by the site (not crawlable)
+Disallow: /upload
+
+Sitemap: https://isaac1804.com/sitemap.xml
