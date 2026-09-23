@@ -1,0 +1,4328 @@
+{
+ "sw": [
+  {
+   "t": "Isaac Trade",
+   "d": "萬用交易社群平台 — 六大分類（🃏卡牌／📦實物／💾數碼檔／🛠服務／🌐域名／✨其他）：任何人發帖（賣／換／收）、留言報價、標記成交；作者用管理碼改狀態／刪自己帖，管理員密碼刪任何帖。頂部有 Isaac 品牌 hub（Portfolio／IsaacDrop／Open Press）。Cloudflare Worker + KV 免費後端，手機版 UI。",
+   "g": [
+    "Cloudflare Worker",
+    "KV",
+    "交易社群",
+    "多分類"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "BetterTerminal",
+   "d": "A real macOS terminal emulator with a plain-English bar — type “go to my desktop” and it runs cd ~/Desktop. Real PTY shells (vim, htop, ssh all work), tabs, split panes, search, 7 themes and a command history rail with exit codes. 48 plain-English phrases, a searchable guide, and it always asks before deleting anything. Installs from a 15 MB .pkg; the app is self-contained, so there is nothing else to install.",
+   "g": [
+    "macOS",
+    "Python",
+    "xterm.js",
+    "PTY",
+    "pkgbuild"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Windows 1.01 Simulator",
+   "d": "Classic Windows 1.01 simulator running in the browser.",
+   "g": [
+    "HTML",
+    "Simulator",
+    "Retro"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Gemini Chat",
+   "d": "AI chat interface — Gemini-powered conversation app.",
+   "g": [
+    "AI",
+    "Chat"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "RGB Color Calculator",
+   "d": "Interactive RGB color picker and calculator.",
+   "g": [
+    "HTML",
+    "Tool"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Gcode Viewer",
+   "d": "Browser-based G-code viewer for CNC toolpath visualization.",
+   "g": [
+    "CNC",
+    "G-code"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Hong Kong Tour",
+   "d": "Interactive Hong Kong tour guide app — Flask + HTML, native macOS .app bundle with photo gallery and tour routes.",
+   "g": [
+    "Flask",
+    "HTML",
+    "Tour",
+    "macOS .app"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacDrop",
+   "d": "Self-hosted Google-Drive-style file sharing: accounts (guest/register, first user = admin ⭐), per-file & per-folder passwords, folders, trash, per-user stars, search, versions, ZIP downloads, and a launchd auto-start service with self-healing Cloudflare tunnel. Live at da.gd/isaacdrop.",
+   "g": [
+    "FastAPI",
+    "Python",
+    "File Sharing",
+    "Accounts",
+    "launchd"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "macOS Simulator",
+   "d": "Full interactive macOS desktop simulator with menubar, dock, windows, and dark/light theme.",
+   "g": [
+    "HTML",
+    "CSS",
+    "JS",
+    "Simulator"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "DT Site Copy",
+   "d": "Full 74-page copy of the DT Google Site, rebranded to Isaac.",
+   "g": [
+    "Web",
+    "Google Sites",
+    "Static",
+    "Python"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "MacAdBlock",
+   "d": "macOS DNS ad-blocker daemon on :8053.",
+   "g": [
+    "macOS",
+    "DNS",
+    "Python",
+    "launchd"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "ESP32-C3 AdBlock",
+   "d": "Network DNS sinkhole on ESP32. Blocks ads for all WiFi devices.",
+   "g": [
+    "ESP32",
+    "C",
+    "DNS",
+    "IoT"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "FrostSolve",
+   "d": "macOS desktop app with manifest structure and full .app bundle.",
+   "g": [
+    "macOS",
+    "App",
+    "JavaScript"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacNetPkg",
+   "d": "Password-protected .pkg. AppleScript uninstall.",
+   "g": [
+    "macOS",
+    "pkgbuild",
+    "AppleScript",
+    "launchd"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacSecureMessenger",
+   "d": "E2E encrypted messaging - X3DH + AES-256-GCM.",
+   "g": [
+    "macOS",
+    "Encryption",
+    "AES-256",
+    "PyObjC"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Multiplayer Game Server",
+   "d": "WebSocket multiplayer backend - multi-room, sync, spectator.",
+   "g": [
+    "WebSocket",
+    "Python",
+    "FastAPI",
+    "Real-time"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "HKPCBypass",
+   "d": "Multi-layer school bypass. DoH+SOCKS5+HTTP CONNECT.",
+   "g": [
+    "Networking",
+    "Proxy",
+    "DoH",
+    "Python"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "WiFi Chat",
+   "d": "LAN offline chat - no internet needed. WebSocket + DXF sharing.",
+   "g": [
+    "WebSocket",
+    "Flask",
+    "LAN",
+    "Offline"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "WiFi Monitor",
+   "d": "ESP32 WiFi scanner - signal graphs, device tracking.",
+   "g": [
+    "ESP32",
+    "WiFi",
+    "Scanner",
+    "C"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "326929.pw Mirror",
+   "d": "Full phishing site mirror - evidence for takedowns.",
+   "g": [
+    "Security",
+    "Phishing",
+    "Evidence"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "218/213 騙局複刻模擬器",
+   "d": "逐頁複刻真實非法賭博網站 218.com（永誠貴賓會）與 213.com（PG娛樂）的反詐教學模擬器 —— 假 Loading 跳轉、備用線路、門戶、遊戲大廳、客服話術、加密啟動頁、代理後台，全部按鈕只連本地模擬。附 10 課深度導覽、12 條黑話術語表、10 題測驗與完整調查檔案。",
+   "g": [
+    "Security",
+    "Anti-Scam",
+    "Phishing",
+    "Evidence"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Scam Mirror",
+   "d": "Automated phishing cloner - registrar takedown reports.",
+   "g": [
+    "Security",
+    "Scraping",
+    "Python"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacKing Browser",
+   "d": "Whitelist-only browser. PyObjC + WKWebView .app.",
+   "g": [
+    "macOS",
+    "WKWebView",
+    "PyObjC",
+    "Browser"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacBrowser",
+   "d": "Variant browser - category-based whitelist.",
+   "g": [
+    "macOS",
+    "Browser",
+    "PyObjC"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacNet",
+   "d": "Layered bypass. TLS-wrapped, multi-tunnel auto-fallback.",
+   "g": [
+    "Networking",
+    "Proxy",
+    "Python",
+    "Bypass"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Manufacturing Explorer",
+   "d": "200-method 3D manufacturing explorer. Three.js + Flask.",
+   "g": [
+    "Three.js",
+    "Flask",
+    "3D",
+    "G-code"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacCombo",
+   "d": "Multi-app .pkg - user selects apps.",
+   "g": [
+    "macOS",
+    "pkgbuild",
+    "Installer"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Macro Typer",
+   "d": "Types text char-by-char - bypasses Google Docs history.",
+   "g": [
+    "Python",
+    "pyautogui",
+    "Tkinter",
+    "macOS"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Godzilla AI Chat",
+   "d": "Godzilla-themed AI roleplay. TUI + GUI. Native .app.",
+   "g": [
+    "AI",
+    "macOS",
+    "Chat",
+    "TUI"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Isaac AI",
+   "d": "AI chat assistant - native .app. Multi-personality, memory.",
+   "g": [
+    "AI",
+    "macOS",
+    "Chat",
+    "App"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacSuite",
+   "d": "Unified launcher - one dock icon for all Isaac apps.",
+   "g": [
+    "macOS",
+    "Launcher",
+    "PyObjC"
+   ],
+   "s": "wip"
+  },
+  {
+   "t": "IsaacAppLaunchers",
+   "d": "Quick-launch scripts for the Isaac ecosystem.",
+   "g": [
+    "macOS",
+    "Scripting",
+    "Automation"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacOS",
+   "d": "Custom OS concept - bootable with all Isaac tools.",
+   "g": [
+    "OS",
+    "Concept",
+    "System Design"
+   ],
+   "s": "draft"
+  },
+  {
+   "t": "IsaacSystem-All",
+   "d": "Monolithic tool - all Isaac apps in one binary.",
+   "g": [
+    "System",
+    "Unified",
+    "Meta-project"
+   ],
+   "s": "draft"
+  },
+  {
+   "t": "Laser Cutting Simulator",
+   "d": "Browser laser simulator - 9+ versions. G-code export.",
+   "g": [
+    "React",
+    "DXF",
+    "Simulation",
+    "Web App"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Library Kiosk",
+   "d": "Locked-down public-library kiosk sim — ticket/HKID auth, guest browsers, session timer, data wipe on logout.",
+   "g": [
+    "Kiosk",
+    "HTML",
+    "JS",
+    "Auth"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IGCSE Tutor",
+   "d": "Interactive personal tutor for IGCSE revision — quizzes and guided explanations.",
+   "g": [
+    "Education",
+    "HTML",
+    "JS",
+    "IGCSE"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "QuickCAM Pro",
+   "d": "Advanced milling CAM simulation — toolpaths, workholding, G-code preview.",
+   "g": [
+    "CAM",
+    "CNC",
+    "Simulation",
+    "HTML"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VR CNC Milling",
+   "d": "Denford-style VR CNC milling simulation for DT practice.",
+   "g": [
+    "CNC",
+    "VR",
+    "Simulation",
+    "DT"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "ISLE Dashboard",
+   "d": "Personal dashboard (ISLE) — widgets, links and shortcuts in one page.",
+   "g": [
+    "Dashboard",
+    "HTML",
+    "Widgets"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Gateway Dashboard",
+   "d": "Gateway start-page dashboard with quick links and tools.",
+   "g": [
+    "Dashboard",
+    "HTML",
+    "Start page"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Cemini Workspace",
+   "d": "Cemini workspace web app — notes and task interface.",
+   "g": [
+    "Web App",
+    "HTML",
+    "Workspace"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "326929.pw Scam Flow Replica",
+   "d": "Step-by-step replica of the 326929.pw scam flow (Chinese) for evidence and education.",
+   "g": [
+    "Security",
+    "Phishing",
+    "Evidence"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "SF Express Scam Evidence Bundle",
+   "d": "Complete evidence bundle for an SF Express scam — timeline, screenshots, contacts.",
+   "g": [
+    "Security",
+    "Scam",
+    "Evidence"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "CC Chat Admin",
+   "d": "Scam chat admin panel reconstruction for takedown research.",
+   "g": [
+    "Security",
+    "Scam",
+    "Research"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "CMail",
+   "d": "Full-stack email client (Node.js + Google OAuth) — server + web UI.",
+   "g": [
+    "Full-stack",
+    "Node.js",
+    "OAuth",
+    "Email"
+   ],
+   "s": "wip"
+  },
+  {
+   "t": "OS Kernel (from scratch)",
+   "d": "x86 OS kernel from scratch — bootloader, kernel, lib.",
+   "g": [
+    "OS",
+    "x86",
+    "Assembly",
+    "C"
+   ],
+   "s": "draft"
+  },
+  {
+   "t": "CNC Drill Box",
+   "d": "CNC drill bit storage box (v1–v3). By Man Cheuk (Ronin).",
+   "g": [
+    "CNC",
+    "Storage",
+    "Man Cheuk",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Canvas",
+   "d": "F1 canvas experiment.",
+   "g": [
+    "F1",
+    "Canvas",
+    "Draft"
+   ],
+   "s": "draft"
+  },
+  {
+   "t": "IsaacNet Browser",
+   "d": "Browser frontend for the IsaacNet proxy.",
+   "g": [
+    "Networking",
+    "Browser",
+    "Proxy"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "School Shield",
+   "d": "Network shield — toggles school-filter DNS blocking.",
+   "g": [
+    "Networking",
+    "DNS",
+    "Bypass"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Red Star Browser",
+   "d": "Red Star browser app (macOS).",
+   "g": [
+    "macOS",
+    "Browser",
+    "App"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Y10 IGCSE Launcher",
+   "d": "Launcher that opens the IGCSE study guide.",
+   "g": [
+    "macOS",
+    "Launcher",
+    "IGCSE"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Y10 IGCSE OTP Generator",
+   "d": "One-time-password generator for IGCSE access.",
+   "g": [
+    "Security",
+    "OTP",
+    "IGCSE"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "WiFi Toggle",
+   "d": "One-click WiFi on/off toggle.",
+   "g": [
+    "macOS",
+    "WiFi",
+    "Automation"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacMac File Portal",
+   "d": "Password-protected remote file portal — browse & download entire computer files from any device. Flask + Cloudflare Tunnel.",
+   "g": [
+    "Flask",
+    "Python",
+    "File Server",
+    "Cloudflare",
+    "macOS"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "DNS Server",
+   "d": "Custom recursive DNS server — LAN devices set DNS to this IP. Forwards to Cloudflare, caches, live dashboard, ad-blocking.",
+   "g": [
+    "DNS",
+    "Python",
+    "Networking",
+    "Server"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacNAS",
+   "d": "Password-protected personal cloud — browse, upload, download files from ~/NAS/ from any device. FastAPI + LaunchAgent + SSH tunnel.",
+   "g": [
+    "FastAPI",
+    "Python",
+    "NAS",
+    "Cloud",
+    "macOS"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IsaacSlicer",
+   "d": "Multi-technology 3D printing slicer — 14 technologies (FDM/SLA/SLS/MJF/DMLS/PolyJet/CLIP/EBM/LOM/FGF), Bambu Lab MQTT connectivity, PyQt6 + OpenGL 3D viewer, splash screen, modern sidebar UI. macOS .app bundle.",
+   "g": [
+    "PyQt6",
+    "OpenGL",
+    "3D Printing",
+    "macOS .app",
+    "Bambu Lab",
+    "Slicer"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "3D Model Upload",
+   "d": "Public upload portal — send STL/DXF/STEP files for fabrication. Drag-drop, 50+ file types, 10 tech options, bot verification, emails to stlfilereceiver@gmail.com.",
+   "g": [
+    "Web App",
+    "3D Models",
+    "Upload",
+    "Fabrication",
+    "HTML"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Kinetic Industries",
+   "d": "Enterprise maker studio orchestration terminal — 4 toolheads (Cricut, Bambu P2S, Weedo, Daja A6), live telemetry, inventory, bookings, wallet, analytics, knowledge base, admin panel, dark/light theme.",
+   "g": [
+    "HTML",
+    "Dashboard",
+    "Maker",
+    "Terminal",
+    "3D Printing",
+    "Laser"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Bearing Reference",
+   "d": "Interactive bearing reference — 22 bearing types with cutaway diagrams, live ISO 15 code decoder, build-a-code tool, 67 real dimension tables, L10 life calculator, ISO 286 fit guide, failure modes & quiz.",
+   "g": [
+    "DT",
+    "Engineering",
+    "Interactive",
+    "HTML"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Drill Bits Guide",
+   "d": "Interactive DT workshop guide — 22 drill bit types with labelled anatomy diagrams, RPM/pilot/tap-drill calculators, 22-question quiz, troubleshooting, sharpening, machines and glossary. Single-file HTML.",
+   "g": [
+    "DT",
+    "HTML",
+    "Interactive",
+    "Education",
+    "Workshop"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "GCSE Home",
+   "d": "Rebuilt copy of the school's Toddle GCSE Home dashboard — My Classes (9), assignments & deadlines, events calendar, and full Sentral snapshot modules: weekly timetable grid, attendance record, newsfeed, engagement, sports fixtures & activities. Data snapshot Sept 2026. Single-file HTML, light theme.",
+   "g": [
+    "Dashboard",
+    "School",
+    "GCSE",
+    "HTML",
+    "Education"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Casio 2048 (fx-CG50)",
+   "d": "2048 sliding-tile puzzle compiled as a native .g3a add-in for the Casio fx-CG50 graphing calculator.",
+   "g": [
+    "Casio",
+    "Calculator",
+    "Game"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Cookie Clicker (Casio)",
+   "d": "Incremental cookie-baking idler compiled as a .g3a add-in for Casio PRIZM / fx-CG50 calculators.",
+   "g": [
+    "Casio",
+    "Calculator",
+    "Game"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Flappy Bird (Casio)",
+   "d": "Flappy Bird recreated as a .g3a add-in with a colour screen on the Casio fx-CG50.",
+   "g": [
+    "Casio",
+    "Calculator",
+    "Game"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Dino Game (Casio)",
+   "d": "The offline Chrome dino-runner recreated as a native .g3a add-in for the fx-CG50.",
+   "g": [
+    "Casio",
+    "Calculator",
+    "Game"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Snake (Casio fx-CG50)",
+   "d": "Classic Snake compiled as a .g3a add-in for the Casio fx-CG50 graphing calculator.",
+   "g": [
+    "Casio",
+    "Calculator",
+    "Game"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Autopilot (VEXcode Python)",
+   "d": "Autopilot robot program written in VEXcode IQ Python - motors, sensors and driving logic.",
+   "g": [
+    "VEX",
+    "IQ",
+    "Python",
+    "Code"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Casio fx-CG50 Add-ins Backup",
+   "d": "Backup pack of Isaac's Casio add-ins, plus the fx-CG50 G90 firmware update zip.",
+   "g": [
+    "Casio",
+    "Calculator",
+    "Backup"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Flappy Bird (Python)",
+   "d": "Flappy Bird written in Python (fx-CG50 Python-capable workflow) - the Python twin of the g3a version.",
+   "g": [
+    "Casio",
+    "Calculator",
+    "Python",
+    "Game"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Hong Kong Observatory (Parody)",
+   "d": "Deadpan comedy parody of the Hong Kong Observatory homepage - the real HKO template, logo and blue palette, filled with absurd official weather warnings (Typhoon Signal No. 11, Very Mild Weather Warning, Frost Warning for your freezer). Clearly labelled fictional.",
+   "g": [
+    "HTML",
+    "Parody",
+    "Comedy",
+    "Weather"
+   ],
+   "s": "done"
+  }
+ ],
+ "hw": [
+  {
+   "t": "Auto-Clamping Vise",
+   "d": "Arduino Nano + NEMA 17 + ACS712 sensor. 3D printed. ~$32.",
+   "g": [
+    "Arduino",
+    "Stepper",
+    "3D Printed",
+    "Current Sense"
+   ],
+   "s": "wip"
+  },
+  {
+   "t": "Clip-On Thermometer",
+   "d": "ESP32-C3 hot wire cutter temp sensor. MAX6675 K-type probe + OLED + WiFi dashboard.",
+   "g": [
+    "ESP32-C3",
+    "Sensor",
+    "PlatformIO",
+    "MAX6675",
+    "OLED",
+    "WiFi"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Optical Center Punch",
+   "d": "DIY $10 punch vs $30-60 commercial. 3D printed + lens.",
+   "g": [
+    "3D Printed",
+    "Precision",
+    "Optical",
+    "Tool"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Micro RC Car",
+   "d": "1/64-1/32 scale high-speed. No-solder Dupont build.",
+   "g": [
+    "RC",
+    "Micro",
+    "No-solder",
+    "Speed"
+   ],
+   "s": "wip"
+  },
+  {
+   "t": "BLE Scanner",
+   "d": "ESP32 BLE device scanner - detect, log, dashboard.",
+   "g": [
+    "ESP32",
+    "BLE",
+    "Scanner",
+    "IoT"
+   ],
+   "s": "wip"
+  },
+  {
+   "t": "Harry Potter AI Diary",
+   "d": "ESP32-C3 Tom Riddle diary - makes its own WiFi AP with a captive portal, answers in-character through an AI API, OLED + typewriter effect.",
+   "g": [
+    "ESP32",
+    "IoT",
+    "AI",
+    "Harry Potter"
+   ],
+   "s": "done"
+  }
+ ],
+ "f3d": [
+  {
+   "t": "Robot Arm (3D Print)",
+   "d": "6-axis robot arm STL models — modern body, legs, arms, and head. 3D printed hobby project.",
+   "g": [
+    "3D Print",
+    "STL",
+    "Robot"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Doraemon 3D Prints",
+   "d": "Doraemon (哆啦A梦) 3D printable STL models — 2 multi-part assemblies.",
+   "g": [
+    "3D Print",
+    "STL",
+    "Hobby"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Model Block Jig",
+   "d": "Precision CNC jig. 6 versions, 15+ STL components.",
+   "g": [
+    "F1 In Schools",
+    "CNC",
+    "Jig",
+    "Precision"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net",
+   "d": "46 DXF versions + 9 measured + 7 re-measured.",
+   "g": [
+    "F1 In Schools",
+    "Laser Cut",
+    "DXF",
+    "46 Versions"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Engine Net",
+   "d": "Laser-cut engine housing net - optimised.",
+   "g": [
+    "F1 In Schools",
+    "Engine",
+    "DXF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Body Net",
+   "d": "Laser-cut car body shell net - axle holes corrected.",
+   "g": [
+    "F1 In Schools",
+    "Body",
+    "DXF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Halo 2025 + SR Logo",
+   "d": "4-stage: helmet - halo - spigot - drilling jig.",
+   "g": [
+    "F1 In Schools",
+    "Safety",
+    "Halo",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Self-Modified Parts",
+   "d": "Axle bushes V2-V4, bearing holders, wings, tether.",
+   "g": [
+    "F1 In Schools",
+    "Modified",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Chassis",
+   "d": "Complete F1 chassis - aero body, competition spec.",
+   "g": [
+    "F1 In Schools",
+    "Chassis",
+    "Aero"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Box Inserts",
+   "d": "34 DXF iterations to perfect. Laser-cut acrylic organizer.",
+   "g": [
+    "VEX",
+    "Organization",
+    "34 Versions"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "BravoProdigy CNC Bit Case",
+   "d": "Parametric CNC bit storage. Calibrated.",
+   "g": [
+    "CNC",
+    "Storage",
+    "Parametric"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Drill Bit Box",
+   "d": "Friction-fit bit storage. Snap lid. Labeled.",
+   "g": [
+    "Storage",
+    "Organization",
+    "Tools"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "CNC Mill Tool Head Box",
+   "d": "Single to dual slot. Improved latch.",
+   "g": [
+    "CNC",
+    "Storage"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Hex Drill Adapter",
+   "d": "Magnetic quick-change. V2-V4 magnet + concentricity.",
+   "g": [
+    "Tools",
+    "Magnetic",
+    "Adapter"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "80 Vise Jaw",
+   "d": "Magnetic jaw - test + final. Press-fit magnet.",
+   "g": [
+    "Vise",
+    "Magnetic",
+    "Workshop"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "USB Dust Cover",
+   "d": "Protective USB cover. V2 tighter fit + grip.",
+   "g": [
+    "USB",
+    "Protection"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Type-C to USB Adapter",
+   "d": "Custom adapter housing. V2 snap-fit.",
+   "g": [
+    "USB",
+    "Adapter",
+    "Type-C"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "1205 Bearing Plug",
+   "d": "Standard and tight-fit variants.",
+   "g": [
+    "Bearings",
+    "Plug"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Inner Hex Screws",
+   "d": "M6 and M8 inner hex screw designs.",
+   "g": [
+    "Screws",
+    "Hex",
+    "Fasteners"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Big Bowl Clicker",
+   "d": "Tactile mechanism. V3 sharper click.",
+   "g": [
+    "Mechanism",
+    "Clicker"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Rocket Flour Sifter",
+   "d": "5 iterations. Recovered after crash.",
+   "g": [
+    "Kitchen",
+    "Mechanism",
+    "Rocket"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Yin Mechanism",
+   "d": "Compliant yin-yang - 4.9 MB. Mechanical art.",
+   "g": [
+    "Compliant",
+    "Mechanism",
+    "Art"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Knurl Bearing",
+   "d": "Heaviest at 16.7 MB. Knurled raceways.",
+   "g": [
+    "Bearings",
+    "Knurling",
+    "Complex"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Acrylic Box",
+   "d": "V1-V3: vents, cutouts, standoffs.",
+   "g": [
+    "VEX",
+    "Enclosure",
+    "Acrylic"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Storage Box",
+   "d": "3D-printed: IQ BIN + Lid + Tray.",
+   "g": [
+    "3D Print",
+    "VEX",
+    "Storage"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX PIN TWEEZER V5",
+   "d": "Specialized VEX pin tool.",
+   "g": [
+    "VEX",
+    "Tool"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX EDR Box Inserts",
+   "d": "Laser-cut inserts for VEX EDR metal kit.",
+   "g": [
+    "VEX EDR",
+    "AI",
+    "DXF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Masterball",
+   "d": "Pokemon Masterball replica. 2-part printable.",
+   "g": [
+    "Pokemon",
+    "Replica"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Halo Helmet V2",
+   "d": "Wearable. V2 dowels for assembly.",
+   "g": [
+    "Halo",
+    "Helmet",
+    "Cosplay"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Family Keychain Set",
+   "d": "Laser-cut keychains - Arcadi + individual.",
+   "g": [
+    "Keychain",
+    "Laser",
+    "DXF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Dura Block",
+   "d": "Sanding block replica. Text + plain.",
+   "g": [
+    "Sanding",
+    "Tool"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Isaac Chan Atom",
+   "d": "Laser engraving - name with orbital rings.",
+   "g": [
+    "Laser",
+    "DXF",
+    "Personal"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Chill Out Sign",
+   "d": "Laser-cut cardboard sign.",
+   "g": [
+    "Laser",
+    "DXF",
+    "Sign"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Music Sheet Holder",
+   "d": "100% scale - 6 iterations.",
+   "g": [
+    "Music",
+    "Stand",
+    "DXF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Honeycomb Laser Bed Clip",
+   "d": "Clip for honeycomb laser bed.",
+   "g": [
+    "Laser",
+    "Clip",
+    "DXF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "NEXAR F1 Car",
+   "d": "F1 in Schools car design — NEXAR (Fusion 360).",
+   "g": [
+    "F1 In Schools",
+    "Fusion 360",
+    "Car"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 In Schools Car 10",
+   "d": "F1 car v10 — final Fusion 360 + STEP export.",
+   "g": [
+    "F1 In Schools",
+    "Fusion 360",
+    "Car"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Endeavour F1 Assembly",
+   "d": "Endeavour F1 car full assembly (STEP).",
+   "g": [
+    "F1 In Schools",
+    "Fusion 360",
+    "Assembly"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Pit Display 2",
+   "d": "F1 pit display design (v2).",
+   "g": [
+    "F1 In Schools",
+    "Fusion 360",
+    "Pit Display"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Pit Display Radtek",
+   "d": "F1 pit display — Radtek team.",
+   "g": [
+    "F1 In Schools",
+    "Fusion 360",
+    "Pit Display"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Bearing 625 Model",
+   "d": "625 bearing (5×16×5mm) parametric model.",
+   "g": [
+    "Fusion 360",
+    "Bearing",
+    "Parametric"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 No-Go Zone",
+   "d": "F1 no-go-zone platform (entry class).",
+   "g": [
+    "F1 In Schools",
+    "Fusion 360",
+    "Rules"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laptop Stand",
+   "d": "Laptop stand — Fusion 360 design.",
+   "g": [
+    "Fusion 360",
+    "Stand",
+    "Laptop"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle Bush",
+   "d": "F1 axle bush (v2–v4).",
+   "g": [
+    "F1 In Schools",
+    "Axle",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Helmet with Dowel",
+   "d": "F1 helmet with dowel assembly pins.",
+   "g": [
+    "F1 In Schools",
+    "Helmet",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Halo 2025 Spigot + SR Logo",
+   "d": "Halo spigot with SR logo (6mm hole).",
+   "g": [
+    "F1 In Schools",
+    "Halo",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Wheel",
+   "d": "F1 in Schools wheel.",
+   "g": [
+    "F1 In Schools",
+    "Wheel",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "REA F1 Tether Guide",
+   "d": "REA F1 racing tether guide.",
+   "g": [
+    "F1 In Schools",
+    "Tether",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "REA F1 Wide Wheel",
+   "d": "REA F1 racing wide wheel.",
+   "g": [
+    "F1 In Schools",
+    "Wheel",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 CO2 Canister",
+   "d": "F1 in Schools CO2 canister.",
+   "g": [
+    "F1 In Schools",
+    "CO2",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Team AIB Final Car Assembly",
+   "d": "F1 final car assembly (Team AIB).",
+   "g": [
+    "F1 In Schools",
+    "Assembly",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Test Car",
+   "d": "F1 test car print.",
+   "g": [
+    "F1 In Schools",
+    "Car",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Bell Helmet with Dowel",
+   "d": "Bell helmet with dowel (pro class).",
+   "g": [
+    "F1 In Schools",
+    "Helmet",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Grand Gabarit (Jig)",
+   "d": "Grand gabarit F1 measurement jig.",
+   "g": [
+    "F1 In Schools",
+    "Jig",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Power Unit",
+   "d": "F1 power unit (motor housing).",
+   "g": [
+    "F1 In Schools",
+    "Power Unit",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Helmet (2025)",
+   "d": "F1 helmet with 6mm spigot.",
+   "g": [
+    "F1 In Schools",
+    "Helmet",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "608 Bearing Plug",
+   "d": "Plug for 608 bearings (tight fit).",
+   "g": [
+    "3D Print",
+    "Bearings",
+    "Plug"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "608 Bearing Plug (standard)",
+   "d": "Standard-fit 608 bearing plug.",
+   "g": [
+    "3D Print",
+    "Bearings",
+    "Plug"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Flat Blade Adapter",
+   "d": "Flat-blade screwdriver bit adapter.",
+   "g": [
+    "3D Print",
+    "Tools",
+    "Adapter"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Inner Octagon Screw",
+   "d": "Inner-octagon screw.",
+   "g": [
+    "3D Print",
+    "Fasteners",
+    "Screw"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Octagon Allen Key",
+   "d": "Octagon allen key.",
+   "g": [
+    "3D Print",
+    "Tools",
+    "Key"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Drill Bit (3D print)",
+   "d": "3D-printed drill bit model.",
+   "g": [
+    "3D Print",
+    "Tools",
+    "Drill"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Screw Sizing Gauge",
+   "d": "Any-size screw sizing gauge.",
+   "g": [
+    "3D Print",
+    "Tools",
+    "Gauge"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Yin Mechanism (full size)",
+   "d": "Compliant yin-yang, full-size variant.",
+   "g": [
+    "3D Print",
+    "Compliant",
+    "Mechanism"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "3mm Hex Adapter",
+   "d": "3mm hex drill adapter (v3).",
+   "g": [
+    "3D Print",
+    "Tools",
+    "Adapter"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Hex Adapter V2",
+   "d": "Hex adapter v2 (magnet pause).",
+   "g": [
+    "3D Print",
+    "Tools",
+    "Adapter"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "USB Dust Cover (v1)",
+   "d": "USB dust cover v1.",
+   "g": [
+    "3D Print",
+    "USB",
+    "Cover"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Watch Holder",
+   "d": "3D-printed watch display holder.",
+   "g": [
+    "3D Print",
+    "Holder",
+    "Watch"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Sphere Mould",
+   "d": "3D-printed spherical mould.",
+   "g": [
+    "3D Print",
+    "Mould",
+    "Sphere"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Impossible Passthrough",
+   "d": "Impossible passthrough fidget (Fede).",
+   "g": [
+    "3D Print",
+    "Fidget",
+    "Print-in-place"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Paper Roll Holder",
+   "d": "Paper roll holder (卷纸架).",
+   "g": [
+    "3D Print",
+    "Holder",
+    "Household"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laser Hot Nozzle",
+   "d": "Hot nozzle for 20W laser.",
+   "g": [
+    "3D Print",
+    "Laser",
+    "Nozzle"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laser Head Washer",
+   "d": "Washer for 20W laser head.",
+   "g": [
+    "3D Print",
+    "Laser",
+    "Washer"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Cube Holder",
+   "d": "3D-printed cube holder.",
+   "g": [
+    "3D Print",
+    "Holder",
+    "Cube"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Pendant",
+   "d": "3D-printed pendant.",
+   "g": [
+    "3D Print",
+    "Pendant",
+    "Jewellery"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Riley Racket",
+   "d": "Riley racket (65mm RED).",
+   "g": [
+    "3D Print",
+    "Racket",
+    "RED"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Statue (Draft)",
+   "d": "3D-printed statue draft.",
+   "g": [
+    "3D Print",
+    "Statue",
+    "Sculpture"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "20W Laser (5th try)",
+   "d": "20W laser head iteration.",
+   "g": [
+    "3D Print",
+    "Laser",
+    "20W"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "6 Lock",
+   "d": "3D-printed 6-lock mechanism.",
+   "g": [
+    "3D Print",
+    "Lock",
+    "Mechanism"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Hex Adapter V4",
+   "d": "Hex adapter v4 (pause print).",
+   "g": [
+    "3D Print",
+    "Variant"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Big Bowl Clicker V4",
+   "d": "Big bowl clicker v4 base.",
+   "g": [
+    "3D Print",
+    "Variant"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "6-Axis Robot Arm (TicStep)",
+   "d": "Desktop 6-axis robotic arm - TicStep model with STEP drawings and manual.",
+   "g": [
+    "Robotics",
+    "6-Axis",
+    "STEP",
+    "CNC"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "5-Axis CNC Concept (RAPIMA RMX-15)",
+   "d": "Desktop 5-axis CNC machining concept model - RAPIMA RMX-15.",
+   "g": [
+    "CNC",
+    "5-Axis",
+    "STEP",
+    "Machining"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Gear Mechanism Model Sets",
+   "d": "Printable gear mechanism education sets (機構模型プラスセット 1-8) + Gear 40 set.",
+   "g": [
+    "Gears",
+    "Mechanisms",
+    "3D Print",
+    "Education"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Parts Library (STEP)",
+   "d": "VEX IQ structural parts as STEP - beams, plates, angle beams, anchors.",
+   "g": [
+    "VEX",
+    "STEP",
+    "Parts",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "3D Chess Set",
+   "d": "Full 3D chess set + board - OBJ/STL/FBX/C4D sources.",
+   "g": [
+    "Chess",
+    "3D Print",
+    "OBJ",
+    "Board Game"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "3D Print Hobby Collection",
+   "d": "Fun 3D prints - Pokemon, Doraemon, holiday models and desk toys.",
+   "g": [
+    "3D Print",
+    "Pokemon",
+    "Hobby",
+    "STL"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Big Mill Box",
+   "d": "Larger CNC mill tool-head box - multi-slot storage.",
+   "g": [
+    "CNC",
+    "Storage",
+    "Fusion 360"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Egg Yolk Mixer",
+   "d": "Kitchen gadget - egg yolk mixer print.",
+   "g": [
+    "Kitchen",
+    "3D Print",
+    "Fusion 360"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Flour Sifter",
+   "d": "Flour sifter - base design before rocket variant.",
+   "g": [
+    "Kitchen",
+    "3D Print",
+    "Fusion 360"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Rocket Flour Sifter V6",
+   "d": "Rocket-shaped flour sifter - V6 (+ recovered copy).",
+   "g": [
+    "Kitchen",
+    "3D Print",
+    "V6",
+    "Fusion 360"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Isaac Separator",
+   "d": "Separator part - Isaac's design.",
+   "g": [
+    "Fusion 360",
+    "Part",
+    "Utility"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Isaac & Damian Wheel",
+   "d": "F1 wheel designed with Damian.",
+   "g": [
+    "F1",
+    "Wheel",
+    "Fusion 360",
+    "Collab"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laptop Stand (Fusion)",
+   "d": "Laptop stand - Fusion 360 design.",
+   "g": [
+    "Stand",
+    "Fusion 360",
+    "Desktop"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Polar Bear Light Design V6",
+   "d": "Polar bear night-light design - V6.",
+   "g": [
+    "Light",
+    "3D Print",
+    "V6",
+    "Fusion 360"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Pin Tweezer V5",
+   "d": "VEX pin tweezer tool - V5.",
+   "g": [
+    "VEX",
+    "Tool",
+    "V5",
+    "Fusion 360"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Inner Hex M6 Screw",
+   "d": "M6 inner-hex socket screw model.",
+   "g": [
+    "Fastener",
+    "M6",
+    "Fusion 360"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Inner Hex M8 Screw",
+   "d": "M8 inner-hex socket screw model.",
+   "g": [
+    "Fastener",
+    "M8",
+    "Fusion 360"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Pewter Me Mould (Y7)",
+   "d": "Year 7 pewter-casting mould design - laser-cut MDF mould for molten pewter.",
+   "g": [
+    "Pewter",
+    "Mould",
+    "DXF",
+    "DT",
+    "Y7"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Acrylic Keyring (Y7)",
+   "d": "Year 7 laser-cut acrylic keyring designs.",
+   "g": [
+    "Acrylic",
+    "Laser",
+    "DXF",
+    "Keyring",
+    "Y7"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Vinyl Sticker Design (Y7)",
+   "d": "Year 7 vinyl-cut sticker designs.",
+   "g": [
+    "Vinyl",
+    "Sticker",
+    "DXF",
+    "Y7"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Organise Me Insert (Y7)",
+   "d": "Year 7 CNC router 'Organise Me' insert design.",
+   "g": [
+    "CNC",
+    "Insert",
+    "DXF",
+    "Y7"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v2",
+   "d": "Laser-cut F1 car body net - iteration 2 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v3",
+   "d": "Laser-cut F1 car body net - iteration 3 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v4",
+   "d": "Laser-cut F1 car body net - iteration 4 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v5",
+   "d": "Laser-cut F1 car body net - iteration 5 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v6",
+   "d": "Laser-cut F1 car body net - iteration 6 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v7",
+   "d": "Laser-cut F1 car body net - iteration 7 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v8",
+   "d": "Laser-cut F1 car body net - iteration 8 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v9",
+   "d": "Laser-cut F1 car body net - iteration 9 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v10",
+   "d": "Laser-cut F1 car body net - iteration 10 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v11",
+   "d": "Laser-cut F1 car body net - iteration 11 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v12",
+   "d": "Laser-cut F1 car body net - iteration 12 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v13",
+   "d": "Laser-cut F1 car body net - iteration 13 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v14",
+   "d": "Laser-cut F1 car body net - iteration 14 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v15",
+   "d": "Laser-cut F1 car body net - iteration 15 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v16",
+   "d": "Laser-cut F1 car body net - iteration 16 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v17",
+   "d": "Laser-cut F1 car body net - iteration 17 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v18",
+   "d": "Laser-cut F1 car body net - iteration 18 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v19",
+   "d": "Laser-cut F1 car body net - iteration 19 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v20",
+   "d": "Laser-cut F1 car body net - iteration 20 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v21",
+   "d": "Laser-cut F1 car body net - iteration 21 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v22",
+   "d": "Laser-cut F1 car body net - iteration 22 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v23",
+   "d": "Laser-cut F1 car body net - iteration 23 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v24",
+   "d": "Laser-cut F1 car body net - iteration 24 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v25",
+   "d": "Laser-cut F1 car body net - iteration 25 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v26",
+   "d": "Laser-cut F1 car body net - iteration 26 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v27",
+   "d": "Laser-cut F1 car body net - iteration 27 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v28",
+   "d": "Laser-cut F1 car body net - iteration 28 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v29",
+   "d": "Laser-cut F1 car body net - iteration 29 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v30",
+   "d": "Laser-cut F1 car body net - iteration 30 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v31",
+   "d": "Laser-cut F1 car body net - iteration 31 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v32",
+   "d": "Laser-cut F1 car body net - iteration 32 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v33",
+   "d": "Laser-cut F1 car body net - iteration 33 of 46. (closed variant also exists)",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v34",
+   "d": "Laser-cut F1 car body net - iteration 34 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v35",
+   "d": "Laser-cut F1 car body net - iteration 35 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v36",
+   "d": "Laser-cut F1 car body net - iteration 36 of 46. (needs jig block hole)",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v37",
+   "d": "Laser-cut F1 car body net - iteration 37 of 46. (needs jig hole)",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v38",
+   "d": "Laser-cut F1 car body net - iteration 38 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v39",
+   "d": "Laser-cut F1 car body net - iteration 39 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v40",
+   "d": "Laser-cut F1 car body net - iteration 40 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v41",
+   "d": "Laser-cut F1 car body net - iteration 41 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v42",
+   "d": "Laser-cut F1 car body net - iteration 42 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v43",
+   "d": "Laser-cut F1 car body net - iteration 43 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v44",
+   "d": "Laser-cut F1 car body net - iteration 44 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v45",
+   "d": "Laser-cut F1 car body net - iteration 45 of 46. (final)",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v46",
+   "d": "Laser-cut F1 car body net - iteration 46 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net v1",
+   "d": "First car body net draft - iteration 1 of 46.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net 4mm v1",
+   "d": "F1 body net built to 4mm material - series v1 of 8.",
+   "g": [
+    "F1",
+    "DXF",
+    "4mm",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net 4mm v2",
+   "d": "F1 body net built to 4mm material - series v2 of 8.",
+   "g": [
+    "F1",
+    "DXF",
+    "4mm",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net 4mm v3",
+   "d": "F1 body net built to 4mm material - series v3 of 8.",
+   "g": [
+    "F1",
+    "DXF",
+    "4mm",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net 4mm v4",
+   "d": "F1 body net built to 4mm material - series v4 of 8.",
+   "g": [
+    "F1",
+    "DXF",
+    "4mm",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net 4mm v5",
+   "d": "F1 body net built to 4mm material - series v5 of 8.",
+   "g": [
+    "F1",
+    "DXF",
+    "4mm",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net 4mm v6",
+   "d": "F1 body net built to 4mm material - series v6 of 8.",
+   "g": [
+    "F1",
+    "DXF",
+    "4mm",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net 4mm v7",
+   "d": "F1 body net built to 4mm material - series v7 of 8.",
+   "g": [
+    "F1",
+    "DXF",
+    "4mm",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net 4mm v8",
+   "d": "F1 body net built to 4mm material - series v8 of 8.",
+   "g": [
+    "F1",
+    "DXF",
+    "4mm",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Net - measured v1",
+   "d": "Measured-from-car net template v1.",
+   "g": [
+    "F1",
+    "DXF",
+    "Measured"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Net - measured CAD v2",
+   "d": "CAD measured against the real car build, v2.",
+   "g": [
+    "F1",
+    "DXF",
+    "Measured"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Net - re-measured CAD (holes fixed)",
+   "d": "Re-measured CAD with corrected axle-hole sizes.",
+   "g": [
+    "F1",
+    "DXF",
+    "Measured"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Net - correct-size measured",
+   "d": "Measured CAD with the properly-sized cutouts.",
+   "g": [
+    "F1",
+    "DXF",
+    "Measured"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Net - re-measured (correct axle bush)",
+   "d": "Re-measured net with the corrected axle-bush hole.",
+   "g": [
+    "F1",
+    "DXF",
+    "Measured"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Engine Net - single v2",
+   "d": "Engine net variant with a single cutout, v2.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Engine Net - single axle hole",
+   "d": "Engine housing net with one axle hole.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net - with tether holes",
+   "d": "Final car net including tether-line holes.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Net - nested CO2 cut",
+   "d": "Nested net layout for the CO2 canister cut-out.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig v1",
+   "d": "First-generation jig - Left/Right jig halves, 5 iterations each.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig v2",
+   "d": "Second generation - split Base + Insert design.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig v3",
+   "d": "Third generation - refined base and insert geometry.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig v4",
+   "d": "Fourth generation - simplified 4-part jig.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig v5 (circular)",
+   "d": "Fifth generation - circular profile jig.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig - BravoProdigy v1",
+   "d": "BravoProdigy-edition jig v1 (3MF project).",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig - BravoProdigy v3 (click-fit bearing)",
+   "d": "BravoProdigy v3 with click-fit bearing seat.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig - BravoProdigy v4 (separate stick)",
+   "d": "BravoProdigy v4 - separate stick assembly.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig - BravoProdigy v5",
+   "d": "BravoProdigy v5 modular halves.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig - BravoProdigy v6",
+   "d": "BravoProdigy v6 - adds plug parts.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Model Block Jig - BravoProdigy v7",
+   "d": "BravoProdigy v7 - latest refinement.",
+   "g": [
+    "F1",
+    "Jig",
+    "CNC",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - measured CAD",
+   "d": "First measured CAD draft of the acrylic box insert.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - measured CAD 2.0",
+   "d": "Second measurement pass - tighter geometry.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - measured CAD 3.0",
+   "d": "Third measurement pass.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - 30% scaled",
+   "d": "Insert scaled to 30% box size.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - 40% of 30%",
+   "d": "40% layout derived from the 30% base.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - perfect",
+   "d": "The 'perfect' fit attempt - after many tries.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - perfect 2.0",
+   "d": "Perfect fit, revision 2 with fixes.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - finalised",
+   "d": "The finalised iteration - fits the box.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - finished",
+   "d": "Finished insert geometry ready for acrylic.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - 7mm rounded",
+   "d": "Corner treatment trial at 7mm radius.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Insert - 0.5 rounding",
+   "d": "Fine 0.5mm corner rounding pass.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Highrise Cube - original",
+   "d": "Master design of the Highrise competition cube, 2025-26 season.",
+   "g": [
+    "VEX",
+    "Highrise",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Highrise Cube - v2",
+   "d": "Second design iteration - refined geometry.",
+   "g": [
+    "VEX",
+    "Highrise",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Highrise Cube - v3 iteration",
+   "d": "Third iteration of the cube design.",
+   "g": [
+    "VEX",
+    "Highrise",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Highrise Cube - print job",
+   "d": "Final cube geometry with sliced gcode + pwmb print files.",
+   "g": [
+    "VEX",
+    "Highrise",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Highrise Cube - engraved text plate",
+   "d": "Laser DXF plate with cube text/logo engraving.",
+   "g": [
+    "VEX",
+    "Highrise",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Drone (Isaac design)",
+   "d": "Custom quadcopter drone frame designed in Fusion 360 - STL + 3MF print project.",
+   "g": [
+    "Drone",
+    "3D Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Bit Storage Box",
+   "d": "3D-printed CNC drill bit storage tray - sized holes keep bits standing upright in the workshop.",
+   "g": [
+    "CNC",
+    "3D Print",
+    "Workshop"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle 43 (2.55mm)",
+   "d": "43mm competition axle for 2.55mm wheel bore.",
+   "g": [
+    "F1",
+    "Print",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle 65 (2.55mm)",
+   "d": "65mm competition axle for 2.55mm wheel bore.",
+   "g": [
+    "F1",
+    "Print",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle Bush - metal axle",
+   "d": "Axle bush variant for metal axles.",
+   "g": [
+    "F1",
+    "Print",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle Bush - loft hole",
+   "d": "Axle bush with loft-shaped hole.",
+   "g": [
+    "F1",
+    "Print",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Wheel - 2.55 axle",
+   "d": "F1 wheel print for a 2.55mm axle.",
+   "g": [
+    "F1",
+    "Print",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Wheel - 3mm axle",
+   "d": "F1 wheel print for a 3mm axle.",
+   "g": [
+    "F1",
+    "Print",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle Bush 2.55 - original",
+   "d": "Original axle bush for 2.55 axle.",
+   "g": [
+    "F1",
+    "Print",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle Bush 2.55 - test",
+   "d": "Test-printed axle bush for 2.55 axle.",
+   "g": [
+    "F1",
+    "Print",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Tether Guide (Island print)",
+   "d": "Tether line guide print variant.",
+   "g": [
+    "F1",
+    "Print",
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Bearing Holder (print)",
+   "d": "CNC-machinable bearing holder part.",
+   "g": [
+    "F1",
+    "Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Ceramic Tether Line Guide",
+   "d": "Ceramic tether line guide - low friction.",
+   "g": [
+    "F1",
+    "Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Front Wing (print)",
+   "d": "Front wing part for the self-modified car.",
+   "g": [
+    "F1",
+    "Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Rear Wing (print)",
+   "d": "Rear wing part for the self-modified car.",
+   "g": [
+    "F1",
+    "Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Standard Car (self-modified)",
+   "d": "Standard F1 car body as printed.",
+   "g": [
+    "F1",
+    "Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Ready for Machining",
+   "d": "Car body prepped for CNC machining.",
+   "g": [
+    "F1",
+    "Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Halo Helmet (print)",
+   "d": "Halo + helmet combo for the car.",
+   "g": [
+    "F1",
+    "Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle Guide (STEP)",
+   "d": "STEP model of the axle guide.",
+   "g": [
+    "F1",
+    "Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle Chamfer (STEP)",
+   "d": "STEP model of the chamfered axle.",
+   "g": [
+    "F1",
+    "Print",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Keychain - Arcadi (connected v2)",
+   "d": "Arcadi keychain, connected-word style, v2.",
+   "g": [
+    "Keychain",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Keychain - Arcadi (no connect)",
+   "d": "Arcadi keychain, disconnected letters style.",
+   "g": [
+    "Keychain",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Keychain - Isaac",
+   "d": "Isaac's own name keychain - laser cut.",
+   "g": [
+    "Keychain",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Keychain - Ivan",
+   "d": "Ivan's name keychain - laser cut (SVG).",
+   "g": [
+    "Keychain",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car - Isaac & Damian",
+   "d": "F1 car model built together with Damian.",
+   "g": [
+    "F1",
+    "STL",
+    "Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car - 'ish' A",
+   "d": "Mid-iteration body shape ('ish' attempt A, STL).",
+   "g": [
+    "F1",
+    "STL",
+    "Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car - ish fixed (DXF)",
+   "d": "Laser-cut net of the fixed 'ish' body.",
+   "g": [
+    "F1",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car - OK ish",
+   "d": "An 'ok ish' body iteration.",
+   "g": [
+    "F1",
+    "STL",
+    "Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car - reprint 2",
+   "d": "Reprint of the F1 body, attempt 2.",
+   "g": [
+    "F1",
+    "STL",
+    "Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car - reprint 3",
+   "d": "Reprint of the F1 body, attempt 3.",
+   "g": [
+    "F1",
+    "STL",
+    "Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car - green body",
+   "d": "Green body variant of the F1 car.",
+   "g": [
+    "F1",
+    "STL",
+    "Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Chassis - grouped net",
+   "d": "Grouped F1 chassis laser-cut net.",
+   "g": [
+    "F1",
+    "DXF",
+    "Chassis"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Chassis - 2.0 net",
+   "d": "F1 chassis net version 2.0.",
+   "g": [
+    "F1",
+    "DXF",
+    "Chassis"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Front Wing - Damian",
+   "d": "Front wing designed with Damian.",
+   "g": [
+    "F1",
+    "STL",
+    "Wing"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Front Wing - Luke",
+   "d": "Front wing variant (Luke's version).",
+   "g": [
+    "F1",
+    "STL",
+    "Wing"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Axle Bush - 0.41mm tolerance",
+   "d": "Axle bush for 2.5 axle with 0.41mm tolerance - precision fit test.",
+   "g": [
+    "F1",
+    "STL",
+    "Axle"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Battery Car - offset optimised",
+   "d": "Battery-powered F1 car net with offset-optimised layout.",
+   "g": [
+    "F1",
+    "DXF",
+    "Battery"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Alice Laptop Stand (DXF)",
+   "d": "Laptop stand variant designed for Alice - final fixed DXF.",
+   "g": [
+    "Laptop Stand",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Gigantamax Snorlax",
+   "d": "Gigantamax Snorlax print - final-final body STL (sliced gcode also on file).",
+   "g": [
+    "3D Print",
+    "Pokemon",
+    "Hobby"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "X-Wing v5 (laser cut)",
+   "d": "Star Wars X-Wing laser-cut model, v5.",
+   "g": [
+    "DXF",
+    "Laser Cut",
+    "Star Wars"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Christmas Tree (laser cut)",
+   "d": "Laser-cut Christmas tree ornament/decoration.",
+   "g": [
+    "DXF",
+    "Laser Cut",
+    "Holiday"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Spinning Top",
+   "d": "3D-printed spinning top with alignment-tuned geometry.",
+   "g": [
+    "3D Print",
+    "Toy"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Toothpaste Squisher",
+   "d": "1mm-tolerance toothpaste squisher - get every last bit out.",
+   "g": [
+    "3D Print",
+    "Practical"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Egg Yolk Separator v2",
+   "d": "Second version of the egg yolk separator kitchen gadget.",
+   "g": [
+    "3D Print",
+    "Kitchen"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Paper Roll Holder v2",
+   "d": "Paper roll holder (卷纸架) second version - 3D printed.",
+   "g": [
+    "3D Print",
+    "Practical"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Ryan's Spinner",
+   "d": "Spinner fidget designed for Ryan - STL + DXF versions.",
+   "g": [
+    "3D Print",
+    "Fidget"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Raspberry Pi 4B Case",
+   "d": "Bottom half of a Raspberry Pi 4B protective case.",
+   "g": [
+    "3D Print",
+    "Raspberry Pi"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Buckle",
+   "d": "3D-printed belt buckle design.",
+   "g": [
+    "3D Print",
+    "Practical"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Keychain Base",
+   "d": "Blank keychain base - ready for engraving.",
+   "g": [
+    "3D Print",
+    "Keychain"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Keyholder (laser cut)",
+   "d": "Laser-cut keyholder design - final version.",
+   "g": [
+    "DXF",
+    "Laser Cut",
+    "Keyholder"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Charger Package",
+   "d": "3D-printed holder/package for a charger.",
+   "g": [
+    "3D Print",
+    "Practical"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Nametag",
+   "d": "3D-printed nametag.",
+   "g": [
+    "3D Print"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Honeycomb Clipper",
+   "d": "Clip for a honeycomb laser bed (clipper style).",
+   "g": [
+    "3D Print",
+    "Laser"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "PLA Trap",
+   "d": "Novelty PLA trap print.",
+   "g": [
+    "3D Print",
+    "Fun"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Drill v2 + v3",
+   "d": "Drill bit print iterations v2 (STL) and v3 (3MF).",
+   "g": [
+    "3D Print",
+    "Drill"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Lamp - 3mm plate",
+   "d": "Laser-cut lamp design, 3mm material plate.",
+   "g": [
+    "DXF",
+    "Laser Cut",
+    "Lamp"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Lamp - 6mm plate",
+   "d": "Laser-cut lamp design, 6mm material plate.",
+   "g": [
+    "DXF",
+    "Laser Cut",
+    "Lamp"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Spur Gear M1.25 Z100",
+   "d": "Spur gear DXF - module 1.25, 100 teeth (SPUR_M1.25).",
+   "g": [
+    "DXF",
+    "Gear",
+    "Engineering"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Involute Gear (DXF)",
+   "d": "Involute-profile gear laser-cut DXF.",
+   "g": [
+    "DXF",
+    "Gear",
+    "Engineering"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ 60T Gear (modified)",
+   "d": "Modified VEX IQ 60-tooth gear profile.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Gear"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Keychain Tag (from Koen)",
+   "d": "A keychain tag design received from Koen.",
+   "g": [
+    "Keychain",
+    "DXF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laser Bed Centre Finder",
+   "d": "Middle-point finder DXF for a 300x300 laser bed.",
+   "g": [
+    "DXF",
+    "Laser",
+    "Tool"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Music Sheet Holder - 0.7 variant",
+   "d": "0.7 scale variant of the music sheet holder.",
+   "g": [
+    "Music",
+    "DXF",
+    "Laser Cut"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Astronaut Badge Base",
+   "d": "Base for an astronaut badge print.",
+   "g": [
+    "3D Print",
+    "Badge"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Fidget Revolver (3MF)",
+   "d": "Revolver-style fidget remix print project (v3a).",
+   "g": [
+    "3D Print",
+    "Fidget"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Vortex Ball (3MF)",
+   "d": "Vortex ball print project.",
+   "g": [
+    "3D Print",
+    "Fun"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Speed Boat (3MF)",
+   "d": "Speed boat race print project (Bambu A1 settings).",
+   "g": [
+    "3D Print",
+    "Vehicle"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Sailboat (3MF)",
+   "d": "Sailboat print project (v2).",
+   "g": [
+    "3D Print",
+    "Vehicle"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Heartflexi (3MF)",
+   "d": "Flexible heart print - heartflexi.",
+   "g": [
+    "3D Print",
+    "Fun"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Brachiosaurus Cup Holder (3MF)",
+   "d": "Brachiosaurus-themed cup holder print.",
+   "g": [
+    "3D Print",
+    "Fun",
+    "Desk"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Cyclone Speed Car (3MF)",
+   "d": "飆风音速 - cyclone-speed car print project.",
+   "g": [
+    "3D Print",
+    "Car"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Blocks - Drive & Sensor Programs",
+   "d": "21 VEXcode IQ Blocks programs - drive training, turning, bumper/optical sensor control, gyro turns.",
+   "g": [
+    "VEX",
+    "Code",
+    "Blocks"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Boxford F1 Blank (QuickCAM)",
+   "d": "School Boxford CNC F1 blank - drawings, STL design, Rtype .des job files and model block.",
+   "g": [
+    "F1",
+    "Boxford",
+    "CNC",
+    "QuickCAM"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Boxford CO2 Car Manufacturing",
+   "d": "CO2 canister jig + spigot Boxford jobs and the full manufacturing guide for R-type CO2 cars.",
+   "g": [
+    "F1",
+    "Boxford",
+    "CNC",
+    "CO2"
+   ],
+   "s": "done"
+  }
+ ],
+ "des": [
+  {
+   "t": "Utilitarianism Guide",
+   "d": "School philosophy project — interactive utilitarianism ethics study guide.",
+   "g": [
+    "HTML",
+    "School",
+    "Philosophy"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Master Fusion Workbook",
+   "d": "Complete interactive Fusion 360 workbook — 14.6 MB self-contained HTML with tutorials, exercises, and reference.",
+   "g": [
+    "Fusion 360",
+    "Tutorial",
+    "Workbook",
+    "Interactive"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Design Portfolio",
+   "d": "Official F1 design portfolio - CAD, CFD. 5.5 MB.",
+   "g": [
+    "F1",
+    "Portfolio",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Enterprise Portfolio",
+   "d": "F1 business - branding, budget. 6.5 MB.",
+   "g": [
+    "F1",
+    "Business",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Verbal Presentation",
+   "d": "Nationals pitch. 3.9 MB.",
+   "g": [
+    "F1",
+    "Presentation",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 Car Renders",
+   "d": "Studio-quality 3D renders. 10 MB.",
+   "g": [
+    "F1",
+    "Renders",
+    "3D",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Kit Layout",
+   "d": "Parts organization poster. 3 MB.",
+   "g": [
+    "VEX",
+    "Poster",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Second Gen Poster",
+   "d": "A2 one-sheet robotics poster — VEX IQ 2nd-gen system: structure, gears &amp; ratios, Smart Motors, sensors, electronics, design &amp; build, VEXcode programming, drivetrains, glossary. ~3,100 words.",
+   "g": [
+    "VEX",
+    "Poster",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Universe",
+   "d": "436 VEX parts across all 8 platforms (IQ 2nd Gen, V5, GO, EXP, 123, AIM, CTE, AIR) - search, gear-ratio calculator, mechanisms, glossary, competitions, quiz, print-to-PDF poster.",
+   "g": [
+    "VEX",
+    "Reference",
+    "Interactive",
+    "Tools",
+    "Poster"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "P2S Clog Guide",
+   "d": "Bambu Lab P2S extruder cleaning. 6.6 MB.",
+   "g": [
+    "Bambu",
+    "3D Printer",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Daja A6 Pro Guide",
+   "d": "Complete Daja laser reference. 13.5 MB.",
+   "g": [
+    "Laser",
+    "Daja",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laser Reference Library",
+   "d": "30+ files: LightBurn, LaserGRBL, Sheets.",
+   "g": [
+    "Laser",
+    "Reference",
+    "Sheets"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Barrier Reef Poster",
+   "d": "A3 science/geography poster.",
+   "g": [
+    "Poster",
+    "Science"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VIQRC Notebook",
+   "d": "VEX IQ engineering notebook. 14 MB.",
+   "g": [
+    "VEX",
+    "Robotics"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Mega Tours Presentation",
+   "d": "87 MB final presentation.",
+   "g": [
+    "Presentation"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Canva Designs",
+   "d": "Canva via school Google. DAHIIX_Dw0Q. 57 MB.",
+   "g": [
+    "Canva",
+    "Cloud",
+    "Design"
+   ],
+   "s": "wip"
+  },
+  {
+   "t": "Google Drive Portfolio",
+   "d": "Docs + Slides. isaac_cs.chan@online.island.edu.hk.",
+   "g": [
+    "Google",
+    "Cloud"
+   ],
+   "s": "wip"
+  },
+  {
+   "t": "Family Keychain AI/SVG",
+   "d": "Illustrator art - Arcadi, Isaac, Ivan.",
+   "g": [
+    "AI",
+    "SVG",
+    "Typography"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Vector Masters",
+   "d": "Production AI/SVG - Perfect.ai, finished.ai.",
+   "g": [
+    "AI",
+    "SVG",
+    "VEX"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Kinetic Industries",
+   "d": "Branding/logo. 1.5 MB PNG.",
+   "g": [
+    "Branding",
+    "Logo"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Storyboard",
+   "d": "2.2 MB visual plan.",
+   "g": [
+    "Storyboard"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Humanities Essay",
+   "d": "26 MB Industrial Revolution research.",
+   "g": [
+    "Humanities",
+    "History"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Photo Holder V3",
+   "d": "3-version photo display stand.",
+   "g": [
+    "Design",
+    "Holder"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Y10–11 IGCSE Guide",
+   "d": "Complete Y10–11 IGCSE study guide — DT & Economics, Island School.",
+   "g": [
+    "Study Guide",
+    "IGCSE",
+    "DT",
+    "Economics"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Toddle Class Portfolio",
+   "d": "Higher Education Class of 2030 portfolio (saved from Toddle LMS).",
+   "g": [
+    "Portfolio",
+    "Higher Ed",
+    "Toddle"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Reference Library",
+   "d": "Official VEX IQ manuals - game manuals, build instructions, activity series.",
+   "g": [
+    "VEX",
+    "Reference",
+    "Manual",
+    "Robotics"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "F1 in Schools Reference Library",
+   "d": "F1 in Schools / STEM Racing - regulations, gauges, car parts, portfolios.",
+   "g": [
+    "F1 In Schools",
+    "Reference",
+    "Regulations",
+    "STEM"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Anthropometric Data Reference",
+   "d": "Ergonomic body-measurement data (Childata / Adultdata) for design.",
+   "g": [
+    "Ergonomics",
+    "Anthropometrics",
+    "Reference",
+    "Design"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laser Cutting Reference",
+   "d": "Laser cutting guides - materials reference, settings, Sculpteo guide.",
+   "g": [
+    "Laser",
+    "Reference",
+    "Materials",
+    "Settings"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "3D Printer & Laser Manuals",
+   "d": "Machine manuals for the workshop — Tina2S user + unboxing guides, DAJA A6 Pro reference + tutorial, Cricut Maker 3, Bambu P2S extruder maintenance.",
+   "g": [
+    "Manual",
+    "3D Printer",
+    "Laser",
+    "Reference"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Science Booklets (Y7-9)",
+   "d": "School science student booklets - biology, chemistry, physics, ecology.",
+   "g": [
+    "Science",
+    "School",
+    "Biology",
+    "Physics"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IGCSE Study Resources",
+   "d": "IGCSE resources - Economics, English, Maths, DT lessons and past papers.",
+   "g": [
+    "IGCSE",
+    "Study",
+    "Economics",
+    "Maths"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laser Cutting & Engraving Poster",
+   "d": "A2 one-sheet laser cutting poster — beam physics, laser types, machine anatomy, cut vs engrave, materials &amp; banned list, parameters, advantages/limits, comparison, safety, applications, glossary. ~3,200 words.",
+   "g": [
+    "Laser",
+    "Poster",
+    "LightBurn",
+    "Safety"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Plasma Cutting Poster",
+   "d": "A2 one-sheet plasma cutting poster — plasma physics, torch anatomy, gases, parameters, cut quality, process comparison, consumables, CNC tables, history, safety, glossary. ~2,500 words.",
+   "g": [
+    "Poster",
+    "Plasma",
+    "DT",
+    "Safety"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "The Mill Poster",
+   "d": "A2 one-sheet milling poster — anatomy, milling types &amp; climb/conventional, cutters, tool materials &amp; coatings, feeds &amp; speeds, CNC workflow, workholding, defects, comparison, safety, glossary. ~2,600 words.",
+   "g": [
+    "Poster",
+    "History",
+    "DT",
+    "Engineering"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Casting Machines Poster",
+   "d": "A2 one-sheet casting poster — furnace families, 6 machine families (sand, die, investment, centrifugal, continuous, others), process comparison matrix, defects, design rules, materials, glossary, exam tips. ~2,400 words.",
+   "g": [
+    "Poster",
+    "Casting",
+    "DT",
+    "Manufacturing"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Lathe Reference Poster",
+   "d": "A2 one-sheet lathe poster — anatomy (headstock, tailstock, carriage), workholding, 11 turning operations, tooling, speeds &amp; feeds, CNC lathe, defects, safety, glossary. ~3,100 words.",
+   "g": [
+    "Poster",
+    "Lathe",
+    "DT",
+    "Machining",
+    "Safety"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Vacuum Forming Poster",
+   "d": "A2 one-sheet vacuum forming poster — thermoforming family, machine anatomy, moulds (male/female), sheet materials, parameters, defects &amp; fixes, process comparison, applications, glossary. ~2,200 words.",
+   "g": [
+    "Poster",
+    "Vacuum Forming",
+    "DT",
+    "Thermoforming"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "CNC Router Poster",
+   "d": "A2 one-sheet CNC router poster — anatomy, motion systems, spindles &amp; collets, end-mill bits, feeds &amp; speeds, CAD→CAM→G-code workflow, workholding, comparison, safety, glossary. ~2,550 words.",
+   "g": [
+    "CNC",
+    "Poster",
+    "DT",
+    "Machining",
+    "Safety"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Injection Moulding Poster",
+   "d": "A2 one-sheet injection moulding poster — machine anatomy, screw &amp; barrel, runner systems, mould anatomy, machine types, the 7-step cycle, parameters, materials &amp; shrink, defects, comparison, glossary. ~2,100 words.",
+   "g": [
+    "Poster",
+    "Injection Moulding",
+    "DT",
+    "Manufacturing",
+    "Polymers"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Waterjet Cutting Poster",
+   "d": "A2 one-sheet waterjet poster — physics, cutting-head anatomy, pure vs abrasive, key parameters, garnet abrasive, history timeline, comparison, materials &amp; apps, glossary. ~2,100 words.",
+   "g": [
+    "Poster",
+    "Waterjet",
+    "DT",
+    "Manufacturing"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Woods Knowledge Guide",
+   "d": "IGCSE DT woods knowledge revision guide — hardwood/softwood & manufactured boards, properties, hand tools, joints & adhesives, finishes, safety.",
+   "g": [
+    "Study Guide",
+    "IGCSE",
+    "DT",
+    "Woods"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "DAJA A6 Pro 20W Material Reference",
+   "d": "LightBurn settings reference for the DAJA A6 Pro 20W blue diode laser — materials speed/power matrix, focus, single/multi-pass, test grid, banned materials, safety. Light-theme HTML guide.",
+   "g": [
+    "Laser",
+    "DAJA",
+    "Reference",
+    "Materials"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Drill Bits Poster",
+   "d": "A2 one-sheet drill bits reference — twist-drill anatomy, 13 drill types, materials, point geometries, sizes &amp; numbering, speeds &amp; feeds, coolant, defects &amp; fixes, operation advice, comparison, safety, glossary. ~2,500 words.",
+   "g": [
+    "Poster",
+    "Drill Bits",
+    "DT",
+    "Machining"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Bearings Poster",
+   "d": "A2 one-sheet bearings reference — bearing types, ISO 15 / DIN 623 numbering decoder, how to read a bearing number, dimensions &amp; clearances, materials, loads &amp; L10 life, failures, plain &amp; linear, applications, glossary. ~2,900 words.",
+   "g": [
+    "Poster",
+    "Bearings",
+    "DT",
+    "Engineering"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "DT Finishing Reference",
+   "d": "HTML study reference for IGCSE DT finishing processes - abrasives, coatings, paints, varnishes, metal finishing. Light-theme reading doc.",
+   "g": [
+    "DT",
+    "Study Guide",
+    "IGCSE",
+    "Reference"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Fiber Laser Parameters (PDF)",
+   "d": "Workshop reference PDF covering parameters for fiber laser machines.",
+   "g": [
+    "Laser",
+    "Reference",
+    "Parameters"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Detailed Laser Cutting Guide",
+   "d": "In-depth laser cutting guide and instruction manual (PDF).",
+   "g": [
+    "Laser",
+    "Guide",
+    "Manual"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "LightBurn Isaac Libraries",
+   "d": "Isaac's custom LightBurn libraries - personal art library (.lbart) + material & engrave CLB settings.",
+   "g": [
+    "LightBurn",
+    "Laser",
+    "Library"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Open-Source Machines Catalog",
+   "d": "78 buildable open-source machines — 3D printers, CNC routers, mills, lasers, lathes, EDM and wire benders. Each with price in USD + HK$, difficulty, why it is special, and build links. Chinese sourcing notes throughout.",
+   "g": [
+    "Catalog",
+    "Machines",
+    "Open Source",
+    "Reference"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "DAJA A6 Pro 20W Laser Guide",
+   "d": "Interactive 23-step laser-cutter guide and safety simulator for the DAJA A6 Pro 20W — Learn / Practice / Cheat sheet tabs, a clickable machine diagram that refuses to start until power, E-stop, lid, purifier, blower, exhaust pipe, honeycomb and focus are all right, plus an A4 print checklist for the wall.",
+   "g": [
+    "Laser",
+    "DAJA",
+    "Guide",
+    "Simulator"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Meme Clicker Prints",
+   "d": "Print-your-own desktop meme clickers — the Shit Clicker (3Deep) and Poop Toilet Clicker. 8 STL/3MF files, assembly included.",
+   "g": [
+    "Print",
+    "Meme",
+    "3D"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Mini 4WD Parts (四驅車)",
+   "d": "Tamiya-style Mini 4WD upgrade and replacement parts — chassis, rollers, guides, launchers — all 3D-printable. 39 STL/3MF files.",
+   "g": [
+    "Print",
+    "Mini 4WD",
+    "Tamiya"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX EDR Super Kit Parts (STEP)",
+   "d": "Full VEX EDR structural part set as STEP models — 228-2500 series beams, plates, brackets — plus two Fusion assembly attempts.",
+   "g": [
+    "VEX EDR",
+    "STEP",
+    "CAD"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Official Resources",
+   "d": "25 official VEX IQ PDFs for build + competition reference — game manuals, activity series, field assembly guides, parts lists.",
+   "g": [
+    "VEX IQ",
+    "Reference",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "X1 Bambu Print Library",
+   "d": "38 sliced print files produced on the Bambu X1 — exported as .gcode.3mf so each file carries full slice data (profiles, supports, plate).",
+   "g": [
+    "3D Print",
+    "Bambu X1",
+    "Sliced"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "FIFA World Cup Trophy Print",
+   "d": "Print-your-own FIFA World Cup trophy — 4 STLs (globe, two green base halves, base), sliced and printed on the Bambu X1.",
+   "g": [
+    "Print",
+    "FIFA",
+    "Trophy"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "iPad / Mic Music-Stand Clamp",
+   "d": "Desktop clamp that holds an iPad or a microphone boom onto a music-stand rail — screw-tightened, STEP source included for remixing.",
+   "g": [
+    "Print",
+    "iPad",
+    "Clamp"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX IQ Logo (DXF for laser)",
+   "d": "VEX IQ logo as laser-ready DXF — full size plus a 30% keychain version. Draw it, cut it, engrave it.",
+   "g": [
+    "VEX",
+    "DXF",
+    "Laser"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "VEX Bin Inserts (Proper)",
+   "d": "Reworked 3D-printed insert set for VEX EDR bins — long/short/tall variants so every tool sits snug and lifts out clean, no rattling.",
+   "g": [
+    "VEX",
+    "3D Print",
+    "Organizer"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Let It Be — Full Band Pack",
+   "d": "Complete Beatles 'Let It Be' arrangement for full band — 135 parts in Easy and Hard versions across ~60 instruments (piano, strings, brass, woodwinds, percussion, zither, accordion…).",
+   "g": [
+    "Music",
+    "Band",
+    "Sheet Music",
+    "PDF"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Pokemon Snorlax Keychains",
+   "d": "27 Pokemon keychain STLs — Snorlax and friends in 6 colours, ready to print 3D.",
+   "g": [
+    "3D Print",
+    "Pokemon",
+    "Keychain"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Bambu Print Profiles Library",
+   "d": "1946 official Bambu Studio profiles — filament, machine and process presets for every Bambu printer (X1/P1/P2/A1/H2D), ready to drop into Bambu Studio.",
+   "g": [
+    "Bambu",
+    "3D Print",
+    "Profiles"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "DAJA A6 Pro Official USB Contents",
+   "d": "The complete official USB stick that ships with the DAJA A6 Pro 20W — Windows/Mac drivers, LaserGRBL + LightBurn software, firmware update guides, operation videos and design photos.",
+   "g": [
+    "Laser",
+    "DAJA",
+    "Drivers",
+    "Firmware"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Casio fx-CG50 Backup (Add-ins + OS)",
+   "d": "Official Casio fx-CG50 software backup — the add-in pack (3D Graph, Geometry, Physium, conversions + install guide) and the OS 3.80 update.",
+   "g": [
+    "Casio",
+    "Calculator",
+    "Software"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "茶寮 Fleur Tea — Online Shop",
+   "d": "A full live e-commerce shop for a herbal flower-tea brand — storefront, product pages, cart, coupons, blog, reviews + a complete admin panel (products, orders, posts, backups, SEO). Built on Cloudflare Workers + KV, live at fleur-tea.isaac1804.workers.dev.",
+   "g": [
+    "Web App",
+    "E-commerce",
+    "Cloudflare",
+    "Shop"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "The Open Press — Community Newspaper",
+   "d": "A newspaper written by anyone, for everyone — 8 sections (Local, World, Campus, Tech, Sports, Arts, Opinion, Investigations), tight word-count editing rules, pull quotes, images and captions. Live on Cloudflare Workers.",
+   "g": [
+    "Web App",
+    "Cloudflare",
+    "Writing"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "a1d2.org — Link Compressor",
+   "d": "Compress long links and optimise QR codes entirely in the browser — strips tracking parameters to shorten URLs, no backend needed. Live at a1d2.org with a bilingual projects page.",
+   "g": [
+    "Web",
+    "Tool",
+    "Link",
+    "QR"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laser Nesting Test DXFs",
+   "d": "8 nesting test files for laser cutting — 'nested all' plus 7 CheckedNestedGroup variants, exercise CAD nesting on the laser bed.",
+   "g": [
+    "Laser",
+    "DXF",
+    "Nesting"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "$100 HKD DIY Tablet",
+   "d": "A working touchscreen Linux tablet built from Pinduoduo parts for about HK$100 - Orange Pi Zero 2W + 3.5\" SPI TFT, Armbian, and the fbcp-ili9341 framebuffer driver.",
+   "g": [
+    "Hardware",
+    "Linux",
+    "Orange Pi",
+    "DIY"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Laser Settings & Material Libraries",
+   "d": "Importable LightBurn material libraries (.clb, 16 power-specific sets), my own art library plus seasonal art packs (.lbart), colour test grids (.lbrn2), test cards and material setting references.",
+   "g": [
+    "Laser",
+    "LightBurn",
+    "Settings",
+    "Reference"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Gear Mechanisms (3D Print Set)",
+   "d": "Japanese mechanism model kits - 235 STL parts plus 3MF print plates: bevel gears, gear trains, rack & pinion, cams, planetary and worm drives. Print and assemble working mechanisms.",
+   "g": [
+    "3D Print",
+    "Mechanisms",
+    "Gears",
+    "Reference"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "5-Axis Desktop CNC Model (RAPIMA RMX-15)",
+   "d": "Full CAD reference model of a RAPIMA RMX-15 5-axis desktop CNC machining centre - 538 SolidWorks parts, master assembly, and a universal STEP export of the whole machine.",
+   "g": [
+    "CNC",
+    "CAD",
+    "5-Axis",
+    "Reference"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "6-Axis Robot Arm",
+   "d": "A 6-axis robotic arm: mechanics, drawings, and stepper-control firmware. Includes the full arm STEP assembly, printed parts, and TicStep driver test code that traces a circular path.",
+   "g": [
+    "Hardware",
+    "Robotics",
+    "Firmware",
+    "CNC"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "DAJA A6 Pro TF Card Files",
+   "d": "The complete TF-card contents that ship in the DAJA A6 Pro 20W laser: 345 JPG + 124 PNG sample artwork and material test photos, documentation PDFs, Windows software and firmware images.",
+   "g": [
+    "Laser",
+    "DAJA",
+    "Reference",
+    "Materials"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Boxford CO2 Dragster Manufacturing",
+   "d": "CO2 dragster (F1 in Schools) manufacturing pack for Boxford CNC machines: blank drawings, the R-type body machining process, jig geometry, CAM workflow and a Fusion 360 model block.",
+   "g": [
+    "F1 in Schools",
+    "CNC",
+    "Boxford",
+    "Manufacturing"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Workshop STL Parts Library",
+   "d": "44 practical 3D-printable parts I reuse across projects: vise jaws, hex and USB-C adapters, bearing plugs, bit cases, storage boxes and shop odds and ends.",
+   "g": [
+    "3D Print",
+    "Workshop",
+    "Jigs",
+    "Parts"
+   ],
+   "s": "done"
+  }
+ ]
+}

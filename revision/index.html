@@ -30,6 +30,16 @@ h1{font-size:26px;letter-spacing:-.02em}
 .miss{color:var(--t3);font-size:12px;font-style:italic}
 footer{margin-top:34px;color:var(--t3);font-size:12px;text-align:center}
 @media print{body{background:#fff;color:#000}.card{border-color:#ccc}.back{display:none}}
+
+.prog{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;margin-bottom:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.prog .bar{flex:1;min-width:160px;height:8px;background:#1c2130;border-radius:20px;overflow:hidden}
+.prog .bar i{display:block;height:100%;background:linear-gradient(90deg,#3ddc97,#7170ff);width:0;transition:width .3s}
+.prog .t{font-size:12.5px;color:var(--t2);white-space:nowrap}
+.done{border-color:rgba(61,220,151,.45)!important}
+.card h2{display:flex;align-items:center;gap:8px}
+.tick{margin-left:auto;background:transparent;border:1px solid var(--bd);color:var(--t3);font-size:11px;padding:3px 9px;border-radius:20px;cursor:pointer;font-family:inherit;white-space:nowrap}
+.tick:hover{border-color:var(--ok);color:var(--ok)}
+.tick.on{background:rgba(61,220,151,.14);border-color:var(--ok);color:var(--ok)}
 </style>
 </head>
 <body>
@@ -37,6 +47,7 @@ footer{margin-top:34px;color:var(--t3);font-size:12px;text-align:center}
 <a class="back" href="/">← Home</a>
 <h1>📚 IGCSE Revision Hub</h1>
 <div class="sub">Notes, past papers and resources, by subject. Everything opens in the browser — nothing to download first.</div>
+<div class="prog"><span class="t" id="pt">Revision progress</span><div class="bar"><i id="pi"></i></div><span class="t" id="pn">0 / 0</span></div>
 <div class="grid" id="grid"></div>
 <footer>Built by Isaac · <a href="/tools/" style="color:var(--t2)">Workshop Tools</a> · <a href="/portfolio/" style="color:var(--t2)">Portfolio</a></footer>
 </div>
@@ -56,7 +67,7 @@ var SUBJ = [
 ];
 var g = document.getElementById("grid"), h = "";
 SUBJ.forEach(function (s) {
-  h += '<div class="card"><h2>' + s.n + '</h2><div class="code">' + s.c + '</div><div class="links">';
+  h += '<div class="card' + (rd(s.n) ? " done" : "") + '"><h2>' + s.n + '<button class="tick' + (rd(s.n) ? " on" : "") + '" onclick="rToggle(\'' + s.n + '\',this)">' + (rd(s.n) ? "✓ revised" : "mark revised") + '</button></h2><div class="code">' + s.c + '</div><div class="links">';
   if (s.notes) h += '<a class="notes" href="' + s.notes + '">📝 Notes</a>';
   if (s.res) h += '<a href="' + s.res + '">📁 Resources</a>';
   if (s.pp) h += '<a href="' + s.pp + '">📄 Past papers</a>';
@@ -66,7 +77,25 @@ SUBJ.forEach(function (s) {
   if (s.miss) h += '<span class="miss">no resources uploaded yet</span>';
   h += '</div></div>';
 });
+
+/* ---- revision progress (saved in this browser) ---- */
+function rk(n){return "rev-"+n}
+function rd(n){try{return localStorage.getItem(rk(n))==="1"}catch(e){return false}}
+function rt(n,on){try{localStorage.setItem(rk(n),on?"1":"0")}catch(e){}}
+function rToggle(n,btn){
+  var on=!rd(n); rt(n,on);
+  btn.className="tick"+(on?" on":""); btn.textContent=on?"✓ revised":"mark revised";
+  btn.closest(".card").className="card"+(on?" done":"");
+  rBar();
+}
+function rBar(){
+  var tot=SUBJ.length, n=SUBJ.filter(function(s){return rd(s.n)}).length;
+  document.getElementById("pi").style.width=(tot?Math.round(n/tot*100):0)+"%";
+  document.getElementById("pn").textContent=n+" / "+tot;
+}
+
 g.innerHTML = h;
+rBar();
 </script>
 </body>
 </html>
