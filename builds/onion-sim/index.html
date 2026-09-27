@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Red Star 暗網模擬器 — build log · Isaac Chan</title>
+<meta name="description" content="ONION SIM — 用 Mac 上真實 Red Star Browser 的介面包住一個虛構 .onion 網絡的教育模擬器：工具列、分頁、★ PROTECTED 盾牌、選單與快捷鍵全部照該 app 抄（palette、180px 分頁、New Tab 頁原封不動）。內有 26 件假貨市集（託管／無託管對比、PGP 指紋、假評價）、真 KV 後端論壇、T">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>Red Star 暗網模擬器</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">2 versions</span><span class="chip soft">Cloudflare Worker</span><span class="chip soft">KV 論壇</span><span class="chip soft">Red Star Browser 介面</span><span class="chip soft">防詐騙教學</span></div>
+  <div class="btns"><a class="btn live" href="https://onion-sim.isaac1804.workers.dev" target="_blank" rel="noopener">▶ Open Simulator</a><a class="btn" href="/portfolio/prompts/onion-sim-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">ONION SIM — 用 Mac 上真實 Red Star Browser 的介面包住一個虛構 .onion 網絡的教育模擬器：工具列、分頁、★ PROTECTED 盾牌、選單與快捷鍵全部照該 app 抄（palette、180px 分頁、New Tab 頁原封不動）。內有 26 件假貨市集（託管／無託管對比、PGP 指紋、假評價）、真 KV 後端論壇、TorMail 詐騙故事、假 Bitcoin 產生器（真的會清空錢包）、假殺手網站、洩密站、ONION NEWS 查封頁，以及隱藏 red room 密碼題。所有商品、店鋪、交易 100% 虛構，只重現有文獻紀錄的詐騙手法。</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Tor 引導日誌、3 跳電路、Hidden Wiki、26 件市集與託管流程、PGP 指紋、三個詐騙站、TorMail 詐騙故事、DarkLeaks＋red room 密碼題、ONION NEWS＋查封頁、Checkpoint、KV 真論壇（可發帖／管理員刪帖）。</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>改成 Mac 上 Red Star Browser 的介面（照抄 palette、工具列順序、180px 分頁、★ PROTECTED 盾牌、選單快捷鍵），加入 Lockdown 模式、Tor/SOCKS 開關、Burn All Data Now、clearnet 頁與 WebKit 錯誤頁；57 項自動驗收。</p></div></div></div></section><section id="files"><h2>Files on the site</h2><ul class="files"><li><a href="/portfolio/Desktop/onion-sim/market.png">View Screenshot</a> <span class="meta">630.2 KB</span></li><li><a href="/portfolio/Desktop/onion-sim/newtab.png">New Tab 畫面</a> <span class="meta">145.0 KB</span></li><li><a href="/portfolio/Desktop/onion-sim/seized.png">查封頁</a> <span class="meta">156.2 KB</span></li><li><a href="/portfolio/prompts/onion-sim-prompt.md">Build notes</a> <span class="meta">21 lines · 2.6 KB</span></li></ul></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Documents/projects/apps/onion-sim</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">29</div><div class="l">files</div></div><div class="st"><div class="n">4,229</div><div class="l">lines of code</div></div><div class="st"><div class="n">6</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-09-27</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-09-27</div><div class="l">last touched</div></div></div><p class="fine">Mostly: binary assets ×11 · JavaScript ×6 · Python ×5 · Markdown ×2 · JSON ×2 · Shell ×1</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/onion-sim.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/onion-sim-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>Red Star 暗網模擬器 · ONION SIM</h2>
+<p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
+<p>用 Mac 上真實的 Red Star Browser 介面包住一個虛構 <code>.onion</code> 網絡的教育模擬器 — 所有商品、店鋪、交易 100% 虛構，只重現有文獻紀錄的詐騙手法。</p>
+<p><strong>Stack / Tools:</strong> Cloudflare Worker + KV（免費，無卡）、單檔內嵌 SPA、Playwright 驗收、Wikimedia Commons 圖片（公有領域）、Red Star Browser UI 規格抽取</p>
+<p><strong>Build path:</strong></p>
+<ul>
+<li>V1 — Tor 引導日誌、3 跳電路、Hidden Wiki、26 件市集（託管／無託管）、PGP 指紋、三個詐騙站、TorMail 故事、DarkLeaks＋red room 密碼題、ONION NEWS＋查封頁、Checkpoint、KV 真論壇（可發帖、管理員刪帖）。</li>
+<li>V2 — 換成 Red Star Browser 介面：palette <code>#e8112d</code>、工具列（H54，圖示 x=10/50/90/130）、分頁列（H36，180×26，stride 186，點右側 20px 或中鍵關閉）、★ PROTECTED 盾牌、選單與快捷鍵照抄；加 Lockdown Mode（⇧⌘L）、Tor/SOCKS 開關（⇧⌘P）、Burn All Data Now、clearnet 頁、WebKit 錯誤頁；57 項自動驗收。</li>
+</ul>
+<p><strong>Location:</strong> <a href="https://onion-sim.isaac1804.workers.dev" target="_blank" rel="noopener">https://onion-sim.isaac1804.workers.dev</a> · <code>~/Documents/projects/apps/onion-sim</code></p>
+<p><strong>Build notes:</strong></p>
+<ul>
+<li>架構：Worker 同源服務 SPA（<code>build.js</code> 把 <code>client/<em>.js</code> 內嵌成 <code>dist/worker.js</code>，一定要用 function replacer，否則 <code>$$</code> 會被吃掉）+ <code>/api/forum</em></code> KV 後端。<code>./deploy.sh</code> 會 build → <code>node --check</code> 兩個產物 → deploy。</li>
+<li>56 字 v3 onion 地址用 FNV-1a + LCG 生成，<strong>必須用 <code>Math.imul</code></strong>：<code>seed * 1103515245</code> 超過 2^53 會令低位全變 0，每個站都出 <code>aaaa…</code>。</li>
+<li><strong>Worker 每個 route 必須回 Response</strong>：回傳普通 object 會在 KV 寫入之後才丟 <code>error code: 1101</code>，資料入庫但客戶端見到 500。build gate：<code>if (/return\s*\{/.test(src)) fail</code>。</li>
+<li>真實 app 規格抽取：<code>/Applications/RedStarBrowser/redstar_app.py</code>（PyObjC）。重點陷阱 — AppKit 大寫 <code>keyEquivalent</code> 代表 Shift（<code>"L"</code>=⌘⇧L、<code>"l"</code>=⌘L，容易裝反）；toolbar 在 tab strip <strong>上面</strong>；單鍵 NSAlert 會令「唔要」這個選擇消失（買單／錢包騙局一定要有 Cancel）；控制項不可靠 dialog callback 才 re-enable（會永久卡在 WORKING…）。</li>
+<li>UI 版權／安全：站內每個假頁都有 SIMULATION 橫幅，視窗下方長註聲明虛構；管理密碼只放 Worker secret（<code>ADMIN_PW</code>），源碼與 API 都不回傳。</li>
+<li>驗收：<code>ADMIN_PW=&lt;pw&gt; python3 scripts/acceptance_ui.py</code> → 57/57、0 console error、0 page error、~43 張圖 200。截圖：<code>python3 scripts/shots.py</code>。</li>
+</ul></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

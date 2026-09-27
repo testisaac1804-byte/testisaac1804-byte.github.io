@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Link Compressor — build log · Isaac Chan</title>
+<meta name="description" content="A URL shortener that lives on my own domain: paste a long link, get a tiny isaac1804.com/s/xxxxx back. It compresses the link itself first — stripping utm_*/fbclid/igshid/si tracki">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>Link Compressor</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">4 versions</span><span class="chip soft">Cloudflare Worker</span><span class="chip soft">KV</span><span class="chip soft">URL shortener</span><span class="chip soft">QR codes</span><span class="chip soft">Vanilla JS</span></div>
+  <div class="btns"><a class="btn live" href="https://isaac1804.com/tools/link-compressor/" target="_blank" rel="noopener">▶ Open Link Compressor</a><a class="btn live" href="https://isaac1804.com/s/rev" target="_blank" rel="noopener">▶ Try a short link</a><a class="btn" href="/portfolio/prompts/link-compressor-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">A URL shortener that lives on my own domain: paste a long link, get a tiny isaac1804.com/s/xxxxx back. It compresses the link itself first — stripping utm_*/fbclid/igshid/si tracking junk (and telling you what it removed, while leaving signed download URLs alone) — then stores it in Cloudflare KV with click counting, custom names, duplicate detection and QR codes. Bulk mode takes one link per line and shows the exact saving per link (was 214 chars → 33 chars, 85% smaller). Anyone can compress any link (rate limited per IP so it cannot become a spam redirector) and that is all they can do; the 🔒 admin password at the top unlocks everything else — who created each link and who clicked it (IP, city, ISP, device), deleting, custom names, the full list and unlimited links.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Worker + KV shortener routed onto isaac1804.com: 5-char codes from an alphabet with no 0/O/1/l/i, 302 redirects with click counting, same-URL reuse, admin token for custom names, deletes and stats. Tool page: bulk paste, tracking-parameter stripping with a per-link saving readout, inline QR codes, searchable/exportable history.</p></div></div><div class="ver"><div class="vn">V1.1</div><div class="vi"><p>Compressing opened to everyone — any link, no token, because it has to work for whoever I send the tool to. Abuse guard is now a 200-links-per-hour-per-IP limit; the token only gates custom names, deleting and the full list.</p></div></div><div class="ver"><div class="vn">V1.2</div><div class="vi"><p>Tracking: every link records who created it and every click records who opened it (IP, city/country, ISP, device, referer) — readable only with the password, in a per-link log plus a combined activity feed.</p></div></div><div class="ver"><div class="vn">V1.3</div><div class="vi"><p>Fully admin controlled: a 🔒 Admin box at the top of the page takes the password and unlocks the logs, deleting, custom names and unlimited links — visitors can only make and follow links. Fixed Delete, which was shown to everyone and only printed an error when locked; it now appears only when unlocked, and any 401 re-asks for the password.</p></div></div></div></section><section id="files"><h2>Files on the site</h2><ul class="files"><li><a href="/portfolio/prompts/link-compressor-prompt.md">Prompt</a> <span class="meta">53 lines · 3.4 KB</span></li></ul></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Documents/projects/apps/isaac-links/</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">9</div><div class="l">files</div></div><div class="st"><div class="n">1,076</div><div class="l">lines of code</div></div><div class="st"><div class="n">5</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-09-27</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-09-27</div><div class="l">last touched</div></div></div><p class="fine">Mostly: Python ×4 · Shell ×2 · JavaScript ×1 · Markdown ×1 · TOML ×1</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/link-compressor.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/link-compressor-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>Link Compressor — isaac1804.com/s/</h2>
+<p>A self-hosted URL shortener that lives on my own domain: paste a long link, get a tiny <code>https://isaac1804.com/s/xxxxx</code> back. Built as the big sibling of the browser-only <strong>a1d2.org Link Compressor</strong> — that one only rewrites the link, this one actually <em>hosts</em> it, so the short link keeps working forever and tells me how many times it was opened.</p>
+<h3>Live</h3>
+<ul>
+<li>App: <a href="https://isaac1804.com/tools/link-compressor/" target="_blank" rel="noopener">https://isaac1804.com/tools/link-compressor/</a></li>
+<li>Backend: <a href="https://isaac1804.com/api/links" target="_blank" rel="noopener">https://isaac1804.com/api/links</a> (Cloudflare Worker <code>isaac-links</code> + KV <code>LINKS</code>)</li>
+<li>Example short link: <a href="https://isaac1804.com/s/rev" target="_blank" rel="noopener">https://isaac1804.com/s/rev</a></li>
+</ul>
+<h3>Features</h3>
+<ul>
+<li><strong>Compress the link itself</strong> — strips tracking junk (<code>utm_*</code>, <code>fbclid</code>, <code>gclid</code>, <code>igshid</code>, <code>si</code>,</li>
+<p><code>spm</code>, <code>mc_cid</code> …) before storing, and reports which parameters it removed. Signed URLs (<code>X-Amz-Signature</code>, <code>token</code>, <code>expires</code>) are left untouched so download links never break.</p>
+<li><strong>Real short links</strong> — 5-character codes from a 31-character alphabet with no <code>0 O 1 l i</code>,</li>
+<p>so a code survives being read out loud or typed from a screen. Custom names available.</p>
+<li><strong>Bulk mode</strong> — paste one link per line (or a comma-separated list) and it compresses them</li>
+<p>all, with a live "was 214 chars → 33 chars · 85% smaller · saved 181 characters" readout per link.</p>
+<li><strong>QR codes</strong> — generated in the page (inline library, works offline), downloadable as PNG.</li>
+<li><strong>Click counting + tracking</strong> — every hit on <code>/s/&lt;code&gt;</code> increments a counter in KV <em>and</em> logs who</li>
+<p>clicked: IP, city/country, ISP, device and which page they came from. Every creation logs the same about whoever made it.</p>
+<li><strong>Only I can see the logs</strong> — the per-link log and the combined activity feed both require the admin</li>
+<p>password; anyone else gets a 401. The password (🔒 Admin box at the top of the page) also removes the rate limit, so with it there is no hourly cap on making links.</p>
+<li><strong>Everyone else can only make links</strong> — a visitor can compress any link and open it; deleting,</li>
+<p>custom names, the list and the logs are all behind the password.</p>
+<li><strong>History</strong> — searchable, exportable as JSON, kept in <code>localStorage</code>; with the admin token it</li>
+<p>merges with every link created anywhere.</p>
+<li><strong>No duplicates</strong> — compressing the same URL twice hands back the code it already has.</li>
+<li><strong>Not an open redirect in practice</strong> — anyone may compress any link (that is the point: it is meant</li>
+<p>to be usable without me), but creation is rate limited to 200 links per IP per hour and only <code>http(s)</code> targets are accepted, so it cannot be turned into a spam redirector. The admin token (kept in <code>~/.isaac-links-token</code>, never in the page source) adds custom names, deleting and the global list.</p>
+</ul>
+<h3>Stack</h3>
+<p>Cloudflare Worker (routes on <code>isaac1804.com/s/<em></code>, <code>/api/links</em></code>, <code>/api/shorten</code>, <code>/api/stats</code>) + Workers KV, deployed with <code>wrangler</code>. Front end is one self-contained HTML page on Cloudflare Pages — no framework, no build step. Repo: <code>~/Documents/projects/apps/isaac-links/</code> (<code>deploy.sh</code>), page source: <code>~/Desktop/homepage-deploy/tools/link-compressor/</code>.</p>
+<h3>API</h3>
+<pre><code>POST   /api/links           {&quot;url&quot;:&quot;…&quot;,&quot;slug&quot;:&quot;optional&quot;,&quot;clean&quot;:true}  -&gt; {short, slug, url, cleaned:[…]}
+GET    /api/links           (token) every link + click counts
+GET    /api/stats           totals + top links
+DELETE /api/links/&lt;code&gt;    (token)
+GET    /s/&lt;code&gt;            302 to the target, counts a click</code></pre>
+<p>Token goes in an <code>X-Link-Token</code> header (or <code>?token=</code>).</p></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

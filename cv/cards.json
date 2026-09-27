@@ -613,6 +613,17 @@
    "s": "done"
   },
   {
+   "t": "API Endpoint Latency Tester",
+   "d": "Browser-side stopwatch for API endpoints — a faithful copy of a Chinese API relay's own 「API地址延迟测试」 page: times each endpoint with performance.now() wrapped around a mode:\"no-cors\" fetch (3 samples, 100 ms apart, averaged), ranks them fastest-first, and reports dead ones as 超时. Carries the original 3 plain-HTTP relay mirrors plus 4 HTTPS endpoints so it does real work on an https site; a mixed-content guard shows ⛔ instead of a fake latency for the http-only ones.",
+   "g": [
+    "JavaScript",
+    "Networking",
+    "Latency",
+    "Web API"
+   ],
+   "s": "done"
+  },
+  {
    "t": "IsaacNAS",
    "d": "Password-protected personal cloud — browse, upload, download files from ~/NAS/ from any device. FastAPI + LaunchAgent + SSH tunnel.",
    "g": [

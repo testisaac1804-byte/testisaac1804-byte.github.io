@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DT Site Copy — build log · Isaac Chan</title>
+<meta name="description" content="Full 74-page copy of the DT Google Site, rebranded to Isaac.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>DT Site Copy</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">3 versions</span><span class="chip soft">Web</span><span class="chip soft">Google Sites</span><span class="chip soft">Static</span><span class="chip soft">Python</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/dt-site-copy-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Full 74-page copy of the DT Google Site, rebranded to Isaac.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Finishing page copy.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Full site: 49 nav pages.</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>74 pages incl. hidden IGCSE coursework section.</p></div></div></div></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Desktop/DT-Site-Copy/</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">490</div><div class="l">files</div></div><div class="st"><div class="n">13,165</div><div class="l">lines of code</div></div><div class="st"><div class="n">2</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-08-22</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-08-22</div><div class="l">last touched</div></div></div><p class="fine">Mostly: binary assets ×412 · HTML ×75</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/dt-site-copy.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/dt-site-copy-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>DT Site Copy (Isaac Edition)</h2>
+<p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
+<p>Full copy of Mr McGill's Design &amp; Technology Google Site (sites.google.com/view/dtmcgill) — all 74 pages, rebranded to Isaac, hosted publicly.</p>
+<p><strong>Stack / Tools:</strong> Google Sites scraping (Jina reader proxy + raw HTML), Playwright/Chromium SVG capture, Python + bs4 + markdown, GitHub Pages, da.gd short link</p>
+<p><strong>Build path:</strong></p>
+<ul>
+<li>V1 — Single Finishing page copy (banner + rendered slides poster image)</li>
+<li>V2 — Full site: 49 nav pages fetched via Jina markdown, rebuilt as static HTML with sidebar nav</li>
+<li>V3 — Crawled hidden IGCSE coursework section (25 more pages, linked only from Coursework Guide) → 74 pages total</li>
+</ul>
+<p><strong>Location:</strong> <a href="https://isaac1804.com/isaac-dt/" target="_blank" rel="noopener">https://isaac1804.com/isaac-dt/</a> · short: <a href="https://da.gd/53Kfta" target="_blank" rel="noopener">https://da.gd/53Kfta</a> · local: <code>~/Desktop/DT-Site-Copy/</code></p>
+<p><strong>Build notes (real knowledge):</strong></p>
+<ul>
+<li>Google Sites + Google Slides block automated browsers (empty shell, black stage). Working path: Jina reader proxy (r.jina.ai) for rendered markdown; raw curl HTML for embed iframes (docs.google.com presentation/document, youtube) which ARE present in unrendered HTML.</li>
+<li>lh3 image URLs are SHORT-LIVED signed URLs — must download IMMEDIATELY after a fresh Jina render (fresh render → curl download in same script run). Stale URLs 403 (net::ERR_BLOCKED_BY_ORB in browsers). 204/204 images captured this way.</li>
+<li>Past papers live in 3 public Drive folders (nested year subfolders). Mirror via embeddedfolderview?id=&lt;ID&gt;#list rendered in Playwright → scrape file/subfolder links → download via drive.google.com/uc?export=download (public files OK; large files need confirm token; view-only files like the Strip Heater video stay linked to Drive).</li>
+<li>Slides decks kept as live iframe embeds; drive /preview embeds kept as-is (work in real browsers) unless the file was downloadable → local.</li>
+<li>Rebrand: McGill→Isaac (case-insensitive), steve→Isaac, email steve.mcgill@online.island.edu.hk→isaac_cs.chan@online.island.edu.hk. MUST rewrite internal site links BEFORE rebranding, or URLs become dtIsaac.</li>
+<li>Content extraction: strip Jina markdown nav (3 repeated nav blocks) by cutting after the LAST sites.google.com/view/dtmcgill link line; cut footer at "Page updated"/"Google Sites".</li>
+<li>Jina free tier ~20 req/min — 3.2s delay between page fetches.</li>
+<li>Nav pages list ≠ full site: content links reveal orphan pages (25 IGCSE coursework pages). Crawl raw HTML of every page for /view/dtmcgill/ slugs, BFS until closure.</li>
+</ul></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESP32-C3 AdBlock — build log · Isaac Chan</title>
+<meta name="description" content="Network DNS sinkhole on ESP32. Blocks ads for all WiFi devices. Built with the open-source esp32-c3-adblock project (M-Abozaid) as reference.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>ESP32-C3 AdBlock</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">1 versions</span><span class="chip soft">ESP32</span><span class="chip soft">C</span><span class="chip soft">DNS</span><span class="chip soft">IoT</span></div>
+  <div class="btns"><a class="btn live" href="https://github.com/M-Abozaid/esp32-c3-adblock" target="_blank" rel="noopener">▶ Reference Repo</a><a class="btn" href="/portfolio/prompts/esp32-c3-adblock-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Network DNS sinkhole on ESP32. Blocks ads for all WiFi devices. Built with the open-source esp32-c3-adblock project (M-Abozaid) as reference.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">Note</div><div class="vi"><p>C3 incompatible with RT-AC58U WPA2. Used WROOM-32D.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/esp32-c3-adblock.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/esp32-c3-adblock-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>ESP32-C3 AdBlock</h2>
+<p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
+<p>Network DNS sinkhole on ESP32. Blocks ads for all WiFi devices.</p>
+<p><strong>Stack / Tools:</strong> ESP32, C, DNS, IoT</p>
+<p><strong>Reference:</strong> <a href="https://github.com/M-Abozaid/esp32-c3-adblock" target="_blank" rel="noopener">https://github.com/M-Abozaid/esp32-c3-adblock</a> — open-source Pi-hole-class DNS ad-blocker on an ESP32-C3 (537k domains as 40-bit FNV-1a hashes in flash, binary-searched; UDP DNS sinkhole + web dashboard, MIT). Used as the reference for this build.</p>
+<p><strong>Build path:</strong></p>
+<ul>
+<li>Note — C3 incompatible with RT-AC58U WPA2. Used WROOM-32D.</li>
+</ul>
+<p><strong>Location:</strong> <code>~/projects/adblockers/</code></p>
+<p>Network DNS sinkhole on ESP32 with ~144k blocked domains, a web dashboard, and a captive-portal WiFi setup. Answers blocked domains with 0.0.0.0 and forwards the rest. The C3 is WPA2-incompatible with the RT-AC58U, so use a WROOM-32D (CP2102, needs the SiLabs driver) or run the sinkhole in AP mode.</p></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

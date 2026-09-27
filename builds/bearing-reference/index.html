@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bearing Reference — build log · Isaac Chan</title>
+<meta name="description" content="Interactive bearing reference — 22 bearing types with cutaway diagrams, live ISO 15 code decoder, build-a-code tool, 67 real dimension tables, L10 life calculator, ISO 286 fit guid">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>Bearing Reference</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">2 versions</span><span class="chip soft">DT</span><span class="chip soft">Engineering</span><span class="chip soft">Interactive</span><span class="chip soft">HTML</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/bearing-reference-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Interactive bearing reference — 22 bearing types with cutaway diagrams, live ISO 15 code decoder, build-a-code tool, 67 real dimension tables, L10 life calculator, ISO 286 fit guide, failure modes &amp; quiz.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>22 types, decoder, quiz.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Builder, dimensions, L10 calculator, ISO fits, failure modes.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/bearing-reference.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/bearing-reference-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>Bearing Reference — Interactive Web App</h2>
+<p>Build spec for the interactive bearing reference (single-file HTML, works offline, no external deps).</p>
+<h3>Deliverable</h3>
+<p><code>~/Desktop/bearing-poster/Bearing-Reference.html</code> (self-contained; ~112 KB; dark engineering/blueprint theme, <code>#0d1b2e</code>).</p>
+<h3>Purpose</h3>
+<p>One interactive reference covering EVERY bearing type for DT coursework, F1 in Schools and revision. Superset of the printed poster (<code>Bearing-Numbers-Poster.pdf</code>).</p>
+<h3>Features (7 tabs)</h3>
+<ol>
+<li><strong>🔍 Types</strong> — 22 bearing types (deep-groove, angular-contact, self-aligning, thrust ball, cylindrical/needle/tapered/spherical roller, roller thrust, linear bushings, insert/pillow-block, miniature, full-complement, hybrid ceramic, thin-section, crossed roller, slewing, plain bushings, spherical plain, cam follower, air/magnetic). Each card has a parametric SVG cutaway + detail modal (features, uses, example codes, variants, pros/cons, speed/load/misalignment, fact). Search + category filter chips.</li>
+<li><strong>🔢 Decoder</strong> — live ISO 15 designation decoder: prefix/type/series/bore/suffix segmentation with colours + meanings. Handles 6205-2RS, NU/NJ/NUP, NA/HK needle, UC inserts, GE/GAC spherical plain, LM linear, MR miniatures, XRB/CRB, KR/CF. Bore rules: 00-03 specials (10/12/15/17), ×5 rule, &lt;10 mm = direct, 620/621/622 specials, HK/NK/GE/LM direct mm.</li>
+<li><strong>🧱 Builder</strong> — reverse decoder: pick family → series → bore → suffix, generates a valid code (zero-padded bore codes!) and live-decodes it. ABEC 1-9 vs ISO P0-P2 grade table.</li>
+<li><strong>📐 Dimensions</strong> — 67 real bearings (6000/6200/6300/6800/6900 + miniatures incl. 608 8×22×7, 623 3×10×4) with d/D/B + load ratings C/Co; searchable/sortable; row click → L10 life calculator ((C/P)^3 or ^10/3 → million revs + hours).</li>
+<li><strong>🛠 Mounting</strong> — 3 mounting rules, ISO 286 fit calculator (p6/j6/h6/g6 shaft; H7/J7/N7/P7 housing, µm values by size range), method cards incl. F1-in-Schools press-fit tip (print PLA hubs 0.1-0.2 mm undersized).</li>
+<li><strong>⚠️ Failures</strong> — 8 failure modes (spalling, brinelling, false brinelling, fluting, overheating, contamination, cage damage, corrosion) + grease vs oil + NLGI grades (30-50% fill rule).</li>
+<li><strong>🎯 Quiz</strong> — 8 random questions (bore/type/series/suffix), scoring + wrong-answer review.</li>
+</ol>
+<h3>Architecture</h3>
+<ul>
+<li>Namespaced objects: <code>B</code> (data), <code>T</code> (SVG), <code>D</code> (decoder), <code>V</code> (views), <code>Q</code> (quiz), <code>N</code> (tools).</li>
+<li>Radio-button tab switching; inline <code>onclick</code>/<code>onchange</code> handlers; string concat (no template literals).</li>
+<li>Built-in <code>#selftest</code> harness (runs on load, writes result to hidden div): 24 decoder cases + 12 build-a-code cases + life-calc math + dims/fits checks.</li>
+</ul>
+<h3>Verification</h3>
+<ul>
+<li><code>node --check</code> on extracted JS.</li>
+<li>Headless Chromium: <code>--dump-dom</code> → grep <code>&lt;div id="selftest"&gt;</code> for <code>SELFTEST PASS</code>.</li>
+<li>Works fully offline (no CDN, system fonts only).</li>
+</ul>
+<h3>Deploy</h3>
+<ul>
+<li>Copied to <code>demos/bearing-reference.html</code> in portfolio repo; card uses o:7 iframe demo.</li>
+<li>Live: <code>https://isaac1804.com/portfolio/</code> → Bearing Reference card.</li>
+</ul></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

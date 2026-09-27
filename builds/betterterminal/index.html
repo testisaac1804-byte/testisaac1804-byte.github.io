@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BetterTerminal — build log · Isaac Chan</title>
+<meta name="description" content="A real macOS terminal emulator with a plain-English bar — type “go to my desktop” and it runs cd ~/Desktop. Real PTY shells (vim, htop, ssh all work), tabs, split panes, search, 7 ">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>BetterTerminal</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">3 versions</span><span class="chip soft">macOS</span><span class="chip soft">Python</span><span class="chip soft">xterm.js</span><span class="chip soft">PTY</span><span class="chip soft">pkgbuild</span></div>
+  <div class="btns"><a class="btn live" href="https://files-proxy.isaac1804.workers.dev/installers/BetterTerminal-1.1.0.pkg" target="_blank" rel="noopener">▶ ⬇ Download installer (.pkg)</a><a class="btn live" href="./Desktop/betterterminal/install.html" target="_blank" rel="noopener">▶ How to install</a><a class="btn" href="/portfolio/prompts/betterterminal-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">A real macOS terminal emulator with a plain-English bar — type “go to my desktop” and it runs cd ~/Desktop. Real PTY shells (vim, htop, ssh all work), tabs, split panes, search, 7 themes and a command history rail with exit codes. 48 plain-English phrases, a searchable guide, and it always asks before deleting anything. Installs from a 15 MB .pkg; the app is self-contained, so there is nothing else to install.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Real PTY terminal: tabs, splits, search, themes, history rail with exit codes.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Plain-English bar (48 phrases) + guide tab, confirm-before-destructive, typo rescue.</p></div></div><div class="ver"><div class="vn">V2.1</div><div class="vi"><p>Self-contained .app bundled into a double-click .pkg installer (Apple silicon).</p></div></div></div></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Documents/projects/apps/BetterTerminal/</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">408</div><div class="l">files</div></div><div class="st"><div class="n">78,042</div><div class="l">lines of code</div></div><div class="st"><div class="n">6</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-09-19</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-09-19</div><div class="l">last touched</div></div></div><p class="fine">Mostly: Python ×154 · JavaScript ×46 · binary assets ×25 · HTML ×9 · CSS ×8 · Shell ×5</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/betterterminal.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/betterterminal-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>BetterTerminal — build spec</h2>
+<p>A real macOS terminal emulator that's genuinely better than Terminal.app: tabs, split panes, search, themes, a command-history rail with exit codes, jump-to-prompt, and a <strong>plain-English bar</strong> for people who have never used a terminal. <strong>Real PTY login shells</strong> — job control, vim/htop/ssh all work.</p>
+<ul>
+<li><strong>App:</strong> <code>~/Applications/BetterTerminal.app</code> (double-click) · fallback <code>~/Documents/BetterTerminal.command</code></li>
+<li><strong>Source:</strong> <code>~/Documents/projects/apps/BetterTerminal/</code></li>
+<li><strong>Version 1.1.0</strong> · Python 3.11 (uv venv) + aiohttp + ptyprocess + pywebview (Cocoa/WKWebView)</li>
+</ul>
+<h3>Plain-English layer (v1.1)</h3>
+<p><code>web/plain.js</code> is a pure, offline resolver: <code>resolve(text, ctx) -&gt; {ok, cmd, explain, danger}</code>.</p>
+<ul>
+<li><strong>48 intents</strong> in one ordered array, each <code>{id, group, label, match(n, ctx), build(m, ctx), preview}</code>.</li>
+<p>Order matters — first match wins, so specific phrases come before generic verbs.</p>
+<li><strong>Path resolution</strong> (<code>resolvePath</code>) is the heart: <code>{cwd, listing}</code> context from</li>
+<p><code>/api/ls</code> lets it match real folder names fuzzily (score by exact/flat/prefix/ substring/token overlap), map synonyms ("desktop" → <code>~/Desktop</code>), and refuse to invent paths — it returns candidates for a "did you mean" chip instead. Unambiguous home folders win immediately; loose words (photos/music/videos) only map to the system folder when no local folder of that name exists.</p>
+<li><strong>Teaching</strong>: every translation shows the command plus a glossary explanation</li>
+<p>(<code>cd = change folder</code>); the History rail keeps the real command.</p>
+<li><strong>Safety</strong>: <code>danger</code> results (delete/move/copy/kill/install/git push) open a</li>
+<p>confirm dialog showing the exact command; the UI never runs them silently.</p>
+<li><strong>Guide tab</strong>: the same intents rendered as a searchable cheat sheet, with the</li>
+<p>resolved command or a <code>&lt;placeholder&gt;</code> pattern under each phrase.</p>
+<li><strong>Rescue</strong>: exit code 127 + <code>command not found: X</code> in the buffer → Levenshtein</li>
+<p>suggestion toast with one-click "Run grep" buttons.</p>
+<li><strong>Never blocks shell users</strong>: <code>looksLikeShell()</code> runs first — flags, pipes,</li>
+<p>paths, quotes, globs and bare known commands pass through untouched.</p>
+</ul>
+<h3>Architecture</h3>
+<p>Python owns the terminals; the UI is a web front-end in a native window.</p>
+<ol>
+<li><code>pty_session.py</code> — <code>PtySession</code> spawns a real login shell via <code>ptyprocess</code></li>
+<p>(own session + controlling tty) and registers the master fd on the asyncio loop with <code>loop.add_reader</code>. Non-blocking read/write with an output buffer, incremental UTF-8 decoding, <code>TIOCSWINSZ</code> resize, <code>killpg</code> for signals.</p>
+<li><code>server.py</code> — aiohttp on 127.0.0.1 with a <strong>per-launch random token</strong> required</li>
+<p>on <code>/ws</code> and <code>/api/*</code> (no other local page can drive your shell). <code>/ws</code> bridges bytes to a PTY; the first frame carries the real terminal geometry so the prompt never reflows. Also <code>/api/ls</code> (folder listings for the resolver), <code>/api/git</code>, <code>/api/clipboard</code>, <code>/api/open</code>, <code>/api/title</code>, <code>/api/stats</code>.</p>
+<li><code>web/</code> — xterm.js (vendored locally) + <code>app.js</code>: tab tree, split-pane tree,</li>
+<p>search (addon-search), WebLinks, OSC hooks, sidebar, palette, English bar.</p>
+<li><code>main.py</code> — picks a free port, runs the server in a thread, opens a pywebview</li>
+<p>window at <code>http://127.0.0.1:PORT/?t=TOKEN</code>. Flags: <code>--command</code>, <code>--cwd</code>, <code>--shell</code>, <code>--no-window</code> (headless tests), <code>--port</code>, <code>--token</code>.</p>
+</ol>
+<h3>Shell integration (the clever bit)</h3>
+<p><code>shell/</code> is a <code>ZDOTDIR</code> shim. zsh reads <code>.zshenv/.zprofile/.zshrc/.zlogin</code> from there; each shim re-sources the user's real file, then <code>.zshrc</code> installs OSC hooks: <code>OSC 7</code> = cwd, <code>OSC 133;A/B/C/D</code> = prompt start / input start / output start / command finished + exit code. The UI parses these to drive the status bar, the history rail (command text is read back out of the xterm buffer between the B and C marks), and jump-to-prompt markers. OSC 52 (remote clipboard write) is swallowed for security.</p>
+<h3>Pitfalls learned</h3>
+<ul>
+<li><code>(( ${+functions[add-zsh-hook]} ))</code> silently evaluated false in this shell →</li>
+<p>the hooks never installed. Use <code>autoload -Uz add-zsh-hook</code> then <code>add-zsh-hook precmd/preexec</code>, with an array-append fallback.</p>
+<li><strong>Do not default to the xterm WebGL renderer</strong> — it painted a blank pane.</li>
+<p>Default is the DOM renderer; WebGL is an opt-in setting.</p>
+<li>macOS menu bar steals shortcuts: clear <code>keyEquivalent</code> on conflicting menu</li>
+<p>items (⌘D dictation, ⌘F fullscreen) after <code>webview.start</code>.</p>
+<li>The launcher execs Python, so set <code>processName</code> + <code>setApplicationIconImage_</code></li>
+<p>at runtime to brand the Dock/menu.</p>
+<li>Restarting a shell must invalidate the old WebSocket's handlers (generation</li>
+<p>counter) or its <code>onclose</code> re-marks the new session as dead.</p>
+<li><code>ZDOTDIR</code> also moves zsh's default <code>HISTFILE</code> to <code>$ZDOTDIR/.zsh_history</code>, which</li>
+<p>hides the user's real history. Re-export <code>HISTFILE="$HOME/.zsh_history"</code> from the shim's <code>.zshenv</code> unless the user set one.</p>
+<li><strong>A <code>match</code> that returns a boolean throws away regex capture groups.</strong> Use the</li>
+<p><code>rx(re, guard)</code> helper so <code>build()</code> always gets a match array; a bare <code>const m = ...; if (m === true) m = null</code> pattern crashes on <code>.replace</code>.</p>
+<li><strong><code>.hidden</code> is both an attribute and a class name.</strong> The bar is hidden with a</li>
+<p>CSS class (<code>classList.toggle('hidden')</code>), so test probes must use <code>classList.contains('hidden')</code> — reading <code>el.hidden</code> silently returns false.</p>
+<li><strong>Test the guide against itself</strong>: resolve every guide label and assert it</li>
+<p>lands on its own intent id. That caught 5 mislabelled/misrouted phrases (get/move stolen by the navigation verb, "go back to the last folder" not matching its own regex).</p>
+<li><code>⌘</code> does not always render in terminal fonts — write "Cmd-E" in text sent to</li>
+<p>the terminal, keep <code>⌘</code> for the UI chrome.</p>
+</ul>
+<h3>Rebuild / test</h3>
+<pre><code>python3 tools/make_icon.py    # icon HTML -&gt; PNG -&gt; AppIcon.icns
+python3 tools/build_app.py    # ~/Applications/BetterTerminal.app + .command
+tools/run_tests.sh            # both Playwright suites (103 checks) on a temp server</code></pre>
+<p><code>tests/debug.py</code>, <code>tests/debug2.py</code>, <code>tests/debug_keys.py</code>, <code>tests/pty_hooks.py</code>, <code>tests/shim_check.py</code> = targeted debuggers. <code>BT_SNAPSHOT=/tmp/x.png</code> + <code>BT_SNAPSHOT_DELAY=7</code> saves a PNG of the real WKWebView's pixels (in-process snapshot, no screen-recording permission).</p></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

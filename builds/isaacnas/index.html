@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IsaacNAS — build log · Isaac Chan</title>
+<meta name="description" content="Password-protected personal cloud — browse, upload, download files from ~/NAS/ from any device. FastAPI + LaunchAgent + SSH tunnel.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>IsaacNAS</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">1 versions</span><span class="chip soft">FastAPI</span><span class="chip soft">Python</span><span class="chip soft">NAS</span><span class="chip soft">Cloud</span><span class="chip soft">macOS</span></div>
+  <div class="btns"><a class="btn live" href="https://da.gd/isaacnas4" target="_blank" rel="noopener">▶ 🔗 Open</a><a class="btn" href="/portfolio/prompts/isaacnas-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Password-protected personal cloud — browse, upload, download files from ~/NAS/ from any device. FastAPI + LaunchAgent + SSH tunnel.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Password auth, file browser, upload, folders, LaunchAgent auto-start, SSH tunnel, da.gd shortlink.</p></div></div></div></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/NAS/</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">1</div><div class="l">files</div></div><div class="st"><div class="n">0</div><div class="l">lines of code</div></div><div class="st"><div class="n">0</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-08-23</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-08-23</div><div class="l">last touched</div></div></div><p class="fine">Mostly: —</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/isaacnas.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/isaacnas-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>IsaacNAS — Personal Cloud</h2>
+<p>Password-protected personal cloud file server. Drop files in <code>~/NAS/</code> and they're instantly accessible from any device.</p>
+<h3>Stack</h3>
+<ul>
+<li><strong>Backend</strong>: FastAPI + uvicorn (Python 3.14)</li>
+<li><strong>Auth</strong>: Session-based cookie auth</li>
+<li><strong>UI</strong>: Single-page dark-themed file browser (HTML/CSS/JS inline)</li>
+<li><strong>Tunnel</strong>: localhost.run SSH reverse proxy for internet access</li>
+<li><strong>Redirect</strong>: GitHub Pages meta-refresh → da.gd shortlink</li>
+<li><strong>Daemon</strong>: macOS LaunchAgent (com.isaac.nas), auto-starts on login</li>
+</ul>
+<h3>Features</h3>
+<ul>
+<li>Password login</li>
+<li>Directory browsing with breadcrumbs</li>
+<li>File download (direct link)</li>
+<li>File upload (multipart form)</li>
+<li>Create folders</li>
+<li>Auto-start on login via LaunchAgent</li>
+<li>SSH tunnel for internet access</li>
+<li>da.gd/isaacnas4 shortlink</li>
+</ul>
+<h3>Key code</h3>
+<ul>
+<li><code>server.py</code> — FastAPI app with all routes</li>
+<li><code>launcher.py</code> — Starts server + tunnel + updates GitHub Pages redirect</li>
+<li><code>run-server.sh</code> — Shell wrapper that strips PYTHONPATH</li>
+</ul>
+<h3>How it works</h3>
+<ol>
+<li>LaunchAgent starts <code>run-server.sh</code> on login</li>
+<li>Server binds to port 8777</li>
+<li>SSH tunnel exposes port to internet via localhost.run</li>
+<li>GitHub Pages redirect page updated with new tunnel URL</li>
+<li>da.gd/isaacnas4 → GitHub Pages → tunnel → server</li>
+</ol></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

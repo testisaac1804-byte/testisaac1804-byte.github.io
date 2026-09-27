@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drill Bits Guide — build log · Isaac Chan</title>
+<meta name="description" content="Interactive DT workshop guide — 22 drill bit types with labelled anatomy diagrams, RPM/pilot/tap-drill calculators, 22-question quiz, troubleshooting, sharpening, machines and glos">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>Drill Bits Guide</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">3 versions</span><span class="chip soft">DT</span><span class="chip soft">HTML</span><span class="chip soft">Interactive</span><span class="chip soft">Education</span><span class="chip soft">Workshop</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/drill-bits-guide-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Interactive DT workshop guide — 22 drill bit types with labelled anatomy diagrams, RPM/pilot/tap-drill calculators, 22-question quiz, troubleshooting, sharpening, machines and glossary. Single-file HTML.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>10-bit A4 poster (PDF).</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Interactive: 18 bits, anatomy hotspots, filters, search.</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>22 bits, RPM/pilot/tap tools, quiz, troubleshooting, machines, glossary.</p></div></div></div></section><section id="files"><h2>Files on the site</h2><ul class="files"><li><a href="/portfolio/projects/drill-bits-guide/Drill-Bits-Full-Catalog.pdf">Poster PDF</a> <span class="meta">392.1 KB</span></li></ul></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/drill-bits-guide.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/drill-bits-guide-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>Drill Bits Guide</h2>
+<p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
+<p>Interactive DT workshop guide — every type of drill bit, how it cuts, when to use it.</p>
+<p><strong>Stack / Tools:</strong> HTML, CSS, JS (single file, no dependencies), SVG vector diagrams</p>
+<p><strong>Build path:</strong></p>
+<ul>
+<li>V1 — 10-bit A4 poster (PDF), dark workshop-manual style</li>
+<li>V2 — Interactive: 18 bits, anatomy hotspots (hover = part names), material filters, live search, detail modal with specs/tips/safety/related</li>
+<li>V3 — 22 bits (added annular cutter, left-hand bit, flex auger, concrete core), RPM speed calculator (cutting-speed formula), pilot-hole finder, tap-drill chart (M2–M16), 22-question quiz with explanations, troubleshooting table, 8-step technique guide, sharpening &amp; care, 6 drill machines, 21-term glossary</li>
+</ul>
+<p><strong>Location:</strong> <code>~/Desktop/drill-bits-interactive.html</code> · live demo <code>demos/drill-bits-interactive.html</code> · posters <code>projects/drill-bits-guide/</code></p>
+<h3>Build notes</h3>
+<ul>
+<li>All bits drawn as inline SVG, tip-down, 160×120 viewBox; orange <code>.hp</code> hotspot circles carry <code>data-label</code> for the anatomy tooltip/legend sync.</li>
+<li>Teeth zigzags must span exactly the cup width: <code>l&lt;step&gt; 7 l&lt;step&gt; -7</code> repeated <code>W/(2·step)</code> times — overshooting teeth was a real bug (paths extended past the bit edge).</li>
+<li>RPM formula: <code>RPM = cutting speed (m/min) × 1000 ÷ (π × Ø mm)</code>, clamped per bit type (hole saw ≤600, Forstner ≤1200, spade ≤1800).</li>
+<li>Pilot hole ≈ 68–80% of screw Ø by material; tap drill ≈ major Ø − pitch.</li>
+<li>Print = A3 landscape poster of all 22 cards via <code>@media print</code>; <code>#sec-bits { display:block !important }</code> in print so the poster exports from ANY tab (blank-PDF bug fixed).</li>
+<li><code>.backdrop[hidden]{display:none!important}</code> required — the <code>.backdrop{display:flex}</code> class overrode the <code>hidden</code> attribute and blocked all clicks.</li>
+<li>Tested headless via Playwright (Chromium 1234): 22 cards, calculators, quiz flow, zero JS errors.</li>
+</ul></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

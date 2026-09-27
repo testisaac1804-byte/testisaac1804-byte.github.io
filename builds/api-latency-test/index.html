@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API Endpoint Latency Tester — build log · Isaac Chan</title>
+<meta name="description" content="Browser-side stopwatch for API endpoints — a faithful copy of a Chinese API relay&#x27;s own 「API地址延迟测试」 page: times each endpoint with performance.now() wrapped around a mode:&quot;no-cors&quot;">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>API Endpoint Latency Tester</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">1 versions</span><span class="chip soft">JavaScript</span><span class="chip soft">Networking</span><span class="chip soft">Latency</span><span class="chip soft">Web API</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/api-latency-test-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Browser-side stopwatch for API endpoints — a faithful copy of a Chinese API relay&#x27;s own 「API地址延迟测试」 page: times each endpoint with performance.now() wrapped around a mode:&quot;no-cors&quot; fetch (3 samples, 100 ms apart, averaged), ranks them fastest-first, and reports dead ones as 超时. Carries the original 3 plain-HTTP relay mirrors plus 4 HTTPS endpoints so it does real work on an https site; a mixed-content guard shows ⛔ instead of a fake latency for the http-only ones.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>3 original relay mirrors + 4 HTTPS addresses, 3-sample averaging, timeout handling, mixed-content guard, explainer panel.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/api-latency-test.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/api-latency-test-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>API Endpoint Latency Tester — build spec / how it works</h2>
+<p><strong>Live:</strong> <a href="https://isaac1804.com/portfolio/demos/api-latency-test.html" target="_blank" rel="noopener">https://isaac1804.com/portfolio/demos/api-latency-test.html</a> <strong>Source of the copy:</strong> <code>http://117.72.62.20/</code> — an API relay's own <code>API地址延迟测试</code> page <strong>Generator:</strong> <code>~/scripts/make-api-latency-test.py</code> (re-run it to regenerate the page from a fresh dump)</p>
+<hr>
+<h3>What it is</h3>
+<p>A browser-side stopwatch for API endpoints. Press <strong>开始测试</strong> and every address in the list is probed three times; the cards then re-sort from fastest to slowest with 1/2/3 rank badges. Nothing is sent to a server of ours — every visitor measures the network between <em>their</em> browser and each endpoint, so two people in different cities get different rankings.</p>
+<h3>How it measures (and why it works cross-origin)</h3>
+<ol>
+<li><strong><code>performance.now()</code> on both sides of a fetch</strong> — high-resolution wall clock in ms.</li>
+<p><code>t1 - t0</code> is the full round trip: DNS lookup + TCP + TLS + server processing + first byte of the response.</p>
+<li><strong><code>mode: 'no-cors'</code></strong> is the load-bearing trick. A normal <code>fetch</code> to another origin</li>
+<p>needs the server to send <code>Access-Control-Allow-Origin</code> <em>and</em> triggers a preflight <code>OPTIONS</code> request, which would pollute the timing and fail on endpoints that don't speak CORS. With <code>no-cors</code> the request is sent as a plain GET and the response arrives <strong>opaque</strong>: JS can read neither the body nor the status (it sees <code>status 0</code>). The original author never needed either — only the moment the promise resolves. Bonus: a relay API endpoint will usually reject a browser request without an API key, but a rejected (401/405) response still resolves, so the timing is still valid.</p>
+<li><strong>The measured URL is a cheap one.</strong> Every entry carries a <code>testUrl</code> pointing at a</li>
+<p>free path (<code>/health</code>, a 212-byte <code>cdn-cgi/trace</code>, a DoH resolve) — never the paid chat endpoint. Latency, not throughput, and no token quota is spent.</p>
+<li><strong><code>AbortController</code> + 5 s timeout.</strong> A dead endpoint aborts → the sample becomes</li>
+<p><code>null</code> → the card prints 超时 (timeout) instead of hanging the page.</p>
+<li><strong>Three samples, 100 ms apart, averaged.</strong> One lucky packet can't win the ranking;</li>
+<p>the loop is <code>for j &lt; 3</code>, and the samples are averaged before rendering.</p>
+<li><strong><code>renderResults()</code> sorts and paints.</strong> Numbers first (ascending), everything else</li>
+<p>last; <code>rank-1/2/3</code> CSS classes colour the podium. Each card also has 复制 buttons that copy the OpenAI/Anthropic base URLs for pasting into config.</p>
+</ol>
+<h3>What was changed for this copy (everything else is verbatim)</h3>
+<p>The original is served over plain <strong>HTTP</strong>, so it can probe its own <code>http://…:11223</code> mirrors. On an <code>https://</code> site the browser refuses those outright — <strong>mixed content</strong> — and a naive copy would silently report every mirror as a timeout. So:</p>
+<ul>
+<li><strong><code>mixedContentBlocked()</code> guard</strong> — an <code>http://</code> address on an <code>https://</code> page is</li>
+<p>detected before the fetch and rendered as <code>⛔ 需 http 页面 (mixed content)</code>, which is the honest answer: no packet left the machine.</p>
+<li><strong>4 HTTPS addresses appended</strong> to the original 3, so the tool does real work on the</li>
+<p>public site: Cloudflare edge, Google DoH, AliDNS, GitHub API.</p>
+<li><strong>Banner</strong> states which mode the page is in (all reachable vs HTTP-only blocked).</li>
+<li><strong>"How this works / 工作原理"</strong> panel at the bottom of the page.</li>
+<li>Empty endpoint rows are hidden for entries that have no Anthropic route.</li>
+</ul>
+<p>Open the same file from disk (<code>file://</code>) or serve it over <code>http://</code> and all 7 addresses are measurable, because the mixed-content rule only applies to <code>https://</code> documents.</p>
+<h3>The relay mirrors, measured from Hong Kong (Sept 2026)</h3>
+<div class="tbl">| Address | Where | <code>/health</code> | Verdict |</div>
+<div class="tbl">|---|---|---|---|</div>
+<div class="tbl">| 地址9 <code>64.90.19.58:11223</code> | Hong Kong (NetLab Global) | ~20–40 ms | fastest by ~25× |</div>
+<div class="tbl">| 地址8 <code>43.155.171.170:11223</code> | Seoul (Tencent Cloud) | ~0.3–0.7 s | usable |</div>
+<div class="tbl">| 地址7 <code>103.236.76.197:11223</code> | Beijing (CHINANET Shaanxi) | ~1.0–1.4 s | slowest from HK, despite the 「国内优先」 label |</div>
+<p>All three are <strong>plain HTTP on port 11223</strong> — no TLS. Keys and prompts cross the network in cleartext, so the relay is only for throwaway traffic, and its API keys are 1-day leases (a dead key answers <code>401 {"error":{"message":"API key 已过期…"}}</code>).</p>
+<h3>Rebuild</h3>
+<pre><code># 1. take a fresh dump of the relay&#x27;s page
+curl -s -A &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36&quot; \
+     http://117.72.62.20/ -o /tmp/ip_page.html
+# 2. regenerate the portfolio copy (surgical edits + guards)
+python3 ~/scripts/make-api-latency-test.py
+# 3. verify in a real browser across file://, http:// and https://
+python3 /tmp/verify_browser.py</code></pre>
+<h3>Pitfalls found while building this</h3>
+<ul>
+<li>DoH endpoints need <code>accept: application/dns-json</code>; without it Cloudflare's</li>
+<p><code>dns-query</code> answers <strong>405</strong> (timing still works, console noise doesn't). Use <code>cdn-cgi/trace</code> or <code>/resolve</code> endpoints for a bare-GET probe.</p>
+<li><code>dns.quad9.net:5053</code> is unreachable from Hong Kong — 8 s timeout, shows as 超时.</li>
+<li>In <code>no-cors</code> mode Chrome logs <code>net::ERR_ABORTED</code> for every probe; that is the</li>
+<p><em>expected</em> opaque-response behaviour, not a failure.</p>
+<li>A placeholder put inside a JS template literal must not contain <code>&lt;/script&gt;</code> — it</li>
+<p>closes the outer tag and kills the whole page script.</p>
+</ul></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

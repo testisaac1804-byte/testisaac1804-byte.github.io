@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Isaac Trade — build log · Isaac Chan</title>
+<meta name="description" content="萬用交易社群平台 — 六大分類（🃏卡牌／📦實物／💾數碼檔／🛠服務／🌐域名／✨其他）：任何人發帖（賣／換／收）、留言報價、標記成交；作者用管理碼改狀態／刪自己帖，管理員密碼刪任何帖。頂部有 Isaac 品牌 hub（Portfolio／IsaacDrop／Open Press）。Cloudflare Worker + KV 免費後端，手機版 UI。">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>Isaac Trade</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">3 versions</span><span class="chip soft">Cloudflare Worker</span><span class="chip soft">KV</span><span class="chip soft">交易社群</span><span class="chip soft">多分類</span></div>
+  <div class="btns"><a class="btn live" href="https://isaac-trade.isaac1804.workers.dev" target="_blank" rel="noopener">▶ Open Isaac Trade</a><a class="btn" href="/portfolio/prompts/isaac-trade-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">萬用交易社群平台 — 六大分類（🃏卡牌／📦實物／💾數碼檔／🛠服務／🌐域名／✨其他）：任何人發帖（賣／換／收）、留言報價、標記成交；作者用管理碼改狀態／刪自己帖，管理員密碼刪任何帖。頂部有 Isaac 品牌 hub（Portfolio／IsaacDrop／Open Press）。Cloudflare Worker + KV 免費後端，手機版 UI。</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Pokémon 卡買賣交換區：發帖／留言報價／成交狀態、管理碼、管理員刪帖、KV 後端、速率限制、手機版 UI。</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>擴充成萬用交易平台：6 大分類 + 分類篩選、表單按分類換標籤、品牌 hub 條。</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>排序、⭐收藏／🙋我的帖、🔗分享 deep-link、📈成交紀錄價格參考、👍👎信譽系統、🚩檢舉 + ⚙️管理員面板（檢舉箱／站點設定／統計）、🌙深色模式、PWA。</p></div></div></div></section><section id="files"><h2>Files on the site</h2><ul class="files"><li><a href="/portfolio/prompts/isaac-trade-prompt.md">Prompt</a> <span class="meta">20 lines · 759 B</span></li></ul></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/isaac-trade.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/isaac-trade-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>Isaac Trade — 萬用交易社群平台</h2>
+<p>A general-purpose trading community platform in Traditional Chinese.</p>
+<h3>Categories (6)</h3>
+<p>🃏 卡牌 · 📦 實物 · 💾 數碼檔 · 🛠 服務 · 🌐 域名 · ✨ 其他</p>
+<h3>Features</h3>
+<ul>
+<li><strong>Anyone can post</strong> — 賣 (sell) / 換 (trade) / 收 (want)</li>
+<li><strong>Comment offers</strong> — negotiate in the thread, mark as 成交 (deal closed)</li>
+<li><strong>Author controls</strong> — edit status or delete your own post with your 管理碼 (management code)</li>
+<li><strong>Admin</strong> — delete any post with the admin password</li>
+<li><strong>Brand hub</strong> in the header — Portfolio / IsaacDrop / Open Press</li>
+<li>Mobile-first UI</li>
+</ul>
+<h3>Stack</h3>
+<p>Cloudflare Worker + KV (free tier) — no server to run, posts persist in KV.</p>
+<h3>Live</h3>
+<p><a href="https://isaac-trade.isaac1804.workers.dev" target="_blank" rel="noopener">https://isaac-trade.isaac1804.workers.dev</a></p></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

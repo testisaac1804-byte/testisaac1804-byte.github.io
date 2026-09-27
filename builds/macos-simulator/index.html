@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>macOS Simulator — build log · Isaac Chan</title>
+<meta name="description" content="Full interactive macOS desktop simulator with menubar, dock, windows, and dark/light theme.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>macOS Simulator</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">1 versions</span><span class="chip soft">HTML</span><span class="chip soft">CSS</span><span class="chip soft">JS</span><span class="chip soft">Simulator</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/macos-simulator-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Full interactive macOS desktop simulator with menubar, dock, windows, and dark/light theme.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Menubar, dock, windows, themes.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/macos-simulator.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/macos-simulator-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>macOS Simulator</h2>
+<p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
+<p>Full interactive macOS desktop simulator with menubar, dock, windows, and dark/light theme.</p>
+<p><strong>Stack / Tools:</strong> HTML, CSS, JS, Simulator</p>
+<p><strong>Build path:</strong></p>
+<ul>
+<li>V1 — Menubar, dock, windows, themes.</li>
+</ul>
+<p><strong>Location:</strong> <code>~/Desktop/mac-simulator.html</code></p>
+<p>Interactive macOS desktop simulation with working menubar (Apple menu, app menus), dock with app icons, draggable windows, and light/dark theme switching. Built as a single-file HTML app.</p>
+<h3>Finder app (redesigned)</h3>
+<p>Real-macOS Finder inside the simulator — single-file JS, no dependencies, localStorage-backed.</p>
+<p><strong>Layout:</strong> window titlebar shows the current folder name · toolbar = back/forward · new folder · move to trash · icon/list/column view buttons · search field · content = sidebar (Favorites / iCloud / Locations) + view pane · bottom = path bar (breadcrumbs) + status bar ("N items", "Available: 214.28 GB of 494.38 GB").</p>
+<p><strong>Views:</strong></p>
+<ul>
+<li><strong>Icon</strong> — 94px grid tiles, single-click select, ⌘-click multi-select, double-click opens.</li>
+<li><strong>List</strong> — Name / Date Modified / Size / Kind columns, click headers to sort (folders sort first).</li>
+<li><strong>Column</strong> — drill-down columns via <code>M.finderColumnChain()</code>; clicking a folder appends a column, clicking a file shows its preview pane (icon, kind, size, modified).</li>
+</ul>
+<p><strong>Behaviour:</strong> history stack for back/forward (<code>finderHistory</code> + <code>finderIdx</code>); breadcrumb nav (Macintosh HD ▸ Users ▸ isaac ▸ …); live search filters the current folder and reports "N of M shown"; New Folder creates <code>untitled folder</code> naming; Move to Trash really moves items into the Trash app window (which lists them with their source folder); Applications folder double-click launches the matching simulator app.</p>
+<p><strong>Filesystem:</strong> <code>M.finderDefaults()</code> seeds 24 nested locations (desktop, documents/work/archive, school/igcse, pictures/vacation/family, music/album, icloud/shared, macintosh/applications/system/users/home). <code>M.finderSeed()</code> adds any missing location to older saved state so existing localStorage users keep their files.</p>
+<p><strong>Pitfalls:</strong> state keys absent from <code>M.state</code> are dropped by the loader — guard every new key in <code>M.finderSeed()</code>. Keep synthetic Date Modified / Size deterministic (hash of the file name) or the list flickers on every render. The search input must survive re-render: re-render content only while typing, never the toolbar.</p></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

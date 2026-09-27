@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GCSE Home — build log · Isaac Chan</title>
+<meta name="description" content="Rebuilt copy of the school&#x27;s Toddle GCSE Home dashboard — My Classes (9), assignments &amp; deadlines, events calendar, and full Sentral snapshot modules: weekly timetable grid, attend">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>GCSE Home</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">1 versions</span><span class="chip soft">Dashboard</span><span class="chip soft">School</span><span class="chip soft">GCSE</span><span class="chip soft">HTML</span><span class="chip soft">Education</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/gcse-home-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Rebuilt copy of the school&#x27;s Toddle GCSE Home dashboard — My Classes (9), assignments &amp; deadlines, events calendar, and full Sentral snapshot modules: weekly timetable grid, attendance record, newsfeed, engagement, sports fixtures &amp; activities. Data snapshot Sept 2026. Single-file HTML, light theme.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Rebuilt Toddle GCSE Home: classes, deadlines, events, quick links, localStorage done-marking.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/gcse-home.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/gcse-home-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>GCSE Home — Toddle Dashboard Rebuild</h2>
+<h3>Stack</h3>
+<p>Single-file HTML (no dependencies, works offline) · light theme · localStorage persistence</p>
+<h3>How it works</h3>
+<p>Rebuilds the school's <strong>Toddle "GCSE Home" dashboard</strong> (web.toddleapp.com) as a standalone static page from the saved page data:</p>
+<ul>
+<li><strong>Quick links</strong> — 10 Toddle modules. Calendar + the six Sentral modules</li>
+<p>(Engagement, Attendance, Newsfeed, Timetable, Sports, Activities) open full <strong>snapshot views</strong> rendered from real class data:</p>
+<li><strong>Timetable</strong> — weekly grid (Mon–Fri × 8 periods) built from the 9 real class</li>
+<p>codes, colour-coded per subject.</p>
+<li><strong>Attendance</strong> — 97.8% overall, 42/43 sessions, 0 unauthorised absences, 2</li>
+<p>lates, day-by-day week view.</p>
+<li><strong>Newsfeed</strong> — school announcements (Charity Week, assemblies, subject support).</li>
+<li><strong>Engagement / Sports / Activities</strong> — attendance+wellbeing cards, fixtures</li>
+<p>with results, after-school clubs. Every view labelled "snapshot · school login required" since live Sentral data is login-gated.</p>
+<li><strong>My Classes</strong> — 9 snaphotted classes: Chinese First Language 10CX201,</li>
+<p>Double Science 10DS206, Design Technology 10DT201, Economics 10EC203, English 10EN208, Health and Wellbeing 10HW102, Mathematics 10MA203, Thrive Programme 10TR104, Higher Education (Class of 2030).</p>
+<li><strong>Assignments &amp; deadlines</strong> — tabbed (Upcoming / Overdue / No due date /</li>
+<p>Not submitted), real snapshot: DT Table Re-Design presentation (Tomorrow 7:30pm), Maths Homework 4 + Homework 5 (extra) (14 Sep 8am). Checkbox marks done → saved to <code>localStorage</code> (<code>gcsehome-v1</code>).</p>
+<li><strong>Events</strong> — 12–15 Sep: Y10 &amp; Y12 Assembly, Y7 Assembly, Rutherford Charity</li>
+<p>Week, Y8 Assembly.</p>
+</ul>
+<h3>Key code</h3>
+<ul>
+<li><code>G</code> object namespaces everything; <code>A</code>/<code>C</code>/<code>E</code>/<code>Q</code>/<code>TT</code>/<code>ATT</code>/<code>NEWS</code>/<code>SPORTS</code>/</li>
+<p><code>ACTS</code> arrays hold snapshot data.</p>
+<li><code>G.view_&lt;module&gt;()</code> renders each Sentral module into the modal (<code>G.set(html, wide)</code>).</li>
+<li><code>G.toggle(id)</code> flips done-state, persists, and re-renders stats + tabs + list.</li>
+<li>Selftest: 12 checks — every modal view renders real content, plus grid/class/</li>
+<p>deadline/event/stat counts. Stamp: <code>SELFTEST PASS — N checks OK</code>.</p>
+</ul>
+<h3>Usage</h3>
+<p>Open <code>demos/gcse-home.html</code> in any browser. No server needed.</p></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>218/213 騙局複刻模擬器 — build log · Isaac Chan</title>
+<meta name="description" content="逐頁複刻真實非法賭博網站 218.com（永誠貴賓會）與 213.com（PG娛樂）的反詐教學模擬器 —— 假 Loading 跳轉、備用線路、門戶、遊戲大廳、客服話術、加密啟動頁、代理後台，全部按鈕只連本地模擬。附 10 課深度導覽、12 條黑話術語表、10 題測驗與完整調查檔案。">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>218/213 騙局複刻模擬器</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">2 versions</span><span class="chip soft">Security</span><span class="chip soft">Anti-Scam</span><span class="chip soft">Phishing</span><span class="chip soft">Evidence</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/casino-scam-sim-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">逐頁複刻真實非法賭博網站 218.com（永誠貴賓會）與 213.com（PG娛樂）的反詐教學模擬器 —— 假 Loading 跳轉、備用線路、門戶、遊戲大廳、客服話術、加密啟動頁、代理後台，全部按鈕只連本地模擬。附 10 課深度導覽、12 條黑話術語表、10 題測驗與完整調查檔案。</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>複刻 218.com 入口頁（假 Loading + base64 隱藏跳轉）。</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>加入 213 門戶、遊戲大廳、客服練功房、App 加密頁、代理後台、10 課導覽與調查檔案。</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/casino-scam-sim.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/casino-scam-sim-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>218/213 騙局複刻模擬器 (Casino Scam Replica Simulator)</h2>
+<p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
+<p>逐頁複刻兩個真實非法賭博網站 —— <strong>218.com（永誠貴賓會，BBIN 白標）</strong> 與 <strong>213.com（PG娛樂 / TruckSDK 門戶農場）</strong> —— 的反詐教學工具。外觀與原站一致，但<strong>所有按鈕只連到本地模擬</strong>：不會連上賭場、不下載任何東西、不收集任何資料。</p>
+<p><strong>Stack / Tools:</strong> HTML · CSS · Vanilla JS · Security · Anti-scam education</p>
+<p><strong>Location:</strong> <code>demos/casino-scam-sim/</code></p>
+<h3>頁面</h3>
+<div class="tbl">| 檔案 | 內容 |</div>
+<div class="tbl">|---|---|</div>
+<div class="tbl">| <code>sim.html</code> | 首頁 / 總覽 —— 入口頁、備用網址、門戶、遊戲、客服、導覽、App、後台、調查檔案 |</div>
+<div class="tbl">| <code>loading.html</code> | 218.com 入口頁複刻：畫面只有「Loading...」，真正工作是 base64 隱藏跳轉 |</div>
+<div class="tbl">| <code>hub.html</code> | 218yc.com 官方備用網址資訊站複刻（5 條線路 + 延時數字） |</div>
+<div class="tbl">| <code>door.html</code> | 213.com 歡迎回家門戶複刻（商戶 FNQ2、在線客服、97聊天、假瀏覽器下載列） |</div>
+<div class="tbl">| <code>lobby.html</code> | 遊戲大廳模擬：百家樂 / 輪盤 / 龍虎鬥 / 老虎機 / 體育，虛擬籌碼 + 真實莊家優勢，「提款」永遠審核中 |</div>
+<div class="tbl">| <code>chat.html</code> | 在線客服「小美」練功房：模擬詐騙話術與「解鎖費」表演 |</div>
+<div class="tbl">| <code>app.html</code> | 218 App 啟動頁複刻 + AES-256-ECB 三次加密握手解密教學 |</div>
+<div class="tbl">| <code>backoffice.html</code> | 代理後台示意（ag.218920.com，Vue3 管理面板）：會員、注單、佣金、IP 白名單、2FA |</div>
+<div class="tbl">| <code>tour.html</code> | 深度導覽：10 課講完整條詐騙產業鏈 + 12 條黑話術語表 + 10 題測驗 |</div>
+<div class="tbl">| <code>investigation-file.md</code> | 完整調查檔案：網域池、伺服器、加密破解、舉報渠道 |</div>
+<h3>建構方式</h3>
+<ol>
+<li>由真實網站存檔（HTTrack / 手動 wget）取得頁面結構與素材，存為 <code>hub_files/</code>、<code>213_files/</code>。</li>
+<li>逐頁重寫為本地模擬頁：保留原站視覺與流程，但把每個連外按鈕改為 <code>sim.js</code> 的本地動作。</li>
+<li><code>sim.js</code> 負責：頁面名稱、詐騙手法收集（🚩 X/8）、術語表、測驗評分 —— 全部純前端，無任何網路請求。</li>
+<li>素材與頁面皆為自帶資源（self-contained），可直接以 <code>python3 -m http.server</code> 開啟。</li>
+</ol>
+<h3>驗證</h3>
+<ul>
+<li>內部連結全部指向本地頁（<code>index.html</code> → <code>sim.html</code>），無外部依賴。</li>
+<li><code>sim.js</code> 內無 <code>fetch</code> / <code>XMLHttpRequest</code> —— 確認不會對外連線。</li>
+<li>無障礙：所有「開啟」按鈕導向本地模擬頁，不會觸發真實賭場網址。</li>
+</ul></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DNS Server — build log · Isaac Chan</title>
+<meta name="description" content="Custom recursive DNS server — LAN devices set DNS to this IP. Forwards to Cloudflare, caches, live dashboard, ad-blocking.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>DNS Server</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">1 versions</span><span class="chip soft">DNS</span><span class="chip soft">Python</span><span class="chip soft">Networking</span><span class="chip soft">Server</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/dns-server-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Custom recursive DNS server — LAN devices set DNS to this IP. Forwards to Cloudflare, caches, live dashboard, ad-blocking.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Recursive resolver, cache, dashboard, blocklist.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/dns-server.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/dns-server-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>DNS Server</h2>
+<p>Built a custom recursive DNS server that people on the WiFi can set as their DNS resolver.</p>
+<h3>What it does</h3>
+<ul>
+<li>Listens on port 53 (UDP) — the standard DNS port</li>
+<li>Parses incoming DNS queries using dnslib</li>
+<li>Forwards to Cloudflare (1.1.1.1) as upstream</li>
+<li>Caches responses with TTL respect</li>
+<li>Live web dashboard on port 8055 showing all queries</li>
+<li>Optional ad/tracker blocking via blocklist</li>
+<li>Cache persists to disk between restarts</li>
+</ul>
+<h3>How it works</h3>
+<pre><code>Client → Your DNS (192.168.1.251:53) → Cloudflare 1.1.1.1 → Answer cached → Client</code></pre>
+<h3>Tech stack</h3>
+<ul>
+<li>Python 3</li>
+<li>dnslib (DNS wire format parsing)</li>
+<li>HTTP server (dashboard)</li>
+<li>Threading (concurrent queries)</li>
+<li>JSON (cache persistence)</li>
+</ul>
+<h3>Features</h3>
+<ul>
+<li>🌐 Forwarded queries go to Cloudflare</li>
+<li>📦 Cached queries return instantly (no upstream call)</li>
+<li>🚫 Blocked domains return NXDOMAIN</li>
+<li>📊 Live dashboard shows all queries in real-time</li>
+</ul>
+<h3>Usage</h3>
+<pre><code># Full DNS server (needs sudo for port 53):
+sudo python3 dns_server.py
+
+# Test without sudo:
+python3 dns_server.py --port 5354</code></pre>
+<p>Other devices on the network set their DNS to <code>192.168.1.251</code> to use it.</p></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

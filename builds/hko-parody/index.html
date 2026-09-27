@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hong Kong Observatory (Parody) — build log · Isaac Chan</title>
+<meta name="description" content="Deadpan comedy parody of the Hong Kong Observatory homepage - the real HKO template, logo and blue palette, filled with absurd official weather warnings (Typhoon Signal No. 11, Ver">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>Hong Kong Observatory (Parody)</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">1 versions</span><span class="chip soft">HTML</span><span class="chip soft">Parody</span><span class="chip soft">Comedy</span><span class="chip soft">Weather</span></div>
+  <div class="btns"><a class="btn live" href="./demos/hko-funny.html" target="_blank" rel="noopener">▶ Open Full Page</a><a class="btn" href="/portfolio/prompts/hko-parody-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Deadpan comedy parody of the Hong Kong Observatory homepage - the real HKO template, logo and blue palette, filled with absurd official weather warnings (Typhoon Signal No. 11, Very Mild Weather Warning, Frost Warning for your freezer). Clearly labelled fictional.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>15-section HKO-styled parody page - real logo, absurd weather notices.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/hko-parody.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/hko-parody-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>Hong Kong Observatory — Parody Page (FICTIONAL)</h2>
+<p><strong>Type:</strong> Single-file HTML parody website (comedy) <strong>Built:</strong> September 2026 <strong>File:</strong> <code>demos/hko-funny.html</code></p>
+<h3>What it is</h3>
+<p>A deadpan comedy parody of the <strong>Hong Kong Observatory</strong> homepage. The page keeps the real HKO visual identity — the genuine HKO logo, the HKO blue palette, official typography and section structure — but every piece of content is absurd bureaucratic humour delivered in the straight-faced tone of an official weather notice.</p>
+<p>It is clearly labelled as fiction in two places: a sticky strip at the very top ("FICTIONAL DEMONSTRATION — NOT the real Hong Kong Observatory · 純屬搞笑虛構") and a disclaimer in the footer. It is not affiliated with the HKO or any government body.</p>
+<h3>How it was built</h3>
+<ol>
+<li><strong>Template source:</strong> the live HKO homepage (<code>hko.gov.hk/en/index.html</code>) was rendered</li>
+<p>in a headless browser to capture its real DOM and its 8 stylesheets.</p>
+<li><strong>Real asset:</strong> the genuine HKO logo (<code>images/logo_hko_index_e.png</code>) is inlined as a</li>
+<p>base64 data URI so the page is fully self-contained (no external files, works offline).</p>
+<li><strong>Rebuild, not salvage:</strong> HKO's page is JavaScript-driven (animated weather map, radar</li>
+<p>loop, mega-menu, carousels). Rather than strip the JS and patch the wreckage — which produced an 18,000px broken layout — the page was <strong>re-written as clean hand-authored HTML</strong> that reuses the HKO look: blue gradient header, logo, nav bar, search box, section headings with blue underlines, white content cards, dark-blue footer.</p>
+<li><strong>Warning badges</strong> are hand-drawn inline SVG circles in the style of HKO warning</li>
+<p>symbols. <strong>Forecast icons</strong> are inline SVG glyphs.</p>
+</ol>
+<h3>Content (the jokes)</h3>
+<div class="tbl">| Section | Content |</div>
+<div class="tbl">|---|---|</div>
+<div class="tbl">| Slogan | "Measure the Sky, Apologise for the Rain" |</div>
+<div class="tbl">| Ticker | Scrolling warning marquee |</div>
+<div class="tbl">| Announcement | 6 deadpan notices |</div>
+<div class="tbl">| Special Bulletin | Typhoon Signal No. 11 — "the supernumerary signal, issued when the Observatory has run out of numbers" |</div>
+<div class="tbl">| Today's Warning | 8 badges (No. 11, Very Mild Weather Warning, Chance of Clouds Advisory, Amber Humidity Advisory, Frost Warning for your freezer…) |</div>
+<div class="tbl">| Warning Summary | Table with "in force since: Tuesday / Always / Once, briefly / 2019" |</div>
+<div class="tbl">| Current Weather | 27°C "feels like 27°C, but louder"; humidity "100% — you are now part of the air"; "Update at 11:40 (the time is also weather)" |</div>
+<div class="tbl">| General Situation | "An anticyclone aloft is bringing weather to Guangdong… the sky remains up." |</div>
+<div class="tbl">| Regional Temperature | Central 27°C, Your Kitchen 31°C, The Shade 24°C, Inside a Coat 34°C, "The Window — being looked out of" |</div>
+<div class="tbl">| 9-Day Outlook | "Sunny, then not." / "Cloudy with a chance of clouds." / "Unsettled. So are we." with rain probability relabelled Certain / Who Knows / Ask Again Later |</div>
+<div class="tbl">| UV &amp; Health | "Consider a hat, or don't. The sun has been notified." |</div>
+<div class="tbl">| Marine | "Wave Height: A wave · Fish: Informed · Sea State: Wet" → "Small craft are advised to remain small." |</div>
+<div class="tbl">| FAQ | "Will it rain tomorrow? — The Observatory does not comment on the future." / "Can I speak to a meteorologist? — Our Chief Meteorologist is currently looking out of the window. This is a scheduled activity and cannot be interrupted." |</div>
+<div class="tbl">| What's New | "Is it Possible to be Rained On?" / "Study finds Tuesday still the most Tuesday-like day of the week" |</div>
+<div class="tbl">| Earthquake Report | "A magnitude 0.3 tremor was felt by one person, who was mistaken. Epicentre: The kitchen." |</div>
+<div class="tbl">| Careers | Window Looker (Senior) — "Requirements: ability to look." / Rain Namer / Future Correspondent |</div>
+<div class="tbl">| Public Consultation | Views on the sky: "It's up" (4,102) · "It's grey" (987) · "No comment" (1) |</div>
+<div class="tbl">| Thought for the Day | "There is no bad weather — only weather for which the Observatory has not yet apologised." |</div>
+<h3>Technical notes</h3>
+<ul>
+<li>Single self-contained file (~43 KB), no external requests, works offline.</li>
+<li>Responsive: two/three-column grids collapse to one column under 900px; the 9-day grid</li>
+<p>drops to 3 columns.</p>
+<li>Only inline SVG icons + one inlined base64 PNG logo. No JS required.</li>
+<li>Verified in headless Chromium: 15 sections, 9 forecast cards, 8 badges, 2 tables,</li>
+<p>8 FAQs, <strong>0 broken images, no horizontal overflow, 0 failed requests</strong>.</p>
+</ul>
+<h3>Disclaimer</h3>
+<p>Fictional comedy project. The HKO template and logo are used as parody. For actual weather information, see hko.gov.hk.</p></div></details></section>
+<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>
