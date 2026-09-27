@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Link Compressor — isaac1804.com/s/ · Isaac Chan</title>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0b0d12">
+<meta name="description" content="Compress long links into short isaac1804.com/s/ links. Bulk mode, QR codes, click counts, custom names — self-hosted on Cloudflare Workers + KV.">
+<meta property="og:title" content="Link Compressor — isaac1804.com/s/">
+<meta property="og:description" content="Paste a long link, get a tiny isaac1804.com/s/xxxxx link. Bulk mode, QR codes and click counts.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/og-image.png">
+<link rel="canonical" href="https://isaac1804.com/tools/link-compressor/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0d12;--card:#12151d;--card2:#171b25;--bd:#252b38;--t1:#e8ebf2;--t2:#9aa4b8;--t3:#6b7488;--ab:#7170ff;--ok:#3ddc97;--warn:#ffb454;--bad:#ff6b6b}
+html[data-theme="light"]{--bg:#f6f7fb;--card:#fff;--card2:#f1f3f9;--bd:#dfe3ec;--t1:#141821;--t2:#4d5666;--t3:#828b9c;--ab:#5b5bd6;--ok:#0da868;--warn:#b26a00;--bad:#d64545}
+body{background:var(--bg);color:var(--t1);font:15px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;padding:26px 16px 90px;-webkit-text-size-adjust:100%}
+.wrap{max-width:900px;margin:0 auto}
+.top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.back{color:var(--t2);text-decoration:none;font-size:13px;border:1px solid var(--bd);padding:6px 12px;border-radius:9px;background:var(--card)}
+.back:hover{border-color:var(--ab);color:var(--t1)}
+.tgl{margin-left:auto;background:var(--card);border:1px solid var(--bd);color:var(--t2);border-radius:9px;padding:6px 11px;font-size:13px;cursor:pointer}
+h1{font-size:29px;letter-spacing:-.025em;line-height:1.15}
+h1 .g{background:linear-gradient(92deg,#7170ff,#3ddc97);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--t2);font-size:13.5px;margin:6px 0 18px}
+.sub code{background:var(--card2);border:1px solid var(--bd);padding:1px 6px;border-radius:6px;font-size:12.5px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:15px;padding:20px;margin-bottom:16px}
+.card h2{font-size:15.5px;margin-bottom:3px;letter-spacing:-.01em}
+.card .hint{color:var(--t3);font-size:12.5px;margin-bottom:14px}
+textarea,input{width:100%;background:var(--card2);border:1px solid var(--bd);color:var(--t1);padding:12px;border-radius:10px;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;resize:vertical}
+textarea:focus,input:focus{outline:none;border-color:var(--ab);box-shadow:0 0 0 3px rgba(113,112,255,.13)}
+textarea{min-height:96px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.grow{flex:1;min-width:170px}
+button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--bd);background:var(--card2);color:var(--t1);padding:10px 15px;font-size:14px;transition:.13s}
+button:hover{border-color:var(--ab)}
+button.primary{background:linear-gradient(96deg,#7170ff,#5b5bd6);border-color:transparent;color:#fff;font-weight:600;padding:11px 22px}
+button.primary:hover{filter:brightness(1.09)}
+button.ghost{background:transparent;color:var(--t2);padding:7px 11px;font-size:12.5px}
+button.tiny{padding:5px 9px;font-size:12px;border-radius:8px}
+button[disabled]{opacity:.45;cursor:not-allowed}
+.lbl{font-size:12px;color:var(--t2);margin-bottom:5px;display:block}
+.pill{font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid var(--bd);color:var(--t3)}
+.pill.ok{border-color:var(--ok);color:var(--ok)}
+.pill.bad{border-color:var(--bad);color:var(--bad)}
+.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
+.stat div{background:var(--card2);border:1px solid var(--bd);border-radius:11px;padding:12px 14px}
+.stat b{display:block;font-size:23px;font-weight:650;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat span{font-size:11.5px;color:var(--t3);text-transform:uppercase;letter-spacing:.07em}
+.item{border:1px solid var(--bd);border-radius:12px;padding:13px 14px;margin-bottom:10px;background:var(--card2)}
+.item.new{border-color:var(--ok);box-shadow:0 0 0 3px rgba(61,220,151,.1)}
+.item .shortline{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.short{font:600 16.5px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ab);word-break:break-all;text-decoration:none}
+.short:hover{text-decoration:underline}
+.from{font-size:12.5px;color:var(--t3);margin-top:7px;word-break:break-all;line-height:1.5}
+.from a{color:var(--t3)}
+.bar{height:5px;border-radius:4px;background:var(--bd);margin-top:9px;overflow:hidden;display:flex}
+.bar i{display:block;height:100%}
+.bar i.a{background:var(--bad);opacity:.55}
+.bar i.b{background:var(--ok)}
+.save{font-size:12px;color:var(--ok);margin-top:6px}
+.actions{margin-top:11px;display:flex;gap:7px;flex-wrap:wrap}
+.msg{border-radius:11px;padding:11px 14px;font-size:13.5px;margin-bottom:13px;border:1px solid}
+.msg.err{background:rgba(255,107,107,.09);border-color:var(--bad);color:var(--bad)}
+.msg.info{background:rgba(113,112,255,.1);border-color:var(--ab)}
+.msg.ok{background:rgba(61,220,151,.1);border-color:var(--ok);color:var(--ok)}
+.empty{color:var(--t3);font-size:13.5px;padding:8px 0}
+details{background:var(--card);border:1px solid var(--bd);border-radius:15px;padding:16px 20px;margin-bottom:16px}
+details summary{cursor:pointer;font-size:14px;font-weight:600}
+details[open] summary{margin-bottom:12px}
+details p,details li{color:var(--t2);font-size:13.5px}
+details ul{margin:8px 0 0 20px}
+.big-modal{position:fixed;inset:0;background:rgba(4,6,12,.78);display:none;place-items:center;z-index:60;padding:20px}
+.big-modal.show{display:grid}
+.qrbox{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px;text-align:center;max-width:340px}
+.qrbox canvas,.qrbox img{border-radius:8px;background:#fff;padding:8px;max-width:100%}
+.qrbox .short{font-size:13px;margin:12px 0 14px;display:block}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,80px);background:var(--card);border:1px solid var(--ok);color:var(--t1);padding:11px 20px;border-radius:12px;font-size:13.5px;opacity:0;transition:.22s;z-index:80;pointer-events:none;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.toast.show{transform:translate(-50%,0);opacity:1}
+footer{margin-top:30px;color:var(--t3);font-size:12px;text-align:center;line-height:1.9}
+footer a{color:var(--t2)}
+@media(max-width:520px){h1{font-size:24px}.card{padding:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="back" href="/tools/">← Tools</a>
+    <a class="back" href="/">🏠 Home</a>
+    <button class="tgl" onclick="theme()">☀️</button>
+  </div>
+
+  <h1>🔗 Link <span class="g">Compressor</span></h1>
+  <p class="sub">Paste a long link → get a tiny <code>isaac1804.com/s/xxxxx</code> link. Bulk mode, QR codes and click counts.
+  Runs on my own Cloudflare Worker + KV, so nothing expires and there is no third-party service in the middle.</p>
+
+  <div id="msgs"></div>
+
+  <div class="card">
+    <h2>Compress links</h2>
+    <div class="hint">One link per line — paste as many as you like. Everything after the <code>#</code> is dropped, <code>https://</code> is added automatically.</div>
+    <textarea id="in" placeholder="https://isaac1804.com/portfolio/Woods%20Knowledge/&#10;isaac1804.com/revision/&#10;https://files-proxy.isaac1804.workers.dev/installers/BetterTerminal-1.1.0.pkg"></textarea>
+    <div class="row">
+      <div class="grow">
+        <label class="lbl" for="slug">Custom name <span class="pill" id="slugPill">token needed</span></label>
+        <input id="slug" placeholder="e.g. woods  (blank = random 5 characters)" disabled>
+      </div>
+      <div class="grow">
+        <label class="lbl" for="note">Note to self (optional)</label>
+        <input id="note" placeholder="e.g. send to DT teacher">
+      </div>
+    </div>
+    <div class="row">
+      <button class="primary" id="go" onclick="compressAll()">🗜️ Compress</button>
+      <button class="ghost" onclick="pasteClip()">📋 Paste from clipboard</button>
+      <button class="ghost" onclick="document.getElementById('in').value='';document.getElementById('in').focus()">Clear</button>
+      <span class="pill" id="countPill">0 links in the box</span>
+    </div>
+    <div class="row">
+      <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--t2);cursor:pointer;margin:0">
+        <input type="checkbox" id="clean" checked style="width:auto"> 🧹 Strip tracking parameters (utm_*, fbclid, igshid, si …)
+      </label>
+    </div>
+  </div>
+
+  <div id="out"></div>
+
+  <div class="card">
+    <h2>Totals</h2>
+    <div class="hint">Live from the Worker's KV store. Cloudflare's list API is eventually consistent, so a link you just made can take up to a minute to appear here — the per-link counts below update straight away.</div>
+    <div class="stat">
+      <div><b id="sLinks">–</b><span>short links</span></div>
+      <div><b id="sClicks">–</b><span>clicks</span></div>
+      <div><b id="sChars">–</b><span>characters saved</span></div>
+      <div><b id="sMine">–</b><span>made on this device</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>My links</h2>
+    <div class="hint" id="listHint">Saved in this browser. Unlock with the admin token to load every link made anywhere and to delete them.</div>
+    <div class="row" style="margin-top:0;margin-bottom:12px">
+      <label class="lbl" style="margin:0;flex:1;min-width:190px">Search<input id="q" placeholder="filter by link or code" style="font-family:inherit;font-size:13px;margin-top:4px" oninput="renderList()"></label>
+      <button class="tiny" onclick="loadServer()">🔄 Refresh clicks</button>
+      <button class="tiny" onclick="exportList()">⬇ Export .json</button>
+    </div>
+    <div id="list"></div>
+  </div>
+
+  <details>
+    <summary>🔑 Admin token — custom names &amp; any link</summary>
+    <p>Compressing links to <b>my own sites</b> is open to anyone. Custom names and links to the wider web need the admin token.
+    Paste it once; it is stored only in this browser (localStorage) and never sent anywhere except this site's own Worker.</p>
+    <div class="row">
+      <div class="grow"><input id="tok" type="password" placeholder="paste token…" autocomplete="off"></div>
+      <button onclick="saveToken()">Save</button>
+      <button class="ghost" onclick="clearToken()">Forget</button>
+    </div>
+    <p style="margin-top:10px" id="tokState"></p>
+  </details>
+
+  <details>
+    <summary>How it works / API</summary>
+    <ul>
+      <li><code>POST /api/links</code> <code>{"url":"…","slug":"optional"}</code> → <code>{"short":"https://isaac1804.com/s/xxxxx"}</code></li>
+      <li><code>GET /api/links</code> (token) → every link with its click count · <code>GET /api/stats</code> → totals</li>
+      <li><code>GET /s/&lt;code&gt;</code> → 302 to the target and counts a click · <code>DELETE /api/links/&lt;code&gt;</code> (token) deletes</li>
+      <li>Codes use a 31-character alphabet with no <code>0 O 1 l i</code>, so they survive being read out loud or typed off a screen. A repeated link returns the code it already has.</li>
+    </ul>
+  </details>
+
+  <footer>Built by Isaac · <a href="/tools/">Workshop Tools</a> · <a href="/portfolio/">Portfolio</a> · <a href="/quests/">Quest Hub</a></footer>
+</div>
+
+<div class="big-modal" id="qrModal" onclick="this.classList.remove('show')">
+  <div class="qrbox" onclick="event.stopPropagation()">
+    <div id="qrHost"></div>
+    <span class="short" id="qrText"></span>
+    <div class="actions" style="justify-content:center">
+      <button onclick="downloadQR()">⬇ Save PNG</button>
+      <button class="ghost" onclick="document.getElementById('qrModal').classList.remove('show')">Close</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="qrcode.min.js"></script>
+<script>
+var ON_SITE = location.hostname === 'isaac1804.com';
+var API = ON_SITE ? '' : 'https://isaac1804.com';
+var TK = 'isaac-links-token-v1', HK = 'isaac-links-history-v1';
+var token = '';
+try { token = localStorage.getItem(TK) || ''; } catch (e) {}
+/* #token=xxxx in the URL saves the token (handy on a phone) */
+if (location.hash.indexOf('token=') > -1) {
+  token = decodeURIComponent(location.hash.split('token=')[1].split('&')[0]);
+  try { localStorage.setItem(TK, token); } catch (e) {}
+  history.replaceState(null, '', location.pathname);
+}
+var hist = [];
+try { hist = JSON.parse(localStorage.getItem(HK) || '[]'); } catch (e) { hist = []; }
+var savedChars = 0;
+try { savedChars = parseInt(localStorage.getItem('isaac-links-chars') || '0', 10) || 0; } catch (e) {}
+
+/* ---------------------------------------------------------------- helpers */
+function $(id) { return document.getElementById(id); }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+function toast(m) { var t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(t._t); t._t = setTimeout(function () { t.classList.remove('show'); }, 1900); }
+function msg(text, kind) { $('msgs').innerHTML = '<div class="msg ' + (kind || 'info') + '">' + text + '</div>'; setTimeout(function () { var b = $('msgs').firstChild; if (b) b.style.opacity = '0'; }, 9000); }
+function theme() {
+  var h = document.documentElement, light = h.getAttribute('data-theme') !== 'light';
+  h.setAttribute('data-theme', light ? 'light' : 'dark');
+  document.querySelector('.tgl').textContent = light ? '🌙' : '☀️';
+  try { localStorage.setItem('isaac-theme', light ? 'light' : 'dark'); } catch (e) {}
+}
+(function () { try { var t = localStorage.getItem('isaac-theme'); if (t) { document.documentElement.setAttribute('data-theme', t); document.querySelector('.tgl').textContent = t === 'light' ? '🌙' : '☀️'; } } catch (e) {} })();
+function copy(text, label) {
+  var done = function () { toast((label || 'Copied') + ' ✓'); };
+  if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done, function () { fallback(text, done); }); }
+  else fallback(text, done);
+}
+function fallback(text, done) {
+  var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); done(); } catch (e) { toast('Copy failed — select it manually'); } document.body.removeChild(ta);
+}
+function persist() {
+  try { localStorage.setItem(HK, JSON.stringify(hist.slice(0, 400))); localStorage.setItem('isaac-links-chars', String(savedChars)); } catch (e) {}
+}
+function pasteClip() {
+  if (!navigator.clipboard || !navigator.clipboard.readText) { toast('Type or paste it in manually'); return; }
+  navigator.clipboard.readText().then(function (t) { $('in').value = t.trim(); countBox(); }, function () { toast('Clipboard blocked — paste manually'); });
+}
+function countBox() { var n = lines().length; $('countPill').textContent = n + (n === 1 ? ' link' : ' links') + ' in the box'; }
+function lines() { return $('in').value.split(/[\n,]+/).map(function (s) { return s.trim(); }).filter(Boolean); }
+
+/* ----------------------------------------------------------------- create */
+function compressAll() {
+  var urls = lines();
+  if (!urls.length) { msg('Paste at least one link first.', 'err'); $('in').focus(); return; }
+  $('go').disabled = true; $('go').textContent = '⏳ Compressing…';
+  var slug = $('slug').value.trim();
+  $('out').innerHTML = '';
+  var results = [], errors = [], i = 0;
+  (function next() {
+    if (i >= urls.length) return finish();
+    var one = urls[i++];
+    fetch(API + '/api/links', {
+      method: 'POST',
+      headers: Object.assign({ 'Content-Type': 'application/json' }, token ? { 'X-Link-Token': token } : {}),
+      body: JSON.stringify({ url: one, slug: i === 1 ? slug : '', note: $('note').value.trim(), clean: $('clean').checked })
+    }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j, src: one }; }); })
+      .then(function (res) {
+        if (res.ok) results.push(res); else errors.push(res);
+        next();
+      })
+      .catch(function () { errors.push({ src: one, j: { error: 'Network error — check the connection' } }); next(); });
+  })();
+
+  function finish() {
+    $('go').disabled = false; $('go').textContent = '🗜️ Compress';
+    var html = '';
+    results.forEach(function (r) {
+      var before = r.src.length, after = r.j.short.length;
+      var cut = Math.max(0, before - after);
+      savedChars += cut;
+      var pct = before ? Math.round((cut / before) * 100) : 0;
+      var rec = { slug: r.j.slug, short: r.j.short, url: r.j.url, created: Date.now(), clicks: 0, note: $('note').value.trim(), chars: cut };
+      hist = hist.filter(function (h) { return h.slug !== rec.slug; });
+      hist.unshift(rec);
+      html += item(rec, { fresh: true, before: before, pct: pct, cut: cut, reused: r.j.reused, cleaned: r.j.cleaned });
+    });
+    errors.forEach(function (e) {
+      html += '<div class="item"><div class="from">' + esc(e.src) + '</div><div class="save" style="color:var(--bad)">✗ ' +
+        esc(e.j.error || 'failed') + (e.j.hint ? ' — ' + esc(e.j.hint) : '') + '</div></div>';
+    });
+    $('out').innerHTML = html ? '<div class="card"><h2>' + (results.length ? '🔗 Short links' : 'Nothing compressed') + '</h2>' +
+      '<div class="hint">Click the short link to copy it. ' + (results.length > 1 ? 'Use “Copy all” below.' : '') + '</div>' + html +
+      (results.length > 1 ? '<div class="row"><button onclick="copyAll()">📋 Copy all short links</button></div>' : '') + '</div>' : '';
+    persist();
+    if (results.length) { $('in').value = ''; $('note').value = ''; countBox(); }
+    if (errors.length && !results.length) msg('Nothing went through — see the details below.', 'err');
+    else if (errors.length) msg(results.length + ' compressed, ' + errors.length + ' failed.', 'info');
+    else msg(results.length === 1 ? 'Compressed ✓' : results.length + ' links compressed ✓', 'ok');
+    renderList(); loadStats();
+  }
+}
+
+function item(rec, extra) {
+  extra = extra || {};
+  var before = extra.before || rec.url.length, cut = extra.cut != null ? extra.cut : Math.max(0, before - rec.short.length);
+  var pct = extra.pct != null ? extra.pct : (before ? Math.round((cut / before) * 100) : 0);
+  var w = before ? Math.round((rec.short.length / before) * 100) : 100;
+  var s = esc(rec.slug);
+  return '<div class="item' + (extra.fresh ? ' new' : '') + '">' +
+    '<div class="shortline"><a class="short" href="' + esc(rec.short) + '" target="_blank" rel="noopener">' + esc(rec.short) + '</a>' +
+    (extra.reused ? '<span class="pill">already existed</span>' : '') +
+    (rec.note ? '<span class="pill">' + esc(rec.note) + '</span>' : '') + '</div>' +
+    '<div class="from">was <span style="white-space:nowrap">' + before + ' chars</span> → <span style="white-space:nowrap">' + rec.short.length + ' chars</span> · ' +
+    '👁 <span id="cl_' + s + '">' + (rec.clicks || 0) + '</span> clicks · ' + esc(rec.url) + '</div>' +
+    '<div class="bar" title="green = the short link, grey = what you saved"><i class="b" style="width:' + w + '%"></i></div>' +
+    '<div class="save">🗜️ ' + pct + '% smaller — saved ' + cut + ' characters</div>' +
+    (extra.cleaned && extra.cleaned.length ? '<div class="save" style="color:var(--warn)">🧹 removed ' + extra.cleaned.length + ' tracking parameter' + (extra.cleaned.length > 1 ? 's' : '') + ': <span style="font-family:ui-monospace,Menlo,monospace">' + esc(extra.cleaned.join(', ')) + '</span></div>' : '') +
+    '<div class="actions">' +
+      '<button class="tiny" data-act="copy" data-slug="' + s + '">📋 Copy</button>' +
+      '<button class="tiny" data-act="orig" data-slug="' + s + '">🔗 Original</button>' +
+      '<button class="tiny" data-act="qr" data-slug="' + s + '">▦ QR</button>' +
+      '<button class="tiny" data-act="open" data-slug="' + s + '">↗ Open</button>' +
+      '<button class="tiny" data-act="del" data-slug="' + s + '">🗑 Delete</button>' +
+    '</div></div>';
+}
+/* one delegated listener, so nothing is ever built into an inline onclick */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest ? e.target.closest('button[data-act]') : null;
+  if (!b) return;
+  var slug = b.getAttribute('data-slug');
+  var rec = null;
+  for (var i = 0; i < hist.length; i++) if (hist[i].slug === slug) rec = hist[i];
+  if (!rec) return;
+  var act = b.getAttribute('data-act');
+  if (act === 'copy') copy(rec.short, 'Short link copied');
+  else if (act === 'orig') copy(rec.url, 'Original copied');
+  else if (act === 'qr') showQR(rec.short);
+  else if (act === 'open') window.open(rec.short, '_blank');
+  else if (act === 'del') del(slug);
+});
+function copyAll() { copy(hist.slice(0, 100).map(function (h) { return h.short; }).join('\n'), 'All short links copied'); }
+
+/* ------------------------------------------------------------------- list */
+function shownList() {
+  var q = ($('q').value || '').toLowerCase();
+  if (!q) return hist;
+  return hist.filter(function (h) { return (h.short + ' ' + h.url + ' ' + (h.note || '') + ' ' + h.slug).toLowerCase().indexOf(q) > -1; });
+}
+function renderList() {
+  var l = shownList();
+  $('list').innerHTML = l.length ? l.map(function (h) { return item(h); }).join('')
+    : '<div class="empty">' + (hist.length ? 'No link matches that search.' : 'Nothing yet — compress a link above and it shows up here.') + '</div>';
+}
+function del(slug) {
+  if (!token) { msg('Deleting needs the admin token — open the 🔑 panel below.', 'err'); return; }
+  if (!confirm('Delete /s/' + slug + '? The short link stops working.')) return;
+  fetch(API + '/api/links/' + encodeURIComponent(slug), { method: 'DELETE', headers: { 'X-Link-Token': token } })
+    .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+    .then(function (res) {
+      if (!res.ok) { msg('Delete failed: ' + esc(res.j.error || 'unknown'), 'err'); return; }
+      hist = hist.filter(function (h) { return h.slug !== slug; }); persist(); renderList(); loadStats(); toast('Deleted /s/' + slug);
+    })
+    .catch(function () { msg('Delete failed — network error.', 'err'); });
+}
+function exportList() {
+  var blob = new Blob([JSON.stringify({ exported: new Date().toISOString(), links: hist }, null, 2)], { type: 'application/json' });
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'isaac-links.json'; a.click();
+}
+function loadServer() {
+  if (!token) { msg('Refreshing every click count needs the admin token (🔑 panel below). Local history still works.', 'info'); return; }
+  fetch(API + '/api/links', { headers: { 'X-Link-Token': token } }).then(function (r) { return r.json(); }).then(function (j) {
+    if (!j.links) { msg('Could not load: ' + esc(j.error || 'unknown'), 'err'); return; }
+    var mine = {};
+    hist.forEach(function (h) { mine[h.slug] = h; });
+    j.links.forEach(function (s) {
+      if (mine[s.slug]) { mine[s.slug].clicks = s.clicks; mine[s.slug].url = s.url; }
+      else hist.push({ slug: s.slug, short: API + '/s/' + s.slug, url: s.url, created: s.created, clicks: s.clicks, note: s.note || '', chars: 0 });
+    });
+    hist.sort(function (a, b) { return (b.created || 0) - (a.created || 0); });
+    persist(); renderList(); loadStats(); toast('Clicks refreshed ✓');
+  }).catch(function () { msg('Could not reach the Worker.', 'err'); });
+}
+function loadStats() {
+  fetch(API + '/api/stats').then(function (r) { return r.json(); }).then(function (j) {
+    $('sLinks').textContent = j.links != null ? j.links : '–';
+    $('sClicks').textContent = j.clicks != null ? j.clicks : '–';
+  }).catch(function () {});
+  $('sChars').textContent = savedChars.toLocaleString();
+  $('sMine').textContent = hist.length;
+}
+
+/* --------------------------------------------------------------------- qr */
+var qrFor = '';
+function showQR(short) {
+  qrFor = short;
+  var host = $('qrHost'); host.innerHTML = '';
+  new QRCode(host, { text: short, width: 208, height: 208, correctLevel: QRCode.CorrectLevel.M });
+  $('qrText').textContent = short;
+  $('qrModal').classList.add('show');
+}
+function downloadQR() {
+  var c = $('qrHost').querySelector('canvas'); if (!c) return;
+  var a = document.createElement('a');
+  a.href = c.toDataURL('image/png');
+  a.download = 'isaac1804-' + (qrFor.split('/').pop() || 'qr') + '.png'; a.click();
+}
+
+/* ------------------------------------------------------------------ token */
+function saveToken() {
+  token = $('tok').value.trim();
+  try { localStorage.setItem(TK, token); } catch (e) {}
+  tokenState(); $('tok').value = ''; toast(token ? 'Token saved ✓' : 'Token cleared');
+  if (token) loadServer();
+}
+function clearToken() { token = ''; try { localStorage.removeItem(TK); } catch (e) {} tokenState(); toast('Token forgotten'); }
+function tokenState() {
+  var on = !!token;
+  $('slug').disabled = !on;
+  $('slugPill').textContent = on ? 'unlocked' : 'token needed';
+  $('slugPill').className = 'pill' + (on ? ' ok' : '');
+  $('tokState').innerHTML = on ? '<span class="pill ok">token saved on this device</span> — custom names, any link, delete and click refresh are unlocked.'
+    : '<span class="pill">locked</span> — anyone can compress links to my own sites; the token adds the rest. It lives in <code>~/.isaac-links-token</code> on my Mac.';
+  $('listHint').innerHTML = on ? 'Token unlocked — “Refresh clicks” loads every link created anywhere.' : 'Saved in this browser. Unlock with the admin token to load every link made anywhere and to delete them.';
+}
+
+/* ------------------------------------------------------------------- init */
+$('in').addEventListener('input', countBox);
+$('in').addEventListener('keydown', function (e) { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) compressAll(); });
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') $('qrModal').classList.remove('show'); });
+countBox(); tokenState(); renderList(); loadStats();
+if (token) loadServer();
+</script>
+</body>
+</html>
