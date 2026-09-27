@@ -6,85 +6,28 @@
 <title>IGCSE Revision Hub · Isaac Chan</title>
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0b0d12">
-<meta name="description" content="IGCSE revision hub — notes, past papers and resources by subject (Biology, Chemistry, Physics, Economics, Maths, English, DT and more).">
+<meta name="description" content="IGCSE revision hub — one page per subject: topics checklist, notes, booklets, past papers and resources.">
 <meta property="og:title" content="IGCSE Revision Hub · Isaac Chan">
-<meta property="og:description" content="Notes, past papers and resources by subject.">
+<meta property="og:description" content="Notes, past papers and resources, by subject.">
 <meta property="og:image" content="/og-image.png">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0b0d12;--card:#12151d;--bd:#252b38;--t1:#e8ebf2;--t2:#9aa4b8;--t3:#6b7488;--ab:#7170ff}
-body{background:var(--bg);color:var(--t1);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:28px 18px 80px}
-.wrap{max-width:1000px;margin:0 auto}
-h1{font-size:26px;letter-spacing:-.02em}
-.sub{color:var(--t3);font-size:13px;margin:4px 0 22px}
-.back{display:inline-block;color:var(--t2);text-decoration:none;font-size:13px;margin-bottom:18px;border:1px solid var(--bd);padding:6px 12px;border-radius:8px}
-.back:hover{border-color:var(--ab);color:var(--t1)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 18px}
-.card h2{font-size:16px;margin-bottom:3px}
-.card .code{color:var(--t3);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
-.links{display:flex;flex-wrap:wrap;gap:7px}
-.links a{display:inline-flex;align-items:center;gap:5px;background:#171b25;border:1px solid var(--bd);color:var(--t2);text-decoration:none;font-size:12.5px;padding:6px 11px;border-radius:8px}
-.links a:hover{border-color:var(--ab);color:#fff;background:rgba(99,102,241,.14)}
-.links a.notes{border-color:rgba(61,220,151,.4);color:#8ff0c4}
-.miss{color:var(--t3);font-size:12px;font-style:italic}
-footer{margin-top:34px;color:var(--t3);font-size:12px;text-align:center}
-@media print{body{background:#fff;color:#000}.card{border-color:#ccc}.back{display:none}}
-
-.prog{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;margin-bottom:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.prog .bar{flex:1;min-width:160px;height:8px;background:#1c2130;border-radius:20px;overflow:hidden}
-.prog .bar i{display:block;height:100%;background:linear-gradient(90deg,#3ddc97,#7170ff);width:0;transition:width .3s}
-.prog .t{font-size:12.5px;color:var(--t2);white-space:nowrap}
-.done{border-color:rgba(61,220,151,.45)!important}
-.card h2{display:flex;align-items:center;gap:8px}
-.tick{margin-left:auto;background:transparent;border:1px solid var(--bd);color:var(--t3);font-size:11px;padding:3px 9px;border-radius:20px;cursor:pointer;font-family:inherit;white-space:nowrap}
-.tick:hover{border-color:var(--ok);color:var(--ok)}
-.tick.on{background:rgba(61,220,151,.14);border-color:var(--ok);color:var(--ok)}
-</style>
+<link rel="stylesheet" href="/revision/hub.css">
 </head>
 <body>
 <div class="wrap">
 <a class="back" href="/">← Home</a>
 <h1>📚 IGCSE Revision Hub</h1>
-<div class="sub">Notes, past papers and resources, by subject. Everything opens in the browser — nothing to download first.</div>
-<div class="prog"><span class="t" id="pt">Revision progress</span><div class="bar"><i id="pi"></i></div><span class="t" id="pn">0 / 0</span></div>
-<div class="grid" id="grid"></div>
+<div class="sub">One page per subject: topic checklist, notes, booklet, past papers. Everything opens in the browser — nothing to download first.</div>
+<div class="prog"><span class="t">Revision progress</span><div class="bar"><i id="pi"></i></div><span class="t" id="pn">0 / 0</span></div>
+<div class="grid"><div class="card" data-slug="biology" data-name="Biology"><h2>Biology<button class="tick" data-n="Biology">mark revised</button></h2><div class="code">Double Award</div><div class="links"><a class="pg" href="/revision/biology/">📝 Revision page</a><a href="/notes/Biology-IGCSE-Notes.html">📝 Notes</a><a class="notes" href="https://files-proxy.isaac1804.workers.dev/science%20booklet/DAB%20Unit%201%20Cells%20%26%20Microbes%20Student%20Booklet%20%28Revised%20June%202026%29.pdf">📕 Cells &amp; Microbes booklet</a><a href="/portfolio/past%20papers/Biology">📄 Past papers</a><a href="/portfolio/pearson-igcse-resources/Biology">🎯 Board resources</a><a href="/portfolio/igcse%20things/1011/Biology">📁 Class files</a></div><div class="cnt" id="cnt-biology"></div></div><div class="card" data-slug="chemistry" data-name="Chemistry"><h2>Chemistry<button class="tick" data-n="Chemistry">mark revised</button></h2><div class="code">Double Award</div><div class="links"><a class="pg" href="/revision/chemistry/">📝 Revision page</a><a href="/notes/Chemistry-IGCSE-Notes.html">📝 Notes</a><a class="notes" href="https://files-proxy.isaac1804.workers.dev/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet.pdf">📕 Unit 1 booklet</a><a href="/portfolio/past%20papers/Chemistry">📄 Past papers</a><a href="/portfolio/igcse%20things/1011/Chemistry">📁 Class files</a></div><div class="cnt" id="cnt-chemistry"></div></div><div class="card" data-slug="physics" data-name="Physics"><h2>Physics<button class="tick" data-n="Physics">mark revised</button></h2><div class="code">Double Award</div><div class="links"><a class="pg" href="/revision/physics/">📝 Revision page</a><a href="/notes/Physics-IGCSE-Notes.html">📝 Notes</a><a class="notes" href="https://files-proxy.isaac1804.workers.dev/science%20booklet/Forces%20Booklet%20Double%20Award%202026.pdf">📕 Forces booklet</a><a href="/portfolio/past%20papers/Physics">📄 Past papers</a><a href="/portfolio/pearson-igcse-resources/Science">🎯 Board resources</a><a href="/portfolio/igcse%20things/1011/Physics">📁 Class files</a></div><div class="cnt" id="cnt-physics"></div></div><div class="card" data-slug="economics" data-name="Economics"><h2>Economics<button class="tick" data-n="Economics">mark revised</button></h2><div class="code">0455</div><div class="links"><a class="pg" href="/revision/economics/">📝 Revision page</a><a href="/notes/Economics-IGCSE-Notes.html">📝 Notes</a><a href="/portfolio/past%20papers/Economics">📄 Past papers</a><a href="/portfolio/pearson-igcse-resources/Economics">🎯 Board resources</a><a href="/portfolio/igcse%20things/1011/Economics">📁 Class files</a></div><div class="cnt" id="cnt-economics"></div></div><div class="card" data-slug="maths" data-name="Mathematics"><h2>Mathematics<button class="tick" data-n="Mathematics">mark revised</button></h2><div class="code">Edexcel IGCSE (9-1)</div><div class="links"><a class="pg" href="/revision/maths/">📝 Revision page</a><a href="/portfolio/past%20papers/Mathematics">📄 Past papers</a><a href="/portfolio/past%20papers/Mathematics%20Additional">📄 Additional Maths</a><a href="https://qualifications.pearson.com/en/qualifications/edexcel-international-gcses/international-gcse-mathematics-a-2016.html">🎯 Board resources</a><a href="/portfolio/igcse%20things/1011/Math">📁 Class files</a></div><div class="cnt" id="cnt-maths"></div></div><div class="card" data-slug="english" data-name="English (FLE)"><h2>English (FLE)<button class="tick" data-n="English (FLE)">mark revised</button></h2><div class="code">0500 First Language</div><div class="links"><a class="pg" href="/revision/english/">📝 Revision page</a><a href="/portfolio/past%20papers/English%20First%20Language">📄 Past papers</a><a href="/portfolio/pearson-igcse-resources/English">🎯 Board resources</a><a href="/portfolio/igcse%20things/1011/English">📁 Class files</a></div><div class="cnt" id="cnt-english"></div></div><div class="card" data-slug="design-technology" data-name="Design &amp; Technology"><h2>Design &amp; Technology<button class="tick" data-n="Design &amp; Technology">mark revised</button></h2><div class="code">DT</div><div class="links"><a class="pg" href="/revision/design-technology/">📝 Revision page</a><a href="/notes/Woods-Knowledge-IGCSE-Notes.html">📝 Notes</a><a href="/portfolio/igcse%20things/1011/DT">📁 Class files</a><a href="/portfolio/isaac-dt/">🔗 DT site</a></div><div class="cnt" id="cnt-design-technology"></div></div><div class="card" data-slug="chinese" data-name="Chinese"><h2>Chinese<button class="tick" data-n="Chinese">mark revised</button></h2><div class="code">0509 · 中文</div><div class="links"><a class="pg" href="/revision/chinese/">📝 Revision page</a><a href="/portfolio/igcse%20things/1011/Chinese">📁 Class files</a></div><div class="cnt" id="cnt-chinese"></div></div><div class="card" data-slug="physical-education" data-name="Physical Education"><h2>Physical Education<button class="tick" data-n="Physical Education">mark revised</button></h2><div class="code">PE</div><div class="links"><a class="pg" href="/revision/physical-education/">📝 Revision page</a><a href="/portfolio/igcse%20things/1011/PE">📁 Class files</a></div><div class="cnt" id="cnt-physical-education"></div></div><div class="card" data-slug="global-perspectives" data-name="Global Perspectives"><h2>Global Perspectives<button class="tick" data-n="Global Perspectives">mark revised</button></h2><div class="code">GP</div><div class="links"><a class="pg" href="/revision/global-perspectives/">📝 Revision page</a><a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-upper-secondary/cambridge-igcse/subjects/">🔗 Cambridge IGCSE subjects ↗</a></div><div class="cnt" id="cnt-global-perspectives"></div></div><div class="card" data-slug="science-booklets" data-name="Science booklets"><h2>Science booklets<button class="tick" data-n="Science booklets">mark revised</button></h2><div class="code">general</div><div class="links"><a href="/science%20booklet/">🔗 Booklets</a><a href="/portfolio/science%20booklet">🗂 All booklets</a></div></div></div>
 <footer>Built by Isaac · <a href="/tools/" style="color:var(--t2)">Workshop Tools</a> · <a href="/portfolio/" style="color:var(--t2)">Portfolio</a></footer>
 </div>
 <script>
-var SUBJ = [
- {n:"Biology", c:"DAB / Double Award", notes:"/notes/Biology-IGCSE-Notes.html", res:"/portfolio/igcse things/1011/Biology/", pp:"/portfolio/past papers/Biology/", pe:"/portfolio/pearson-igcse-resources/Biology/", bk:"https://files-proxy.isaac1804.workers.dev/science%20booklet/DAB%20Unit%201%20Cells%20%26%20Microbes%20Student%20Booklet%20%28Revised%20June%202026%29.pdf", bkl:"Cells & Microbes booklet"},
- {n:"Chemistry", c:"IGCSE", notes:"/notes/Chemistry-IGCSE-Notes.html", res:"/portfolio/igcse things/1011/Chemistry/", pp:"/portfolio/past papers/Chemistry/", bk:"https://files-proxy.isaac1804.workers.dev/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet.pdf", bkl:"Unit 1 booklet"},
- {n:"Physics", c:"Double Award", notes:"/notes/Physics-IGCSE-Notes.html", res:"/portfolio/igcse things/1011/Physics/", pe:"/portfolio/pearson-igcse-resources/Science/", bk:"https://files-proxy.isaac1804.workers.dev/science%20booklet/Forces%20Booklet%20Double%20Award%202026.pdf", bkl:"Forces booklet"},
- {n:"Economics", c:"0455", notes:"/notes/Economics-IGCSE-Notes.html", res:"/portfolio/igcse things/1011/Economics/", pp:"/portfolio/past papers/Economics/", pe:"/portfolio/pearson-igcse-resources/Economics/"},
- {n:"Mathematics", c:"Edexcel", res:"/portfolio/igcse things/1011/Math/", pp:"/portfolio/past papers/Mathematics/", pp2:"/portfolio/past papers/Mathematics Additional/", pe:"/portfolio/pearson-igcse-resources/Maths/", rev:"/revision/unit-1-number/"},
- {n:"English (FLE)", c:"0500 First Language", res:"/portfolio/igcse things/1011/English/", pp:"/portfolio/past papers/English First Language/", pe:"/portfolio/pearson-igcse-resources/English/"},
- {n:"Design & Technology", c:"DT", res:"/portfolio/igcse things/1011/DT/", extra:"/portfolio/isaac-dt/", extraL:"DT site"},
- {n:"Chinese", c:"中文", res:"/portfolio/igcse things/1011/Chinese/"},
- {n:"Physical Education", c:"PE", res:"/portfolio/igcse things/1011/PE/"},
- {n:"Global Perspectives", c:"GP", miss:true},
- {n:"Science booklets", c:"general", extra:"/science booklet/", extraL:"Booklets", res2:"/portfolio/science booklet/"}
-];
-var g = document.getElementById("grid"), h = "";
-SUBJ.forEach(function (s) {
-  h += '<div class="card' + (rd(s.n) ? " done" : "") + '"><h2>' + s.n + '<button class="tick' + (rd(s.n) ? " on" : "") + '" onclick="rToggle(\'' + s.n + '\',this)">' + (rd(s.n) ? "✓ revised" : "mark revised") + '</button></h2><div class="code">' + s.c + '</div><div class="links">';
-  if (s.notes) h += '<a class="notes" href="' + s.notes + '">📝 Notes</a>';
-  if (s.res) h += '<a href="' + s.res + '">📁 Resources</a>';
-  if (s.bk) h += '<a class="notes" href="' + s.bk + '">📕 ' + (s.bkl || "Booklet") + '</a>';
-  if (s.rev) h += '<a href="' + s.rev + '">📝 Unit revision</a>';
-  if (s.pp) h += '<a href="' + s.pp + '">📄 Past papers</a>';
-  if (s.pp2) h += '<a href="' + s.pp2 + '">📄 Additional Maths</a>';
-  if (s.pe) h += '<a href="' + s.pe + '">🎯 Pearson</a>';
-  if (s.extra) h += '<a href="' + s.extra + '">🔗 ' + s.extraL + '</a>';
-  if (s.res2) h += '<a href="' + s.res2 + '">🗂 All booklets</a>';
-  if (s.miss) h += '<span class="miss">no resources uploaded yet</span>';
-  h += '</div></div>';
-});
-
-/* ---- revision progress (saved in this browser) ---- */
+var SLUGS = ["biology", "chemistry", "physics", "economics", "maths", "english", "design-technology", "chinese", "physical-education", "global-perspectives", "science-booklets"];
+var NAMES = {"biology": "Biology", "chemistry": "Chemistry", "physics": "Physics", "economics": "Economics", "maths": "Mathematics", "english": "English (FLE)", "design-technology": "Design & Technology", "chinese": "Chinese", "physical-education": "Physical Education", "global-perspectives": "Global Perspectives", "science-booklets": "Science booklets"};
 function rk(n){return "rev-"+n}
 function rd(n){try{return localStorage.getItem(rk(n))==="1"}catch(e){return false}}
 function rt(n,on){try{localStorage.setItem(rk(n),on?"1":"0")}catch(e){}}
+function chap(s){try{return JSON.parse(localStorage.getItem("rchap-"+s)||"[]")}catch(e){return []}}
 function rToggle(n,btn){
   var on=!rd(n); rt(n,on);
   btn.className="tick"+(on?" on":""); btn.textContent=on?"✓ revised":"mark revised";
@@ -92,13 +35,28 @@ function rToggle(n,btn){
   rBar();
 }
 function rBar(){
-  var tot=SUBJ.length, n=SUBJ.filter(function(s){return rd(s.n)}).length;
-  document.getElementById("pi").style.width=(tot?Math.round(n/tot*100):0)+"%";
-  document.getElementById("pn").textContent=n+" / "+tot;
+  var cards=[].slice.call(document.querySelectorAll(".card[data-name]"));
+  var n=cards.filter(function(c){return rd(c.getAttribute("data-name"))}).length;
+  document.getElementById("pi").style.width=(cards.length?Math.round(n/cards.length*100):0)+"%";
+  document.getElementById("pn").textContent=n+" / "+cards.length;
+  cards.forEach(function(c){
+    var s=c.getAttribute("data-slug"), el=document.getElementById("cnt-"+s);
+    if(!el) return;
+    var d=chap(s).length;
+    el.textContent = d ? ("✅ "+d+" topic"+(d===1?"":"s")+" revised on this page") : "no topics ticked yet";
+    el.className = "cnt"+(d?" on":"");
+  });
 }
-
-g.innerHTML = h;
+document.querySelectorAll(".tick").forEach(function(b){
+  var n=b.getAttribute("data-n");
+  b.className="tick"+(rd(n)?" on":"");
+  b.textContent=rd(n)?"✓ revised":"mark revised";
+  if(rd(n)) b.closest(".card").className="card done";
+  b.onclick=function(){rToggle(n,b)};
+});
 rBar();
+addEventListener("focus",rBar);
+document.addEventListener("visibilitychange",rBar);
 </script>
 </body>
 </html>

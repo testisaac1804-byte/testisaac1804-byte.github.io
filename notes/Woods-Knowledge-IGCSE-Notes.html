@@ -1394,5 +1394,26 @@ document.addEventListener('keydown',function(e){
 });
 ckInit();
 </script>
+<script>/*rev-deeplink*/(function(){
+function go(){
+  var h; try { h = decodeURIComponent(location.hash.replace(/^#/,"")); } catch(e) { h = location.hash.replace(/^#/,""); }
+  if(!h) return;
+  var el = document.getElementById(h); if(!el) return;
+  var sec = el.closest ? el.closest("section.tab") : null;
+  if(sec){
+    [].forEach.call(document.querySelectorAll("section.tab"), function(s){ s.classList.remove("active"); });
+    sec.classList.add("active");
+    var id = sec.id.replace("tab-","");
+    [].forEach.call(document.querySelectorAll("nav.tabs button"), function(b){
+      b.classList.toggle("active", b.getAttribute("data-tab") === id);
+    });
+  }
+  if(el.tagName === "DETAILS") el.open = true;
+  el.style.transition = "box-shadow .25s"; el.style.boxShadow = "0 0 0 3px #1d4ed8";
+  setTimeout(function(){ el.style.boxShadow = ""; }, 1800);
+  setTimeout(function(){ el.scrollIntoView({ block: "start", behavior: "smooth" }); }, 60);
+}
+addEventListener("load", go); addEventListener("hashchange", go);
+})();</script>
 </body>
 </html>

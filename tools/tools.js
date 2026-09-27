@@ -127,7 +127,9 @@ TOOLS.push({
 /* ---------- 5. Filament cost ---------- */
 TOOLS.push({
   id: "fil", icon: "🧵", name: "Print Cost",
-  hint: "Filament + electricity cost for a print (HK$).",
+  hint: "Filament + electricity cost for a print (HK$). The numbers can come straight from my own print log.",
+  extra: '<div class="pl" id="pl"><div class="pl-h">📥 From my print log <span id="pl-st">loading…</span></div>' +
+         '<div id="pl-body"></div></div>',
   fields: [
     { k: "g", label: "Filament used (g)", type: "number", def: 50 },
     { k: "price", label: "Spool price (HK$/kg)", type: "number", def: 150 },
@@ -191,7 +193,7 @@ TOOLS.push({
 
     var p = document.createElement("div");
     p.className = "panel" + (i === 0 ? " on" : "");
-    var h = '<h2>' + t.icon + " " + t.name + '</h2><div class="hint">' + t.hint + '</div><div class="grid">';
+    var h = '<h2>' + t.icon + " " + t.name + '</h2><div class="hint">' + t.hint + '</div>' + (t.extra || "") + '<div class="grid">';
     t.fields.forEach(function (f) {
       h += '<div><label>' + f.label + '</label>';
       if (f.type === "select") {
@@ -228,3 +230,103 @@ TOOLS.push({
   }
 })();
 
+
+/* ---------- print log -> Print Cost calculator ---------- */
+/* Pulls real logged prints from the print-log Worker and offers them as the
+   calculator's inputs, plus the failure rate I actually get per material. */
+(function () {
+  var API = "https://print-log.isaac1804.workers.dev";
+  var host = document.getElementById("pl");
+  if (!host) return;
+  var st = document.getElementById("pl-st");
+  var body = document.getElementById("pl-body");
+  var gEl = document.querySelector('#panels [data-k="g"]');
+  var hEl = document.querySelector('#panels [data-k="hrs"]');
+  var fEl = document.querySelector('#panels [data-k="fail"]');
+  var panel = gEl ? gEl.closest(".panel") : null;
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function r1(x) { return Math.round(x * 10) / 10; }
+
+  function use(g, h, fail) {
+    if (gEl && g != null) gEl.value = g;
+    if (hEl && h != null) hEl.value = h;
+    if (fEl && fail != null) fEl.value = fail;
+    if (panel && panel._run) panel._run();
+    st.textContent = "loaded — check the spool price";
+  }
+
+  body.addEventListener("click", function (ev) {
+    var b = ev.target.closest ? ev.target.closest("[data-use]") : null;
+    if (!b) return;
+    var sel = document.getElementById("pl-sel");
+    if (b.getAttribute("data-use") === "sel") {
+      var o = sel && sel.options[sel.selectedIndex];
+      if (!o) return;
+      use(o.getAttribute("data-g"), o.getAttribute("data-h"), o.getAttribute("data-f"));
+      return;
+    }
+    use(b.getAttribute("data-g"), b.getAttribute("data-h"), b.getAttribute("data-f"));
+  });
+
+  fetch(API + "/api/prints").then(function (r) { return r.json(); }).then(function (d) {
+    var prints = (d && d.prints) || [];
+    var usable = prints.filter(function (p) { return p.grams != null && p.hours != null; });
+    if (!prints.length) {
+      st.textContent = "nothing logged yet";
+      body.innerHTML = '<p class="pl-note">Log a print at <a href="/print-log/" style="color:var(--t2)">/print-log/</a> ' +
+        'and its real time + filament use shows up here.</p>';
+      return;
+    }
+    st.textContent = prints.length + " prints logged";
+
+    var mat = {};
+    prints.forEach(function (p) {
+      var k = p.material || "unknown";
+      var m = mat[k] || (mat[k] = { n: 0, clean: 0, g: 0, h: 0, gn: 0 });
+      m.n++;
+      if (p.result === "ok") m.clean++;
+      if (p.grams != null) { m.g += p.grams; m.gn++; }
+      if (p.hours != null) { m.h += p.hours; }
+    });
+    var rows = Object.keys(mat).map(function (k) {
+      var m = mat[k];
+      var g = m.gn ? r1(m.g / m.gn) : null;
+      var h = m.gn ? r1(m.h / m.gn) : null;
+      var clean = Math.round((m.clean / m.n) * 100);
+      return { k: k, m: m, g: g, h: h, clean: clean };
+    }).sort(function (a, b) { return b.m.n - a.m.n; });
+
+    var h_ = '<div class="pl-mat">';
+    rows.forEach(function (r) {
+      h_ += '<div class="pl-row"><div><b>' + esc(r.k) + '</b> <i>' + r.m.n + ' print' + (r.m.n === 1 ? "" : "s") +
+        ' · ' + r.clean + '% clean' + (r.g != null ? ' · avg ' + r.g + ' g / ' + r.h + ' h' : "") + '</i></div>' +
+        (r.g != null ? '<button class="pl-btn" data-use="mat" data-g="' + r.g + '" data-h="' + r.h +
+          '" data-f="' + (100 - r.clean) + '">Use avg</button>' : "") + '</div>';
+    });
+    h_ += '</div>';
+
+    if (usable.length) {
+      h_ += '<select class="pl-sel" id="pl-sel">';
+      usable.slice(0, 12).forEach(function (p) {
+        var m = mat[p.material || "unknown"];
+        var fail = m ? 100 - Math.round((m.clean / m.n) * 100) : 10;
+        h_ += '<option data-g="' + p.grams + '" data-h="' + p.hours + '" data-f="' + fail + '">' +
+          esc(p.name || "(unnamed)") + ' — ' + esc(p.material || "?") + ' · ' + p.grams + ' g / ' + p.hours + ' h' +
+          (p.result === "fail" ? " (failed)" : p.result === "warn" ? " (issues)" : "") + '</option>';
+      });
+      h_ += '</select><button class="pl-btn" data-use="sel" style="margin-top:8px">Use this print</button>';
+    } else {
+      h_ += '<p class="pl-note">No print has grams + hours logged yet — use the per-material averages above.</p>';
+    }
+    h_ += '<p class="pl-note">Straight from <a href="/print-log/" style="color:var(--t2)">my print log</a> — ' +
+      'failure allowance = my real fail rate for that material.</p>';
+    body.innerHTML = h_;
+  }).catch(function () {
+    st.textContent = "offline";
+    body.innerHTML = '<p class="pl-note">Print log unreachable right now — the calculator still works, just type the numbers.</p>';
+  });
+})();

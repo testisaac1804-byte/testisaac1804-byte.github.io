@@ -1,6 +1,17 @@
 {
  "sw": [
   {
+   "t": "Red Star 暗網模擬器",
+   "d": "ONION SIM — 用 Mac 上真實 Red Star Browser 的介面包住一個虛構 .onion 網絡的教育模擬器：工具列、分頁、★ PROTECTED 盾牌、選單與快捷鍵全部照該 app 抄（palette、180px 分頁、New Tab 頁原封不動）。內有 26 件假貨市集（託管／無託管對比、PGP 指紋、假評價）、真 KV 後端論壇、TorMail 詐騙故事、假 Bitcoin 產生器（真的會清空錢包）、假殺手網站、洩密站、ONION NEWS 查封頁，以及隱藏 red room 密碼題。所有商品、店鋪、交易 100% 虛構，只重現有文獻紀錄的詐騙手法。",
+   "g": [
+    "Cloudflare Worker",
+    "KV 論壇",
+    "Red Star Browser 介面",
+    "防詐騙教學"
+   ],
+   "s": "done"
+  },
+  {
    "t": "Isaac Trade",
    "d": "萬用交易社群平台 — 六大分類（🃏卡牌／📦實物／💾數碼檔／🛠服務／🌐域名／✨其他）：任何人發帖（賣／換／收）、留言報價、標記成交；作者用管理碼改狀態／刪自己帖，管理員密碼刪任何帖。頂部有 Isaac 品牌 hub（Portfolio／IsaacDrop／Open Press）。Cloudflare Worker + KV 免費後端，手機版 UI。",
    "g": [
@@ -118,7 +129,7 @@
   },
   {
    "t": "ESP32-C3 AdBlock",
-   "d": "Network DNS sinkhole on ESP32. Blocks ads for all WiFi devices.",
+   "d": "Network DNS sinkhole on ESP32. Blocks ads for all WiFi devices. Built with the open-source esp32-c3-adblock project (M-Abozaid) as reference.",
    "g": [
     "ESP32",
     "C",
