@@ -3822,8 +3822,8 @@
    "s": "done"
   },
   {
-   "t": "Science Booklets (Y7-9)",
-   "d": "School science student booklets - biology, chemistry, physics, ecology.",
+   "t": "Science Booklets (Y7–Y10)",
+   "d": "School science student booklets - biology, chemistry, physics, ecology, from Y7 up to the 2026-27 Y10 editions (Chem Unit 1, DAB Cells & Microbes, Double Award Forces). 19 booklets, all previewable in the browser.",
    "g": [
     "Science",
     "School",
@@ -3834,7 +3834,7 @@
   },
   {
    "t": "IGCSE Study Resources",
-   "d": "IGCSE resources - Economics, English, Maths, DT lessons and past papers.",
+   "d": "IGCSE resources by subject - Economics, English FLE, Maths, Chemistry, Biology, DT lesson files plus past papers, wired to the same folders the revision hub uses.",
    "g": [
     "IGCSE",
     "Study",
@@ -4321,6 +4321,95 @@
     "Workshop",
     "Jigs",
     "Parts"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IGCSE Science Booklets 2026–27",
+   "d": "The Y10 science booklets I actually work from this year — Chemistry Unit 1 (States of Matter & Separation Techniques), DAB Biology Unit 1 Cells & Microbes (Revised June 2026) and the Double Award Forces booklet — sitting alongside the full Y7–Y9 archive (19 booklets). Every one opens in the browser, no download first.",
+   "g": [
+    "Booklet",
+    "IGCSE",
+    "Science",
+    "Chemistry",
+    "Biology"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IGCSE Biology — Cells & Microbes (Unit 1)",
+   "d": "Every resource for DAB Biology Unit 1: lessons 1–8 — classification, animal & plant cells, diffusion, osmosis theory + practical, active transport, pathogens — with the worksheets, PowerPoints, Focus eLearning simulations, magnification calculation and the full revision pack (knowledge organiser, summary page, exam questions and answers).",
+   "g": [
+    "Biology",
+    "IGCSE",
+    "DAB",
+    "Unit 1",
+    "Revision"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IGCSE Chemistry — Unit 1 States of Matter",
+   "d": "Chemistry Unit 1 end to end: six lessons with their worksheets and decks — states of matter, dissolving & diffusion, elements/compounds/mixtures, filtration & crystallisation, distillation, chromatography — plus the Unit 1 revision worksheet set with mark-scheme answers and the 2026–27 student booklet.",
+   "g": [
+    "Chemistry",
+    "IGCSE",
+    "Unit 1",
+    "Revision"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IGCSE Maths — Unit 1 Number",
+   "d": "Maths Unit 1 (Number) resources from the school drive, plus the revision page I built off them: the practice sheet, course info, GCSE resource pack and the Maths login page, all in one folder.",
+   "g": [
+    "Maths",
+    "IGCSE",
+    "Unit 1",
+    "Revision"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "DT — Material Properties (IGCSE)",
+   "d": "The DT coursework intro unit: health & safety, assessment overview, material properties theory with the handout for revision, a Kahoot quiz, Young's modulus explainer, the course plan and my table re-design evaluation presentation.",
+   "g": [
+    "DT",
+    "IGCSE",
+    "Materials",
+    "Coursework"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Thrive — Wellbeing Programme",
+   "d": "The Y10 Thrive wellbeing course, lessons 1–5: positive well-being, stress resilience, mental agility, resilience — decks, workbooks and handouts as handed out.",
+   "g": [
+    "Wellbeing",
+    "School",
+    "Thrive"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Y10 Chinese 0509 & English FLE",
+   "d": "The Y10 first-language and English files from school — the IGCSE 0509 course introduction and unit materials for Chinese, plus the Welcome to Y10 English pack and the 📝IGCSE FLE 0500 Paper 1 & 2 folder.",
+   "g": [
+    "Chinese",
+    "English",
+    "IGCSE",
+    "FLE"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IGCSE Lesson Files — Y10 1011 (all subjects)",
+   "d": "One index for every subject folder from Y10: Biology, Chemistry, Physics, Maths, Economics, English, Chinese, DT, PE and Thrive — worksheets, decks, handouts, answer keys and revision packs, 130+ files added this round. Browse by subject and open anything in the browser.",
+   "g": [
+    "IGCSE",
+    "School",
+    "Y10",
+    "All subjects"
    ],
    "s": "done"
   }
