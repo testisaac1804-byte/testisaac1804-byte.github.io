@@ -781,7 +781,7 @@
   },
   {
    "t": "Link Compressor",
-   "d": "A URL shortener that lives on my own domain: paste a long link, get a tiny isaac1804.com/s/xxxxx back. It compresses the link itself first — stripping utm_*/fbclid/igshid/si tracking junk (and telling you what it removed, while leaving signed download URLs alone) — then stores it in Cloudflare KV with click counting, custom names, duplicate detection and QR codes. Bulk mode takes one link per line and shows the exact saving per link (was 214 chars → 33 chars, 85% smaller). Public use is open to anyone for any link (rate limited per IP so it cannot be abused as a spam redirector); the admin token removes that limit entirely and unlocks the click/creator logs — who opened each link, from where, on what device — plus custom names, deleting and the global list.",
+   "d": "A URL shortener that lives on my own domain: paste a long link, get a tiny isaac1804.com/s/xxxxx back. It compresses the link itself first — stripping utm_*/fbclid/igshid/si tracking junk (and telling you what it removed, while leaving signed download URLs alone) — then stores it in Cloudflare KV with click counting, custom names, duplicate detection and QR codes. Bulk mode takes one link per line and shows the exact saving per link (was 214 chars → 33 chars, 85% smaller). Anyone can compress any link (rate limited per IP so it cannot become a spam redirector) and that is all they can do; the 🔒 admin password at the top unlocks everything else — who created each link and who clicked it (IP, city, ISP, device), deleting, custom names, the full list and unlimited links.",
    "g": [
     "Cloudflare Worker",
     "KV",

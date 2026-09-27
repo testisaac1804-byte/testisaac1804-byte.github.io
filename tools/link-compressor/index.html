@@ -99,6 +99,26 @@ footer a{color:var(--t2)}
 
   <div id="msgs"></div>
 
+  <div class="card" id="adminCard">
+    <div id="adminLocked">
+      <h2>🔒 Admin</h2>
+      <div class="hint">Anyone can compress links and open them. <b>This password</b> unlocks everything else:
+      the logs (who created &amp; who clicked each link), deleting links, custom names, and unlimited links.</div>
+      <div class="row">
+        <div class="grow"><input id="pw" type="password" placeholder="admin password" autocomplete="current-password" style="font-family:inherit"></div>
+        <button class="primary" onclick="unlock()">🔓 Unlock</button>
+      </div>
+      <div id="pwMsg"></div>
+    </div>
+    <div id="adminOpen" style="display:none">
+      <h2>🔓 Admin unlocked</h2>
+      <div class="hint">Everything is unlocked: <b>📊 Log</b> and <b>🗑 Delete</b> on every link, custom names, the
+      activity feed below, and <b>unlimited</b> links (the hourly limit only applies to visitors).</div>
+      <div class="row"><button class="tiny" onclick="lockNow()">🔒 Lock again</button>
+        <span class="pill ok">saved on this device</span></div>
+    </div>
+  </div>
+
   <div class="card">
     <h2>Compress links</h2>
     <div class="hint">One link per line — paste as many as you like. Everything after the <code>#</code> is dropped, <code>https://</code> is added automatically.</div>
@@ -150,39 +170,27 @@ footer a{color:var(--t2)}
     <div id="list"></div>
   </div>
 
-  <div class="card">
+  <div class="card" id="actCard" style="display:none">
     <h2>📈 Who clicked — activity</h2>
-    <div class="hint">Every creation and every click, newest first: who (device), from where (city/country), their ISP, and which page they came from. Visible <b>only</b> with the admin token — visitors never see this.</div>
+    <div class="hint">Every creation and every click, newest first: who (device), from where (city/country), their ISP, and which page they came from. Visible <b>only</b> with the admin password — visitors never see this.</div>
     <div class="row" style="margin-top:0;margin-bottom:12px">
       <button class="tiny" onclick="loadActivity()">🔄 Refresh activity</button>
-      <span class="pill" id="actPill">token needed</span>
+      <span class="pill" id="actPill">admin locked</span>
     </div>
     <div id="activity"></div>
   </div>
 
   <details>
-    <summary>🔑 Admin token — logs, custom names &amp; unlimited links</summary>
-    <p><b>Any link can be compressed without the token</b> — just paste and go. Putting the token in
-    unlocks the rest: <b>unlimited links (no hourly limit at all)</b>, custom names, the click/creator
-    logs above, the full list from every device, and deleting. Paste it once; it is stored only in
-    this browser (localStorage) and never sent anywhere except this site's own Worker.</p>
-    <div class="row">
-      <div class="grow"><input id="tok" type="password" placeholder="paste token…" autocomplete="off"></div>
-      <button onclick="saveToken()">Save</button>
-      <button class="ghost" onclick="clearToken()">Forget</button>
-    </div>
-    <p style="margin-top:10px" id="tokState"></p>
-  </details>
-
-  <details>
     <summary>How it works / API</summary>
     <ul>
-      <li><code>POST /api/links</code> <code>{"url":"…","slug":"optional"}</code> → <code>{"short":"https://isaac1804.com/s/xxxxx"}</code></li>
-      <li><code>GET /api/links</code> (token) → every link with its click count · <code>GET /api/stats</code> → totals</li>
-      <li><code>GET /api/links/&lt;code&gt;</code> (token) → who made it + the last 100 clicks · <code>GET /api/activity</code> (token) → newest creations + clicks</li>
-      <li><code>GET /s/&lt;code&gt;</code> → 302 to the target and logs the click · <code>DELETE /api/links/&lt;code&gt;</code> (token) deletes</li>
+      <li><code>POST /api/links</code> <code>{"url":"…","slug":"optional"}</code> → <code>{"short":"https://isaac1804.com/s/xxxxx"}</code> — open to anyone, any link</li>
+      <li><code>GET /s/&lt;code&gt;</code> → 302 to the target and logs the click — open to anyone</li>
+      <li><b>Everything else needs the admin password</b> (sent as the <code>X-Link-Token</code> header or <code>?password=</code>):</li>
+      <li><code>GET /api/links</code> → every link with creator + clicks · <code>GET /api/links/&lt;code&gt;</code> → who made it + the last 100 clicks</li>
+      <li><code>GET /api/activity</code> → newest creations + clicks · <code>DELETE /api/links/&lt;code&gt;</code> → delete a link and its log</li>
+      <li><code>GET /api/stats</code> → public totals only (link count, clicks)</li>
       <li>Codes use a 31-character alphabet with no <code>0 O 1 l i</code>, so they survive being read out loud or typed off a screen. A repeated link returns the code it already has.</li>
-      <li>Click logs record IP, city/country, ISP, device and referer — kept only on this site's own Worker, readable only with the token.</li>
+      <li>Click logs record IP, city/country, ISP, device and referer — kept only on this site's own Worker, readable only with the password.</li>
     </ul>
   </details>
 
@@ -331,9 +339,11 @@ function item(rec, extra) {
       '<button class="tiny" data-act="copy" data-slug="' + s + '">📋 Copy</button>' +
       '<button class="tiny" data-act="orig" data-slug="' + s + '">🔗 Original</button>' +
       '<button class="tiny" data-act="qr" data-slug="' + s + '">▦ QR</button>' +
-      '<button class="tiny" data-act="log" data-slug="' + s + '">📊 Log</button>' +
+      (token ? '<button class="tiny" data-act="log" data-slug="' + s + '">📊 Log</button>' +
       '<button class="tiny" data-act="open" data-slug="' + s + '">↗ Open</button>' +
-      '<button class="tiny" data-act="del" data-slug="' + s + '">🗑 Delete</button>' +
+      '<button class="tiny" data-act="del" data-slug="' + s + '">🗑 Delete</button>' :
+      '<button class="tiny" data-act="open" data-slug="' + s + '">↗ Open</button>' +
+      '<button class="tiny" data-act="needpw" data-slug="' + s + '">🔒 Log / Delete</button>') +
     '</div></div>';
 }
 /* one delegated listener, so nothing is ever built into an inline onclick */
@@ -349,6 +359,7 @@ document.addEventListener('click', function (e) {
   else if (act === 'orig') copy(rec.url, 'Original copied');
   else if (act === 'qr') showQR(rec.short);
   else if (act === 'log') showLog(slug);
+  else if (act === 'needpw') needPassword('see a link\'s log or delete it');
   else if (act === 'open') window.open(rec.short, '_blank');
   else if (act === 'del') del(slug);
 });
@@ -366,11 +377,12 @@ function renderList() {
     : '<div class="empty">' + (hist.length ? 'No link matches that search.' : 'Nothing yet — compress a link above and it shows up here.') + '</div>';
 }
 function del(slug) {
-  if (!token) { msg('Deleting needs the admin token — open the 🔑 panel below.', 'err'); return; }
+  if (!token) { needPassword('delete a link'); return; }
   if (!confirm('Delete /s/' + slug + '? The short link stops working.')) return;
   fetch(API + '/api/links/' + encodeURIComponent(slug), { method: 'DELETE', headers: { 'X-Link-Token': token } })
-    .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+    .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); })
     .then(function (res) {
+      if (res.status === 401) { needPassword('delete a link', res.j); return; }
       if (!res.ok) { msg('Delete failed: ' + esc(res.j.error || 'unknown'), 'err'); return; }
       hist = hist.filter(function (h) { return h.slug !== slug; }); persist(); renderList(); loadStats(); toast('Deleted /s/' + slug);
     })
@@ -381,8 +393,10 @@ function exportList() {
   var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'isaac-links.json'; a.click();
 }
 function loadServer() {
-  if (!token) { msg('Refreshing every click count needs the admin token (🔑 panel below). Local history still works.', 'info'); return; }
-  fetch(API + '/api/links', { headers: { 'X-Link-Token': token } }).then(function (r) { return r.json(); }).then(function (j) {
+  if (!token) { needPassword('see every link'); return; }
+  fetch(API + '/api/links', { headers: { 'X-Link-Token': token } }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); }).then(function (res) {
+    if (res.status === 401) { needPassword('see every link', res.j); return; }
+    var j = res.j;
     if (!j.links) { msg('Could not load: ' + esc(j.error || 'unknown'), 'err'); return; }
     var mine = {};
     hist.forEach(function (h) { mine[h.slug] = h; });
@@ -431,13 +445,14 @@ function actorTable(a) {
 }
 var lastLogSlug = '';
 function showLog(slug) {
-  if (!token) { msg('The click log needs the admin token — open the 🔑 panel below and paste it once.', 'err'); return; }
+  if (!token) { needPassword("see a link's log"); return; }
   lastLogSlug = slug;
   $('logHost').innerHTML = '<div class="empty">Loading the log…</div>';
   $('logModal').classList.add('show');
   fetch(API + '/api/links/' + encodeURIComponent(slug), { headers: { 'X-Link-Token': token } })
-    .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+    .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); })
     .then(function (res) {
+      if (res.status === 401) { $('logModal').classList.remove('show'); needPassword("see a link's log", res.j); return; }
       if (!res.ok) { $('logHost').innerHTML = '<div class="msg err">' + esc(res.j.error || 'could not load') + '</div>'; return; }
       var d = res.j;
       var countries = Object.keys(d.countries || {}).map(function (k) { return k + ' ×' + d.countries[k]; }).join(' · ') || '—';
@@ -467,11 +482,12 @@ function showLog(slug) {
 function reloadLog() { if (lastLogSlug) showLog(lastLogSlug); }
 
 function loadActivity() {
-  if (!token) { msg('The activity feed needs the admin token — open the 🔑 panel below and paste it once.', 'err'); return; }
+  if (!token) { needPassword('read the activity feed'); return; }
   $('activity').innerHTML = '<div class="empty">Loading…</div>';
   fetch(API + '/api/activity?limit=80', { headers: { 'X-Link-Token': token } })
-    .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+    .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); })
     .then(function (res) {
+      if (res.status === 401) { needPassword('read the activity feed', res.j); return; }
       if (!res.ok) { $('activity').innerHTML = '<div class="msg err">' + esc(res.j.error || 'could not load') + '</div>'; return; }
       var f = res.j.feed || [];
       if (!f.length) { $('activity').innerHTML = '<div class="empty">Nothing yet — compress a link and open it.</div>'; return; }
@@ -507,32 +523,62 @@ function downloadQR() {
   a.download = 'isaac1804-' + (qrFor.split('/').pop() || 'qr') + '.png'; a.click();
 }
 
-/* ------------------------------------------------------------------ token */
-function saveToken() {
-  token = $('tok').value.trim();
-  try { localStorage.setItem(TK, token); } catch (e) {}
-  tokenState(); $('tok').value = ''; toast(token ? 'Token saved ✓' : 'Token cleared');
-  if (token) { loadServer(); loadActivity(); }
-  else if ($('activity')) $('activity').innerHTML = '';
+/* ------------------------------------------------------------------ admin */
+function pwMsg(text, kind) {
+  $('pwMsg').innerHTML = '<div class="msg ' + (kind || 'info') + '" style="margin-top:12px">' + text + '</div>';
 }
-function clearToken() { token = ''; try { localStorage.removeItem(TK); } catch (e) {} tokenState(); toast('Token forgotten'); }
-function tokenState() {
+function unlock() {
+  var v = $('pw').value.trim();
+  if (!v) { pwMsg('Type the admin password first.', 'err'); $('pw').focus(); return; }
+  pwMsg('Checking…', 'info');
+  fetch(API + '/api/links', { headers: { 'X-Link-Token': v } })
+    .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); })
+    .then(function (res) {
+      if (!res.ok) { pwMsg('❌ ' + esc(res.j.error || 'Wrong password'), 'err'); $('pw').select(); return; }
+      token = v;
+      try { localStorage.setItem(TK, v); } catch (e) {}
+      $('pw').value = ''; $('pwMsg').innerHTML = '';
+      adminState(); renderList(); loadServer(); loadActivity();
+      toast('Admin unlocked ✓');
+    })
+    .catch(function () { pwMsg('Could not reach the Worker — check the connection.', 'err'); });
+}
+function lockNow() {
+  token = '';
+  try { localStorage.removeItem(TK); } catch (e) {}
+  adminState(); renderList();
+  $('activity').innerHTML = ''; $('logModal').classList.remove('show');
+  toast('Locked 🔒');
+}
+/** Called whenever an admin action needs the password: lock, explain, focus the field. */
+function needPassword(what, j) {
+  if (token) { token = ''; try { localStorage.removeItem(TK); } catch (e) {} adminState(); renderList(); }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  pwMsg('<b>Password needed to ' + esc(what) + '.</b>' + (j && j.error ? ' ' + esc(j.error) : '') +
+    ' Type it above and hit Unlock — this device remembers it afterwards.', 'err');
+  $('pw').focus();
+}
+function adminState() {
   var on = !!token;
+  $('adminLocked').style.display = on ? 'none' : 'block';
+  $('adminOpen').style.display = on ? 'block' : 'none';
+  $('actCard').style.display = on ? 'block' : 'none';
   $('slug').disabled = !on;
-  $('slugPill').textContent = on ? 'unlocked' : 'token needed';
+  $('slugPill').textContent = on ? 'unlocked' : 'admin locked';
   $('slugPill').className = 'pill' + (on ? ' ok' : '');
-  $('actPill').textContent = on ? 'tap refresh' : 'token needed';
+  $('actPill').textContent = on ? 'tap refresh' : 'admin locked';
   $('actPill').className = 'pill' + (on ? ' ok' : '');
-  $('tokState').innerHTML = on ? '<span class="pill ok">token saved on this device</span> — unlimited links (no hourly limit), the click/creator logs, custom names, the full list and deleting are all unlocked.'
-    : '<span class="pill">not needed to compress</span> — paste any link and it works. The token adds <b>unlimited links</b>, the click/creator logs, custom names, the full list and deleting; it lives in <code>~/.isaac-links-token</code> on my Mac.';
-  $('listHint').innerHTML = on ? 'Token unlocked — “Refresh clicks” loads every link created anywhere, and 📊 Log shows who created and clicked each one.' : 'Saved in this browser. To see every link made anywhere, who clicked it and to delete them, add the token below.';
+  $('listHint').innerHTML = on
+    ? 'Admin unlocked — 📊 Log shows who created and clicked each link, 🗑 Delete removes it.'
+    : 'Saved in this browser. Unlock admin at the top to load every link from every device, see who clicked, and delete.';
 }
 
 /* ------------------------------------------------------------------- init */
 $('in').addEventListener('input', countBox);
 $('in').addEventListener('keydown', function (e) { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) compressAll(); });
+$('pw').addEventListener('keydown', function (e) { if (e.key === 'Enter') unlock(); });
 document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { $('qrModal').classList.remove('show'); $('logModal').classList.remove('show'); } });
-countBox(); tokenState(); renderList(); loadStats();
+countBox(); renderList(); adminState(); loadStats();
 if (token) { loadServer(); loadActivity(); }
 </script>
 </body>
