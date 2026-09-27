@@ -1,18 +1,6 @@
 {
  "sw": [
   {
-   "t": "Link Compressor",
-   "d": "A URL shortener that lives on my own domain: paste a long link, get a tiny isaac1804.com/s/xxxxx back. It compresses the link itself first — stripping utm_*/fbclid/igshid/si tracking junk (and telling you what it removed, while leaving signed download URLs alone) — then stores it in Cloudflare KV with click counting, custom names, duplicate detection and QR codes. Bulk mode takes one link per line and shows the exact saving per link (was 214 chars → 33 chars, 85% smaller). Public use is limited to my own hosts so it can never become an open redirect; an admin token unlocks any link, deleting and the global list.",
-   "g": [
-    "Cloudflare Worker",
-    "KV",
-    "URL shortener",
-    "QR codes",
-    "Vanilla JS"
-   ],
-   "s": "done"
-  },
-  {
    "t": "Isaac Trade",
    "d": "萬用交易社群平台 — 六大分類（🃏卡牌／📦實物／💾數碼檔／🛠服務／🌐域名／✨其他）：任何人發帖（賣／換／收）、留言報價、標記成交；作者用管理碼改狀態／刪自己帖，管理員密碼刪任何帖。頂部有 Isaac 品牌 hub（Portfolio／IsaacDrop／Open Press）。Cloudflare Worker + KV 免費後端，手機版 UI。",
    "g": [
@@ -788,6 +776,18 @@
     "Parody",
     "Comedy",
     "Weather"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Link Compressor",
+   "d": "A URL shortener that lives on my own domain: paste a long link, get a tiny isaac1804.com/s/xxxxx back. It compresses the link itself first — stripping utm_*/fbclid/igshid/si tracking junk (and telling you what it removed, while leaving signed download URLs alone) — then stores it in Cloudflare KV with click counting, custom names, duplicate detection and QR codes. Bulk mode takes one link per line and shows the exact saving per link (was 214 chars → 33 chars, 85% smaller). Public use is open to anyone for any link (rate limited per IP so it cannot be abused as a spam redirector); an admin token adds custom names, deleting and the global list.",
+   "g": [
+    "Cloudflare Worker",
+    "KV",
+    "URL shortener",
+    "QR codes",
+    "Vanilla JS"
    ],
    "s": "done"
   }

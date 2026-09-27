@@ -151,9 +151,11 @@ footer a{color:var(--t2)}
   </div>
 
   <details>
-    <summary>🔑 Admin token — custom names &amp; any link</summary>
-    <p>Compressing links to <b>my own sites</b> is open to anyone. Custom names and links to the wider web need the admin token.
-    Paste it once; it is stored only in this browser (localStorage) and never sent anywhere except this site's own Worker.</p>
+    <summary>🔑 Admin token — optional extra powers</summary>
+    <p><b>Any link can be compressed without the token</b> — just paste and go. The token adds the
+    extras: custom names, seeing every link ever made (not just this browser's), refreshing all click
+    counts, and deleting. Paste it once; it is stored only in this browser (localStorage) and never
+    sent anywhere except this site's own Worker.</p>
     <div class="row">
       <div class="grow"><input id="tok" type="password" placeholder="paste token…" autocomplete="off"></div>
       <button onclick="saveToken()">Save</button>
@@ -406,9 +408,9 @@ function tokenState() {
   $('slug').disabled = !on;
   $('slugPill').textContent = on ? 'unlocked' : 'token needed';
   $('slugPill').className = 'pill' + (on ? ' ok' : '');
-  $('tokState').innerHTML = on ? '<span class="pill ok">token saved on this device</span> — custom names, any link, delete and click refresh are unlocked.'
-    : '<span class="pill">locked</span> — anyone can compress links to my own sites; the token adds the rest. It lives in <code>~/.isaac-links-token</code> on my Mac.';
-  $('listHint').innerHTML = on ? 'Token unlocked — “Refresh clicks” loads every link created anywhere.' : 'Saved in this browser. Unlock with the admin token to load every link made anywhere and to delete them.';
+  $('tokState').innerHTML = on ? '<span class="pill ok">token saved on this device</span> — custom names, the full list, click refresh and deleting are unlocked.'
+    : '<span class="pill">not needed to compress</span> — paste any link and it works. The token only adds custom names, the full list, click refresh and deleting; it lives in <code>~/.isaac-links-token</code> on my Mac.';
+  $('listHint').innerHTML = on ? 'Token unlocked — “Refresh clicks” loads every link created anywhere.' : 'Saved in this browser. To see every link made anywhere (and delete them), add the token below.';
 }
 
 /* ------------------------------------------------------------------- init */
