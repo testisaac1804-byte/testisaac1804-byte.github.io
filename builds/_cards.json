@@ -11966,5 +11966,35 @@
    "All subjects"
   ],
   "v": []
+ },
+ {
+  "cat": "des",
+  "t": "Science Booklet Answer Keys (all 19)",
+  "s": "done",
+  "d": "Every science student booklet from the Y7–Y10/DAB archive re-issued as a full answer version — the original pages, images and questions are untouched, with the model answers added in red: written on the dotted answer lines, filled into the underline blanks, ringed around the correct multiple-choice option, ticked in the right box and dropped into the ruled table cells. Anything a page had no room for is listed on a marked appendix page, so no question is left unanswered.",
+  "pt": "prompts/science-booklet-answers-prompt.md",
+  "a": [
+   {
+    "c": "ac",
+    "l": "📂 Answer booklets",
+    "o": 1,
+    "u": "https://isaac1804.com/science%20booklet/",
+    "p": ""
+   },
+   {
+    "c": "ac",
+    "l": "🧪 Chem Unit 1 answers",
+    "o": 1,
+    "u": "https://files-proxy.isaac1804.workers.dev/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet%20(ANSWERS).pdf",
+    "p": ""
+   }
+  ],
+  "g": [
+   "IGCSE",
+   "School",
+   "Science",
+   "Answers"
+  ],
+  "v": []
  }
 ]

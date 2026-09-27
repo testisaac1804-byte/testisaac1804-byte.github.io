@@ -41,7 +41,7 @@
 <p><strong>Behaviour:</strong> history stack for back/forward (<code>finderHistory</code> + <code>finderIdx</code>); breadcrumb nav (Macintosh HD ▸ Users ▸ isaac ▸ …); live search filters the current folder and reports "N of M shown"; New Folder creates <code>untitled folder</code> naming; Move to Trash really moves items into the Trash app window (which lists them with their source folder); Applications folder double-click launches the matching simulator app.</p>
 <p><strong>Filesystem:</strong> <code>M.finderDefaults()</code> seeds 24 nested locations (desktop, documents/work/archive, school/igcse, pictures/vacation/family, music/album, icloud/shared, macintosh/applications/system/users/home). <code>M.finderSeed()</code> adds any missing location to older saved state so existing localStorage users keep their files.</p>
 <p><strong>Pitfalls:</strong> state keys absent from <code>M.state</code> are dropped by the loader — guard every new key in <code>M.finderSeed()</code>. Keep synthetic Date Modified / Size deterministic (hash of the file name) or the list flickers on every render. The search input must survive re-render: re-render content only while typing, never the toolbar.</p></div></details></section>
-<footer>Generated 2026-09-27 by <code>gen-build-logs.py</code> ·
+<footer>Generated 2026-09-28 by <code>gen-build-logs.py</code> ·
 <a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
 </main>
 </body>
