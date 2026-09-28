@@ -222,7 +222,10 @@ footer a{color:var(--t2)}
 <script src="qrcode.min.js"></script>
 <script>
 var ON_SITE = location.hostname === 'isaac1804.com';
-var API = ON_SITE ? '' : 'https://isaac1804.com';
+/* ?api=http://127.0.0.1:8791 points the page at a local `wrangler dev` Worker so the
+   e2e tests never touch production KV (see test-local.sh in the worker repo). */
+var API_OVERRIDE = (location.search.match(/[?&]api=([^&]*)/) || [])[1];
+var API = API_OVERRIDE ? decodeURIComponent(API_OVERRIDE) : (ON_SITE ? '' : 'https://isaac1804.com');
 var TK = 'isaac-links-token-v1', HK = 'isaac-links-history-v1';
 var token = '';
 try { token = localStorage.getItem(TK) || ''; } catch (e) {}

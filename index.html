@@ -80,6 +80,10 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
 .mhd-loading{text-align:center;padding:40px;color:var(--t3)}
 .mhd-empty{text-align:center;padding:40px;color:var(--t3);font-size:13px}
 .mhd-error{text-align:center;padding:40px;color:#ef4444;font-size:13px}
+.localservers{margin:18px 0;border:1px solid var(--bd);border-radius:12px;padding:12px 14px;background:var(--card)}
+.localservers summary{cursor:pointer;font-weight:600;font-size:15px;display:flex;gap:8px;align-items:center}
+.localservers .fine{color:var(--t3);font-size:12.5px;margin:8px 0 12px}
+.localservers .badge{margin-left:auto}
 </style></head><body>
 
 <button id="themeBtn" onclick="toggleTheme()">🌙</button>
@@ -185,13 +189,13 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
   <span class="label">Past Papers — Cambridge IGCSE question papers + mark schemes (Econ, DT, Maths, Physics, Biology)</span>
   <span class="url">isaac1804.com/portfolio/past papers/</span>
 </a>
-<a href="/science booklet/">
+<a href="/science%20booklet/">
   <span class="icon">🧪</span>
   <span class="label">Science Booklets — Yr 7–10 student booklets (19 files) incl. the 2026–27 editions: Chem Unit 1, DAB Unit 1 Cells &amp; Microbes, Double Award Forces</span>
   <span class="url">/science booklet/</span>
   <span class="badge">updated</span>
 </a>
-<a href="/books/The Inheritance Games - Jennifer Lynn Barnes.pdf">
+<a href="/books/The%20Inheritance%20Games%20-%20Jennifer%20Lynn%20Barnes.pdf">
   <span class="icon">📖</span>
   <span class="label">The Inheritance Games — Jennifer Lynn Barnes (novel PDF)</span>
   <span class="url">/books/The Inheritance Games - Jennifer Lynn Barnes.pdf</span>
@@ -346,8 +350,7 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
 <a href="/portfolio/school/"><span class="icon">🏫</span><span class="label">School — 14 files</span><span class="url">/portfolio/school/</span></a>
 <a href="/portfolio/tools/"><span class="icon">🔧</span><span class="label">Tools — 2 files</span><span class="url">/portfolio/tools/</span></a>
 
-<h2>🔌 Local Servers</h2>
-<a href="http://localhost:8531" target="_blank">
+<details class="localservers"><summary>🔌 Local Servers <span class="badge">this Mac only</span></summary><p class="fine">These run on the Mac itself (HK Tour, IsaacDrop-local, the print-log dev server). They only open on this machine — from anywhere else the links refuse to connect, so they are tucked away here.</p><a href="http://localhost:8531" target="_blank">
   <span class="icon">🏙️</span>
   <span class="label">HK Tour</span>
   <span class="url">localhost:8531</span>
@@ -366,7 +369,7 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
   <span class="badge">local</span>
 </a>
 
-<h2>🔗 Links</h2>
+</details><h2>🔗 Links</h2>
 <a href="https://isaac1804.com/portfolio/bambu%20print%20profiles/">
   <span class="icon">🖨️</span>
   <span class="label">Bambu Print Profiles Library — 1946 official Bambu Studio filament/machine/process presets for every printer (X1, P1, P2S, A1, H2D)</span>

@@ -11,35 +11,40 @@
     "l": "Open Simulator",
     "o": 1,
     "u": "https://onion-sim.isaac1804.workers.dev",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "View Screenshot",
     "o": 8,
     "u": "",
-    "p": "./Desktop/onion-sim/market.png"
+    "p": "./Desktop/onion-sim/market.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "New Tab 畫面",
     "o": 8,
     "u": "",
-    "p": "./Desktop/onion-sim/newtab.png"
+    "p": "./Desktop/onion-sim/newtab.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "查封頁",
     "o": 8,
     "u": "",
-    "p": "./Desktop/onion-sim/seized.png"
+    "p": "./Desktop/onion-sim/seized.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "Build notes",
     "o": 6,
     "u": "",
-    "p": "./prompts/onion-sim-prompt.md"
+    "p": "./prompts/onion-sim-prompt.md",
+    "vs": []
    }
   ],
   "g": [
@@ -73,14 +78,16 @@
     "l": "Open Isaac Trade",
     "o": 1,
     "u": "https://isaac-trade.isaac1804.workers.dev",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "Prompt",
     "o": 6,
     "u": "",
-    "p": "./prompts/isaac-trade-prompt.md"
+    "p": "./prompts/isaac-trade-prompt.md",
+    "vs": []
    }
   ],
   "g": [
@@ -119,14 +126,16 @@
     "l": "⬇ Download installer (.pkg)",
     "o": 1,
     "u": "https://files-proxy.isaac1804.workers.dev/installers/BetterTerminal-1.1.0.pkg",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "How to install",
     "o": 1,
     "u": "./Desktop/betterterminal/install.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -166,7 +175,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/windows-101.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -194,7 +204,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/gemini-chat.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -221,7 +232,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/rgb-calculator.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -248,7 +260,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/gcode-viewer.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -275,7 +288,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/hongkong-tour.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -304,21 +318,24 @@
     "l": "Open IsaacDrop",
     "o": 1,
     "u": "https://da.gd/isaacdrop",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "Files",
     "o": 9,
     "u": "./projects/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "Prompt",
     "o": 6,
     "u": "",
-    "p": "./prompts/isaacdrop-prompt.md"
+    "p": "./prompts/isaacdrop-prompt.md",
+    "vs": []
    }
   ],
   "g": [
@@ -358,7 +375,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./projects/mac-simulator.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -387,7 +405,8 @@
     "l": "Live Site",
     "o": 7,
     "u": "https://isaac1804.com/isaac-dt/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -426,7 +445,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/macadblock.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -465,14 +485,16 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/esp32-c3-adblock.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "Reference Repo",
     "o": 1,
     "u": "https://github.com/M-Abozaid/esp32-c3-adblock",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -501,7 +523,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/frostsolve.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -534,7 +557,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacnetpkg.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -568,7 +592,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacsecuremessenger.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -607,7 +632,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/game-server.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -646,7 +672,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/hkc-bypass.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -685,7 +712,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/wifi-chat.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -724,7 +752,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/wifi-monitor.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -763,7 +792,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/scam-mirror.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -796,28 +826,32 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/casino-scam-sim/sim.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "🎓 深度導覽",
     "o": 7,
     "u": "./demos/casino-scam-sim/tour.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "🎰 原版鏡像",
     "o": 7,
     "u": "./demos/casino-scam-sim/hub.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./demos/casino-scam-sim/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -851,7 +885,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/scam-mirror.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -884,7 +919,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacking-browser.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -918,7 +954,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacbrowser.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -951,7 +988,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacnet.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -990,7 +1028,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/manufacturing-explorer.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1029,7 +1068,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaaccombo.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1062,7 +1102,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/macro-typer.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1096,7 +1137,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/godzilla-ai-chat.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1135,7 +1177,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaac-ai.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1174,7 +1217,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacsuite.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1202,7 +1246,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacapplaunchers.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1235,7 +1280,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacos.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1263,7 +1309,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacsystem-all.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1291,7 +1338,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/laser-cutting-simulator.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1330,7 +1378,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/library-kiosk.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1353,7 +1402,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/igcse-tutor.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1376,7 +1426,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/quickcam-pro.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1399,7 +1450,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/vr-cnc-milling.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1422,7 +1474,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isle-dashboard.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1444,7 +1497,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/gateway-dashboard.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1466,7 +1520,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/cemini.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1488,7 +1543,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/scam-flow-replica.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1510,7 +1566,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/scam-evidence-bundle.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1532,7 +1589,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/cc-chat-admin.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1554,7 +1612,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/cmail.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1577,7 +1636,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/os-kernel.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1600,21 +1660,37 @@
     "l": "View 3D (v3)",
     "o": 2,
     "u": "",
-    "p": "./Documents/cnc drill box/v3/Clear_Box.stl"
+    "p": "./Documents/cnc drill box/v3/Clear_Box.stl",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "View 3D (smooth)",
     "o": 3,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "./Documents/cnc drill box/smooth/v1/Clear_Box (Easy slide).stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/cnc drill box/smooth/v1/Box_Lid_3.175mm_Shank.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/cnc drill box/smooth/v1/Box_Lid_4mm_Shank.stl",
+      "n": ""
+     }
+    ]
    },
    {
     "c": "ac",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/cnc drill box/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1653,7 +1729,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/f1-canvas.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1675,7 +1752,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacnet-browser.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1697,7 +1775,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/school-shield.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1719,7 +1798,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/red-star-browser.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1741,7 +1821,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/igcse-launcher.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1763,7 +1844,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/igcse-otp.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1785,7 +1867,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/wifi-toggle.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1807,7 +1890,8 @@
     "l": "Open Portal",
     "o": 1,
     "u": "https://da.gd/isaacmac",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1837,7 +1921,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/dns-server.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1866,7 +1951,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/api-latency-test.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1895,14 +1981,16 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacnas.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "🔗 Open",
     "o": 1,
     "u": "https://da.gd/isaacnas4",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1932,7 +2020,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/isaacslicer.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1963,7 +2052,8 @@
     "l": "🔗 Open Upload Page",
     "o": 1,
     "u": "https://da.gd/ftdmAv",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -1993,7 +2083,8 @@
     "l": "🚀 Live Demo",
     "o": 7,
     "u": "./demos/kinetic-station.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2029,7 +2120,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/bearing-reference.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2063,21 +2155,24 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/drill-bits-interactive.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "📂 Files",
     "o": 9,
     "u": "./projects/drill-bits-guide/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./projects/drill-bits-guide/Drill-Bits-Full-Catalog.pdf"
+    "p": "./projects/drill-bits-guide/Drill-Bits-Full-Catalog.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -2117,7 +2212,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/gcse-home.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2147,7 +2243,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/casio-games/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2169,7 +2266,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/casio-games/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2191,7 +2289,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/casio-games/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2213,7 +2312,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/casio-games/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2235,7 +2335,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/casio-games/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2257,7 +2358,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-autopilot/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2280,7 +2382,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/casio-games/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2302,7 +2405,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/casio-games/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2325,14 +2429,16 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/hko-funny.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "Open Full Page",
     "o": 1,
     "u": "./demos/hko-funny.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2361,21 +2467,24 @@
     "l": "Open Link Compressor",
     "o": 1,
     "u": "https://isaac1804.com/tools/link-compressor/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "Try a short link",
     "o": 1,
     "u": "https://isaac1804.com/s/rev",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "Prompt",
     "o": 6,
     "u": "",
-    "p": "./prompts/link-compressor-prompt.md"
+    "p": "./prompts/link-compressor-prompt.md",
+    "vs": []
    }
   ],
   "g": [
@@ -2420,7 +2529,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./projects/auto-vise/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2459,7 +2569,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./projects/clip-thermometer/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2526,7 +2637,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./projects/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2555,7 +2667,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./projects/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2584,14 +2697,16 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/harry-potter-diary.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./projects/harry-potter-diary/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2614,14 +2729,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./hobby/prints/robot-arm/modern-body.stl"
+    "p": "./hobby/prints/robot-arm/modern-body.stl",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "📂 Files",
     "o": 9,
     "u": "./hobby/prints/robot-arm/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2649,14 +2766,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./hobby/prints/doraemon/obj_1_组合体.stl"
+    "p": "./hobby/prints/doraemon/obj_1_组合体.stl",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "📂 Files",
     "o": 9,
     "u": "./hobby/prints/doraemon/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -2684,7 +2803,81 @@
     "l": "View 3D (18 combos)",
     "o": 3,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v3 (click fit bearing)/Left Jig Base.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/v4/Left Jig Base.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v5/Left Jig Base.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v6/Left Base.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v3 (click fit bearing)/Right Jig Base.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/v4/Right Jig Base.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v5/Right Jig Base.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v6/Right Base.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v3 (click fit bearing)/Left Jig Insert.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/v4/Left Jig Insert.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v5/Left Jig Insert.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v6/Left Insert.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v3 (click fit bearing)/Right Jig Insert.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/v4/Right Jig Insert.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v5/Right Jig Insert.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v6/Right Insert.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v6/Left Plug.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/Model Block Jig/version bravoprodigy/v6/Right Plug.stl",
+      "n": ""
+     }
+    ]
    }
   ],
   "g": [
@@ -2728,7 +2921,41 @@
     "l": "View DXF (8 vers)",
     "o": 4,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "./Documents/f1/f1 folding/bought v1.dxf",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 folding/car net v5.dxf",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 folding/car net v10.dxf",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 folding/car net v20.dxf",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 folding/car net v30.dxf",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 folding/car net v40.dxf",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 folding/car net v45 final.dxf",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 folding/very good (final).dxf",
+      "n": ""
+     }
+    ]
    }
   ],
   "g": [
@@ -2772,7 +2999,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1/f1 folding/f1 engine net optimised.dxf"
+    "p": "./Documents/f1/f1 folding/f1 engine net optimised.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -2805,7 +3033,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1/f1 folding/car body axle holes correct.dxf"
+    "p": "./Documents/f1/f1 folding/car body axle holes correct.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -2838,7 +3067,25 @@
     "l": "View 3D (4 vers)",
     "o": 3,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "./Documents/f1/f1 print/2025_helmet__with_6mm_dia_spigot_final.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 print/Self Modified/halo_v2.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 print/halo_2025_with_6mm_hole_and_sr_logo.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/f1/f1 print/final_entry_class_halo_spigot_drilling_jig.stl",
+      "n": ""
+     }
+    ]
    }
   ],
   "g": [
@@ -2882,7 +3129,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1/f1 print/Self Modified/axle bush v4.stl"
+    "p": "./Documents/f1/f1 print/Self Modified/axle bush v4.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -2920,7 +3168,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1/f1 print/new f1 car model.stl"
+    "p": "./Documents/f1/f1 print/new f1 car model.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -2942,7 +3191,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/VEX IQ BOX INSERTS/finished.dxf"
+    "p": "./Documents/VEX IQ BOX INSERTS/finished.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -2990,7 +3240,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/common stl/bravoprodigy cnc bit case.stl"
+    "p": "./Documents/common stl/bravoprodigy cnc bit case.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3023,7 +3274,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/common stl/bit-storage-box-base.stl"
+    "p": "./Documents/common stl/bit-storage-box-base.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3056,7 +3308,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/cnc%20drill%20bit%20case.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/cnc%20drill%20bit%20case.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3088,7 +3341,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/common stl/hex adapter v4.stl"
+    "p": "./Documents/common stl/hex adapter v4.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3126,7 +3380,17 @@
     "l": "View 3D (2 vers)",
     "o": 3,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "./Documents/common stl/80 vise jaw good.stl.gz",
+      "n": ""
+     },
+     {
+      "p": "./Documents/common stl/80 vise jaw good.stl.gz",
+      "n": ""
+     }
+    ]
    }
   ],
   "g": [
@@ -3159,7 +3423,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/common stl/usb dust cover v2.stl"
+    "p": "./Documents/common stl/usb dust cover v2.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3191,7 +3456,17 @@
     "l": "View 3D (2 vers)",
     "o": 3,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "./Documents/common stl/type c to usb adapter.stl",
+      "n": ""
+     },
+     {
+      "p": "./Documents/common stl/v2 type c to usb adapter.stl",
+      "n": ""
+     }
+    ]
    }
   ],
   "g": [
@@ -3224,7 +3499,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/common stl/tight 1205 plug.stl"
+    "p": "./Documents/common stl/tight 1205 plug.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3245,7 +3521,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/common stl/inner hex screw.stl"
+    "p": "./Documents/common stl/inner hex screw.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3267,7 +3544,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/common stl/big bowl clicker v3 base.stl"
+    "p": "./Documents/common stl/big bowl clicker v3 base.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3299,7 +3577,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./Downloads/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3332,7 +3611,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/common stl/yin.stl"
+    "p": "./Documents/common stl/yin.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3354,7 +3634,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/knurl%20bearing%20in%20out.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/knurl%20bearing%20in%20out.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3376,7 +3657,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./Documents/VEX IQ BOX INSERTS/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3409,7 +3691,21 @@
     "l": "View 3D (3 parts)",
     "o": 3,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "https://files-proxy.isaac1804.workers.dev/Downloads/40%25%20vex%20iq%20storage%20box/Tray.stl",
+      "n": ""
+     },
+     {
+      "p": "https://files-proxy.isaac1804.workers.dev/Downloads/40%25%20vex%20iq%20storage%20box/228-2929%20IQ%20BIN.stl",
+      "n": ""
+     },
+     {
+      "p": "https://files-proxy.isaac1804.workers.dev/Downloads/40%25%20vex%20iq%20storage%20box/Storage%20Lid.stl",
+      "n": ""
+     }
+    ]
    }
   ],
   "g": [
@@ -3442,7 +3738,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./projects/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3463,7 +3760,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/VEX%20EDR%20Box%20Inserts.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/VEX%20EDR%20Box%20Inserts.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -3485,7 +3783,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/masterball%20new.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/masterball%20new.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3506,7 +3805,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1/f1 print/Self Modified/Halo Helmet f1 car.stl"
+    "p": "./Documents/f1/f1 print/Self Modified/Halo Helmet f1 car.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3539,7 +3839,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/family keychain/family keychain.dxf"
+    "p": "./Documents/family keychain/family keychain.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -3561,7 +3862,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./Downloads/Dura+Block+Hand+Sanding+Block/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3593,7 +3895,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/family keychain/isaac.dxf"
+    "p": "./Documents/family keychain/isaac.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -3615,7 +3918,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/chill out resized on cardboard.dxf"
+    "p": "./Documents/chill out resized on cardboard.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -3637,7 +3941,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/100%20music%20sheet%20holder%200.6.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/100%20music%20sheet%20holder%200.6.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -3670,7 +3975,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Desktop/honeycomb laser bed clip.dxf"
+    "p": "./Desktop/honeycomb laser bed clip.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -3692,7 +3998,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3714,7 +4021,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3736,7 +4044,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3758,7 +4067,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3780,7 +4090,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3802,7 +4113,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3824,7 +4136,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3846,7 +4159,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3868,7 +4182,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/f1-axle-bush.stl"
+    "p": "./cad/f1-axle-bush.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3890,7 +4205,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/f1-helmet-dowel.stl"
+    "p": "./cad/f1-helmet-dowel.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3912,7 +4228,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/f1-halo-spigot.stl"
+    "p": "./cad/f1-halo-spigot.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3934,7 +4251,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/f1-wheel.stl"
+    "p": "./cad/f1-wheel.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3956,7 +4274,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/rea-tether-guide.stl"
+    "p": "./cad/rea-tether-guide.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -3978,7 +4297,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/rea-wheel-wide.stl"
+    "p": "./cad/rea-wheel-wide.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4000,7 +4320,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/f1-co2-canister.stl"
+    "p": "./cad/f1-co2-canister.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4022,7 +4343,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/car-assembly.stl"
+    "p": "./cad/car-assembly.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4044,7 +4366,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/test-car.stl"
+    "p": "./cad/test-car.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4066,7 +4389,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/bell-helmet.stl"
+    "p": "./cad/bell-helmet.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4088,7 +4412,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/grand-gabarit.stl"
+    "p": "./cad/grand-gabarit.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4110,7 +4435,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/power-unit.stl"
+    "p": "./cad/power-unit.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4132,7 +4458,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/f1-helmet-2025.stl"
+    "p": "./cad/f1-helmet-2025.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4154,7 +4481,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/bearing-plug-608.stl"
+    "p": "./cad/bearing-plug-608.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4176,7 +4504,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/bearing-plug-608-std.stl"
+    "p": "./cad/bearing-plug-608-std.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4198,7 +4527,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/flat-blade-adapter.stl"
+    "p": "./cad/flat-blade-adapter.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4220,7 +4550,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/octagon-screw.stl"
+    "p": "./cad/octagon-screw.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4242,7 +4573,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/octagon-key.stl"
+    "p": "./cad/octagon-key.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4264,7 +4596,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/drill-bit-print.stl"
+    "p": "./cad/drill-bit-print.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4286,7 +4619,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4308,7 +4642,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/yin-full.stl"
+    "p": "./cad/yin-full.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4330,7 +4665,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/hex-adapter-3mm.stl"
+    "p": "./cad/hex-adapter-3mm.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4352,7 +4688,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/hex-adapter-v2.stl"
+    "p": "./cad/hex-adapter-v2.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4374,7 +4711,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/usb-dust-cover-v1.stl"
+    "p": "./cad/usb-dust-cover-v1.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4396,7 +4734,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/watch-holder.stl"
+    "p": "./cad/watch-holder.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4418,7 +4757,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/sphere-mould.stl"
+    "p": "./cad/sphere-mould.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4440,7 +4780,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/impossible-passthrough.stl"
+    "p": "./cad/impossible-passthrough.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4462,7 +4803,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/paper-roll-holder.stl"
+    "p": "./cad/paper-roll-holder.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4484,7 +4826,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/hot-nozzle.stl"
+    "p": "./cad/hot-nozzle.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4506,7 +4849,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/laser-head-washer.stl"
+    "p": "./cad/laser-head-washer.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4528,7 +4872,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/cube-holder.stl"
+    "p": "./cad/cube-holder.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4550,7 +4895,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/pendant.stl"
+    "p": "./cad/pendant.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4572,7 +4918,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/riley-racket.stl"
+    "p": "./cad/riley-racket.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4594,7 +4941,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/statue-draft.stl"
+    "p": "./cad/statue-draft.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4616,7 +4964,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/20w-laser.stl"
+    "p": "./cad/20w-laser.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4638,7 +4987,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./cad/6-lock.stl"
+    "p": "./cad/6-lock.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -4660,7 +5010,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4681,7 +5032,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./cad/fusion/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4702,7 +5054,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./engineering/robot-arm/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4725,7 +5078,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./engineering/cnc5/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4748,7 +5102,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./engineering/gears/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4771,7 +5126,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./engineering/vex-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4794,7 +5150,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./hobby/chess/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4817,7 +5174,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./hobby/prints/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4840,7 +5198,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/big-mill-box.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4862,7 +5221,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/egg-yolk-mixer.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4884,7 +5244,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/flour-sifter.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4906,7 +5267,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/rocket-flour-sifter-v6.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4929,7 +5291,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/isaac-separator.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4951,7 +5314,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/isaac-damian-wheel.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4974,7 +5338,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/laptop-stand.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -4996,7 +5361,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/polar-bear-light-v6.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5019,7 +5385,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/vex-pin-tweezer-v5.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5042,7 +5409,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/inner-hex-m6.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5064,7 +5432,8 @@
     "l": "Download .f3d",
     "o": 1,
     "u": "./cad/fusion/inner-hex-m8.f3d",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5086,7 +5455,21 @@
     "l": "View DXF (3 vers)",
     "o": 4,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "./school/dt-y7/pewter-isaac.dxf",
+      "n": ""
+     },
+     {
+      "p": "./school/dt-y7/mold-isaac.dxf",
+      "n": ""
+     },
+     {
+      "p": "./school/dt-y7/isaac-homeowrk.dxf",
+      "n": ""
+     }
+    ]
    }
   ],
   "g": [
@@ -5110,7 +5493,17 @@
     "l": "View DXF (2 vers)",
     "o": 4,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "./school/dt-y7/isaac-acrylic.dxf",
+      "n": ""
+     },
+     {
+      "p": "./school/dt-y7/isaac-rook.dxf",
+      "n": ""
+     }
+    ]
    }
   ],
   "g": [
@@ -5134,7 +5527,17 @@
     "l": "View DXF (2 vers)",
     "o": 4,
     "u": "",
-    "p": ""
+    "p": "",
+    "vs": [
+     {
+      "p": "./school/dt-y7/isaac-duck.dxf",
+      "n": ""
+     },
+     {
+      "p": "./school/dt-y7/isaac-chan-darkblue.dxf",
+      "n": ""
+     }
+    ]
    }
   ],
   "g": [
@@ -5157,7 +5560,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./school/dt-y7/isaac-insert.dxf"
+    "p": "./school/dt-y7/isaac-insert.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -5180,14 +5584,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v2.dxf"
+    "p": "./Documents/f1-folding/car net v2.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5209,14 +5615,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v3.dxf"
+    "p": "./Documents/f1-folding/car net v3.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5238,14 +5646,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v4.dxf"
+    "p": "./Documents/f1-folding/car net v4.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5267,14 +5677,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v5.dxf"
+    "p": "./Documents/f1-folding/car net v5.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5296,14 +5708,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v6.dxf"
+    "p": "./Documents/f1-folding/car net v6.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5325,14 +5739,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v7.dxf"
+    "p": "./Documents/f1-folding/car net v7.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5354,14 +5770,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v8.dxf"
+    "p": "./Documents/f1-folding/car net v8.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5383,14 +5801,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v9.dxf"
+    "p": "./Documents/f1-folding/car net v9.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5412,14 +5832,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v10.dxf"
+    "p": "./Documents/f1-folding/car net v10.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5441,14 +5863,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v11.dxf"
+    "p": "./Documents/f1-folding/car net v11.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5470,14 +5894,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v12.dxf"
+    "p": "./Documents/f1-folding/car net v12.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5499,14 +5925,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v13.dxf"
+    "p": "./Documents/f1-folding/car net v13.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5528,14 +5956,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v14.dxf"
+    "p": "./Documents/f1-folding/car net v14.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5557,14 +5987,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v15.dxf"
+    "p": "./Documents/f1-folding/car net v15.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5586,14 +6018,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v16.dxf"
+    "p": "./Documents/f1-folding/car net v16.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5615,14 +6049,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v17.dxf"
+    "p": "./Documents/f1-folding/car net v17.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5644,14 +6080,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v18.dxf"
+    "p": "./Documents/f1-folding/car net v18.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5673,14 +6111,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v19.dxf"
+    "p": "./Documents/f1-folding/car net v19.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5702,14 +6142,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v20.dxf"
+    "p": "./Documents/f1-folding/car net v20.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5731,14 +6173,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v21.dxf"
+    "p": "./Documents/f1-folding/car net v21.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5760,14 +6204,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v22.dxf"
+    "p": "./Documents/f1-folding/car net v22.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5789,14 +6235,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v23.dxf"
+    "p": "./Documents/f1-folding/car net v23.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5818,14 +6266,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v24.dxf"
+    "p": "./Documents/f1-folding/car net v24.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5847,14 +6297,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v25.dxf"
+    "p": "./Documents/f1-folding/car net v25.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5876,14 +6328,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v26.dxf"
+    "p": "./Documents/f1-folding/car net v26.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5905,14 +6359,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v27.dxf"
+    "p": "./Documents/f1-folding/car net v27.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5934,14 +6390,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v28.dxf"
+    "p": "./Documents/f1-folding/car net v28.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5963,14 +6421,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v29.dxf"
+    "p": "./Documents/f1-folding/car net v29.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -5992,14 +6452,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v30.dxf"
+    "p": "./Documents/f1-folding/car net v30.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6021,14 +6483,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v31.dxf"
+    "p": "./Documents/f1-folding/car net v31.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6050,14 +6514,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v32.dxf"
+    "p": "./Documents/f1-folding/car net v32.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6079,14 +6545,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v33.dxf"
+    "p": "./Documents/f1-folding/car net v33.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6108,14 +6576,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v34.dxf"
+    "p": "./Documents/f1-folding/car net v34.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6137,14 +6607,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v35.dxf"
+    "p": "./Documents/f1-folding/car net v35.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6166,14 +6638,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v36 (needs jig block hole perfect_.dxf"
+    "p": "./Documents/f1-folding/car net v36 (needs jig block hole perfect_.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6195,14 +6669,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v37 (needs jig hole).dxf"
+    "p": "./Documents/f1-folding/car net v37 (needs jig hole).dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6224,14 +6700,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v38.dxf"
+    "p": "./Documents/f1-folding/car net v38.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6253,14 +6731,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v39.dxf"
+    "p": "./Documents/f1-folding/car net v39.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6282,14 +6762,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v40.dxf"
+    "p": "./Documents/f1-folding/car net v40.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6311,14 +6793,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v41.dxf"
+    "p": "./Documents/f1-folding/car net v41.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6340,14 +6824,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v42.dxf"
+    "p": "./Documents/f1-folding/car net v42.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6369,14 +6855,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v43.dxf"
+    "p": "./Documents/f1-folding/car net v43.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6398,14 +6886,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v44.dxf"
+    "p": "./Documents/f1-folding/car net v44.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6427,14 +6917,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v45 final.dxf"
+    "p": "./Documents/f1-folding/car net v45 final.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6456,14 +6948,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net v46.dxf"
+    "p": "./Documents/f1-folding/car net v46.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6485,14 +6979,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net.dxf"
+    "p": "./Documents/f1-folding/car net.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6514,14 +7010,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net 4mm v1.dxf"
+    "p": "./Documents/f1-folding/car net 4mm v1.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6544,14 +7042,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net 4mm v2.dxf"
+    "p": "./Documents/f1-folding/car net 4mm v2.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6574,14 +7074,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net 4mm v3.dxf"
+    "p": "./Documents/f1-folding/car net 4mm v3.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6604,14 +7106,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net 4mm v4.dxf"
+    "p": "./Documents/f1-folding/car net 4mm v4.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6634,14 +7138,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net 4mm v5.dxf"
+    "p": "./Documents/f1-folding/car net 4mm v5.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6664,14 +7170,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net 4mm v6.dxf"
+    "p": "./Documents/f1-folding/car net 4mm v6.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6694,14 +7202,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net 4mm v7 .dxf"
+    "p": "./Documents/f1-folding/car net 4mm v7 .dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6724,14 +7234,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/car net 4mm v8 final.dxf"
+    "p": "./Documents/f1-folding/car net 4mm v8 final.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6754,14 +7266,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/MEASURED NET V1.dxf"
+    "p": "./Documents/f1-folding/MEASURED NET V1.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6783,14 +7297,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/MEASURED CAD V2.dxf"
+    "p": "./Documents/f1-folding/MEASURED CAD V2.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6812,14 +7328,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/RE MEASURED CAD WITH CORRECT SIZE HOLES.dxf"
+    "p": "./Documents/f1-folding/RE MEASURED CAD WITH CORRECT SIZE HOLES.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6841,14 +7359,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/correct size of measured cad.dxf"
+    "p": "./Documents/f1-folding/correct size of measured cad.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6870,14 +7390,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/re measured net correct axle bush.dxf"
+    "p": "./Documents/f1-folding/re measured net correct axle bush.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6899,14 +7421,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/engine single v2.dxf"
+    "p": "./Documents/f1-folding/engine single v2.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6928,14 +7452,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/f1 engine net with single axle hole.dxf"
+    "p": "./Documents/f1-folding/f1 engine net with single axle hole.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6957,14 +7483,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/final car net with tether holes.dxf"
+    "p": "./Documents/f1-folding/final car net with tether holes.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -6986,14 +7514,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/f1-folding/nested for co2 cut.dxf"
+    "p": "./Documents/f1-folding/nested for co2 cut.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-folding/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7015,14 +7545,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/v1/Left Jig v5.stl"
+    "p": "./Documents/model-block-jig/v1/Left Jig v5.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/v1/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7045,14 +7577,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/v2/Left Jig Base v2.stl"
+    "p": "./Documents/model-block-jig/v2/Left Jig Base v2.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/v2/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7075,14 +7609,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/v3/Left Jig Base v2.stl"
+    "p": "./Documents/model-block-jig/v3/Left Jig Base v2.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/v3/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7105,14 +7641,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/v4/Left Jig Base.stl"
+    "p": "./Documents/model-block-jig/v4/Left Jig Base.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/v4/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7135,14 +7673,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/v5 circular/Left Jig Base.stl"
+    "p": "./Documents/model-block-jig/v5 circular/Left Jig Base.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/v5 circular/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7165,7 +7705,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/version bravoprodigy/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7188,14 +7729,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/version bravoprodigy/v3 (click fit bearing)/Left Jig Base.stl"
+    "p": "./Documents/model-block-jig/version bravoprodigy/v3 (click fit bearing)/Left Jig Base.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/version bravoprodigy/v3 (click fit bearing)/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7218,14 +7761,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/version bravoprodigy/v4 (seperate stick)/(Version BravoProdigy v4) F1 In Schools Model Block Jig v3.stl"
+    "p": "./Documents/model-block-jig/version bravoprodigy/v4 (seperate stick)/(Version BravoProdigy v4) F1 In Schools Model Block Jig v3.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/version bravoprodigy/v4 (seperate stick)/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7248,14 +7793,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/version bravoprodigy/v5/Left Jig Base.stl"
+    "p": "./Documents/model-block-jig/version bravoprodigy/v5/Left Jig Base.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/version bravoprodigy/v5/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7278,14 +7825,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/version bravoprodigy/v6/Left Base.stl"
+    "p": "./Documents/model-block-jig/version bravoprodigy/v6/Left Base.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/version bravoprodigy/v6/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7308,14 +7857,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/model-block-jig/version bravoprodigy/v7/Left Base.stl"
+    "p": "./Documents/model-block-jig/version bravoprodigy/v7/Left Base.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/model-block-jig/version bravoprodigy/v7/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7338,14 +7889,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/measured cad.dxf"
+    "p": "./Documents/vex-insert-milestones/measured cad.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7367,14 +7920,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/measured cad 2.0.dxf"
+    "p": "./Documents/vex-insert-milestones/measured cad 2.0.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7396,14 +7951,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/measured cad 3.0.dxf"
+    "p": "./Documents/vex-insert-milestones/measured cad 3.0.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7425,14 +7982,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/30% measured cad.dxf"
+    "p": "./Documents/vex-insert-milestones/30% measured cad.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7454,14 +8013,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/40% of 30% measured cad.dxf"
+    "p": "./Documents/vex-insert-milestones/40% of 30% measured cad.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7483,14 +8044,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/perfect.dxf"
+    "p": "./Documents/vex-insert-milestones/perfect.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7512,14 +8075,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/perfect 2.0.dxf"
+    "p": "./Documents/vex-insert-milestones/perfect 2.0.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7541,14 +8106,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/finalised!.dxf"
+    "p": "./Documents/vex-insert-milestones/finalised!.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7570,14 +8137,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/finished.dxf"
+    "p": "./Documents/vex-insert-milestones/finished.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7599,14 +8168,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/rounded 7mm radius.dxf"
+    "p": "./Documents/vex-insert-milestones/rounded 7mm radius.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7628,14 +8199,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-insert-milestones/0.5 rounding.dxf"
+    "p": "./Documents/vex-insert-milestones/0.5 rounding.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-insert-milestones/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7657,14 +8230,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/vex-highrise/highrise cube original.stl"
+    "p": "./Documents/vex-highrise/highrise cube original.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-highrise/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7686,14 +8261,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/vex-highrise/highrise cube v2 2.stl"
+    "p": "./Documents/vex-highrise/highrise cube v2 2.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-highrise/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7715,14 +8292,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/vex-highrise/HighRise_Cube copy 3.stl"
+    "p": "./Documents/vex-highrise/HighRise_Cube copy 3.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-highrise/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7744,14 +8323,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/vex-highrise/HighRise_Cube 2.stl"
+    "p": "./Documents/vex-highrise/HighRise_Cube 2.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-highrise/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7773,14 +8354,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/vex-highrise/highrise cube text 2.dxf"
+    "p": "./Documents/vex-highrise/highrise cube text 2.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-highrise/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7802,14 +8385,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/drone/drone isaac.stl"
+    "p": "./Documents/drone/drone isaac.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/drone/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7831,14 +8416,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/common stl/bit-storage-box-base.stl"
+    "p": "./Documents/common stl/bit-storage-box-base.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/common stl/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7860,14 +8447,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/ISLAND_43 (2.55) axle.stl"
+    "p": "./Documents/f1-print-parts/ISLAND_43 (2.55) axle.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7889,14 +8478,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/ISLAND_65 (2.55) axle.stl"
+    "p": "./Documents/f1-print-parts/ISLAND_65 (2.55) axle.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7918,14 +8509,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/ISLAND_axle bush for metal axle.stl"
+    "p": "./Documents/f1-print-parts/ISLAND_axle bush for metal axle.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7947,14 +8540,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/ISLAND_axle bush loft hole.stl"
+    "p": "./Documents/f1-print-parts/ISLAND_axle bush loft hole.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -7976,14 +8571,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/ISLAND_f1 wheel for 2.55 axle.stl"
+    "p": "./Documents/f1-print-parts/ISLAND_f1 wheel for 2.55 axle.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8005,14 +8602,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/ISLAND_f1 wheel for 3 axle.stl"
+    "p": "./Documents/f1-print-parts/ISLAND_f1 wheel for 3 axle.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8034,14 +8633,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/ISLAND_original axle bush for 2.55.stl"
+    "p": "./Documents/f1-print-parts/ISLAND_original axle bush for 2.55.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8063,14 +8664,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/ISLAND_test original axle bush for 2.55.stl"
+    "p": "./Documents/f1-print-parts/ISLAND_test original axle bush for 2.55.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8092,14 +8695,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/ISLAND_tether guide.stl"
+    "p": "./Documents/f1-print-parts/ISLAND_tether guide.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8121,14 +8726,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/SM_Bearing holder.stl"
+    "p": "./Documents/f1-print-parts/SM_Bearing holder.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8150,14 +8757,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/SM_Ceramic Tether Line Guide.stl"
+    "p": "./Documents/f1-print-parts/SM_Ceramic Tether Line Guide.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8179,14 +8788,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/SM_Front Wing.stl"
+    "p": "./Documents/f1-print-parts/SM_Front Wing.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8208,14 +8819,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/SM_Rear Wing.stl"
+    "p": "./Documents/f1-print-parts/SM_Rear Wing.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8237,14 +8850,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/SM_Standard f1 car.stl"
+    "p": "./Documents/f1-print-parts/SM_Standard f1 car.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8266,14 +8881,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/SM_Ready for machining.stl"
+    "p": "./Documents/f1-print-parts/SM_Ready for machining.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8295,14 +8912,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/f1-print-parts/SM_Halo Helmet f1 car.stl"
+    "p": "./Documents/f1-print-parts/SM_Halo Helmet f1 car.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8324,14 +8943,16 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8353,14 +8974,16 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/f1-print-parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8382,14 +9005,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/family keychain/arcadi connected v2.dxf"
+    "p": "./Documents/family keychain/arcadi connected v2.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/family keychain/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8411,14 +9036,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/family keychain/arcadi no connect.dxf"
+    "p": "./Documents/family keychain/arcadi no connect.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/family keychain/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8440,14 +9067,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./Documents/family keychain/isaac.dxf"
+    "p": "./Documents/family keychain/isaac.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/family keychain/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8469,7 +9098,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/family keychain/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -8490,7 +9120,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/The%20car%20Isaac%20Damian.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/The%20car%20Isaac%20Damian.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8512,7 +9143,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/ish%203.stl_A.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/ish%203.stl_A.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8534,7 +9166,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/ish%203_fixed.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/ish%203_fixed.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -8556,7 +9189,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/ok%20ish.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/ok%20ish.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8578,7 +9212,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/reprint%202.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/reprint%202.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8600,7 +9235,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/reprint%203.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/reprint%203.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8622,7 +9258,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/%28body%29%20green.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/%28body%29%20green.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8644,7 +9281,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/grouped%20car%20shasis.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/grouped%20car%20shasis.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -8666,7 +9304,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/car%20chasis%20dxf%202.0.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/car%20chasis%20dxf%202.0.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -8688,7 +9327,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/damian%20front%20wing%20%281%29.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/damian%20front%20wing%20%281%29.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8710,7 +9350,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Luke%20Front%20Wing.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Luke%20Front%20Wing.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8732,7 +9373,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/0.41%20tolerance%20axle%20bush%20for%202.5.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/0.41%20tolerance%20axle%20bush%20for%202.5.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8754,7 +9396,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/offset%20optimised%20batterycar.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/offset%20optimised%20batterycar.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -8776,7 +9419,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/DONE%20alice%20laptop%20stand%20final%20fixed.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/DONE%20alice%20laptop%20stand%20final%20fixed.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -8798,7 +9442,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Gigantamax%20Snorlax%20final%20final.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Gigantamax%20Snorlax%20final%20final.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8820,7 +9465,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/xwing%20v5.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/xwing%20v5.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -8842,7 +9488,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/christmas%20tree.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/christmas%20tree.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -8864,7 +9511,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/spinning%20top%20align.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/spinning%20top%20align.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8885,7 +9533,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/1mm%20toothpaste%20squisher.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/1mm%20toothpaste%20squisher.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8906,7 +9555,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Egg%20Yolk%20Seperator%20v2.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Egg%20Yolk%20Seperator%20v2.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8927,7 +9577,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/%E5%8D%B7%E7%BA%B8%E6%9E%B6%20v2.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/%E5%8D%B7%E7%BA%B8%E6%9E%B6%20v2.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8948,7 +9599,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Ryan%27s%20Spinner%201.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Ryan%27s%20Spinner%201.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8969,7 +9621,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Raspberry%20Pi%204B%20case%20-%20bottom.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Raspberry%20Pi%204B%20case%20-%20bottom.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -8990,7 +9643,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Buckle-1%20%281%29.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Buckle-1%20%281%29.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -9011,7 +9665,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Keychain%20base.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Keychain%20base.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -9032,7 +9687,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/final%20keyholoder.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/final%20keyholoder.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -9054,7 +9710,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/charger%20package.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/charger%20package.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -9075,7 +9732,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/nametag.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/nametag.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -9095,7 +9753,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/honeycomb%20clipper.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/honeycomb%20clipper.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -9116,7 +9775,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/PLA_Trap.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/PLA_Trap.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -9137,14 +9797,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/3mm%20drill%20v2.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/3mm%20drill%20v2.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9165,7 +9827,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/3mm%20final%20lampp.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/3mm%20final%20lampp.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -9187,7 +9850,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/6mm%20final%20lampp.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/6mm%20final%20lampp.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -9209,7 +9873,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Spur_M1.25_Pa20_Z100.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Spur_M1.25_Pa20_Z100.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -9231,7 +9896,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/involute_gear%20%283%29.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/involute_gear%20%283%29.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -9253,7 +9919,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/modified%20vex%20iq%2060t%20gear.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/modified%20vex%20iq%2060t%20gear.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -9275,7 +9942,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/a%20keychain%20tag%20from%20koen.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/a%20keychain%20tag%20from%20koen.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -9296,7 +9964,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/middle%20point%20of%20300x300.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/middle%20point%20of%20300x300.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -9318,7 +9987,8 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/100%20music%20sheet%20holder%200.7%20%281%29.dxf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/100%20music%20sheet%20holder%200.7%20%281%29.dxf",
+    "vs": []
    }
   ],
   "g": [
@@ -9340,7 +10010,8 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/astronaut_badge_base.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/astronaut_badge_base.stl",
+    "vs": []
    }
   ],
   "g": [
@@ -9361,7 +10032,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9382,7 +10054,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9403,7 +10076,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9424,7 +10098,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9445,7 +10120,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9466,7 +10142,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9488,7 +10165,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Downloads/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9509,7 +10187,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/vex-blocks/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9531,21 +10210,24 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "./Documents/boxford-f1/F1223 F1 BLANK V3.pdf"
+    "p": "./Documents/boxford-f1/F1223 F1 BLANK V3.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./Documents/boxford-f1/DesignRtype004.stl"
+    "p": "./Documents/boxford-f1/DesignRtype004.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/boxford-f1/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9568,14 +10250,16 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "./Documents/boxford-f1/Manufacturing Rtype Co2 Cars on Boxford Equipment.pdf"
+    "p": "./Documents/boxford-f1/Manufacturing Rtype Co2 Cars on Boxford Equipment.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Documents/boxford-f1/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9598,7 +10282,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/utilitarianism-guide.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9626,7 +10311,8 @@
     "l": "Open Workbook",
     "o": 6,
     "u": "",
-    "p": "./Desktop/master-fusion-workbook/Master_Fusion_Workbook_interactive.html"
+    "p": "./Desktop/master-fusion-workbook/Master_Fusion_Workbook_interactive.html",
+    "vs": []
    }
   ],
   "g": [
@@ -9655,7 +10341,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/F1InSchools-main/documents/Design%20portfolio.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/F1InSchools-main/documents/Design%20portfolio.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9677,7 +10364,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/F1InSchools-main/documents/Enterprise%20portfolio.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/F1InSchools-main/documents/Enterprise%20portfolio.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9699,7 +10387,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/F1InSchools-main/documents/Verbal%20Presentation%20Nationals.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/F1InSchools-main/documents/Verbal%20Presentation%20Nationals.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9721,7 +10410,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/F1InSchools-main/documents/renders.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/F1InSchools-main/documents/renders.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9744,7 +10434,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/228-8899-KitLayout.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/228-8899-KitLayout.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9766,21 +10457,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/vex-poster/VEX-Components-Poster-A2.pdf"
+    "p": "./Desktop/vex-poster/VEX-Components-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/vex-poster/VEX-Components-Poster-A2-preview.png"
+    "p": "./Desktop/vex-poster/VEX-Components-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/vex-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9802,14 +10496,16 @@
     "l": "Open App",
     "o": 7,
     "u": "./demos/vex-parts.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "Open PDF Poster",
     "o": 6,
     "u": "",
-    "p": "./Desktop/vex-poster/VEX-Components-Poster.pdf"
+    "p": "./Desktop/vex-poster/VEX-Components-Poster.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9833,7 +10529,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/P2S%20Extruder%20Clog%20Cleaning%20Guide.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/P2S%20Extruder%20Clog%20Cleaning%20Guide.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9855,7 +10552,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/daja%20a6%20pro%20tutorial.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/daja%20a6%20pro%20tutorial.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9877,7 +10575,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./Desktop/Parametrers/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9899,7 +10598,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Barrier%20Reef.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Barrier%20Reef.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9920,7 +10620,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Copy%20of%20VIQRC%20Digital%20Notebook%20-%20Template%20v4.0.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Copy%20of%20VIQRC%20Digital%20Notebook%20-%20Template%20v4.0.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9941,7 +10642,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Mega%20Tours%20Final%20Presentation.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Mega%20Tours%20Final%20Presentation.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -9961,7 +10663,8 @@
     "l": "Open Canva",
     "o": 1,
     "u": "https://www.canva.com/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -9983,7 +10686,8 @@
     "l": "Open Drive",
     "o": 1,
     "u": "https://drive.google.com/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10004,7 +10708,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./Documents/family%20keychain/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10026,7 +10731,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./Documents/VEX%20IQ%20BOX%20INSERTS/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10048,7 +10754,8 @@
     "l": "View Image",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Kinetic%20Industries.png"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Kinetic%20Industries.png",
+    "vs": []
    }
   ],
   "g": [
@@ -10069,7 +10776,8 @@
     "l": "View Image",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Storyboard.png"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/Storyboard.png",
+    "vs": []
    }
   ],
   "g": [
@@ -10089,7 +10797,8 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/humanities%20industrial%20revolution.pdf"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/humanities%20industrial%20revolution.pdf",
+    "vs": []
    }
   ],
   "g": [
@@ -10110,14 +10819,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/photo%20holder.stl"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/photo%20holder.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Render",
     "o": 6,
     "u": "",
-    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/photo%20holder%20v3%20%282%29.jpg"
+    "p": "https://files-proxy.isaac1804.workers.dev/Downloads/photo%20holder%20v3%20%282%29.jpg",
+    "vs": []
    }
   ],
   "g": [
@@ -10138,7 +10849,8 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/igcse-guide.html",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10161,7 +10873,8 @@
     "l": "Open Folder",
     "o": 1,
     "u": "./toddle-class-portfolio/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10183,7 +10896,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/vex/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10206,7 +10920,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/f1/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10229,7 +10944,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/ergonomics/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10252,7 +10968,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/laser/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10275,7 +10992,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/manuals/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10298,14 +11016,16 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./school/science/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "🗂 All 19 booklets",
     "o": 1,
     "u": "./science%20booklet/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10328,21 +11048,24 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./school/igcse/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "🗂 Y10 lesson files",
     "o": 1,
     "u": "./igcse%20things/1011/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "📚 Revision hub",
     "o": 1,
     "u": "/revision/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10365,21 +11088,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/laser-poster/Laser-Cutter-Poster-A2.pdf"
+    "p": "./Desktop/laser-poster/Laser-Cutter-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/laser-poster/Laser-Cutter-Poster-A2-preview.png"
+    "p": "./Desktop/laser-poster/Laser-Cutter-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/laser-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10402,21 +11128,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/plasma-poster/Plasma-Cutter-Poster-A2.pdf"
+    "p": "./Desktop/plasma-poster/Plasma-Cutter-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/plasma-poster/Plasma-Cutter-Poster-A2-preview.png"
+    "p": "./Desktop/plasma-poster/Plasma-Cutter-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/plasma-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10439,21 +11168,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/mills-poster/Mills-Poster-A2.pdf"
+    "p": "./Desktop/mills-poster/Mills-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/mills-poster/Mills-Poster-A2-preview.png"
+    "p": "./Desktop/mills-poster/Mills-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/mills-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10476,21 +11208,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/casting-poster/Casting-Machines-Poster-A2.pdf"
+    "p": "./Desktop/casting-poster/Casting-Machines-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/casting-poster/Casting-Machines-Poster-A2-preview.png"
+    "p": "./Desktop/casting-poster/Casting-Machines-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/casting-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10513,21 +11248,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/lathe-poster/Lathe-Poster-A2.pdf"
+    "p": "./Desktop/lathe-poster/Lathe-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/lathe-poster/Lathe-Poster-A2-preview.png"
+    "p": "./Desktop/lathe-poster/Lathe-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/lathe-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10551,21 +11289,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/vacuum-poster/Vacuum-Forming-Poster-A2.pdf"
+    "p": "./Desktop/vacuum-poster/Vacuum-Forming-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/vacuum-poster/Vacuum-Forming-Poster-A2-preview.png"
+    "p": "./Desktop/vacuum-poster/Vacuum-Forming-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/vacuum-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10588,21 +11329,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/cnc-router-poster/CNC-Router-Poster-A2.pdf"
+    "p": "./Desktop/cnc-router-poster/CNC-Router-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/cnc-router-poster/CNC-Router-Poster-A2-preview.png"
+    "p": "./Desktop/cnc-router-poster/CNC-Router-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/cnc-router-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10626,21 +11370,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/injection-moulding-poster/Injection-Moulding-Poster-A2.pdf"
+    "p": "./Desktop/injection-moulding-poster/Injection-Moulding-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/injection-moulding-poster/Injection-Moulding-Poster-A2-preview.png"
+    "p": "./Desktop/injection-moulding-poster/Injection-Moulding-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/injection-moulding-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10664,21 +11411,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/waterjet-poster/Waterjet-Machine-Poster-A2.pdf"
+    "p": "./Desktop/waterjet-poster/Waterjet-Machine-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/waterjet-poster/Waterjet-Machine-Poster-A2-preview.png"
+    "p": "./Desktop/waterjet-poster/Waterjet-Machine-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/waterjet-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10701,14 +11451,16 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/woods-knowledge.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "Open Folder",
     "o": 1,
     "u": "./Woods%20Knowledge/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10731,14 +11483,16 @@
     "l": "Open Reference",
     "o": 1,
     "u": "./reference/laser/DAJA-A6-Pro-20W-Material-Reference.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/laser/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10761,21 +11515,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/drill-bits-poster/Drill-Bits-Poster-A2.pdf"
+    "p": "./Desktop/drill-bits-poster/Drill-Bits-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/drill-bits-poster/Drill-Bits-Poster-A2-preview.png"
+    "p": "./Desktop/drill-bits-poster/Drill-Bits-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/drill-bits-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10798,21 +11555,24 @@
     "l": "Open Poster PDF",
     "o": 6,
     "u": "",
-    "p": "./Desktop/bearing-poster/Bearing-Numbers-Poster-A2.pdf"
+    "p": "./Desktop/bearing-poster/Bearing-Numbers-Poster-A2.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./Desktop/bearing-poster/Bearing-Numbers-Poster-A2-preview.png"
+    "p": "./Desktop/bearing-poster/Bearing-Numbers-Poster-A2-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./Desktop/bearing-poster/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10835,14 +11595,16 @@
     "l": "Open Reference",
     "o": 1,
     "u": "./reference/dt/finishing-reference.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/dt/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10865,14 +11627,16 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "./reference/laser/Parameters for Fiber Laser.pdf"
+    "p": "./reference/laser/Parameters for Fiber Laser.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/laser/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10894,14 +11658,16 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "./reference/laser/Detailed Laser Cutting Guide and Instruction Manual.pdf"
+    "p": "./reference/laser/Detailed Laser Cutting Guide and Instruction Manual.pdf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/laser/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10923,7 +11689,8 @@
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/lightburn/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10945,21 +11712,24 @@
     "l": "Open Catalog",
     "o": 1,
     "u": "./reference/machines/Open-Source-Machines-Catalog.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "View Preview",
     "o": 8,
     "u": "",
-    "p": "./reference/machines/Open-Source-Machines-Catalog-preview.png"
+    "p": "./reference/machines/Open-Source-Machines-Catalog-preview.png",
+    "vs": []
    },
    {
     "c": "",
     "l": "U0001F4C2 Files",
     "o": 9,
     "u": "./reference/machines/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -10982,14 +11752,16 @@
     "l": "Open Guide",
     "o": 1,
     "u": "./reference/laser/daja-guide/DAJA-A6-Pro-20W-Guide.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "U0001F4C2 Files",
     "o": 9,
     "u": "./reference/laser/daja-guide/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11012,7 +11784,8 @@
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./meme clickers/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11034,7 +11807,8 @@
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./mini 4wd parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11056,7 +11830,8 @@
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./vex super kit parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11078,7 +11853,8 @@
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./vex iq official/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11100,7 +11876,8 @@
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./x1 print library/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11122,14 +11899,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./hobby/fifa-cup/obj_1_FIFA Cup.step.stl"
+    "p": "./hobby/fifa-cup/obj_1_FIFA Cup.step.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "🗂 Files",
     "o": 9,
     "u": "./hobby/fifa-cup/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11151,14 +11930,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./hobby/ipad-mic-clamp/desktop-clip.stl"
+    "p": "./hobby/ipad-mic-clamp/desktop-clip.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "🗂 Files",
     "o": 9,
     "u": "./hobby/ipad-mic-clamp/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11180,21 +11961,24 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./reference/vex-logo/vex-iq-logo.dxf"
+    "p": "./reference/vex-logo/vex-iq-logo.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "View 30% DXF",
     "o": 5,
     "u": "",
-    "p": "./reference/vex-logo/vex-iq-logo-30.dxf"
+    "p": "./reference/vex-logo/vex-iq-logo-30.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "📂 Files",
     "o": 9,
     "u": "./reference/vex-logo/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11216,14 +12000,16 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "./hobby/vex-bin-inserts/long v1.stl"
+    "p": "./hobby/vex-bin-inserts/long v1.stl",
+    "vs": []
    },
    {
     "c": "",
     "l": "🗂 Files",
     "o": 9,
     "u": "./hobby/vex-bin-inserts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11245,7 +12031,8 @@
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./let it be band pack/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11270,14 +12057,16 @@
     "u": "",
     "p": [
      "https://files-proxy.isaac1804.workers.dev/pokemon%20snorlax%20keychains/llavero%20Pokemon%20v1_llaveros%20Pokemon%20v1_Base.stl"
-    ]
+    ],
+    "vs": []
    },
    {
     "c": "",
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./pokemon snorlax keychains/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11299,7 +12088,8 @@
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./bambu print profiles/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11321,7 +12111,8 @@
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./daja a6 usb contents/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11344,7 +12135,8 @@
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./casio fx-cg50 backup/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11366,14 +12158,16 @@
     "l": "Live Site",
     "o": 1,
     "u": "https://fleur-tea.isaac1804.workers.dev/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "Admin Demo",
     "o": 1,
     "u": "https://fleur-tea.isaac1804.workers.dev/admin",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11396,7 +12190,8 @@
     "l": "Live Site",
     "o": 1,
     "u": "https://openpress.isaac1804.workers.dev/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11418,7 +12213,8 @@
     "l": "Live Site",
     "o": 1,
     "u": "https://a1d2.org/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11441,14 +12237,16 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "./laser-nesting-dxfs/nested all.dxf"
+    "p": "./laser-nesting-dxfs/nested all.dxf",
+    "vs": []
    },
    {
     "c": "",
     "l": "🗂 Browse Files",
     "o": 1,
     "u": "./laser-nesting-dxfs/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11470,14 +12268,16 @@
     "l": "Open Build Guide",
     "o": 1,
     "u": "./reference/builds/diy-tablet.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📁 Files",
     "o": 9,
     "u": "./reference/builds/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11500,7 +12300,8 @@
     "l": "📁 Files",
     "o": 9,
     "u": "./reference/laser/settings-library/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11523,7 +12324,8 @@
     "l": "📁 Files",
     "o": 9,
     "u": "./gear%20mechanisms/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11546,7 +12348,8 @@
     "l": "📁 Files",
     "o": 9,
     "u": "./5-axis%20cnc%20model/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11569,7 +12372,8 @@
     "l": "📁 Files",
     "o": 9,
     "u": "./6-axis%20robot%20arm/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11592,7 +12396,8 @@
     "l": "📁 Files",
     "o": 9,
     "u": "./daja%20tf%20card%20files/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11615,7 +12420,8 @@
     "l": "📁 Files",
     "o": 9,
     "u": "./reference/boxford-co2/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11638,7 +12444,8 @@
     "l": "📁 Files",
     "o": 9,
     "u": "./workshop%20stl%20parts/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11661,28 +12468,32 @@
     "l": "🧪 Chem Unit 1",
     "o": 1,
     "u": "https://files-proxy.isaac1804.workers.dev/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet.pdf",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "🧬 DAB Unit 1 Cells",
     "o": 1,
     "u": "https://files-proxy.isaac1804.workers.dev/science%20booklet/DAB%20Unit%201%20Cells%20%26%20Microbes%20Student%20Booklet%20%28Revised%20June%202026%29.pdf",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "⚡ Forces (DA)",
     "o": 1,
     "u": "https://files-proxy.isaac1804.workers.dev/science%20booklet/Forces%20Booklet%20Double%20Award%202026.pdf",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "🗂 All 19 booklets",
     "o": 1,
     "u": "./science%20booklet/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11706,28 +12517,32 @@
     "l": "📁 Unit 1 resources",
     "o": 1,
     "u": "./igcse%20things/1011/Biology/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "🧬 Cells & Microbes booklet",
     "o": 1,
     "u": "https://files-proxy.isaac1804.workers.dev/science%20booklet/DAB%20Unit%201%20Cells%20%26%20Microbes%20Student%20Booklet%20%28Revised%20June%202026%29.pdf",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📝 Biology notes",
     "o": 1,
     "u": "/notes/Biology-IGCSE-Notes.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📄 Past papers",
     "o": 1,
     "u": "./past%20papers/Biology/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11751,28 +12566,32 @@
     "l": "📁 Unit 1 resources",
     "o": 1,
     "u": "./igcse%20things/1011/Chemistry/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "⚗️ Chem Unit 1 booklet",
     "o": 1,
     "u": "https://files-proxy.isaac1804.workers.dev/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet.pdf",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📝 Chemistry notes",
     "o": 1,
     "u": "/notes/Chemistry-IGCSE-Notes.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📄 Past papers",
     "o": 1,
     "u": "./past%20papers/Chemistry/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11795,21 +12614,24 @@
     "l": "📁 Unit 1 resources",
     "o": 1,
     "u": "./igcse%20things/1011/Math/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "📝 Unit 1 revision page",
     "o": 1,
     "u": "/revision/unit-1-number/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📄 Past papers",
     "o": 1,
     "u": "./past%20papers/Mathematics/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11832,28 +12654,32 @@
     "l": "📁 Material Properties",
     "o": 1,
     "u": "./igcse%20things/1011/DT/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "📚 Material Properties handout",
     "o": 1,
     "u": "https://files-proxy.isaac1804.workers.dev/igcse%20things/1011/DT/GCSE%20DT%20-%20Introduction%20%26%20Material%20Properties/01%20Material%20Properties%20Theory/01%20IGCSE%20-%20Material%20Properties%20-%20Handout%20for%20Material%20Properties%20Revision.pdf",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "🪵 Woods knowledge",
     "o": 1,
     "u": "/notes/Woods-Knowledge-IGCSE-Notes.html",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "🔗 DT site",
     "o": 1,
     "u": "/isaac-dt/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11876,7 +12702,8 @@
     "l": "📁 Thrive lessons",
     "o": 1,
     "u": "./igcse%20things/1011/Thrive/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11898,21 +12725,24 @@
     "l": "📁 Chinese 0509",
     "o": 1,
     "u": "./igcse%20things/1011/Chinese/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "📁 English FLE",
     "o": 1,
     "u": "./igcse%20things/1011/English/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "📄 FLE past papers",
     "o": 1,
     "u": "./past%20papers/English%20First%20Language/",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11935,28 +12765,32 @@
     "l": "📁 All subjects",
     "o": 1,
     "u": "./igcse%20things/1011/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "📚 Revision hub",
     "o": 1,
     "u": "/revision/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "",
     "l": "🎤 Y10–Y13 assembly",
     "o": 1,
     "u": "./igcse%20things/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "💪 Strengths profile",
     "o": 1,
     "u": "https://files-proxy.isaac1804.workers.dev/igcse%20things/StrengthsProfile-Isaac--09EC-.pdf",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -11979,14 +12813,16 @@
     "l": "📂 Answer booklets",
     "o": 1,
     "u": "https://isaac1804.com/science%20booklet/",
-    "p": ""
+    "p": "",
+    "vs": []
    },
    {
     "c": "ac",
     "l": "🧪 Chem Unit 1 answers",
     "o": 1,
     "u": "https://files-proxy.isaac1804.workers.dev/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet%20(ANSWERS).pdf",
-    "p": ""
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
