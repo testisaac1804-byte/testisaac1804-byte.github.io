@@ -1,4 +1,5 @@
 # Cloudflare Pages redirects
-# The 30 MB science booklet is over the Pages 25 MiB per-file cap, so it is
-# served from the files proxy (bulk store) instead. Keep the original URL working.
+# Files over the 25 MiB per-file cap cannot live in the Pages bundle, so they are
+# served from the bulk store (files proxy) instead. Keep the original URL working.
+/science%20booklet/8C%20%20Mapping%20Matter%20Student%20Booklet%202024%20%28ANSWERS%29.pdf  https://cdn.isaac1804.com/science%20booklet/8C%20%20Mapping%20Matter%20Student%20Booklet%202024%20%28ANSWERS%29.pdf  302
 /science%20booklet/8C%20%20Mapping%20Matter%20Student%20Booklet%202024.pdf  https://cdn.isaac1804.com/science%20booklet/8C%20%20Mapping%20Matter%20Student%20Booklet%202024.pdf  302
