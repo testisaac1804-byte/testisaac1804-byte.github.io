@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>School Shield — build log · Isaac Chan</title>
+<meta name="description" content="Network shield — toggles school-filter DNS blocking.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>School Shield</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip soft">Networking</span><span class="chip soft">DNS</span><span class="chip soft">Bypass</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/school-shield-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Network shield — toggles school-filter DNS blocking.</p></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Documents/projects/network-tools/school-shield</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">9</div><div class="l">files</div></div><div class="st"><div class="n">776</div><div class="l">lines of code</div></div><div class="st"><div class="n">3</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-08-11</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-08-11</div><div class="l">last touched</div></div></div><p class="fine">Mostly: Python ×6 · TOML ×1 · Markdown ×1</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/school-shield.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/school-shield-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>School Shield</h2>
+<p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
+<p>Network shield — toggles school-filter DNS blocking.</p>
+<p><strong>Stack / Tools:</strong> Networking, DNS, Bypass</p>
+<p><strong>Location:</strong> <code>~/school-shield</code></p>
+<h3>Where it lives</h3>
+<ul>
+<li>Source folder: <code>~/Documents/projects/network-tools/school-shield</code></li>
+<li>Artefacts on the site: 11 files · 776 lines of text · 67 KB</li>
+</ul>
+<h3>Stack</h3>
+<ul>
+<li>Python ×6 · .lock ×1 · TOML ×1 · Markdown ×1 · pyproject</li>
+</ul>
+<h3>What's in the code</h3>
+<ul>
+<li><code>shield.py</code> — 208 lines (Python)</li>
+<li><code>dashboard.py</code> — 144 lines (Python)</li>
+<li><code>doh_proxy.py</code> — 143 lines (Python)</li>
+<li><code>detector.py</code> — 132 lines (Python)</li>
+<li><code>firewall.py</code> — 130 lines (Python)</li>
+<li><code>pyproject.toml</code> — 13 lines (TOML)</li>
+<li><code>main.py</code> — 6 lines (Python)</li>
+<li><code>README.md</code> — 0 lines (Markdown)</li>
+</ul>
+<h3>Verified in the Python source</h3>
+<ul>
+<li>routes: <code>get /</code>, <code>get /status</code></li>
+<li>classes: <code>DoHProxy</code>, <code>_DNSProtocol</code></li>
+<li>functions: <code>_disable_all</code>, <code>_is_doh_running</code>, <code>_require_root</code>, <code>_run_pfctl</code>, <code>_start_doh_background</code>, <code>_stop_doh_background</code>, <code>_write_rules</code>, <code>create_app</code>, <code>dashboard</code>, <code>disable_killswitch</code>, <code>enable_killswitch</code>, <code>get_current_dns</code>, <code>get_current_wifi</code>, <code>get_network_info</code>, <code>is_school_network</code>, <code>main</code></li>
+</ul>
+<hr>
+<p>_Spec generated from the project's own files on 2026-09-28 (<code>gen-project-specs.py</code>). Everything above was read from the listed files — file counts, line counts, names, routes, headings and script comments. No description was invented._</p></div></details></section>
+<footer>Generated 2026-09-28 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

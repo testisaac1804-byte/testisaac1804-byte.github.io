@@ -19,7 +19,7 @@
 </div></header>
 <nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
 <main class="wrap">
-<section id="what"><h2>What it is</h2><p class="lead">Custom OS concept - bootable with all Isaac tools.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Concept phase.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/isaacos.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/isaacos-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><p class="fine warn">⚠️ This project’s spec file is a stub — only its title, category and status were ever recorded, so there is no build detail to show. Nothing has been filled in to pad it out.</p><details class="spec"><summary>Show the spec</summary><div class="md"><h2>IsaacOS</h2>
+<section id="what"><h2>What it is</h2><p class="lead">Custom OS concept - bootable with all Isaac tools.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Concept phase.</p></div></div></div></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Documents/projects/drafts/IsaacOS</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">9</div><div class="l">files</div></div><div class="st"><div class="n">960</div><div class="l">lines of code</div></div><div class="st"><div class="n">2</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-07-17</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-07-17</div><div class="l">last touched</div></div></div><p class="fine">Mostly: Shell ×2 · Markdown ×1</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/isaacos.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/isaacos-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>IsaacOS</h2>
 <p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Draft</p>
 <p>Custom OS concept - bootable with all Isaac tools.</p>
 <p><strong>Stack / Tools:</strong> OS, Concept, System Design</p>
@@ -28,7 +28,32 @@
 <li>V1 — Concept phase.</li>
 </ul>
 <p><strong>Location:</strong> <code>~/projects/drafts/</code></p>
-<p>Custom OS concept — bootable image bundling all Isaac tools. Concept phase.</p></div></details></section>
+<p>Custom OS concept — bootable image bundling all Isaac tools. Concept phase.</p>
+<h3>Where it lives</h3>
+<ul>
+<li>Source folder: <code>~/Documents/projects/drafts/IsaacOS</code></li>
+<li>Artefacts on the site: 9 files · 960 lines of text · 28 KB</li>
+</ul>
+<h3>Stack</h3>
+<ul>
+<li>Shell ×2 · .embed ×1 · .combined ×1 · .amd64 ×1</li>
+<li>external tools invoked: <code>node</code>, <code>npm</code>, <code>python3</code></li>
+</ul>
+<h3>What's in the code</h3>
+<ul>
+<li><code>build-isaacos.sh</code> — 802 lines (Shell)</li>
+<li><code>README.md</code> — 108 lines (Markdown)</li>
+<li><code>run-build.sh</code> — 50 lines (Shell)</li>
+</ul>
+<h3>Notes found in the scripts</h3>
+<ul>
+<li>=============================================================================</li>
+<li>IsaacOS ISO Builder</li>
+<li>Creates custom Debian-based ISOs for ARM64 and x86_64</li>
+<li>=============================================================================</li>
+</ul>
+<hr>
+<p>_Spec generated from the project's own files on 2026-09-28 (<code>gen-project-specs.py</code>). Everything above was read from the listed files — file counts, line counts, names, routes, headings and script comments. No description was invented._</p></div></details></section>
 <footer>Generated 2026-09-28 by <code>gen-build-logs.py</code> ·
 <a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
 </main>

@@ -19,7 +19,7 @@
 </div></header>
 <nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
 <main class="wrap">
-<section id="what"><h2>What it is</h2><p class="lead">macOS DNS ad-blocker daemon on :8053.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Basic hosts file.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Daemon mode: launchd, auto-start.</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>System-wide: blocks ads in EVERY app.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/macadblock.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/macadblock-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><p class="fine warn">⚠️ This project’s spec file is a stub — only its title, category and status were ever recorded, so there is no build detail to show. Nothing has been filled in to pad it out.</p><details class="spec"><summary>Show the spec</summary><div class="md"><h2>MacAdBlock</h2>
+<section id="what"><h2>What it is</h2><p class="lead">macOS DNS ad-blocker daemon on :8053.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Basic hosts file.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Daemon mode: launchd, auto-start.</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>System-wide: blocks ads in EVERY app.</p></div></div></div></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Documents/projects/adblockers/MacAdBlock</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">11</div><div class="l">files</div></div><div class="st"><div class="n">1,331</div><div class="l">lines of code</div></div><div class="st"><div class="n">3</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-07-25</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-07-26</div><div class="l">last touched</div></div></div><p class="fine">Mostly: Python ×3 · Shell ×2 · Markdown ×1</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/macadblock.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/macadblock-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>MacAdBlock</h2>
 <p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
 <p>macOS DNS ad-blocker daemon on :8053.</p>
 <p><strong>Stack / Tools:</strong> macOS, DNS, Python, launchd</p>
@@ -30,7 +30,42 @@
 <li>V3 — System-wide: blocks ads in EVERY app.</li>
 </ul>
 <p><strong>Location:</strong> <code>~/projects/adblockers/</code></p>
-<p>macOS DNS ad-blocker. A launchd LaunchDaemon runs a Python DNS server on :8053 with an ad/tracker blocklist; point system DNS at 127.0.0.1 to block ads app-wide. Re-sign after edits; NSStatusItem is broken on macOS 26, so use a plain window or a LaunchAgent.</p></div></details></section>
+<p>macOS DNS ad-blocker. A launchd LaunchDaemon runs a Python DNS server on :8053 with an ad/tracker blocklist; point system DNS at 127.0.0.1 to block ads app-wide. Re-sign after edits; NSStatusItem is broken on macOS 26, so use a plain window or a LaunchAgent.</p>
+<h3>Where it lives</h3>
+<ul>
+<li>Source folder: <code>~/Documents/projects/adblockers/MacAdBlock</code></li>
+<li>Artefacts on the site: 11 files · 1,354 lines of text · 752 KB</li>
+</ul>
+<h3>Stack</h3>
+<ul>
+<li>Python ×3 · .txt ×3 · Shell ×2 · plist ×1</li>
+<li>external tools invoked: <code>networksetup</code>, <code>pfctl</code>, <code>python3</code></li>
+</ul>
+<h3>What's in the code</h3>
+<ul>
+<li><code>src/macadblock.py</code> — 657 lines (Python)</li>
+<li><code>src/macadblock_gui.py</code> — 364 lines (Python)</li>
+<li><code>macadblock.sh</code> — 97 lines (Shell)</li>
+<li><code>README.md</code> — 79 lines (Markdown)</li>
+<li><code>tools/build_blocklist.py</code> — 73 lines (Python)</li>
+<li><code>tools/build_app.sh</code> — 61 lines (Shell)</li>
+<li><code>com.isaac.macadblock.plist</code> — 23 lines (plist)</li>
+<li><code>blocklist/blocklist.bin</code> — 701 KB (binary, binary — not line-counted)</li>
+</ul>
+<h3>Verified in the Python source</h3>
+<ul>
+<li>classes: <code>APIHandler</code>, <code>MacAdBlockAppDelegate</code>, <code>ReusableHTTPServer</code></li>
+<li>functions: <code>build_blocked_response</code>, <code>build_error_response</code>, <code>build_forward_response</code>, <code>dns_worker</code>, <code>flush_dns_cache</code>, <code>fnv</code>, <code>fnv_hash</code>, <code>in_blocklist</code>, <code>is_blocked</code>, <code>load_allowlist</code>, <code>load_banned</code>, <code>load_blocklist</code>, <code>load_custom</code>, <code>main</code>, <code>norm</code>, <code>notify_user</code></li>
+</ul>
+<h3>Notes found in the scripts</h3>
+<ul>
+<li>macadblock v2 — start/stop/reload MacAdBlock DNS sinkhole</li>
+<li>DNS on port 8054 (no root needed); pfctl redirects 53→8054</li>
+<li>Build MacAdBlock.app bundle</li>
+<li>Remove old app if exists</li>
+</ul>
+<hr>
+<p>_Spec generated from the project's own files on 2026-09-28 (<code>gen-project-specs.py</code>). Everything above was read from the listed files — file counts, line counts, names, routes, headings and script comments. No description was invented._</p></div></details></section>
 <footer>Generated 2026-09-28 by <code>gen-build-logs.py</code> ·
 <a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
 </main>

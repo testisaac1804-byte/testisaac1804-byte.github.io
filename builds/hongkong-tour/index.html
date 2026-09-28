@@ -19,7 +19,7 @@
 </div></header>
 <nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
 <main class="wrap">
-<section id="what"><h2>What it is</h2><p class="lead">Interactive Hong Kong tour guide app — Flask + HTML, native macOS .app bundle with photo gallery and tour routes.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Photo gallery, tour routes, ratings.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/hongkong-tour.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/hongkong-tour-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><p class="fine warn">⚠️ This project’s spec file is a stub — only its title, category and status were ever recorded, so there is no build detail to show. Nothing has been filled in to pad it out.</p><details class="spec"><summary>Show the spec</summary><div class="md"><h2>Hong Kong Tour</h2>
+<section id="what"><h2>What it is</h2><p class="lead">Interactive Hong Kong tour guide app — Flask + HTML, native macOS .app bundle with photo gallery and tour routes.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Photo gallery, tour routes, ratings.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/hongkong-tour.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/hongkong-tour-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>Hong Kong Tour</h2>
 <p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
 <p>Interactive Hong Kong tour guide app — Flask + HTML, native macOS .app bundle with photo gallery and tour routes.</p>
 <p><strong>Stack / Tools:</strong> Flask, HTML, Tour, macOS .app</p>
@@ -27,7 +27,30 @@
 <ul>
 <li>V1 — Photo gallery, tour routes, ratings.</li>
 </ul>
-<p><strong>Location:</strong> <code>/Applications/HongKongTour.app/</code></p></div></details></section>
+<p><strong>Location:</strong> <code>/Applications/HongKongTour.app/</code></p>
+<h3>Where it lives</h3>
+<ul>
+<li>Published copy on the site (working folder isn't on this Mac): <code>~/Desktop/portfolio-deploy/demos/hongkong-tour.html</code></li>
+<li>Artefacts on the site: 1 files · 640 lines of text · 29 KB</li>
+</ul>
+<h3>Stack</h3>
+<ul>
+<li>HTML ×1</li>
+</ul>
+<h3>What's in the code</h3>
+<ul>
+<li><code>hongkong-tour.html</code> — 640 lines (HTML)</li>
+</ul>
+<h3>Verified in the page source</h3>
+<ul>
+<li>page title: “Hong Kong Tour”</li>
+<li>headings: 🇭🇰 香港旅遊 · Hong Kong Tour · 🇭🇰 香港 · ${area.name}</li>
+<li>fetches / endpoints: <code>/api/search?q=${encodeURIComponent(val)}</code></li>
+<li>functions: <code>init</code>, <code>loadData</code>, <code>renderSidebar</code>, <code>renderWelcomeStats</code>, <code>selectRegion</code>, <code>renderFilters</code>, <code>setFilter</code>, <code>renderRegion</code>, <code>renderSpotCard</code>, <code>ratingNum</code>, <code>toggleExpand</code>, <code>doSearch</code>, <code>showSearchResults</code>, <code>goToSpot</code></li>
+<li>UI element ids: <code>contentArea</code>, <code>filterBar</code>, <code>mainHeader</code>, <code>pageSubtitle</code>, <code>pageTitle</code>, <code>regionContent</code>, <code>regionNav</code>, <code>searchContent</code>, <code>searchInput</code>, <code>statAreas</code></li>
+</ul>
+<hr>
+<p>_Spec generated from the project's own files on 2026-09-28 (<code>gen-project-specs.py</code>). Everything above was read from the listed files — file counts, line counts, names, routes, headings and script comments. No description was invented._</p></div></details></section>
 <footer>Generated 2026-09-28 by <code>gen-build-logs.py</code> ·
 <a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
 </main>

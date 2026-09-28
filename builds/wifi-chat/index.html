@@ -19,7 +19,7 @@
 </div></header>
 <nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
 <main class="wrap">
-<section id="what"><h2>What it is</h2><p class="lead">LAN offline chat - no internet needed. WebSocket + DXF sharing.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Basic text.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>DXF/SVG uploads.</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>Offline-first. Cross-device.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/wifi-chat.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/wifi-chat-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><p class="fine warn">⚠️ This project’s spec file is a stub — only its title, category and status were ever recorded, so there is no build detail to show. Nothing has been filled in to pad it out.</p><details class="spec"><summary>Show the spec</summary><div class="md"><h2>WiFi Chat</h2>
+<section id="what"><h2>What it is</h2><p class="lead">LAN offline chat - no internet needed. WebSocket + DXF sharing.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Basic text.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>DXF/SVG uploads.</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>Offline-first. Cross-device.</p></div></div></div></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Documents/projects/network-tools/wifi-chat</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">20</div><div class="l">files</div></div><div class="st"><div class="n">944</div><div class="l">lines of code</div></div><div class="st"><div class="n">3</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-07-29</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-07-31</div><div class="l">last touched</div></div></div><p class="fine">Mostly: binary assets ×12 · Python ×4 · HTML ×1</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/wifi-chat.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/wifi-chat-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>WiFi Chat</h2>
 <p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
 <p>LAN offline chat - no internet needed. WebSocket + DXF sharing.</p>
 <p><strong>Stack / Tools:</strong> WebSocket, Flask, LAN, Offline</p>
@@ -30,7 +30,39 @@
 <li>V3 — Offline-first. Cross-device.</li>
 </ul>
 <p><strong>Location:</strong> <code>~/demos/wifi-chat.html</code></p>
-<p>LAN offline chat — Flask + WebSocket, no internet needed. DXF/SVG file sharing, cross-device, offline-first.</p></div></details></section>
+<p>LAN offline chat — Flask + WebSocket, no internet needed. DXF/SVG file sharing, cross-device, offline-first.</p>
+<h3>Where it lives</h3>
+<ul>
+<li>Source folder: <code>~/Documents/projects/network-tools/wifi-chat</code></li>
+<li>Artefacts on the site: 20 files · 944 lines of text · 10.8 MB</li>
+</ul>
+<h3>Stack</h3>
+<ul>
+<li>STL model ×7 · Python ×4 · binary ×3 · .txt ×2 · requirements.txt</li>
+</ul>
+<h3>What's in the code</h3>
+<ul>
+<li><code>client/index.html</code> — 361 lines (HTML)</li>
+<li><code>server/main.py</code> — 289 lines (Python)</li>
+<li><code>launcher.py</code> — 177 lines (Python)</li>
+<li><code>server/chat_manager.py</code> — 117 lines (Python)</li>
+<li><code>server/__init__.py</code> — 0 lines (Python)</li>
+<li><code>uploads/6bb38a1a4c62470691b3b45761517533.stl</code> — 11 KB (STL model, binary — not line-counted)</li>
+<li><code>uploads/a80648917da843af9c01d2d513335746.zip</code> — 73 KB (archive, binary — not line-counted)</li>
+<li><code>uploads/ebd7fc10b99046de949ad04b7be3f53e.stl</code> — 11 KB (STL model, binary — not line-counted)</li>
+<li><code>uploads/bc309475af564c17ac041e628b487934.stl</code> — 78 KB (STL model, binary — not line-counted)</li>
+<li><code>uploads/3abde903b766469a8a2e0487aa874e67.jpg</code> — 3.4 MB (binary, binary — not line-counted)</li>
+<li><code>uploads/eab1b3026f374bd38502232abed03560.stl</code> — 11 KB (STL model, binary — not line-counted)</li>
+<li><code>uploads/2e3410c5b30b4be8853eb19c0f2c2e05.stl</code> — 349 KB (STL model, binary — not line-counted)</li>
+</ul>
+<h3>Verified in the Python source</h3>
+<ul>
+<li>routes: <code>get /</code>, <code>get /health</code>, <code>get /link</code>, <code>post /upload</code></li>
+<li>classes: <code>ChatManager</code>, <code>ChatUser</code></li>
+<li>functions: <code>get_local_ip</code>, <code>is_host_ip</code>, <code>main</code>, <code>start_tunnel</code></li>
+</ul>
+<hr>
+<p>_Spec generated from the project's own files on 2026-09-28 (<code>gen-project-specs.py</code>). Everything above was read from the listed files — file counts, line counts, names, routes, headings and script comments. No description was invented._</p></div></details></section>
 <footer>Generated 2026-09-28 by <code>gen-build-logs.py</code> ·
 <a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
 </main>

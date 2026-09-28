@@ -19,7 +19,7 @@
 </div></header>
 <nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
 <main class="wrap">
-<section id="what"><h2>What it is</h2><p class="lead">E2E encrypted messaging - X3DH + AES-256-GCM.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Browser chat. Manual key exchange.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Native app: QR code pairing.</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>X3DH protocol. Production grade.</p></div></div></div></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/isaacsecuremessenger.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/isaacsecuremessenger-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><p class="fine warn">⚠️ This project’s spec file is a stub — only its title, category and status were ever recorded, so there is no build detail to show. Nothing has been filled in to pad it out.</p><details class="spec"><summary>Show the spec</summary><div class="md"><h2>IsaacSecureMessenger</h2>
+<section id="what"><h2>What it is</h2><p class="lead">E2E encrypted messaging - X3DH + AES-256-GCM.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Browser chat. Manual key exchange.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Native app: QR code pairing.</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>X3DH protocol. Production grade.</p></div></div></div></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Documents/projects/apps/IsaacSecureMessenger</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">22</div><div class="l">files</div></div><div class="st"><div class="n">3,402</div><div class="l">lines of code</div></div><div class="st"><div class="n">4</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-07-13</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-07-13</div><div class="l">last touched</div></div></div><p class="fine">Mostly: Python ×10 · HTML ×1 · JavaScript ×1 · CSS ×1</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/isaacsecuremessenger.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/isaacsecuremessenger-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>IsaacSecureMessenger</h2>
 <p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
 <p>E2E encrypted messaging - X3DH + AES-256-GCM.</p>
 <p><strong>Stack / Tools:</strong> macOS, Encryption, AES-256, PyObjC</p>
@@ -30,7 +30,46 @@
 <li>V3 — X3DH protocol. Production grade.</li>
 </ul>
 <p><strong>Location:</strong> <code>~/projects/IsaacSecureMessenger/</code></p>
-<p>E2E encrypted messenger. X3DH key agreement (identity + signed prekeys + one-time prekeys) + AES-256-GCM for messages. PyObjC native .app; QR-code pairing for key exchange.</p></div></details></section>
+<p>E2E encrypted messenger. X3DH key agreement (identity + signed prekeys + one-time prekeys) + AES-256-GCM for messages. PyObjC native .app; QR-code pairing for key exchange.</p>
+<h3>Where it lives</h3>
+<ul>
+<li>Source folder: <code>~/Documents/projects/apps/IsaacSecureMessenger</code></li>
+<li>Artefacts on the site: 22 files · 3,524 lines of text · 754 KB</li>
+</ul>
+<h3>Stack</h3>
+<ul>
+<li>Python ×10 · binary ×2 · Shell ×1 · plist ×1</li>
+<li>external tools invoked: <code>python3</code></li>
+</ul>
+<h3>What's in the code</h3>
+<ul>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/app.py</code> — 504 lines (Python)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/static/script.js</code> — 459 lines (JavaScript)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/secure_channel.py</code> — 343 lines (Python)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/static/style.css</code> — 342 lines (CSS)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/x3dh_protocol.py</code> — 321 lines (Python)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/peer_discovery.py</code> — 266 lines (Python)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/double_ratchet.py</code> — 213 lines (Python)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/proxy.py</code> — 202 lines (Python)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/disappearing_messages.py</code> — 180 lines (Python)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/file_transfer.py</code> — 176 lines (Python)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/voice_notes.py</code> — 162 lines (Python)</li>
+<li><code>IsaacSecureMessenger.app/Contents/Resources/crypto_utils.py</code> — 126 lines (Python)</li>
+</ul>
+<h3>Verified in the Python source</h3>
+<ul>
+<li>CLI / options: <code>--fingerprint</code>, <code>--name</code>, <code>--no-gui</code>, <code>--port</code></li>
+<li>classes: <code>DisappearingMessage</code>, <code>DisappearingMessages</code>, <code>DoubleRatchet</code>, <code>FileTransfer</code>, <code>IdentityKeyBundle</code>, <code>IsaacNetProxy</code>, <code>OneTimePreKey</code>, <code>PeerDiscovery</code>, <code>PeerInfo</code>, <code>SecureChannel</code>, <code>SecureTransport</code>, <code>SignedPreKey</code>, <code>VoiceNoteMessage</code>, <code>VoiceRecorder</code></li>
+<li>functions: <code>aes_decrypt</code>, <code>aes_decrypt_str</code>, <code>aes_encrypt</code>, <code>aes_encrypt_str</code>, <code>api_bundle</code>, <code>api_connect</code>, <code>api_conversations</code>, <code>api_disappearing</code>, <code>api_file_upload</code>, <code>api_messages</code>, <code>api_peers</code>, <code>api_proxy_status</code>, <code>api_proxy_toggle</code>, <code>api_self_info</code>, <code>api_send</code>, <code>api_status</code></li>
+</ul>
+<h3>Notes found in the scripts</h3>
+<ul>
+<li>Isaac Secure Messenger — Dependency Installer</li>
+<li>Double-click this file to install everything needed.</li>
+<li>Requires macOS and an internet connection.</li>
+</ul>
+<hr>
+<p>_Spec generated from the project's own files on 2026-09-28 (<code>gen-project-specs.py</code>). Everything above was read from the listed files — file counts, line counts, names, routes, headings and script comments. No description was invented._</p></div></details></section>
 <footer>Generated 2026-09-28 by <code>gen-build-logs.py</code> ·
 <a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
 </main>

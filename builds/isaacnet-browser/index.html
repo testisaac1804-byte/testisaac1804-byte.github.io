@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IsaacNet Browser — build log · Isaac Chan</title>
+<meta name="description" content="Browser frontend for the IsaacNet proxy.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>IsaacNet Browser</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip soft">Networking</span><span class="chip soft">Browser</span><span class="chip soft">Proxy</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/isaacnet-browser-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Browser frontend for the IsaacNet proxy.</p></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Desktop/portfolio-deploy/projects/isaacnet-browser</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">4</div><div class="l">files</div></div><div class="st"><div class="n">723</div><div class="l">lines of code</div></div><div class="st"><div class="n">2</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-08-18</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-09-28</div><div class="l">last touched</div></div></div><p class="fine">Mostly: Python ×2 · HTML ×1</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/isaacnet-browser.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/isaacnet-browser-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>IsaacNet Browser</h2>
+<p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Done</p>
+<p>Browser frontend for the IsaacNet proxy.</p>
+<p><strong>Stack / Tools:</strong> Networking, Browser, Proxy</p>
+<p><strong>Location:</strong> <code>~/isaacnet-browser</code></p>
+<h3>Where it lives</h3>
+<ul>
+<li>Published copy on the site (working folder isn't on this Mac): <code>~/Desktop/portfolio-deploy/demos/isaacnet-browser.html</code></li>
+<li>Published copy on the site (working folder isn't on this Mac): <code>~/Desktop/portfolio-deploy/projects/isaacnet-browser</code></li>
+<li>Artefacts on the site: 5 files · 894 lines of text · 38 KB</li>
+</ul>
+<h3>Stack</h3>
+<ul>
+<li>HTML ×2 · Python ×2 · Shell ×1</li>
+<li>external tools invoked: <code>networksetup</code>, <code>node</code>, <code>python3</code></li>
+</ul>
+<h3>What's in the code</h3>
+<ul>
+<li><code>../projects/isaacnet-browser/isaacnet_browser.py</code> — 538 lines (Python)</li>
+<li><code>../projects/isaacnet-browser/probe.py</code> — 184 lines (Python)</li>
+<li><code>isaacnet-browser.html</code> — 136 lines (HTML)</li>
+<li><code>../projects/isaacnet-browser/IsaacNet.command</code> — 35 lines (Shell)</li>
+<li><code>../projects/isaacnet-browser/index.html</code> — 1 lines (HTML)</li>
+</ul>
+<h3>Verified in the Python source</h3>
+<ul>
+<li>classes: <code>AppDelegate</code>, <code>ConnectProxy</code></li>
+<li>functions: <code>_detect_service</code>, <code>_doh_json</code>, <code>_doh_wire</code>, <code>_opener</code>, <code>_parse_wire</code>, <code>_wire_query</code>, <code>doh_resolve</code>, <code>main</code>, <code>normalize_url</code>, <code>proxy_off</code>, <code>proxy_on</code>, <code>tls_handshake</code></li>
+</ul>
+<h3>Verified in the page source</h3>
+<ul>
+<li>page title: “IsaacNet Browser”</li>
+<li>headings: ' + (host.indexOf("wikipedia") !== -1 ? "TCP/IP — the protocol stack behind every request" : "Securely proxied: " + host) + '</li>
+<li>UI element ids: <code>chain</code>, <code>lock</code>, <code>page</code></li>
+</ul>
+<h3>Notes found in the scripts</h3>
+<ul>
+<li>=============================================================================</li>
+<li>IsaacNet — double-click launcher</li>
+<li>Runs the DoH + CONNECT browser and GUARANTEES the system proxy is restored</li>
+</ul>
+<hr>
+<p>_Spec generated from the project's own files on 2026-09-28 (<code>gen-project-specs.py</code>). Everything above was read from the listed files — file counts, line counts, names, routes, headings and script comments. No description was invented._</p></div></details></section>
+<footer>Generated 2026-09-28 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

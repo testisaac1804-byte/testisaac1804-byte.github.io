@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OS Kernel (from scratch) — build log · Isaac Chan</title>
+<meta name="description" content="x86 OS kernel from scratch — bootloader, kernel, lib.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>OS Kernel (from scratch)</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">draft</span><span class="chip soft">OS</span><span class="chip soft">x86</span><span class="chip soft">Assembly</span><span class="chip soft">C</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/os-kernel-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">x86 OS kernel from scratch — bootloader, kernel, lib.</p></section><section id="numbers"><h2>By the numbers</h2><p class="fine">Measured from the real working folder <code>~/Documents/projects/drafts/oskernel</code> — not a claim, a count.</p><div class="stats"><div class="st"><div class="n">44</div><div class="l">files</div></div><div class="st"><div class="n">2,414</div><div class="l">lines of code</div></div><div class="st"><div class="n">4</div><div class="l">file types used</div></div><div class="st"><div class="n">2026-07-24</div><div class="l">oldest file</div></div><div class="st"><div class="n">2026-07-24</div><div class="l">last touched</div></div></div><p class="fine">Mostly: C ×15 · C/C++ header ×6 · Python ×1 · Shell ×1</p></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/os-kernel.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/os-kernel-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>OS Kernel (from scratch)</h2>
+<p><strong>Category:</strong> Software &amp; Apps · <strong>Status:</strong> Draft</p>
+<p>x86 OS kernel from scratch — bootloader, kernel, lib.</p>
+<p><strong>Stack / Tools:</strong> OS, x86, Assembly, C</p>
+<p><strong>Location:</strong> <code>~/os-kernel</code></p>
+<h3>Where it lives</h3>
+<ul>
+<li>Source folder: <code>~/Documents/projects/drafts/oskernel</code></li>
+<li>Artefacts on the site: 44 files · 2,455 lines of text · 289 KB</li>
+</ul>
+<h3>Stack</h3>
+<ul>
+<li>binary ×16 · C ×15 · C/C++ header ×6 · Python ×1</li>
+</ul>
+<h3>What's in the code</h3>
+<ul>
+<li><code>kernel/shell.c</code> — 274 lines (C)</li>
+<li><code>include/kernel.h</code> — 248 lines (C/C++ header)</li>
+<li><code>kernel/scheduler.c</code> — 245 lines (C)</li>
+<li><code>kernel/fs.c</code> — 159 lines (C)</li>
+<li><code>kernel/kernel.c</code> — 156 lines (C)</li>
+<li><code>lib/string.c</code> — 138 lines (C)</li>
+<li><code>kernel/keyboard.c</code> — 130 lines (C)</li>
+<li><code>kernel/screen.c</code> — 128 lines (C)</li>
+<li><code>lib/printf.c</code> — 120 lines (C)</li>
+<li><code>kernel/idt.c</code> — 113 lines (C)</li>
+<li><code>kernel/pmm.c</code> — 101 lines (C)</li>
+<li><code>kernel/paging.c</code> — 99 lines (C)</li>
+</ul>
+<h3>Notes found in the scripts</h3>
+<ul>
+<li>Test script for Hermes OS</li>
+<li>Run QEMU with serial reading from the pipe</li>
+<li>Wait for boot</li>
+</ul>
+<hr>
+<p>_Spec generated from the project's own files on 2026-09-28 (<code>gen-project-specs.py</code>). Everything above was read from the listed files — file counts, line counts, names, routes, headings and script comments. No description was invented._</p></div></details></section>
+<footer>Generated 2026-09-28 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>
