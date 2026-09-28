@@ -125,7 +125,7 @@
     "c": "ac",
     "l": "⬇ Download installer (.pkg)",
     "o": 1,
-    "u": "https://files.isaac1804.com/installers/BetterTerminal-1.1.0.pkg",
+    "u": "https://cdn.isaac1804.com/installers/BetterTerminal-1.1.0.pkg",
     "p": "",
     "vs": []
    },
@@ -3308,7 +3308,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/cnc%20drill%20bit%20case.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/cnc%20drill%20bit%20case.stl",
     "vs": []
    }
   ],
@@ -3634,7 +3634,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/knurl%20bearing%20in%20out.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/knurl%20bearing%20in%20out.stl",
     "vs": []
    }
   ],
@@ -3694,15 +3694,15 @@
     "p": "",
     "vs": [
      {
-      "p": "https://files.isaac1804.com/Downloads/40%25%20vex%20iq%20storage%20box/Tray.stl",
+      "p": "https://cdn.isaac1804.com/Downloads/40%25%20vex%20iq%20storage%20box/Tray.stl",
       "n": ""
      },
      {
-      "p": "https://files.isaac1804.com/Downloads/40%25%20vex%20iq%20storage%20box/228-2929%20IQ%20BIN.stl",
+      "p": "https://cdn.isaac1804.com/Downloads/40%25%20vex%20iq%20storage%20box/228-2929%20IQ%20BIN.stl",
       "n": ""
      },
      {
-      "p": "https://files.isaac1804.com/Downloads/40%25%20vex%20iq%20storage%20box/Storage%20Lid.stl",
+      "p": "https://cdn.isaac1804.com/Downloads/40%25%20vex%20iq%20storage%20box/Storage%20Lid.stl",
       "n": ""
      }
     ]
@@ -3760,7 +3760,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/VEX%20EDR%20Box%20Inserts.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/VEX%20EDR%20Box%20Inserts.dxf",
     "vs": []
    }
   ],
@@ -3783,7 +3783,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/masterball%20new.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/masterball%20new.stl",
     "vs": []
    }
   ],
@@ -3941,7 +3941,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/100%20music%20sheet%20holder%200.6.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/100%20music%20sheet%20holder%200.6.dxf",
     "vs": []
    }
   ],
@@ -9120,7 +9120,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/The%20car%20Isaac%20Damian.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/The%20car%20Isaac%20Damian.stl",
     "vs": []
    }
   ],
@@ -9143,7 +9143,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/ish%203.stl_A.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/ish%203.stl_A.stl",
     "vs": []
    }
   ],
@@ -9166,7 +9166,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/ish%203_fixed.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/ish%203_fixed.dxf",
     "vs": []
    }
   ],
@@ -9189,7 +9189,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/ok%20ish.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/ok%20ish.stl",
     "vs": []
    }
   ],
@@ -9212,7 +9212,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/reprint%202.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/reprint%202.stl",
     "vs": []
    }
   ],
@@ -9235,7 +9235,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/reprint%203.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/reprint%203.stl",
     "vs": []
    }
   ],
@@ -9258,7 +9258,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/%28body%29%20green.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/%28body%29%20green.stl",
     "vs": []
    }
   ],
@@ -9281,7 +9281,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/grouped%20car%20shasis.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/grouped%20car%20shasis.dxf",
     "vs": []
    }
   ],
@@ -9304,7 +9304,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/car%20chasis%20dxf%202.0.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/car%20chasis%20dxf%202.0.dxf",
     "vs": []
    }
   ],
@@ -9327,7 +9327,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/damian%20front%20wing%20%281%29.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/damian%20front%20wing%20%281%29.stl",
     "vs": []
    }
   ],
@@ -9350,7 +9350,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Luke%20Front%20Wing.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/Luke%20Front%20Wing.stl",
     "vs": []
    }
   ],
@@ -9373,7 +9373,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/0.41%20tolerance%20axle%20bush%20for%202.5.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/0.41%20tolerance%20axle%20bush%20for%202.5.stl",
     "vs": []
    }
   ],
@@ -9396,7 +9396,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/offset%20optimised%20batterycar.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/offset%20optimised%20batterycar.dxf",
     "vs": []
    }
   ],
@@ -9419,7 +9419,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/DONE%20alice%20laptop%20stand%20final%20fixed.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/DONE%20alice%20laptop%20stand%20final%20fixed.dxf",
     "vs": []
    }
   ],
@@ -9442,7 +9442,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Gigantamax%20Snorlax%20final%20final.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/Gigantamax%20Snorlax%20final%20final.stl",
     "vs": []
    }
   ],
@@ -9465,7 +9465,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/xwing%20v5.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/xwing%20v5.dxf",
     "vs": []
    }
   ],
@@ -9488,7 +9488,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/christmas%20tree.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/christmas%20tree.dxf",
     "vs": []
    }
   ],
@@ -9511,7 +9511,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/spinning%20top%20align.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/spinning%20top%20align.stl",
     "vs": []
    }
   ],
@@ -9533,7 +9533,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/1mm%20toothpaste%20squisher.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/1mm%20toothpaste%20squisher.stl",
     "vs": []
    }
   ],
@@ -9555,7 +9555,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Egg%20Yolk%20Seperator%20v2.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/Egg%20Yolk%20Seperator%20v2.stl",
     "vs": []
    }
   ],
@@ -9577,7 +9577,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/%E5%8D%B7%E7%BA%B8%E6%9E%B6%20v2.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/%E5%8D%B7%E7%BA%B8%E6%9E%B6%20v2.stl",
     "vs": []
    }
   ],
@@ -9599,7 +9599,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Ryan%27s%20Spinner%201.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/Ryan%27s%20Spinner%201.stl",
     "vs": []
    }
   ],
@@ -9621,7 +9621,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Raspberry%20Pi%204B%20case%20-%20bottom.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/Raspberry%20Pi%204B%20case%20-%20bottom.stl",
     "vs": []
    }
   ],
@@ -9643,7 +9643,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Buckle-1%20%281%29.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/Buckle-1%20%281%29.stl",
     "vs": []
    }
   ],
@@ -9665,7 +9665,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Keychain%20base.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/Keychain%20base.stl",
     "vs": []
    }
   ],
@@ -9687,7 +9687,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/final%20keyholoder.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/final%20keyholoder.dxf",
     "vs": []
    }
   ],
@@ -9710,7 +9710,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/charger%20package.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/charger%20package.stl",
     "vs": []
    }
   ],
@@ -9732,7 +9732,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/nametag.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/nametag.stl",
     "vs": []
    }
   ],
@@ -9753,7 +9753,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/honeycomb%20clipper.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/honeycomb%20clipper.stl",
     "vs": []
    }
   ],
@@ -9775,7 +9775,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/PLA_Trap.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/PLA_Trap.stl",
     "vs": []
    }
   ],
@@ -9797,7 +9797,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/3mm%20drill%20v2.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/3mm%20drill%20v2.stl",
     "vs": []
    },
    {
@@ -9827,7 +9827,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/3mm%20final%20lampp.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/3mm%20final%20lampp.dxf",
     "vs": []
    }
   ],
@@ -9850,7 +9850,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/6mm%20final%20lampp.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/6mm%20final%20lampp.dxf",
     "vs": []
    }
   ],
@@ -9873,7 +9873,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Spur_M1.25_Pa20_Z100.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/Spur_M1.25_Pa20_Z100.dxf",
     "vs": []
    }
   ],
@@ -9896,7 +9896,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/involute_gear%20%283%29.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/involute_gear%20%283%29.dxf",
     "vs": []
    }
   ],
@@ -9919,7 +9919,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/modified%20vex%20iq%2060t%20gear.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/modified%20vex%20iq%2060t%20gear.dxf",
     "vs": []
    }
   ],
@@ -9942,7 +9942,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/a%20keychain%20tag%20from%20koen.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/a%20keychain%20tag%20from%20koen.dxf",
     "vs": []
    }
   ],
@@ -9964,7 +9964,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/middle%20point%20of%20300x300.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/middle%20point%20of%20300x300.dxf",
     "vs": []
    }
   ],
@@ -9987,7 +9987,7 @@
     "l": "View DXF",
     "o": 5,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/100%20music%20sheet%20holder%200.7%20%281%29.dxf",
+    "p": "https://cdn.isaac1804.com/Downloads/100%20music%20sheet%20holder%200.7%20%281%29.dxf",
     "vs": []
    }
   ],
@@ -10010,7 +10010,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/astronaut_badge_base.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/astronaut_badge_base.stl",
     "vs": []
    }
   ],
@@ -10341,7 +10341,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/F1InSchools-main/documents/Design%20portfolio.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/F1InSchools-main/documents/Design%20portfolio.pdf",
     "vs": []
    }
   ],
@@ -10364,7 +10364,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/F1InSchools-main/documents/Enterprise%20portfolio.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/F1InSchools-main/documents/Enterprise%20portfolio.pdf",
     "vs": []
    }
   ],
@@ -10387,7 +10387,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/F1InSchools-main/documents/Verbal%20Presentation%20Nationals.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/F1InSchools-main/documents/Verbal%20Presentation%20Nationals.pdf",
     "vs": []
    }
   ],
@@ -10410,7 +10410,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/F1InSchools-main/documents/renders.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/F1InSchools-main/documents/renders.pdf",
     "vs": []
    }
   ],
@@ -10434,7 +10434,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/228-8899-KitLayout.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/228-8899-KitLayout.pdf",
     "vs": []
    }
   ],
@@ -10529,7 +10529,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/P2S%20Extruder%20Clog%20Cleaning%20Guide.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/P2S%20Extruder%20Clog%20Cleaning%20Guide.pdf",
     "vs": []
    }
   ],
@@ -10552,7 +10552,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/daja%20a6%20pro%20tutorial.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/daja%20a6%20pro%20tutorial.pdf",
     "vs": []
    }
   ],
@@ -10598,7 +10598,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Barrier%20Reef.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/Barrier%20Reef.pdf",
     "vs": []
    }
   ],
@@ -10620,7 +10620,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Copy%20of%20VIQRC%20Digital%20Notebook%20-%20Template%20v4.0.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/Copy%20of%20VIQRC%20Digital%20Notebook%20-%20Template%20v4.0.pdf",
     "vs": []
    }
   ],
@@ -10642,7 +10642,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Mega%20Tours%20Final%20Presentation.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/Mega%20Tours%20Final%20Presentation.pdf",
     "vs": []
    }
   ],
@@ -10754,7 +10754,7 @@
     "l": "View Image",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Kinetic%20Industries.png",
+    "p": "https://cdn.isaac1804.com/Downloads/Kinetic%20Industries.png",
     "vs": []
    }
   ],
@@ -10776,7 +10776,7 @@
     "l": "View Image",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/Storyboard.png",
+    "p": "https://cdn.isaac1804.com/Downloads/Storyboard.png",
     "vs": []
    }
   ],
@@ -10797,7 +10797,7 @@
     "l": "Open PDF",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/humanities%20industrial%20revolution.pdf",
+    "p": "https://cdn.isaac1804.com/Downloads/humanities%20industrial%20revolution.pdf",
     "vs": []
    }
   ],
@@ -10819,7 +10819,7 @@
     "l": "View 3D",
     "o": 2,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/photo%20holder.stl",
+    "p": "https://cdn.isaac1804.com/Downloads/photo%20holder.stl",
     "vs": []
    },
    {
@@ -10827,7 +10827,7 @@
     "l": "View Render",
     "o": 6,
     "u": "",
-    "p": "https://files.isaac1804.com/Downloads/photo%20holder%20v3%20%282%29.jpg",
+    "p": "https://cdn.isaac1804.com/Downloads/photo%20holder%20v3%20%282%29.jpg",
     "vs": []
    }
   ],
@@ -12056,7 +12056,7 @@
     "o": 3,
     "u": "",
     "p": [
-     "https://files.isaac1804.com/pokemon%20snorlax%20keychains/llavero%20Pokemon%20v1_llaveros%20Pokemon%20v1_Base.stl"
+     "https://cdn.isaac1804.com/pokemon%20snorlax%20keychains/llavero%20Pokemon%20v1_llaveros%20Pokemon%20v1_Base.stl"
     ],
     "vs": []
    },
@@ -12467,7 +12467,7 @@
     "c": "ac",
     "l": "🧪 Chem Unit 1",
     "o": 1,
-    "u": "https://files.isaac1804.com/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet.pdf",
+    "u": "https://cdn.isaac1804.com/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet.pdf",
     "p": "",
     "vs": []
    },
@@ -12475,7 +12475,7 @@
     "c": "ac",
     "l": "🧬 DAB Unit 1 Cells",
     "o": 1,
-    "u": "https://files.isaac1804.com/science%20booklet/DAB%20Unit%201%20Cells%20%26%20Microbes%20Student%20Booklet%20%28Revised%20June%202026%29.pdf",
+    "u": "https://cdn.isaac1804.com/science%20booklet/DAB%20Unit%201%20Cells%20%26%20Microbes%20Student%20Booklet%20%28Revised%20June%202026%29.pdf",
     "p": "",
     "vs": []
    },
@@ -12483,7 +12483,7 @@
     "c": "",
     "l": "⚡ Forces (DA)",
     "o": 1,
-    "u": "https://files.isaac1804.com/science%20booklet/Forces%20Booklet%20Double%20Award%202026.pdf",
+    "u": "https://cdn.isaac1804.com/science%20booklet/Forces%20Booklet%20Double%20Award%202026.pdf",
     "p": "",
     "vs": []
    },
@@ -12524,7 +12524,7 @@
     "c": "ac",
     "l": "🧬 Cells & Microbes booklet",
     "o": 1,
-    "u": "https://files.isaac1804.com/science%20booklet/DAB%20Unit%201%20Cells%20%26%20Microbes%20Student%20Booklet%20%28Revised%20June%202026%29.pdf",
+    "u": "https://cdn.isaac1804.com/science%20booklet/DAB%20Unit%201%20Cells%20%26%20Microbes%20Student%20Booklet%20%28Revised%20June%202026%29.pdf",
     "p": "",
     "vs": []
    },
@@ -12573,7 +12573,7 @@
     "c": "ac",
     "l": "⚗️ Chem Unit 1 booklet",
     "o": 1,
-    "u": "https://files.isaac1804.com/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet.pdf",
+    "u": "https://cdn.isaac1804.com/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet.pdf",
     "p": "",
     "vs": []
    },
@@ -12661,7 +12661,7 @@
     "c": "ac",
     "l": "📚 Material Properties handout",
     "o": 1,
-    "u": "https://files.isaac1804.com/igcse%20things/1011/DT/GCSE%20DT%20-%20Introduction%20%26%20Material%20Properties/01%20Material%20Properties%20Theory/01%20IGCSE%20-%20Material%20Properties%20-%20Handout%20for%20Material%20Properties%20Revision.pdf",
+    "u": "https://cdn.isaac1804.com/igcse%20things/1011/DT/GCSE%20DT%20-%20Introduction%20%26%20Material%20Properties/01%20Material%20Properties%20Theory/01%20IGCSE%20-%20Material%20Properties%20-%20Handout%20for%20Material%20Properties%20Revision.pdf",
     "p": "",
     "vs": []
    },
@@ -12788,7 +12788,7 @@
     "c": "ac",
     "l": "💪 Strengths profile",
     "o": 1,
-    "u": "https://files.isaac1804.com/igcse%20things/StrengthsProfile-Isaac--09EC-.pdf",
+    "u": "https://cdn.isaac1804.com/igcse%20things/StrengthsProfile-Isaac--09EC-.pdf",
     "p": "",
     "vs": []
    }
@@ -12820,7 +12820,7 @@
     "c": "ac",
     "l": "🧪 Chem Unit 1 answers",
     "o": 1,
-    "u": "https://files.isaac1804.com/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet%20(ANSWERS).pdf",
+    "u": "https://cdn.isaac1804.com/science%20booklet/2026-2027%20DA%20IGCSE%20Chemistry%20Unit%201%20Student%20Booklet%20(ANSWERS).pdf",
     "p": "",
     "vs": []
    }
