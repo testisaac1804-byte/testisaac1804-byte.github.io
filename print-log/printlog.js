@@ -90,7 +90,7 @@ function addPrint(e) {
 function delPrint(id) {
   var p = prompt("Passcode to delete?");
   if (!p) return;
-  fetch(API + "/api/prints/" + id + "?pass=" + encodeURIComponent(p), { method: "DELETE" })
+  fetch(API + "/api/prints/" + id, { method: "DELETE", headers: { "X-Pass": p } })
     .then(function (r) { return r.json(); })
     .then(function (j) { if (j && j.ok) load(); else alert("Wrong passcode."); });
 }
