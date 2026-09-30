@@ -296,6 +296,8 @@ var U = {};
 U.API_URL = 'https://script.google.com/macros/s/AKfycby_9ZaQzuDbPiPvlfIo5LiEsgQ6IJPWoxjQRiqfqp4tk4rayqNys8g2CfeixIi_0-KvJQ/exec';
 U.MAX_SIZE = 20 * 1024 * 1024; // 20MB
 U.MIN_TIME = 3; // seconds before submit allowed
+// Shared secret — must equal CONFIG.FORM_SECRET in upload-backend.gs
+U.FORM_SECRET = 'isaac-3d-upload-v2-7f2c9a';
 
 // ===== State =====
 U.file = null;
@@ -498,6 +500,10 @@ U.submitForm = function(dataUrl) {
   var form = document.getElementById('uploadForm');
   form.action = U.API_URL;
   form.innerHTML = '';
+  U.addField(form, 'secret', U.FORM_SECRET);
+  U.addField(form, 'website', document.getElementById('hp_website').value);
+  U.addField(form, 'trap', U.verifyA + ' + ' + U.verifyB);
+  U.addField(form, 'ans', document.getElementById('verifyAnswer').value.trim());
   U.addField(form, 'fileName', U.file.name);
   U.addField(form, 'fileSize', String(U.file.size));
   U.addField(form, 'fileData', dataUrl);
