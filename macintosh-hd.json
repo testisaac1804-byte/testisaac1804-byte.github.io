@@ -1,14 +1,14 @@
 {
-  "last_synced": "2026-10-09 18:59:46 UTC",
+  "last_synced": "2026-10-10 18:18:52 UTC",
   "hostname": "Isaac's Macbook Air",
   "drive": {
     "total": "460Gi",
     "used": "12Gi",
-    "avail": "33Gi",
+    "avail": "34Gi",
     "pct": "27%"
   },
   "total_files": 43098,
-  "scan_time_sec": 3.8,
+  "scan_time_sec": 2.8,
   "tree": {
     "\ud83c\udfe0 Home": {
       "ai-girlfriend/": {
@@ -30916,8 +30916,8 @@
             "m": "2026-10-03 16:19"
           },
           "macintosh-hd.json": {
-            "s": 7366870,
-            "m": "2026-10-08 18:00"
+            "s": 7367127,
+            "m": "2026-10-09 18:59"
           },
           "manifest.json": {
             "s": 790,
@@ -47616,8 +47616,8 @@
             "m": "2026-10-08 03:26"
           },
           "isaacmac.html": {
-            "s": 806,
-            "m": "2026-10-09 07:16"
+            "s": 740,
+            "m": "2026-10-10 07:58"
           },
           "LICENSE": {
             "s": 1067,
@@ -178539,7 +178539,7 @@
           },
           "_notify_offset": {
             "s": 6,
-            "m": "2026-10-09 01:12"
+            "m": "2026-10-10 02:19"
           },
           "_skip_paths.json": {
             "s": 35089,
