@@ -17,6 +17,13 @@ window.HOME={
       "title": "🖥️ Web Apps",
       "items": [
         {
+          "icon": "🟤",
+          "label": "The Brown Meter — a live brownness meter: one orb, a percentage, and a word for what the number means. It updates itself on every open screen the instant it changes — 64 words across 8 bands, peak records, a public reaction bar, and an hourly auto-drift mode",
+          "url": "brown-meter.isaac1804.workers.dev",
+          "href": "https://brown-meter.isaac1804.workers.dev",
+          "badge": "new"
+        },
+        {
           "icon": "✍️",
           "label": "DocScribe — a writing pad with nothing to set up: open it and type. No login, no key, no Google account, no console. Autosaves, keeps an honest edit log, exports to Word (.docx) and Markdown",
           "url": "docscribe.isaac1804.workers.dev",
@@ -240,7 +247,7 @@ window.HOME={
         },
         {
           "icon": "🔗",
-          "label": "Link Compressor — paste a long link, get a tiny isaac1804.com/s/xxxxx link (bulk mode, QR codes, click counts)",
+          "label": "Link Compressor — paste a long link, get a tiny isaac1804.com/s/xxxxx link (bulk mode, QR codes, and logs of who clicked it)",
           "url": "/tools/link-compressor/",
           "href": "/tools/link-compressor/",
           "badge": "new"

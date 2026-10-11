@@ -122,7 +122,7 @@ footer a{color:var(--t2)}
   <div class="card">
     <h2>Compress links</h2>
     <div class="hint">One link per line — paste as many as you like. Everything after the <code>#</code> is dropped, <code>https://</code> is added automatically.</div>
-    <textarea id="in" placeholder="https://isaac1804.com/portfolio/Woods%20Knowledge/&#10;isaac1804.com/revision/&#10;https://cdn.isaac1804.com/installers/BetterTerminal-1.1.0.pkg"></textarea>
+    <textarea id="in" placeholder="https://isaac1804.com/portfolio/Woods%20Knowledge/&#10;isaac1804.com/revision/&#10;https://isaac1804.com/files/installers/BetterTerminal-1.1.0.pkg"></textarea>
     <div class="row">
       <div class="grow">
         <label class="lbl" for="slug">Custom name <span class="pill" id="slugPill">token needed</span></label>
@@ -185,7 +185,7 @@ footer a{color:var(--t2)}
     <ul>
       <li><code>POST /api/links</code> <code>{"url":"…","slug":"optional"}</code> → <code>{"short":"https://isaac1804.com/s/xxxxx"}</code> — open to anyone, any link</li>
       <li><code>GET /s/&lt;code&gt;</code> → 302 to the target and logs the click — open to anyone</li>
-      <li><b>Everything else needs the admin password</b> (sent as the <code>X-Link-Token</code> header or <code>?password=</code>):</li>
+      <li><b>Everything else needs the admin password</b> (sent as the <code>X-Link-Token</code> header only; 5 wrong tries locks you out for 15 min):</li>
       <li><code>GET /api/links</code> → every link with creator + clicks · <code>GET /api/links/&lt;code&gt;</code> → who made it + the last 100 clicks</li>
       <li><code>GET /api/activity</code> → newest creations + clicks · <code>DELETE /api/links/&lt;code&gt;</code> → delete a link and its log</li>
       <li><code>GET /api/stats</code> → public totals only (link count, clicks)</li>
