@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DocScribe — build log · Isaac Chan</title>
+<meta name="description" content="A writing pad that needs no setup at all: open the URL and type — no login, no API key, no Google account, no console. The text lives in Cloudflare KV, so the first browser to open">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>DocScribe</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">2 versions</span><span class="chip soft">Cloudflare Worker</span><span class="chip soft">KV</span><span class="chip soft">Zero setup</span><span class="chip soft">Google Docs alternative</span><span class="chip soft">Vanilla JS</span></div>
+  <div class="btns"><a class="btn live" href="https://docscribe.isaac1804.workers.dev" target="_blank" rel="noopener">▶ Open DocScribe</a><a class="btn" href="/portfolio/prompts/docscribe-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">A writing pad that needs no setup at all: open the URL and type — no login, no API key, no Google account, no console. The text lives in Cloudflare KV, so the first browser to open it becomes the owner with nothing to type, and nobody else can read, edit, export or delete it. Autosaves as you type, keeps a real edit log (one row = one genuine keystroke-caused edit at real wall-clock time — a no-op save mints nothing), and exports to .docx (a hand-built ZIP that opens in real Word) and .md. Pair a second device with a one-tap link. Originally written against the Google Docs API; deleting the whole Google OAuth setup — Cloud project, consent screen, client ID and secret — is exactly what the KV rewrite did.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Local Python app on the Google Docs API — needed a Cloud project, an OAuth consent screen and a client ID + secret before it would save a word.</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Rebuilt as a Cloudflare Worker with the text in KV: no OAuth, no access key, no setup page. First browser to open it owns it; .docx + .md export; one-tap device pairing; 93/93 offline assertions; live-verified with a stranger getting 403.</p></div></div></div></section><section id="files"><h2>Files on the site</h2><ul class="files"><li><a href="/portfolio/prompts/docscribe-prompt.md">Build notes</a> <span class="meta">78 lines · 4.5 KB</span></li></ul></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/docscribe.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/docscribe-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>DocScribe — a writing pad with nothing to set up</h2>
+<p>A Google-Docs-shaped editor you can just open and type in. There is no login, no API key, no Google account and no setup page — <strong>no console work of any kind</strong>. The text is stored in Cloudflare KV, which the site already had.</p>
+<h3>Live</h3>
+<ul>
+<li>App: <a href="https://docscribe.isaac1804.workers.dev" target="_blank" rel="noopener">https://docscribe.isaac1804.workers.dev</a></li>
+<li>Backend: Cloudflare Worker <code>docscribe</code> + KV namespace <code>DOCSCRIBE</code></li>
+<li>Open it and start writing. That is the whole setup.</li>
+</ul>
+<h3>Why this exists (the interesting part)</h3>
+<p>V1 was an honest attempt at "make it work for Google Docs": a local Python app that read and wrote a real Google Doc through the Docs API. It worked — but the Google Doc <em>was</em> the database, so every page load and every save called <code>documents.get</code> / <code>documents.batchUpdate</code>. That requires an OAuth client, which requires the full click-through:</p>
+<blockquote>Cloud project → enable the Docs API → OAuth consent screen wizard → External audience →</blockquote>
+<blockquote>add yourself as a test user → publish → add the <code>documents</code> scope → create a Web</blockquote>
+<blockquote>application client → paste the redirect URI → download the JSON → and re-authorise every</blockquote>
+<blockquote><strong>7 days</strong> because an unpublished app in Testing status expires refresh tokens.</blockquote>
+<p>That is a lot of console clicking before the first word gets typed, and it deliberately puts your document in Google's hands. So instead of documenting the walkthrough, the dependency was <strong>deleted</strong>: the storage moved from a Google Doc into the KV store that was already provisioned. Every step above disappeared at once, and so did Google.</p>
+<h3>Features</h3>
+<ul>
+<li><strong>Zero setup</strong> — no client ID, no secret, no access key, no unlock box. The Worker's</li>
+<p>secret list is genuinely empty.</p>
+<li><strong>No access key at all</strong> — the door is the browser, not a typed password. The first</li>
+<p>browser to open the URL claims the pad and gets a 256-bit random cookie; the claim is first-write-wins in KV.</p>
+<li><strong>Nobody else can touch it</strong> — no cookie means <code>403 already claimed</code> on read, write,</li>
+<p>export and delete. The pad does not leak its text to anyone who finds the URL.</p>
+<li><strong>Autosave</strong> — the editor posts only when there is a change.</li>
+<li><strong>An honest edit log</strong> — one log row equals one real edit caused by real typing at real</li>
+<p>wall-clock time. A save that changes nothing returns early and writes nothing, so the log cannot inflate itself.</p>
+<li><strong>Export to <code>.docx</code></strong> — a ZIP written by hand (no libraries, because a Worker has no npm</li>
+<p>deps here): <code>[Content_Types].xml</code>, <code>_rels</code>, <code>word/document.xml</code>, CRC-32 checked by the ZIP writer itself. Verified with <code>file</code> (reports "Microsoft Word 2007+"), <code>unzip -t</code> (clean) and macOS <code>textutil</code> (reads the body back, CJK and escaped entities included).</p>
+<li><strong>Export to <code>.md</code></strong> — plain markdown for anything that is not Word.</li>
+<li><strong>Getting it into Google Docs anyway</strong> — download the <code>.docx</code>, then in Drive:</li>
+<p><em>New → File upload</em>, right-click the file, <em>Open with → Google Docs</em>. Drive converts it to a native Google Doc. Three clicks, no API project, and the conversion happens in Drive where it belongs.</p>
+<li><strong>Second device</strong> — the home page hands out a one-tap pairing link (<code>/pair?t=…</code>), single</li>
+<p>use and 10-minute expiry. The link <em>is</em> the credential, so it can be redeemed by a device that has no cookie yet; no code to read off a screen and retype.</p>
+</ul>
+<h3>Files</h3>
+<ul>
+<li><code>cloud/worker.js</code> — the whole app: routing, KV storage, owner claim, autosave, exports,</li>
+<p>the hand-rolled <code>.docx</code> ZIP writer.</p>
+<li><code>cloud/test_core.mjs</code> — 39 assertions on the pure helpers (ZIP checksums, XML escaping,</li>
+<p>save-mode maths, filename safety).</p>
+<li><code>cloud/test_access.mjs</code> — 54 assertions driving the real Worker against an in-memory KV</li>
+<p>stand-in: claim, lockout, save, no-op save, export, pairing, delete.</p>
+<li><code>cloud/deploy.sh</code> — runs both suites and only then deploys with the <code>isaac1804</code> API token.</li>
+<p>Shipping is gated on 93/93.</p>
+<li><code>cloud/README.md</code> — the one-line "what do I do" page. There is no setup guide because</li>
+<p>there is nothing to set up.</p>
+<li><code>app.py</code>, <code>google_client.py</code>, <code>templates/setup.html</code> — the old local V1, kept for</li>
+<p>reference. It still needs the OAuth client and should not be used.</p>
+</ul>
+<h3>Verification done</h3>
+<ul>
+<li>93/93 offline assertions (<code>node test_core.mjs</code> + <code>node test_access.mjs</code>).</li>
+<li>Live: first visit returns 200 and sets the owner cookie; a stranger gets 403 on every</li>
+<p>route; the <code>.docx</code> downloaded from the live Worker opens in real Word tooling.</p>
+<li>The deployed home page contains <strong>zero</strong> mentions of Google, OAuth, key or setup.</li>
+<li>KV was wiped after testing (<code>owner</code> key deleted explicitly) so the owner's first visit</li>
+<p>claims a clean, empty pad.</p>
+</ul></div></details></section>
+<footer>Generated 2026-10-11 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

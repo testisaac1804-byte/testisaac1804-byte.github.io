@@ -1,0 +1,24 @@
+# Cloudflare Pages security headers.
+#
+# IMPORTANT: this file only takes effect at the ROOT of the deployed bundle.
+# The homepage folder is rsynced to the bundle root by deploy-isaac-site.sh, so
+# it lands at /_headers and applies site-wide (homepage + /portfolio/ + extras).
+# A copy under /portfolio/_headers is IGNORED by Cloudflare Pages.
+#
+# CSP is deliberately omitted: the site relies on inline scripts, external CDN
+# libraries (three.js, etc.) and loads arbitrary user files in the preview pane
+# — a strict CSP would break those, so we apply the safe subset instead.
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# NOTE: you CANNOT shorten the asset TTL from here. Cloudflare Pages serves
+# /portfolio/app.js with `public, max-age=14400` and OVERRIDES the max-age in
+# this file — a `Cache-Control: public, max-age=0, must-revalidate` rule only
+# gets `must-revalidate` merged into the Pages default (verified 2026-10-08).
+# The stale-bundle fix is therefore the content-hash cache-bust token that
+# deploy-isaac-site.sh rewrites into /portfolio/index.html (`app.js?v=<hash>`).

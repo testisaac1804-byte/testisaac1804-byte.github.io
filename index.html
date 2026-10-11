@@ -84,7 +84,8 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
 .localservers summary{cursor:pointer;font-weight:600;font-size:15px;display:flex;gap:8px;align-items:center}
 .localservers .fine{color:var(--t3);font-size:12.5px;margin:8px 0 12px}
 .localservers .badge{margin-left:auto}
-</style></head><body>
+</style><script src="home-data.js"></script>
+</head><body>
 
 <button id="themeBtn" onclick="toggleTheme()">🌙</button>
 <button id="igcseSyncBtn" onclick="igcseSyncHome()" title="Sync IGCSE folders (igcse books, igcse things, science booklet) to GitHub — requires the local sync server">🔄 Sync IGCSE Files</button>
@@ -93,348 +94,7 @@ a .badge{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(16,185,
 <h1>Isaac<span> Chan</span></h1>
 <p class="sub">Island School · Y10 · Hong Kong</p>
 
-<h2>📂 Portfolio</h2>
-<a href="/portfolio/">
-  <span class="icon">🚀</span>
-  <span class="label">Full Project Portfolio — 120+ projects, 3D previews, version histories</span>
-  <span class="url">/portfolio/</span>
-</a>
-
-<h2>🖥️ Web Apps</h2>
-<a href="https://fleur-tea.isaac1804.workers.dev">
-  <span class="icon">🍵</span>
-  <span class="label">Fleur Tea — live e-commerce shop for herbal flower tea: storefront, cart, coupons, blog, reviews + full admin panel (products, orders, backups)</span>
-  <span class="url">fleur-tea.isaac1804.workers.dev</span>
-  <span class="badge">live</span>
-</a>
-<a href="https://openpress.isaac1804.workers.dev">
-  <span class="icon">📰</span>
-  <span class="label">The Open Press — a newspaper written by anyone, for everyone. Community publishing: 8 sections, word-count validation, pull quotes, live on Cloudflare Workers</span>
-  <span class="url">openpress.isaac1804.workers.dev</span>
-  <span class="badge">live</span>
-</a>
-<a href="/portfolio/demos/gcse-home.html">
-  <span class="icon">🏫</span>
-  <span class="label">GCSE Home — rebuilt Toddle dashboard: my 9 classes, homework deadlines, events + full Sentral modules (timetable, attendance, newsfeed, sports, activities)</span>
-  <span class="url">/portfolio/demos/gcse-home.html</span>
-  <span class="badge">new</span>
-</a>
-<a href="https://da.gd/isaacdrop">
-  <span class="icon">📁</span>
-  <span class="label">IsaacDrop — my own Google-Drive-style file sharing: upload &amp; folders, per-file &amp; per-folder passwords, accounts (register = files you own), versions, ZIP downloads. Live service on my Mac — first account becomes admin</span>
-  <span class="url">da.gd/isaacdrop</span>
-  <span class="badge">live</span>
-</a>
-<a href="/portfolio/demos/drill-bits-interactive.html">
-  <span class="icon">🔩</span>
-  <span class="label">Drill Bits Guide — interactive DT guide: 22 bit types, anatomy diagrams, RPM/pilot/tap calculators, quiz, troubleshooting</span>
-  <span class="url">/portfolio/demos/drill-bits-interactive.html</span>
-  <span class="badge">new</span>
-</a>
-<a href="/portfolio/demos/vex-parts.html">
-  <span class="icon">🧩</span>
-  <span class="label">VEX Universe — 436-part interactive reference across all 8 platforms: IQ 2nd Gen, V5, GO, EXP, 123, AIM, CTE, AIR + gear calculator, mechanisms, glossary, quiz</span>
-  <span class="url">/portfolio/demos/vex-parts.html</span>
-  <span class="badge">new</span>
-</a>
-<a href="/portfolio/demos/library-kiosk.html">
-  <span class="icon">📚</span>
-  <span class="label">Library Kiosk — locked-down desktop sim, ticket/HKID auth, admin panel</span>
-  <span class="url">/portfolio/demos/library-kiosk.html</span>
-</a>
-<a href="/notes/Economics-IGCSE-Notes.html">
-  <span class="icon">📈</span>
-  <span class="label">IGCSE Economics Notes — complete 42-chapter revision guide with graph diagrams</span>
-  <span class="url">/notes/Economics-IGCSE-Notes.html</span>
-  <span class="badge">new</span>
-</a>
-<a href="/notes/Biology-IGCSE-Notes.html">
-  <span class="icon">🧬</span>
-  <span class="label">IGCSE Biology Notes — complete 22-chapter revision guide (all units)</span>
-  <span class="url">/notes/Biology-IGCSE-Notes.html</span>
-</a>
-<a href="/notes/Chemistry-IGCSE-Notes.html">
-  <span class="icon">⚗️</span>
-  <span class="label">IGCSE Chemistry Notes — complete 29-chapter revision guide (all units)</span>
-  <span class="url">/notes/Chemistry-IGCSE-Notes.html</span>
-</a>
-<a href="/notes/Physics-IGCSE-Notes.html">
-  <span class="icon">⚡</span>
-  <span class="label">IGCSE Physics Notes — complete 28-chapter revision guide (all units)</span>
-  <span class="url">/notes/Physics-IGCSE-Notes.html</span>
-</a>
-<a href="/notes/Woods-Knowledge-IGCSE-Notes.html">
-  <span class="icon">🪵</span>
-  <span class="label">IGCSE DT Woods Notes — woods knowledge revision guide (categories, tools, joints, finishes)</span>
-  <span class="url">/notes/Woods-Knowledge-IGCSE-Notes.html</span>
-</a>
-<a href="https://isaac1804.com/portfolio/igcse%20books/">
-  <span class="icon">📚</span>
-  <span class="label">IGCSE Books — 4 Edexcel textbooks (biology, chemistry, physics, economics)</span>
-  <span class="url">isaac1804.com/portfolio/igcse books/</span>
-</a>
-<a href="https://isaac1804.com/portfolio/Woods%20Knowledge/">
-  <span class="icon">🪚</span>
-  <span class="label">Woods Knowledge — IGCSE DT class deck (50-slide pptx + viewable PDF)</span>
-  <span class="url">/portfolio/Woods%20Knowledge/</span>
-</a>
-<a href="https://isaac1804.com/portfolio/igcse%20things/">
-  <span class="icon">🗂️</span>
-  <span class="label">IGCSE Things — my Y10 (1011) lesson files by subject: Biology Cells &amp; Microbes, Chemistry Unit 1, Maths Unit 1, DT, Thrive, Chinese, English</span>
-  <span class="url">isaac1804.com/portfolio/igcse things/</span>
-  <span class="badge">updated</span>
-</a>
-<a href="https://isaac1804.com/portfolio/past%20papers/">
-  <span class="icon">📝</span>
-  <span class="label">Past Papers — Cambridge IGCSE question papers + mark schemes (Econ, DT, Maths, Physics, Biology)</span>
-  <span class="url">isaac1804.com/portfolio/past papers/</span>
-</a>
-<a href="/science%20booklet/">
-  <span class="icon">🧪</span>
-  <span class="label">Science Booklets — Yr 7–10 student booklets (19 files) incl. the 2026–27 editions: Chem Unit 1, DAB Unit 1 Cells &amp; Microbes, Double Award Forces</span>
-  <span class="url">/science booklet/</span>
-  <span class="badge">updated</span>
-</a>
-<a href="/books/The%20Inheritance%20Games%20-%20Jennifer%20Lynn%20Barnes.pdf">
-  <span class="icon">📖</span>
-  <span class="label">The Inheritance Games — Jennifer Lynn Barnes (novel PDF)</span>
-  <span class="url">/books/The Inheritance Games - Jennifer Lynn Barnes.pdf</span>
-</a>
-<a href="/portfolio/demos/igcse-guide.html">
-  <span class="icon">📖</span>
-  <span class="label">Y10 IGCSE Study Guide — Economics, DT, Maths, Physics, Biology</span>
-  <span class="url">/portfolio/demos/igcse-guide.html</span>
-</a>
-
-
-
-<a href="/portfolio/demos/igcse-tutor.html">
-  <span class="icon">🎓</span>
-  <span class="label">IGCSE Tutor — interactive practice and explanations</span>
-  <span class="url">/portfolio/demos/igcse-tutor.html</span>
-</a>
-<a href="/portfolio/IGCSE-Links.html">
-  <span class="icon">🔗</span>
-  <span class="label">IGCSE Resource Hub — all Y10 subjects, past papers, revision links</span>
-  <span class="url">/portfolio/IGCSE-Links.html</span>
-  <span class="badge">new</span>
-</a>
-<a href="/revision/unit-1-number/">
-  <span class="icon">🧮</span>
-  <span class="label">Maths Unit 1 — Number revision: recurring decimals, percentages, bounds, ratio, proportion + 4 real past-paper questions</span>
-  <span class="url">/revision/unit-1-number/</span>
-  <span class="badge">new</span>
-</a>
-<a href="/upload.html">
-  <span class="icon">📦</span>
-  <span class="label">3D Model Upload — send STL/DXF/STEP files for fabrication</span>
-  <span class="url">/upload.html</span>
-  <span class="badge">new</span>
-</a>
-<a href="/portfolio/projects/mac-simulator.html">
-  <span class="icon">💻</span>
-  <span class="label">macOS Simulator — browser-based Mac desktop</span>
-  <span class="url">/portfolio/projects/mac-simulator.html</span>
-</a>
-<a href="/portfolio/demos/kinetic-station.html">
-  <span class="icon">🏭</span>
-  <span class="label">Kinetic Industries — maker studio terminal, 4 toolheads, live telemetry, bookings</span>
-  <span class="url">/portfolio/demos/kinetic-station.html</span>
-  <span class="badge">new</span>
-</a>
-
-<h2>🧰 Tools &amp; Study</h2>
-<a href="/print-log/">
-  <span class="icon">🖨️</span>
-  <span class="label">Print Log — track every 3D print's settings and results (builds your proven-settings database)</span>
-  <span class="url">/print-log/</span>
-  <span class="badge">new</span>
-</a>
-<a href="/cv/">
-  <span class="icon">📄</span>
-  <span class="label">CV — auto-generated from my portfolio, print-ready</span>
-  <span class="url">/cv/</span>
-  <span class="badge">new</span>
-</a>
-<a href="/builds/">
-  <span class="icon">🔧</span>
-  <span class="label">Build Logs — one page per project: the spec, its real version history, and what broke</span>
-  <span class="url">/builds/</span>
-  <span class="badge">new</span>
-</a>
-<a href="/revision/">
-  <span class="icon">📚</span>
-  <span class="label">IGCSE Revision Hub — a topic checklist for every subject: notes, booklet, past papers + progress</span>
-  <span class="url">/revision/</span>
-  <span class="badge">new</span>
-</a>
-<a href="/tools/">
-  <span class="icon">🔧</span>
-  <span class="label">Workshop Tools — laser settings, gear ratio, resistor code, beam deflection, print cost, CNC feeds</span>
-  <span class="url">/tools/</span>
-  <span class="badge">new</span>
-</a>
-<a href="/tools/link-compressor/">
-  <span class="icon">🔗</span>
-  <span class="label">Link Compressor — paste a long link, get a tiny isaac1804.com/s/xxxxx link (bulk mode, QR codes, click counts)</span>
-  <span class="url">/tools/link-compressor/</span>
-  <span class="badge">new</span>
-</a>
-<a href="/tools/wood-joints/">
-  <span class="icon">🪵</span>
-  <span class="label">100 Wood Joints — every joint worth knowing, each with its own cut-geometry diagram, strength rating, how it is cut, where it belongs and how it fails</span>
-  <span class="url">/tools/wood-joints/</span>
-  <span class="badge">new</span>
-</a>
-<h2>🧩 解謎任務 Quest</h2>
-<a href="/quests/">
-  <span class="icon">🗺️</span>
-  <span class="label">Quest Hub — 三個解謎網站總覽（孩子回家／溪埕國小／邺山彼处）+ 完整攻略</span>
-  <span class="url">/quests/</span>
-  <span class="badge">new</span>
-</a>
-<a href="/hces-quest-guide/">
-  <span class="icon">🔍</span>
-  <span class="label">溪埕國小解謎網站攻略 — 完整指南：HTTP 狀態碼解析、全秘密路徑地圖、逐步攻略、密碼與鑰匙、人物表</span>
-  <span class="url">/hces-quest-guide/</span>
-</a>
-<a href="/hces-quest-site/">
-  <span class="icon">🏫</span>
-  <span class="label">溪埕國小解謎網站鏡像 — 2003 年校網完整離線備份（含隱藏備份目錄、搜尋紀錄、真相檔案）</span>
-  <span class="url">/hces-quest-site/</span>
-</a>
-<a href="/childquest-guide/">
-  <span class="icon">👧</span>
-  <span class="label">孩子回家完整攻略 — 六名失蹤兒童、秀蘭查證筆記破解、四條證據鏈、結局推論與彩蛋</span>
-  <span class="url">/childquest-guide/</span>
-</a>
-<a href="/childquest-site/">
-  <span class="icon">🔎</span>
-  <span class="label">孩子回家網站鏡像 — 失蹤兒童協尋資料站完整備份（含加密筆記、西和派出所回報表單）</span>
-  <span class="url">/childquest-site/</span>
-</a>
-<a href="/yeshan-guide/">
-  <span class="icon">⛰️</span>
-  <span class="label">邺山彼处完整攻略 — 中式民俗恐怖解謎：論壇登入破解、與佛論禪密碼、三種結局與彩蛋</span>
-  <span class="url">/yeshan-guide/</span>
-</a>
-<a href="/yeshan-site/">
-  <span class="icon">📱</span>
-  <span class="label">邺山彼处網站鏡像 — 微信→七聞論壇→小紅書→公眾號→農家樂完整手機模擬（含三結局）</span>
-  <span class="url">/yeshan-site/</span>
-</a>
-
-<h2>🖥️ Isaac's Macintosh HD</h2>
-<div class="mhd-header">
-  <div>
-    <div class="mhd-drive" id="mhdDrive"></div>
-    <div class="mhd-bar"><div class="fill" id="mhdBar" style="width:0%"></div></div>
-  </div>
-  <button class="mhd-sync" id="mhdSyncBtn" onclick="syncNow()" title="Run sync on your Mac">🔄 Sync Now</button>
-</div>
-<div class="mhd-synced" id="mhdSynced">Loading…</div>
-<input class="mhd-search" id="mhdSearch" placeholder="🔍 Search files…" oninput="doSearch()">
-<div class="mhd-breadcrumb" id="mhdBreadcrumb"></div>
-<div class="mhd-files" id="mhdFiles"><div class="mhd-loading">⏳ Loading file tree…</div></div>
-
-<h2>📁 Browse All Files</h2>
-<a href="/portfolio/cad/"><span class="icon">📐</span><span class="label">CAD — 59 files</span><span class="url">/portfolio/cad/</span></a>
-<a href="/portfolio/demos/"><span class="icon">🎮</span><span class="label">Demos — 47 files</span><span class="url">/portfolio/demos/</span></a>
-<a href="/portfolio/Documents/"><span class="icon">📄</span><span class="label">Documents — 65 files</span><span class="url">/portfolio/Documents/</span></a>
-<a href="/portfolio/Downloads/"><span class="icon">📥</span><span class="label">Downloads — 35 files</span><span class="url">/portfolio/Downloads/</span></a>
-<a href="/portfolio/engineering/"><span class="icon">⚙️</span><span class="label">Engineering — 18 files</span><span class="url">/portfolio/engineering/</span></a>
-<a href="/portfolio/hobby/"><span class="icon">🎯</span><span class="label">Hobby — 17 files</span><span class="url">/portfolio/hobby/</span></a>
-<a href="/portfolio/projects/"><span class="icon">💻</span><span class="label">Projects — 747 files</span><span class="url">/portfolio/projects/</span></a>
-<a href="/portfolio/prompts/"><span class="icon">💬</span><span class="label">Prompts — 181 files</span><span class="url">/portfolio/prompts/</span></a>
-<a href="/portfolio/reference/"><span class="icon">📚</span><span class="label">Reference — 27 files</span><span class="url">/portfolio/reference/</span></a>
-<a href="/portfolio/school/"><span class="icon">🏫</span><span class="label">School — 14 files</span><span class="url">/portfolio/school/</span></a>
-<a href="/portfolio/tools/"><span class="icon">🔧</span><span class="label">Tools — 2 files</span><span class="url">/portfolio/tools/</span></a>
-
-<details class="localservers"><summary>🔌 Local Servers <span class="badge">this Mac only</span></summary><p class="fine">These run on the Mac itself (HK Tour, IsaacDrop-local, the print-log dev server). They only open on this machine — from anywhere else the links refuse to connect, so they are tucked away here.</p><a href="http://localhost:8531" target="_blank">
-  <span class="icon">🏙️</span>
-  <span class="label">HK Tour</span>
-  <span class="url">localhost:8531</span>
-  <span class="badge">local</span>
-</a>
-<a href="http://localhost:8530" target="_blank">
-  <span class="icon">🏭</span>
-  <span class="label">Manufacturing Explorer</span>
-  <span class="url">localhost:8530</span>
-  <span class="badge">local</span>
-</a>
-<a href="http://localhost:8540" target="_blank">
-  <span class="icon">🖥️</span>
-  <span class="label">Macintosh HD Sync</span>
-  <span class="url">localhost:8540</span>
-  <span class="badge">local</span>
-</a>
-
-</details><h2>🔗 Links</h2>
-<a href="https://isaac1804.com/portfolio/bambu%20print%20profiles/">
-  <span class="icon">🖨️</span>
-  <span class="label">Bambu Print Profiles Library — 1946 official Bambu Studio filament/machine/process presets for every printer (X1, P1, P2S, A1, H2D)</span>
-  <span class="url">/portfolio/bambu print profiles/</span>
-  <span class="badge">new</span>
-</a>
-<a href="https://isaac1804.com/portfolio/daja%20a6%20usb%20contents/">
-  <span class="icon">🔦</span>
-  <span class="label">DAJA A6 Pro Official USB Contents — the full factory USB: drivers, LaserGRBL/LightBurn docs, firmware, operation videos, design photos</span>
-  <span class="url">/portfolio/daja a6 usb contents/</span>
-  <span class="badge">new</span>
-</a>
-<a href="https://a1d2.org">
-  <span class="icon">🔗</span>
-  <span class="label">a1d2.org — link compressor + QR optimizer by p2r3 (MIT), runs entirely in the browser, bilingual projects page</span>
-  <span class="url">a1d2.org</span>
-  <span class="badge">live</span>
-</a>
-<a href="https://isaac1804.com/portfolio/let%20it%20be%20band%20pack/">
-  <span class="icon">🎵</span>
-  <span class="label">Let It Be — Full Band Pack: 135 sheet-music parts across ~60 instruments, Easy + Hard versions</span>
-  <span class="url">/portfolio/let it be band pack/</span>
-  <span class="badge">new</span>
-</a>
-<a href="https://isaac1804.com/portfolio/pokemon%20snorlax%20keychains/">
-  <span class="icon">🔑</span>
-  <span class="label">Pokemon Snorlax Keychains — 27 printable keychain STLs in 6 colours</span>
-  <span class="url">/portfolio/pokemon snorlax keychains/</span>
-  <span class="badge">new</span>
-</a>
-<a href="https://isaac1804.com/portfolio/equipments/">
-  <span class="icon">🗜️</span>
-  <span class="label">Workshop Equipment Library — 500 equipment reference PDFs: features, safe operation, safety notes, maintenance + downloadable ZIP</span>
-  <span class="url">/portfolio/equipments/</span>
-  <span class="badge">new</span>
-</a>
-<a href="https://isaac1804.com/portfolio/reference/machines/Open-Source-Machines-Catalog.html">
-  <span class="icon">🛠️</span>
-  <span class="label">Open-Source Machines Catalog — 78 buildable machines: 3D printers, CNC, lasers, lathes, EDM. Price in USD + HK$, difficulty and build links</span>
-  <span class="url">/portfolio/reference/machines/</span>
-  <span class="badge">new</span>
-</a>
-<a href="https://isaac1804.com/portfolio/reference/laser/daja-guide/DAJA-A6-Pro-20W-Guide.html">
-  <span class="icon">🔦</span>
-  <span class="label">DAJA A6 Pro 20W Laser Guide — interactive 23-step workflow + safety simulator, practice mode and a printable cheat sheet</span>
-  <span class="url">/portfolio/reference/laser/daja-guide/</span>
-  <span class="badge">new</span>
-</a>
-<a href="https://isaac1804.com/portfolio/nelson-econ-worksheets/">
-  <span class="icon">📉</span>
-  <span class="label">Nelson Economics Worksheets — 57-worksheet economics series plus 87 extra econ PDFs (146 files)</span>
-  <span class="url">/portfolio/nelson-econ-worksheets/</span>
-  <span class="badge">new</span>
-</a>
-<a href="https://isaac1804.com/portfolio/pearson-igcse-resources/">
-  <span class="icon">📘</span>
-  <span class="label">Pearson Edexcel Resources — IGCSE specifications, science guides and welcome packs (16 files)</span>
-  <span class="url">/portfolio/pearson-igcse-resources/</span>
-  <span class="badge">new</span>
-</a>
-<a href="mailto:isaac_cs.chan@online.island.edu.hk">
-  <span class="icon">📧</span>
-  <span class="label">School Email</span>
-  <span class="url">isaac_cs.chan@online.island.edu.hk</span>
-</a>
+<div id="homeCards"></div>
 
 <script>
 // ── Theme toggle ─────────────────────────────────────────
@@ -653,8 +313,7 @@ function openFile(path){
     });
 }
 
-// Load on startup
-loadMHD();
+// Loaded by render() once the MHD widget DOM exists (see __homeRender).
 
 function igcseSyncHome(){
   var btn=document.getElementById('igcseSyncBtn'),msg=document.getElementById('igcseSyncMsg');
@@ -677,5 +336,49 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(function () {});
   });
 }
+</script>
+
+<script>
+/* Homepage card sections rendered from window.HOME (home-data.js) + localStorage override */
+(function(){
+ var OVERRIDE="isaac-home-cards-v1";
+ var MHD="<h2>🖥️ Isaac's Macintosh HD</h2>\n<div class=\"mhd-header\">\n  <div>\n    <div class=\"mhd-drive\" id=\"mhdDrive\"></div>\n    <div class=\"mhd-bar\"><div class=\"fill\" id=\"mhdBar\" style=\"width:0%\"></div></div>\n  </div>\n  <button class=\"mhd-sync\" id=\"mhdSyncBtn\" onclick=\"syncNow()\" title=\"Run sync on your Mac\">🔄 Sync Now</button>\n</div>\n<div class=\"mhd-synced\" id=\"mhdSynced\">Loading…</div>\n<input class=\"mhd-search\" id=\"mhdSearch\" placeholder=\"🔍 Search files…\" oninput=\"doSearch()\">\n<div class=\"mhd-breadcrumb\" id=\"mhdBreadcrumb\"></div>\n<div class=\"mhd-files\" id=\"mhdFiles\"><div class=\"mhd-loading\">⏳ Loading file tree…</div></div>\n\n";
+ var DET="<details class=\"localservers\"><summary>🔌 Local Servers <span class=\"badge\">this Mac only</span></summary><p class=\"fine\">These run on the Mac itself (HK Tour, IsaacDrop-local, the print-log dev server). They only open on this machine — from anywhere else the links refuse to connect, so they are tucked away here.</p><a href=\"http://localhost:8531\" target=\"_blank\">\n  <span class=\"icon\">🏙️</span>\n  <span class=\"label\">HK Tour</span>\n  <span class=\"url\">localhost:8531</span>\n  <span class=\"badge\">local</span>\n</a>\n<a href=\"http://localhost:8530\" target=\"_blank\">\n  <span class=\"icon\">🏭</span>\n  <span class=\"label\">Manufacturing Explorer</span>\n  <span class=\"url\">localhost:8530</span>\n  <span class=\"badge\">local</span>\n</a>\n<a href=\"http://localhost:8540\" target=\"_blank\">\n  <span class=\"icon\">🖥️</span>\n  <span class=\"label\">Macintosh HD Sync</span>\n  <span class=\"url\">localhost:8540</span>\n  <span class=\"badge\">local</span>\n</a>\n\n</details>";
+ function esc(t){var d=document.createElement("div");d.textContent=t||"";return d.innerHTML}
+ function load(){
+   var data;
+   try{var o=localStorage.getItem(OVERRIDE);if(o){data=JSON.parse(o)}}catch(e){}
+   if(!data){try{data=window.HOME}catch(e){}}
+   return data&&data.sections?data:{sections:[]};
+ }
+ function render(){
+   var data=load(); var root=document.getElementById("homeCards"); if(!root)return;
+   var html="";
+   data.sections.forEach(function(sec){
+     if(sec.type==="mhd"){ html+=MHD; return; }
+     if(sec.type==="det"){ html+=DET; return; }
+     html+="<h2>"+esc(sec.title)+"</h2>";
+     (sec.items||[]).forEach(function(c){
+       html+='<a href="'+esc(c.href)+'">'+
+            '<span class="icon">'+esc(c.icon)+'</span>'+
+            '<span class="label">'+esc(c.label)+'</span>'+
+            '<span class="url">'+esc(c.url)+'</span>'+
+            (c.badge?'<span class="badge">'+esc(c.badge)+'</span>':'')+
+            '</a>';
+     });
+   });
+   root.innerHTML=html;
+   // The MHD widget markup only exists after this render. Its data file is
+   // ~7 MB raw / ~550 KB gzipped, so fetch it on idle instead of competing
+   // with the initial paint + font load.
+   if(!window.__mhdLoaded){window.__mhdLoaded=1;
+     var __goMhd=function(){try{loadMHD()}catch(e){}};
+     if(window.requestIdleCallback){requestIdleCallback(__goMhd,{timeout:2500})}
+     else{setTimeout(__goMhd,900)}
+   }
+ }
+ if(document.readyState!=="loading"){render()}else{document.addEventListener("DOMContentLoaded",render)}
+ window.__homeRender=render;
+})();
 </script>
 </body></html>

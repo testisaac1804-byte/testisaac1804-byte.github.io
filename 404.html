@@ -1,32 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Redirecting…</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>404 — Page not found · Isaac Chan</title>
+<meta name="robots" content="noindex">
 <script>
 (function(){
-  var p = window.location.pathname;              // e.g. /classweb/6b.html
+  // A few very old archived mirror URLs still forward into the quest mirror.
+  // Everything else now shows a REAL 404 page instead of silently bouncing home.
+  var p = window.location.pathname;
   var known = ['/classweb/','/backup/','/images/','/album/','/equipment/','/_v/',
                '/0913/','/student_work/','/student_works/','/news_local/',
-               '/style.css','/imgload.js','/slow-stream-sw.js','/favicon.ico',
-               '/index.html','/news.html','/works.html','/guestbook.html',
+               '/style.css','/imgload.js','/slow-stream-sw.js',
+               '/news.html','/works.html','/guestbook.html',
                '/notice_920704.html','/album_920704.html','/map_0915.html',
                '/school.html','/activities.html','/internal.html','/maintain.html',
-               '/repair_0705.html','/hces-quest-guide/','/hces-quest-site/'];
-  var hit = null;
+               '/repair_0705.html'];
   for (var i=0;i<known.length;i++){
-    if (p.indexOf(known[i]) === 0){ hit = known[i]; break; }
-  }
-  if (hit){
-    // Forward mirror-like paths into the mirror subpath
-    window.location.replace('/hces-quest-site' + p);
-  } else {
-    window.location.replace('/');
+    if (p.indexOf(known[i]) === 0){ window.location.replace('/hces-quest-site' + p); return; }
   }
 })();
 </script>
+<style>
+:root{--bg:#050508;--t1:#f0f0f5;--t2:#c8ccd6;--t3:#6b7080;--bd:rgba(255,255,255,0.07);--grad:linear-gradient(135deg,#6366f1,#8b5cf6,#06b6d4)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--t2);font-family:-apple-system,BlinkMacSystemFont,Inter,system-ui,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
+.box{max-width:520px}
+.code{font-size:96px;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.04em}
+h1{font-size:22px;font-weight:700;color:var(--t1);margin:14px 0 8px}
+p{color:var(--t3);font-size:14.5px;line-height:1.7;margin-bottom:26px}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+a{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:9px;text-decoration:none;font-size:14px;font-weight:600;transition:all .2s}
+.primary{background:var(--grad);color:#fff}
+.primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(99,102,241,.35)}
+.ghost{border:1px solid var(--bd);color:var(--t2)}
+.ghost:hover{border-color:#818cf8;color:var(--t1)}
+.hint{margin-top:30px;font-size:12.5px;color:#3d4150}
+code{background:rgba(255,255,255,.05);padding:2px 6px;border-radius:5px;font-size:12.5px}
+</style>
 </head>
 <body>
-<p>Redirecting…</p>
+<div class="box">
+  <div class="code">404</div>
+  <h1>This page isn't here</h1>
+  <p>The link you followed doesn't exist on this site — it may have moved or been renamed. Here's the way back:</p>
+  <div class="btns">
+    <a class="primary" href="/">🏠 Home</a>
+    <a class="ghost" href="/portfolio/">📦 All projects</a>
+  </div>
+  <div class="hint">Looking for a download? Open the project card and use its <code>📂 Files</code> button.</div>
+</div>
 </body>
 </html>

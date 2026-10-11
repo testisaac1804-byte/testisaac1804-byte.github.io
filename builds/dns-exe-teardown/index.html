@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anatomy of a Fake “DNS Optimizer” — build log · Isaac Chan</title>
+<meta name="description" content="Teardown of DNS一键优化.exe — a “one-click DNS fix” handed out by an online gambling portal as a repair for “the game won’t open”. I unpacked the UPX-packed Qt binary, read its embedde">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>Anatomy of a Fake “DNS Optimizer”</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">1 versions</span><span class="chip soft">Reverse engineering</span><span class="chip soft">Windows PE / UPX</span><span class="chip soft">DNS</span><span class="chip soft">Security</span><span class="chip soft">Education</span></div>
+  <div class="btns"><a class="btn" href="/portfolio/prompts/dns-exe-teardown-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Teardown of DNS一键优化.exe — a “one-click DNS fix” handed out by an online gambling portal as a repair for “the game won’t open”. I unpacked the UPX-packed Qt binary, read its embedded manifest (requireAdministrator) and confirmed the whole program is four netsh commands that rewrite every adapter’s DNS to 8.8.8.8 — plus hidden --preferred-dns-server flags that let a launcher aim it at any resolver. No C2, no persistence, no payload: the real risk is an unsigned admin-level network tool published by the site you were trying to unblock. Full method, IOCs and how to revert included.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Static analysis only: provenance from macOS download attributes, .rsrc manifest (requireAdministrator), UPX unpack to 11.3 MB, string-cluster classification (statically-linked Qt + MinGW-W64 GCC 4.8.3), behaviour hunt for C2 / persistence / dropped files, and analysis of the source site’s three-item access-bypass kit. Published as a public teardown with IOCs and remediation steps.</p></div></div></div></section><section id="files"><h2>Files on the site</h2><ul class="files"><li><a href="/portfolio/prompts/dns-exe-teardown-prompt.md">Build notes</a> <span class="meta">202 lines · 10.3 KB</span></li><li><a href="/portfolio/demos/dns-exe-icon.png">Sample icon</a> <span class="meta">4.7 KB</span></li></ul></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/dns-exe-teardown.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/dns-exe-teardown-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>Anatomy of a Fake "DNS Optimizer" — teardown of <code>DNS一键优化.exe</code></h2>
+<p><strong>Category:</strong> Software &amp; Security · <strong>Status:</strong> Done · <strong>Type:</strong> Defensive reverse engineering</p>
+<p>A 3.6 MB Windows program called <code>DNS一键优化.exe</code> ("one-click DNS optimization") is handed to users by an online gambling portal as a fix for "the game won't open / black screen". It looks like a friendly support utility. It is actually an unsigned, administrator-level tool that rewrites the DNS servers on <strong>every network adapter</strong> in Windows, published by the operator of the site you were trying to unblock. This is the full teardown: what it does, what it does <em>not</em> do, and why the answer is still "don't run it".</p>
+<p><strong>Stack / Tools:</strong> Python (PE/resource parsing) · UPX (built from source) · Qt/MinGW binary analysis · macOS provenance (<code>xattr</code>) · HTML write-up</p>
+<p><strong>Artifacts on the site:</strong></p>
+<ul>
+<li><code>demos/exe-teardown.html</code> — the published write-up (self-contained, dark/light)</li>
+<li><code>demos/dns-exe-icon.png</code> — the sample's own icon, extracted from its <code>.rsrc</code></li>
+<li>this file — the build spec / method notes</li>
+</ul>
+<hr>
+<h3>Verdict</h3>
+<p><strong>Not a password stealer — and still not safe.</strong> No spyware, no backdoor, no payload. It is an unsigned, unversioned, administrator-level utility whose entire function is to replace your DNS servers, and it arrives from an unlicensed gambling operation as part of an access-bypass kit. The risk is not a hidden virus; it is <strong>who is handing you an admin-level network tool, and what that tool is permitted to point your traffic at.</strong></p>
+<h3>1 — Provenance (no guessing required)</h3>
+<p>macOS records the source of every download in an extended attribute:</p>
+<pre><code>$ xattr -l DNS一键优化.exe
+com.apple.metadata:kMDItemWhereFroms: https://www.218yc.com/static/file/DNS一键优化.exe
+                                     https://www.218yc.com/
+com.apple.quarantine: 0081;6aae4c6a;Chrome;67742DF8-97D5-48D8-9C09-BB275F6181D3</code></pre>
+<div class="tbl">| Field | Value |</div>
+<div class="tbl">|---|---|</div>
+<div class="tbl">| Download URL | <code>https://www.218yc.com/static/file/DNS一键优化.exe</code> |</div>
+<div class="tbl">| Linking page | <code>https://www.218yc.com/</code> |</div>
+<div class="tbl">| Fetched by | Google Chrome |</div>
+<div class="tbl">| Timestamp | 2026-09-19 16:48 HKT (decoded from the quarantine stamp <code>6aae4c6a</code>) |</div>
+<p><code>218yc.com</code> is a search-engine-camouflaged portal for an unlicensed gambling operation — scraped news snippets, bank and email links for legitimacy, and links into browser-based casino games. Its help page offers a three-item "self-rescue" kit: <strong>① 一键优化修改DNS (this file)</strong>, <strong>② 寰宇浏览器</strong> (a promoted "goes anywhere" browser), <strong>③ a line-check tool</strong>. All three exist to make a blocked site load.</p>
+<h3>2 — File facts</h3>
+<div class="tbl">| Property | Finding |</div>
+<div class="tbl">|---|---|</div>
+<div class="tbl">| Format | Windows PE32 GUI executable, Intel 80386 |</div>
+<div class="tbl">| Size | 3,767,808 bytes packed → 11,321,344 bytes unpacked |</div>
+<div class="tbl">| Packer | UPX 3.91 (sections <code>UPX0</code> / <code>UPX1</code>) |</div>
+<div class="tbl">| Toolchain | Statically-linked <strong>Qt</strong> GUI app, built with <strong>MinGW-W64 GCC 4.8.3</strong> |</div>
+<div class="tbl">| Digital signature | none |</div>
+<div class="tbl">| Version resource | <strong>absent</strong> — no publisher, product name or version |</div>
+<div class="tbl">| Requested privilege | <strong><code>requireAdministrator</code></strong> (UAC elevation on launch) |</div>
+<div class="tbl">| Network code | none — no HTTP client, downloader or socket code in the app layer |</div>
+<p>The manifest is stored uncompressed even inside a packed PE, so it is readable <em>without</em> unpacking:</p>
+<pre><code>&lt;requestedExecutionLevel level=&quot;requireAdministrator&quot; uiAccess=&quot;false&quot; /&gt;</code></pre>
+<p>No signature + no version resource + admin demand = a throwaway build nobody can be held to.</p>
+<h3>3 — The whole program, in four lines</h3>
+<p>Application class names are <code>UDnsOptimizer</code> / <code>UDnsWindow</code>. Its working code wraps Windows' own network CLI:</p>
+<pre><code>netsh interface ip   set dns &quot;%1&quot; static %2
+netsh interface ip   add dns &quot;%1&quot; %2 index=2
+netsh interface ipv4 set dnsserver &quot;%1&quot; static %2
+netsh interface ip   set dns &quot;%1&quot; dhcp          // &quot;reset to automatic&quot;
+
+HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\%1 → NameServer</code></pre>
+<p>The UI it presents is a single button, with these strings:</p>
+<blockquote><strong>DNS 设置尚未优化</strong> · <strong>按下 "优化" 按键, 以优化 DNS 服务器的设置。</strong> · <strong>DNS 设定中…</strong> · <strong>DNS 设置已优化</strong> · <strong>DNS 优化失败</strong></blockquote>
+<p>The only DNS server addresses anywhere in the binary are <strong><code>8.8.8.8</code> and <code>8.8.4.4</code></strong> — Google Public DNS. There is no latency test and no provider comparison, so "optimize" means exactly one thing: <em>replace your ISP's resolvers with Google's</em>.</p>
+<p>It also carries hidden command-line options — <code>--adapter-index</code>, <code>--preferred-dns-server</code>, <code>--alternate-dns-server</code> — and programmatic entry points such as <code>setAllDnsAddressManually()</code>. <strong>Whoever launches it can aim your DNS at any resolver they choose</strong>, elevated, on every adapter.</p>
+<h3>4 — Why a gambling site ships a DNS tool</h3>
+<p>DNS is usually what blocks it. Casino domains are commonly sinkholed at the DNS layer (notably on mainland ISP resolvers), so the site simply won't resolve. The standard workaround is a foreign resolver plus a proxy-capable browser — which is exactly the three-item kit on the help page. The tool is not random; it is step one of a documented access-bypass workflow, dressed up as consumer-friendly "one-click" support.</p>
+<h3>5 — What was <em>not</em> found (kept deliberately honest)</h3>
+<ul>
+<li>No C2 or network behaviour: no <code>InternetOpen</code>, <code>URLDownloadToFile</code> or <code>WinHttpConnect</code>; no</li>
+<p>embedded URLs or IP endpoints beyond Qt library text.</p>
+<li>No persistence: no <code>Run</code> keys, scheduled tasks, services or startup-folder drops.</li>
+<li>No second stage: no dropped files, no appended overlay beyond the packed image.</li>
+<li>No hosts-file edit, no proxy reconfiguration, no UAC tampering (it only <em>reads</em> the UAC state</li>
+<p>and can open the UAC settings panel).</p>
+<li>The scary-looking strings (<code>\\.\lnk</code>, <code>NetShareEnum</code>, UNC paths) are Qt/Windows shell library</li>
+<p>strings present in every Qt app — a classic false positive.</p>
+</ul>
+<p>"No payload" is a statement about <strong>this build, today</strong>. You are still granting administrator rights to an unsigned, unversioned binary from an unlicensed gambling operator with no support channel and no update path — and trojanising an update to a tool people already trust is the ordinary way this pattern turns bad later.</p>
+<h3>6 — Why you shouldn't run it (five reasons)</h3>
+<ol>
+<li><strong>Unverifiable authorship, with admin rights.</strong> No signature, no version info, no publisher;</li>
+<p>you cannot distinguish this build from a modified one.</p>
+<li><strong>It rewrites every adapter, and rollback is on you.</strong> Changes are applied per adapter and</li>
+<p>written to the registry. A partial failure or a VPN/school/work profile with its own resolver leaves you with broken name resolution and only a blunt "set it back to automatic".</p>
+<li><strong>It silently redirects all DNS traffic to a third party.</strong> A real privacy change, and it</li>
+<p>commonly breaks split-horizon internal DNS, captive portals, and ISP/parental/campus filtering.</p>
+<li>**It can be aimed at <em>any</em> resolver by whoever runs it.** The <code>--preferred-dns-server</code> /</li>
+<p><code>--alternate-dns-server</code> switches make it a generic DNS-setting engine that a launcher can drive to a malicious resolver without any prompt — and DNS decides where traffic goes.</p>
+<li><strong>Provenance is disqualifying.</strong> Distributed by an unlicensed gambling operation from a</li>
+<p>disguised pseudo-news domain, as part of a workflow whose purpose is evading network controls.</p>
+</ol>
+<h3>7 — The pattern to recognise next time</h3>
+<ul>
+<li>Pushed by the site you were trying to reach, rather than by a vendor.</li>
+<li>An <strong>unsigned</strong> binary asking for <strong>administrator</strong> rights.</li>
+<li><strong>No version info at all</strong> — nobody intends to be held to it.</li>
+<li>The "fix" is actually a <strong>bypass</strong>: "fixes the black screen", "works anywhere", "unblocks the game".</li>
+<li>A <strong>browser bundled with the fix</strong> — a network setting change plus a vendor-controlled browser</li>
+<p>are the two halves of a traffic-redirection kit.</p>
+</ul>
+<h3>8 — Method (static analysis only)</h3>
+<div class="tbl">| # | Step | How |</div>
+<div class="tbl">|---|---|---|</div>
+<div class="tbl">| 1 | Provenance first | <code>xattr -l</code> → <code>kMDItemWhereFroms</code> + quarantine stamp (URL, link page, browser, exact time) |</div>
+<div class="tbl">| 2 | Identify + hash | <code>file</code>, <code>shasum -a 256</code> |</div>
+<div class="tbl">| 3 | Read resources while packed | parse PE section table → dump <code>.rsrc</code> (UPX leaves it uncompressed) → manifest, icons, absence of version info |</div>
+<div class="tbl">| 4 | Unpack | build UPX from source (no macOS prebuilts; Homebrew here is x86_64 vs an arm64-only toolchain) → <code>upx -d</code> → 11.3 MB image |</div>
+<div class="tbl">| 5 | Classify by string cluster | extract printable runs + maximal valid-UTF-8 CJK runs, then read the cluster around the giveaway; Qt meta-object strings reveal the app's function list |</div>
+<div class="tbl">| 6 | Behaviour hunt | grep imports/strings for network, persistence and drop primitives; <strong>absence</strong> is a finding |</div>
+<div class="tbl">| 7 | Cross-check the story | fetch the source domain and read the surrounding help page → the three-item bypass kit |</div>
+<p>Notes worth keeping:</p>
+<ul>
+<li>A naive byte-pair "GBK" regex over a binary yields ~22k false positives; require successful</li>
+<p>UTF-8 decoding <em>and</em> a CJK run.</p>
+<li><code>brew install upx | tail -5</code> masks the real exit code — the pipeline returns <code>tail</code>'s status.</li>
+<li>Don't pass <code>-DCMAKE_OSX_ARCHITECTURES=arm64</code> when building UPX here; it triggers the same</li>
+<p>x86_64 <code>libxcrun</code> failure. Pin <code>CMAKE_C_COMPILER</code>/<code>CMAKE_CXX_COMPILER</code> instead.</p>
+</ul>
+<h3>9 — Indicators</h3>
+<div class="tbl">| Item | Value |</div>
+<div class="tbl">|---|---|</div>
+<div class="tbl">| Filename | <code>DNS一键优化.exe</code> |</div>
+<div class="tbl">| SHA-256 (packed) | <code>6c47bebfc1a0cc53be82268de3c7c6781d89254e54421091d7fa2c26e9514b01</code> |</div>
+<div class="tbl">| SHA-256 (unpacked) | <code>bbfd77a19f2b98ba57c02f64bcfb3a1efa061351ca998226a26cef53118e444f</code> |</div>
+<div class="tbl">| Distribution host | <code>www.218yc.com</code> (<code>/static/file/</code>) |</div>
+<div class="tbl">| Component names | <code>UDnsOptimizer</code>, <code>UDnsWindow</code> |</div>
+<div class="tbl">| Registry touch point | <code>HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\&lt;adapter&gt;</code> → <code>NameServer</code> |</div>
+<h3>10 — If it was already run on a Windows machine</h3>
+<pre><code>:: see current DNS servers per adapter
+netsh interface ip show dns
+
+:: revert an adapter to the network&#x27;s own resolvers
+netsh interface ip set dns &quot;Wi-Fi&quot; dhcp
+netsh interface ip set dns &quot;Ethernet&quot; dhcp</code></pre>
+<p>Then confirm the <code>NameServer</code> values under <code>HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\</code> are empty/automatic.</p>
+<p>The sample is deliberately <strong>not</strong> hosted on this site. To get a scanner's opinion, submit the hashes above to a service such as VirusTotal instead of running the file.</p>
+<h3>Scope note</h3>
+<p>Static analysis of one sample, identified by the hashes above. No dynamic execution was performed (a Windows PE cannot run on the analysing macOS host). Findings describe this build; they are not a general claim about every "DNS optimizer". Analysed 19 Sep 2026 · published 8 Oct 2026.</p></div></details></section>
+<footer>Generated 2026-10-11 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

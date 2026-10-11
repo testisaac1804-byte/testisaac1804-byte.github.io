@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isaac Admin — Homepage + Portfolio</title>
+<style>
+:root{
+  --bg:#0f1117;--sf:#171a23;--sf2:#1e2230;--bd:#2a2f3f;--t1:#e8eaf0;--t2:#b8bdc9;--t3:#8a90a0;--t4:#5b6070;
+  --ab:#6d6ff5;--ac:#7c5cff;--ar:#ef6b6b;--gr:#38d39f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--t1);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;padding:28px;min-height:100vh}
+h1{font-size:22px;font-weight:700;letter-spacing:-.3px}
+h1 span{color:var(--ab)}
+.sub{color:var(--t3);font-size:13px;margin-top:4px}
+.tabs{display:flex;gap:8px;margin:22px 0 18px;flex-wrap:wrap}
+.tab{padding:9px 18px;border-radius:9999px;border:1px solid var(--bd);background:var(--sf);color:var(--t2);cursor:pointer;font-size:13px;font-weight:600;font-family:inherit}
+.tab.active{background:var(--ac);color:#fff;border-color:var(--ac)}
+.btn{padding:8px 16px;border-radius:8px;border:1px solid var(--bd);background:var(--sf);color:var(--t2);cursor:pointer;font-size:12px;font-weight:600;font-family:inherit;transition:all .15s}
+.btn:hover{border-color:var(--ab);color:var(--t1)}
+.btn.primary{background:var(--ac);border-color:var(--ac);color:#fff}
+.btn.primary:hover{background:var(--ab)}
+.btn.danger{color:var(--ar);border-color:rgba(239,107,107,.35)}
+.btn.danger:hover{background:rgba(239,107,107,.1)}
+.btn.small{padding:5px 10px;font-size:11px}
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.badge{font-size:10px;padding:2px 8px;border-radius:9999px;background:rgba(109,111,245,.18);color:var(--ab);font-weight:600}
+.panel{display:none}
+.panel.show{display:block}
+.section{border:1px solid var(--bd);border-radius:12px;background:var(--sf);margin-bottom:14px;padding:14px 16px}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.section-head input{flex:1;font-size:15px;font-weight:650;padding:7px 10px;border-radius:8px;border:1px solid var(--bd);background:var(--bg);color:var(--t1);font-family:inherit}
+.section-head .wrap{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+.section .count{font-size:11px;color:var(--t3)}
+.card-list{display:flex;flex-direction:column;gap:8px}
+.card-row{display:flex;gap:8px;align-items:flex-start;padding:9px 11px;border:1px solid var(--bd);border-radius:8px;background:var(--sf2)}
+.card-row .inputs{flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.card-row input{width:100%;padding:6px 9px;border-radius:6px;border:1px solid var(--bd);background:var(--bg);color:var(--t1);font-size:12px;font-family:inherit}
+.card-row input.lbl{grid-column:1/-1}
+.card-row .col{display:flex;flex-direction:column;gap:3px}
+.card-row .col label{font-size:9px;color:var(--t4);text-transform:uppercase;letter-spacing:.4px;font-weight:600}
+.card-row .ops{display:flex;flex-direction:column;gap:5px}
+.card-row .ops .btn{padding:4px}
+h3.sec-title{font-size:13px;color:var(--t3);margin:18px 0 8px;font-weight:650}
+.notice{border:1px solid rgba(56,211,159,.35);background:rgba(56,211,159,.08);color:var(--gr);border-radius:8px;padding:10px 14px;font-size:12px;margin-bottom:16px}
+.warn{border:1px solid rgba(239,107,107,.35);background:rgba(239,107,107,.08);color:var(--ar);border-radius:8px;padding:10px 14px;font-size:12px;margin-bottom:16px}
+.proj-cat{font-size:13px;font-weight:700;color:var(--t2);margin:6px 0 10px;display:flex;align-items:center;gap:8px}
+.proj-cat .badge{font-size:10px}
+.proj-row{display:flex;gap:10px;align-items:center;padding:8px 11px;border:1px solid var(--bd);border-radius:8px;background:var(--sf2);margin-bottom:7px}
+.proj-row .main{flex:1;min-width:0}
+.proj-row .pt{font-size:13px;font-weight:600;color:var(--t1)}
+.proj-row .pd{font-size:11px;color:var(--t3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.proj-row .ps{font-size:10px;padding:2px 8px;border-radius:9999px;font-weight:600}
+.proj-row .ps.done{background:rgba(56,211,159,.16);color:var(--gr)}
+.proj-row .ps.wip{background:rgba(255,196,90,.16);color:#ffc45a}
+.proj-row .ps.draft{background:rgba(139,144,160,.16);color:var(--t3)}
+.proj-row .ops{display:flex;gap:5px}
+.editor{max-width:820px;border:1px solid var(--bd);border-radius:12px;background:var(--sf);padding:18px;margin-bottom:14px}
+.editor label{display:block;font-size:10px;color:var(--t4);text-transform:uppercase;letter-spacing:.5px;margin:12px 0 4px;font-weight:650}
+.editor input,.editor textarea,.editor select{width:100%;padding:8px 11px;border-radius:7px;border:1px solid var(--bd);background:var(--bg);color:var(--t1);font-size:13px;font-family:inherit}
+.editor textarea{min-height:60px;resize:vertical}
+.editor .row{display:flex;gap:10px;margin-bottom:6px}
+.editor .row>*{flex:1}
+.editor .r-ops{display:flex;gap:8px;margin-top:14px;align-items:center}
+#gate{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:5000}
+#gate .box{width:340px;max-width:90vw;text-align:center}
+#gate .lock{font-size:40px}
+#gate h2{font-size:19px;font-weight:700;margin:10px 0 4px}
+#gate .sub{font-size:12px;margin-bottom:20px}
+#gate input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--bd);background:var(--sf);color:var(--t1);font-size:16px;text-align:center;letter-spacing:4px;font-family:inherit}
+#gate input:focus{border-color:var(--ab);outline:none}
+#gate .err{color:var(--ar);font-size:12px;margin-top:10px;min-height:16px}
+#gate .btn{margin-top:14px;width:100%;padding:11px}
+.log{font-size:11px;color:var(--t3);margin-top:6px}
+.app-wrap{display:none}
+.app-wrap.show{display:block}
+</style>
+</head>
+<body>
+<div id="gate">
+  <div class="box">
+    <div class="lock">🔐</div>
+    <h2>Isaac Admin</h2>
+    <div class="sub">Homepage cards + portfolio projects</div>
+    <input type="password" id="pass" placeholder="••••" autocomplete="off" onkeydown="if(event.key==='Enter')unlock()">
+    <div class="err" id="gateErr"></div>
+    <button class="btn primary" onclick="unlock()">Unlock</button>
+  </div>
+</div>
+
+<div class="app-wrap" id="app">
+  <h1>Isaac<span>.</span>admin</h1>
+  <div class="sub">Manage the homepage link cards and the portfolio projects. Changes are saved to this browser only (localStorage).</div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="home" onclick="which('home')">🏠 Homepage cards</button>
+    <button class="tab" data-tab="port" onclick="which('port')">📁 Portfolio projects</button>
+  </div>
+
+  <div class="panel show" id="panel-home">
+    <div class="notice">Homepage edits appear on <code>/</code> in this browser. Click <b>Save</b> to apply, or <b>Reset to original</b> to drop local edits and show the built-in list again.</div>
+    <div class="toolbar">
+      <button class="btn primary" onclick="saveHome()">💾 Save homepage</button>
+      <button class="btn" onclick="resetHome()">↩ Reset to original</button>
+      <button class="btn primary" onclick="addSection()">+ Add section</button>
+      <button class="btn" onclick="exportHome()">⬇ Export JSON</button>
+      <span class="badge" id="homeCount"></span>
+    </div>
+    <div id="homeSections"></div>
+  </div>
+
+  <div class="panel" id="panel-port">
+    <div class="warn">Portfolio project edits are client-side only in this browser. To publish them for everyone, edit the source in the repo and redeploy.</div>
+    <div class="toolbar">
+      <button class="btn primary" onclick="savePort()">💾 Save portfolio</button>
+      <button class="btn" onclick="resetPort()">↩ Reset to live data</button>
+      <button class="btn" onclick="exportPort()">⬇ Export JSON</button>
+      <span class="badge" id="portCount"></span>
+    </div>
+    <div id="portCats"></div>
+    <div id="projEditorWrap"></div>
+  </div>
+</div>
+
+<script src="home-data.js"></script>
+<script>
+var PASS_HASH='da28719dfd9c4da81f433d4788c3d0e10d97180018d0e32b65c967c45661597e';
+var HOME_KEY='isaac-home-cards-v1';
+var PORT_KEY='isaac-projects-v3';
+var cur='home';
+
+async function sha256hex(s){
+  try{var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('')}
+  catch(e){return ''}
+}
+async function unlock(){
+  var v=document.getElementById('pass').value;
+  if(await sha256hex(v)===PASS_HASH){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('app').classList.add('show');
+    loadHome();loadPort();
+  }else{
+    document.getElementById('gateErr').textContent='Wrong password';
+    document.getElementById('pass').value='';
+  }
+}
+
+function esc(s){var d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML}
+function which(t){
+  cur=t;
+  document.querySelectorAll('.tab').forEach(function(b){b.classList.toggle('active',b.dataset.tab===t)});
+  document.getElementById('panel-home').classList.toggle('show',t==='home');
+  document.getElementById('panel-port').classList.toggle('show',t==='port');
+}
+
+/* ---------- LOCAL STORAGE HELPERS ---------- */
+function getOverride(key,f){try{var o=localStorage.getItem(key);if(o)return JSON.parse(o)}catch(e){}return f()}
+function setOverride(key,val){try{localStorage.setItem(key,JSON.stringify(val))}catch(e){alert('Save failed (storage full?)')}}
+
+/* ---------- HOMEPAGE ---------- */
+var HOMEDATA=null;
+function loadHome(){
+  HOMEDATA=getOverride(HOME_KEY,function(){return window.HOME?{sections:JSON.parse(JSON.stringify(window.HOME.sections))}:{sections:[]}});
+  if(!HOMEDATA.sections)HOMEDATA.sections=[];
+  renderHome();
+}
+function renderHome(){
+  var root=document.getElementById('homeSections');
+  if(!HOMEDATA)loadHome();
+  var html='';
+  HOMEDATA.sections.forEach(function(sec,si){
+    if(sec.type==='mhd'||sec.type==='det'){
+      html+='<div class="section"><div class="section-head"><div class="wrap"><input disabled value="'+(sec.type==='mhd'?'🖥️ Macintosh HD (auto)':'🔌 Local Servers (auto)')+'"><span class="count">built-in — not editable</span></div></div></div>';
+      return;
+    }
+    var items=(sec.items||[]);
+    html+='<div class="section" data-si="'+si+'">';
+    html+='<div class="section-head"><div class="wrap"><input class="secTitle" value="'+esc(sec.title||'')+'" onchange="setSecTitle('+si+',this.value)"><span class="count">'+items.length+' cards</span></div>';
+    html+='<div class="ops" style="display:flex;gap:6px"><button class="btn small" onclick="addCard('+si+')">+ Card</button><button class="btn small danger" onclick="delSection('+si+')">Del</button></div></div>';
+    html+='<div class="card-list">';
+    items.forEach(function(c,ci){
+      html+='<div class="card-row">';
+      html+='<div class="inputs">';
+      html+='<input class="lbl" placeholder="Label" value="'+esc(c.label||'')+'" onchange="setCard('+si+','+ci+',\'label\',this.value)">';
+      html+='<input placeholder="URL text" value="'+esc(c.url||'')+'" onchange="setCard('+si+','+ci+',\'url\',this.value)">';
+      html+='<input placeholder="Link (href)" value="'+esc(c.href||'')+'" onchange="setCard('+si+','+ci+',\'href\',this.value)">';
+      html+='<input placeholder="Icon emoji" value="'+esc(c.icon||'')+'" onchange="setCard('+si+','+ci+',\'icon\',this.value)">';
+      html+='<input placeholder="Badge (optional)" value="'+esc(c.badge||'')+'" onchange="setCard('+si+','+ci+',\'badge\',this.value)">';
+      html+='</div>';
+      html+='<div class="ops"><button class="btn small danger" onclick="delCard('+si+','+ci+')">🗑</button></div>';
+      html+='</div>';
+    });
+    html+='</div></div>';
+  });
+  root.innerHTML=html;
+  var n=0;HOMEDATA.sections.forEach(function(s){if(s.items)n+=s.items.length});
+  document.getElementById('homeCount').textContent=n+' cards · '+HOMEDATA.sections.length+' sections';
+}
+function setSecTitle(si,v){HOMEDATA.sections[si].title=v}
+function addSection(){HOMEDATA.sections.push({title:'New Section',items:[]});renderHome()}
+function delSection(si){if(!confirm('Delete this section?'))return;HOMEDATA.sections.splice(si,1);renderHome()}
+function addCard(si){HOMEDATA.sections[si].items.push({icon:'🔗',label:'New Card',url:'',href:'',badge:''});renderHome()}
+function delCard(si,ci){if(!confirm('Delete this card?'))return;HOMEDATA.sections[si].items.splice(ci,1);renderHome()}
+function setCard(si,ci,f,v){HOMEDATA.sections[si].items[ci][f]=v}
+function saveHome(){setOverride(HOME_KEY,{sections:HOMEDATA.sections});alert('Homepage saved to this browser. Open / to see it.')}
+function resetHome(){localStorage.removeItem(HOME_KEY);loadHome()}
+function exportHome(){var a=document.createElement('a');a.href='data:application/json;charset=utf-8,'+encodeURIComponent(JSON.stringify({sections:HOMEDATA.sections},null,2));a.download='isac-home.json';document.body.appendChild(a);a.click();a.remove()}
+
+/* ---------- PORTFOLIO ---------- */
+var PORTDATA=null;
+function loadPort(){
+  PORTDATA=getOverride(PORT_KEY,function(){return null});
+  if(PORTDATA){renderPort();return}
+  // fetch app.js and pull D out
+  fetch('/portfolio/app.js').then(function(r){return r.text()}).then(function(txt){
+    var st=txt.indexOf('var D=');var start=txt.indexOf('{',st);
+    var depth=0,ins=false,esc2=false,end=-1;
+    for(var j=start;j<txt.length;j++){var c=txt[j];
+      if(ins){if(esc2)esc2=false;else if(c==='\\')esc2=true;else if(c==='"')ins=false;continue}
+      if(c==='"')ins=true;else if(c==='{')depth++;else if(c==='}'){depth--;if(depth===0){end=j;break}}
+    }
+    try{PORTDATA=Function('return '+txt.slice(start,end+1))()}catch(e){}
+    if(!PORTDATA)PORTDATA={sw:[],hw:[],f3d:[],des:[]};
+    renderPort();
+  }).catch(function(){PORTDATA={sw:[],hw:[],f3d:[],des:[]};renderPort()});
+}
+function renderPort(){
+  var cats=[['sw','Software'],['hw','Hardware'],['f3d','Fusion 360'],['des','Design']];
+  var root=document.getElementById('portCats');
+  var html='';var total=0;
+  cats.forEach(function(cat){
+    var key=cat[0];var arr=PORTDATA[key]||[];total+=arr.length;
+    html+='<div class="proj-cat">'+cat[1]+' <span class="badge">'+arr.length+'</span><button class="btn small primary" style="margin-left:auto" onclick="addProj(\''+key+'\')">+ Add</button></div>';
+    arr.forEach(function(p,pi){
+      var ps=p.s||'draft';
+      html+='<div class="proj-row" data-key="'+key+'" data-idx="'+pi+'">';
+      html+='<div class="main"><div class="pt">'+esc(p.t||'Untitled')+'</div><div class="pd">'+esc(p.d||'')+'</div></div>';
+      html+='<span class="ps '+ps+'">'+(ps==='done'?'Done':ps==='wip'?'WIP':'Draft')+'</span>';
+      html+='<div class="ops"><button class="btn small" onclick="editProj(\''+key+'\','+pi+')">✏️</button><button class="btn small danger" onclick="delProj(\''+key+'\','+pi+')">🗑</button></div>';
+      html+='</div>';
+    });
+  });
+  root.innerHTML=html;
+  document.getElementById('portCount').textContent=total+' projects';
+  window.PORTDATA=PORTDATA;
+}
+function addProj(key){PORTDATA[key].push({t:'New Project',s:'draft',d:'Describe this project...',g:[],v:[],a:[],how:'',src:'',howR:1});renderPort();editProj(key,PORTDATA[key].length-1)}
+function delProj(key,pi){if(!confirm('Delete "'+(PORTDATA[key][pi]&&PORTDATA[key][pi].t)+'"?'))return;PORTDATA[key].splice(pi,1);renderPort()}
+function editProj(key,pi){
+  var p=PORTDATA[key][pi];
+  var body='<div class="editor" id="projEditor">';
+  body+='<label>Title</label><input value="'+esc(p.t)+'" oninput="EDIT.t=this.value">';
+  body+='<label>Description</label><textarea oninput="EDIT.d=this.value">'+esc(p.d)+'</textarea>';
+  body+='<label>How it works / how it was made</label><textarea oninput="EDIT.how=this.value">'+esc(p.how||'')+'</textarea>';
+  body+='<label>Materials / tools / sources</label><input value="'+esc(p.src||'')+'" oninput="EDIT.src=this.value">';
+  body+='<label>Tags (comma separated)</label><input value="'+esc((p.g||[]).map(function(x){return x.l}).join(', '))+'" oninput="EDIT.g=this.value">';
+  body+='<label>Status</label><select onchange="EDIT.s=this.value"><option value="done"'+(p.s==='done'?' selected':'')+'>Done</option><option value="wip"'+(p.s==='wip'?' selected':'')+'>WIP</option><option value="draft"'+(p.s==='draft'?' selected':'')+'>Draft</option></select>';
+  body+='<div class="r-ops"><button class="btn primary" onclick="commitEdit(\''+key+'\','+pi+')">Save</button><button class="btn" onclick="closeEditor()">Cancel</button></div>';
+  body+='</div>';
+  document.getElementById('projEditorWrap').innerHTML=body;
+  window.EDIT={t:p.t,d:p.d,how:p.how||'',src:p.src||'',g:(p.g||[]).map(function(x){return x.l}).join(', '),s:p.s||'draft'};
+}
+function commitEdit(key,pi){
+  var p=PORTDATA[key][pi];
+  p.t=EDIT.t;p.d=EDIT.d;p.how=EDIT.how;p.src=EDIT.src;
+  p.g=EDIT.g.split(',').map(function(x){return{l:x.trim()}}).filter(function(x){return x.l});
+  p.s=EDIT.s;
+  closeEditor();renderPort();
+}
+function closeEditor(){var w=document.getElementById('projEditorWrap');if(w)w.innerHTML=''}
+function savePort(){setOverride(PORT_KEY,{sw:PORTDATA.sw,hw:PORTDATA.hw,f3d:PORTDATA.f3d,des:PORTDATA.des});alert('Portfolio saved to this browser. Open /portfolio/ to see edits.')}
+function resetPort(){localStorage.removeItem(PORT_KEY);PORTDATA=null;loadPort()}
+function exportPort(){var a=document.createElement('a');a.href='data:application/json;charset=utf-8,'+encodeURIComponent(JSON.stringify(PORTDATA,null,2));a.download='isaac-projects.json';document.body.appendChild(a);a.click();a.remove()}
+</script>
+</body>
+</html>

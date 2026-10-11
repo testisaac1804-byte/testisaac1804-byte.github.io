@@ -1,6 +1,18 @@
 {
  "sw": [
   {
+   "t": "Anatomy of a Fake “DNS Optimizer”",
+   "d": "Teardown of DNS一键优化.exe — a “one-click DNS fix” handed out by an online gambling portal as a repair for “the game won’t open”. I unpacked the UPX-packed Qt binary, read its embedded manifest (requireAdministrator) and confirmed the whole program is four netsh commands that rewrite every adapter’s DNS to 8.8.8.8 — plus hidden --preferred-dns-server flags that let a launcher aim it at any resolver. No C2, no persistence, no payload: the real risk is an unsigned admin-level network tool published by the site you were trying to unblock. Full method, IOCs and how to revert included.",
+   "g": [
+    "Reverse engineering",
+    "Windows PE / UPX",
+    "DNS",
+    "Security",
+    "Education"
+   ],
+   "s": "done"
+  },
+  {
    "t": "Red Star 暗網模擬器",
    "d": "ONION SIM — 用 Mac 上真實 Red Star Browser 的介面包住一個虛構 .onion 網絡的教育模擬器：工具列、分頁、★ PROTECTED 盾牌、選單與快捷鍵全部照該 app 抄（palette、180px 分頁、New Tab 頁原封不動）。內有 26 件假貨市集（託管／無託管對比、PGP 指紋、假評價）、真 KV 後端論壇、TorMail 詐騙故事、假 Bitcoin 產生器（真的會清空錢包）、假殺手網站、洩密站、ONION NEWS 查封頁，以及隱藏 red room 密碼題。所有商品、店鋪、交易 100% 虛構，只重現有文獻紀錄的詐騙手法。",
    "g": [
@@ -810,6 +822,30 @@
     "URL shortener",
     "QR codes",
     "Vanilla JS"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "DocScribe",
+   "d": "A writing pad that needs no setup at all: open the URL and type — no login, no API key, no Google account, no console. The text lives in Cloudflare KV, so the first browser to open it becomes the owner with nothing to type, and nobody else can read, edit, export or delete it. Autosaves as you type, keeps a real edit log (one row = one genuine keystroke-caused edit at real wall-clock time — a no-op save mints nothing), and exports to .docx (a hand-built ZIP that opens in real Word) and .md. Pair a second device with a one-tap link. Originally written against the Google Docs API; deleting the whole Google OAuth setup — Cloud project, consent screen, client ID and secret — is exactly what the KV rewrite did.",
+   "g": [
+    "Cloudflare Worker",
+    "KV",
+    "Zero setup",
+    "Google Docs alternative",
+    "Vanilla JS"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "The Brown Meter",
+   "d": "A live, public brownness meter: one big orb, a 0-100 percentage, and a word that says what the number means — from 'nothin brown here' to 'MAXIMUM BROWN'. It updates itself on every open screen the moment the owner moves it: log in at /admin, push the slider, and every watcher's tab changes on its own over a server-sent-events stream, no refresh. 8 bands x 8 words = 64 phrasings, each band with its own 'as brown as ___' comparator and rotating flavour lines (75% still reads ouuuu). Plus today's + all-time peak records (breaking one flashes NEW PEAK), a public reaction bar (ouuuu / meh / i'm dead — one tap per visitor per minute, counts pushed live), and an optional 'vibe mode' where the hourly cron drifts the meter 1-9% on its own. Installable (inline SVG icon + manifest) and shareable (og: preview tags). One worker.js, zero dependencies, 173/173 assertions. Built after the class in-joke Netlify page of the same name could not be found — so it was made instead.",
+   "g": [
+    "Cloudflare Worker",
+    "KV",
+    "Server-sent events",
+    "Vanilla JS",
+    "Zero deps"
    ],
    "s": "done"
   }
@@ -4455,6 +4491,52 @@
     "School",
     "Science",
     "Answers"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "macOS Battery Drain Mode",
+   "d": "How to make a MacBook stay awake on battery until it drains to 0% — lid closed or open — using three pmset settings (disablesleep 1, sleep 0, hibernatemode 0) plus a live battery logger, and how to restore normal sleep afterwards. Interactive self-contained guide with a drain simulator, copy-ready commands and a quiz.",
+   "g": [
+    "macOS",
+    "Reference",
+    "Tutorial",
+    "Power"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Economics — Market System Exam Kit",
+   "d": "IGCSE Economics (Edexcel 4EC1) Unit 1.1 taught end-to-end — scarcity & opportunity cost, factors of production, the PPF, demand, supply and market equilibrium (excess demand/supply, calculations) — plus a full exam-skills playbook: command words, mark tariffs, levels of response and model answers at 1, 2, 3, 6, 9 and 12 marks, five drawn diagrams and a self-marking quiz.",
+   "g": [
+    "Study Guide",
+    "IGCSE",
+    "Economics",
+    "Exam Skills",
+    "Interactive"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "Economics — Market System Diagram Quiz",
+   "d": "Interactive diagram quiz for IGCSE Economics Unit 1.1 — practise PPF movements, supply and demand shifts, subsidies and spotting unobtainable points, with the two rules that crack every diagram question.",
+   "g": [
+    "Study Guide",
+    "IGCSE",
+    "Economics",
+    "Quiz",
+    "Interactive"
+   ],
+   "s": "done"
+  },
+  {
+   "t": "IGCSE Physics — Forces Revision Notes",
+   "d": "Complete IGCSE Physics (Double Award) revision notes on forces — 40 sections covering vectors and scalars, Newton's laws, weight and mass, moments, pressure, Hooke's law, terminal velocity and stopping distances, with formulas and worked examples.",
+   "g": [
+    "Study Guide",
+    "IGCSE",
+    "Physics",
+    "Notes"
    ],
    "s": "done"
   }

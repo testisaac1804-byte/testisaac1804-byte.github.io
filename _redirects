@@ -1,4 +1,45 @@
 # Cloudflare Pages redirects
 # Files over the 25 MiB per-file cap cannot live in the Pages bundle, so they are
 # served from the bulk store (files proxy) instead. Keep the original URL working.
-/science%20booklet/8C%20%20Mapping%20Matter%20Student%20Booklet%202024.pdf  https://cdn.isaac1804.com/science%20booklet/8C%20%20Mapping%20Matter%20Student%20Booklet%202024.pdf  302
+/science%20booklet/8C%20%20Mapping%20Matter%20Student%20Booklet%202024.pdf  https://isaac1804.com/files/science%20booklet/8C%20%20Mapping%20Matter%20Student%20Booklet%202024.pdf  302
+
+# Unified admin panel (password-gated) for BOTH the homepage link cards and the
+# portfolio projects. Cloudflare Pages serves /isaac-admin directly from
+# isaac-admin.html and auto-308s the .html form to the clean URL. Do NOT add a
+# reverse rule here: /isaac-admin -> /isaac-admin.html loops with that 308 forever.
+
+# ---------------------------------------------------------------------------
+# Legacy paths: the portfolio used to live at the site ROOT and was later moved
+# to /portfolio/. Old root-absolute links (in the portfolio's own pages, in the
+# command palette, in generated build logs, and in external bookmarks) pointed
+# at the root and 404'd — which used to silently bounce visitors to the homepage.
+# Forward them to their real home under /portfolio/.
+# ---------------------------------------------------------------------------
+/terms                            /portfolio/terms                            301
+/preview                          /portfolio/preview.html                     301
+/prompts/*                        /portfolio/prompts/:splat                   301
+/demos/*                          /portfolio/demos/:splat                     301
+/projects/*                       /portfolio/projects/:splat                  301
+/Desktop/*                        /portfolio/Desktop/:splat                   301
+/Documents/*                      /portfolio/Documents/:splat                 301
+/home/*                           /portfolio/home/:splat                      301
+/google-sites-archive.html        /portfolio/google-sites-archive.html        301
+/equipments/*                     /portfolio/equipments/:splat                301
+/x1%20print%20library/*           /portfolio/x1%20print%20library/:splat      301
+/mini%204wd%20parts/*             /portfolio/mini%204wd%20parts/:splat        301
+/vex%20iq%20official/*            /portfolio/vex%20iq%20official/:splat       301
+/vex%20super%20kit%20parts/*      /portfolio/vex%20super%20kit%20parts/:splat 301
+/meme%20clickers/*                /portfolio/meme%20clickers/:splat           301
+/pokemon%20snorlax%20keychains/*  /portfolio/pokemon%20snorlax%20keychains/:splat 301
+/bambu%20print%20profiles/*       /portfolio/bambu%20print%20profiles/:splat  301
+/gear%20mechanisms/*              /portfolio/gear%20mechanisms/:splat         301
+/5-axis%20cnc%20model/*           /portfolio/5-axis%20cnc%20model/:splat      301
+/6-axis%20robot%20arm/*           /portfolio/6-axis%20robot%20arm/:splat      301
+/daja%20tf%20card%20files/*       /portfolio/daja%20tf%20card%20files/:splat  301
+/workshop%20stl%20parts/*         /portfolio/workshop%20stl%20parts/:splat    301
+/igcse%20books/*                  /portfolio/igcse%20books/:splat             301
+/igcse%20things/*                 /portfolio/igcse%20things/:splat            301
+/past%20papers/*                  /portfolio/past%20papers/:splat             301
+/nelson-econ-worksheets/*         /portfolio/nelson-econ-worksheets/:splat    301
+/pearson-igcse-resources/*        /portfolio/pearson-igcse-resources/:splat   301
+/let%20it%20be%20band%20pack/*    /portfolio/let%20it%20be%20band%20pack/:splat 301

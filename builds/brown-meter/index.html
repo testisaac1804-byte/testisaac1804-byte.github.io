@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Brown Meter — build log · Isaac Chan</title>
+<meta name="description" content="A live, public brownness meter: one big orb, a 0-100 percentage, and a word that says what the number means — from &#x27;nothin brown here&#x27; to &#x27;MAXIMUM BROWN&#x27;. It updates itself on ever">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>The Brown Meter</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">3 versions</span><span class="chip soft">Cloudflare Worker</span><span class="chip soft">KV</span><span class="chip soft">Server-sent events</span><span class="chip soft">Vanilla JS</span><span class="chip soft">Zero deps</span></div>
+  <div class="btns"><a class="btn live" href="https://brown-meter.isaac1804.workers.dev" target="_blank" rel="noopener">▶ Open the Brown Meter</a><a class="btn" href="/portfolio/prompts/brown-meter-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">reflection not written yet · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">A live, public brownness meter: one big orb, a 0-100 percentage, and a word that says what the number means — from &#x27;nothin brown here&#x27; to &#x27;MAXIMUM BROWN&#x27;. It updates itself on every open screen the moment the owner moves it: log in at /admin, push the slider, and every watcher&#x27;s tab changes on its own over a server-sent-events stream, no refresh. 8 bands x 8 words = 64 phrasings, each band with its own &#x27;as brown as ___&#x27; comparator and rotating flavour lines (75% still reads ouuuu). Plus today&#x27;s + all-time peak records (breaking one flashes NEW PEAK), a public reaction bar (ouuuu / meh / i&#x27;m dead — one tap per visitor per minute, counts pushed live), and an optional &#x27;vibe mode&#x27; where the hourly cron drifts the meter 1-9% on its own. Installable (inline SVG icon + manifest) and shareable (og: preview tags). One worker.js, zero dependencies, 173/173 assertions. Built after the class in-joke Netlify page of the same name could not be found — so it was made instead.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>Worker + KV with a password-gated admin panel; public page, /api/rate, live push, logout that really revokes (KV session generation).</p></div></div><div class="ver"><div class="vn">V2</div><div class="vi"><p>Admin panel rebuilt: slider, presets, nudge, undo, change history + stats; 2-second micro-cache so N viewers cost one KV read per TTL; 117/117 tests.</p></div></div><div class="ver"><div class="vn">V3</div><div class="vi"><p>24 words -&gt; 64 (8 per band) with 'as brown as ___' comparators and flavour lines; daily + all-time peak records; public reaction bar with live counts; hourly auto-drift 'vibe mode' via cron; inline icon + manifest + og tags; 173/173 tests, live-verified (429 on a repeat tap, real SSE stats push).</p></div></div></div></section><section id="files"><h2>Files on the site</h2><ul class="files"><li><a href="/portfolio/prompts/brown-meter-prompt.md">Build notes</a> <span class="meta">56 lines · 3.2 KB</span></li></ul></section><section id="reflection"><h2>What broke, and what I’d change</h2><div class="reflect"><p><strong>Not written yet.</strong> This is the part only I can write — what actually went wrong, and what I’d do differently. It lives in <code>builds/reflections/brown-meter.md</code> (see <a href="/builds/reflections/_TEMPLATE.md">_TEMPLATE.md</a>); as soon as that file has words in it, this section fills in on the next build.</p><p class="fine">Everything else on this page — the spec, the version history, the file counts — is generated from the project’s own build notes and files, so nothing here is guesswork.</p></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/brown-meter-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>The Brown Meter — a live brownness meter on a Cloudflare Worker</h2>
+<p>A public page that shows exactly how brown something is, on a 0-100 scale: one big icon, a percentage, and a word that says what that number means. The owner logs in at <code>/admin</code> and pushes the slider — and <strong>every open screen changes by itself</strong>, over a server-sent-events stream, with no refresh.</p>
+<h3>Live</h3>
+<ul>
+<li>App: <a href="https://brown-meter.isaac1804.workers.dev" target="_blank" rel="noopener">https://brown-meter.isaac1804.workers.dev</a></li>
+<li>Admin: <code>/admin</code> — password-gated (credentials kept out of the repo, 0600 file on disk)</li>
+<li>Backend: Cloudflare Worker <code>brown-meter</code> + KV namespace <code>BROWN</code></li>
+<li>Free tier only: no card, no build step, no dependencies — one <code>worker.js</code> file.</li>
+</ul>
+<h3>Where it came from</h3>
+<p>The original job was to <em>find</em> someone else's Netlify page called "Brown Meter" — a class in-joke whose exact URL could not be recovered. Rather than keep hunting for a link, the meter was built properly, on Isaac's own domain, and it came out better than the joke.</p>
+<h3>What it does</h3>
+<ul>
+<li><strong>8 bands, 64 words.</strong> Every band has eight phrasings, its own <em>"as brown as ___"</em></li>
+<p>comparator and rotating flavour lines — <code>nothin brown here</code> → <code>a hint of beige</code> → <code>hmm</code> → <code>ohh</code> → <code>ohhhh</code> → <strong><code>ouuuu</code></strong> → <code>OUUUUUU</code> → <code>MAXIMUM BROWN</code>. The canonical word is biased to the front of the rotation so 75% still reads <strong>ouuuu</strong>.</p>
+<li><strong>Live, not polled.</strong> <code>/api/stream</code> is a real SSE endpoint; a change is pushed to every</li>
+<p>viewer in the same tick. Clients reconnect + fall back to polling if the stream dies.</p>
+<li><strong>Records.</strong> Today's peak and the all-time peak are tracked in KV. Beat one and a</li>
+<p>"NEW PEAK!" flash drops onto the public page.</p>
+<li><strong>A public reaction bar.</strong> Visitors tap <em>ouuuu / meh / i'm dead</em>; counts push live to</li>
+<p>everyone. One tap per visitor per minute (hashed IP + 60 s cooldown, 429 with a countdown), and the client never gets to name the counter.</p>
+<li><strong>Vibe mode.</strong> Optional hourly cron tick that drifts the meter 1-9% on its own,</li>
+<p>bouncing between 8% and 97% instead of sticking to a wall. Off by default — when it is off the cron costs a single read and does nothing.</p>
+<li><strong>Installable + shareable.</strong> Inline SVG icon, web manifest, <code>og:</code> link-preview tags.</li>
+<li><strong>Honest admin panel.</strong> Slider + presets, nudge buttons, <code>🎲 surprise me</code>, undo (a real</li>
+<p>toggle, not a fake stack), a recent-changes list, and a wipe button for the reactions.</p>
+</ul>
+<h3>Build path</h3>
+<ul>
+<li><strong>V1</strong> — Worker + KV, password-gated admin, public page, <code>/api/rate</code>, live push, logout</li>
+<p>that actually revokes (a KV session generation bump).</p>
+<li><strong>V2</strong> — admin panel rebuilt (slider, presets, history, stats); a 2-second in-isolate</li>
+<p>micro-cache so N viewers cost one KV read per TTL; screenshot + live verification.</p>
+<li><strong>V3</strong> — 24 words → 64; "as brown as" comparators; daily + all-time peaks; public</li>
+<p>reactions with live counts; hourly auto-drift; icon + manifest; <strong>173/173 assertions</strong>.</p>
+</ul>
+<h3>Verified, not assumed</h3>
+<p>173/173 offline assertions (fake-KV harness: bands, rotation, sessions, lockout, undo, records, reactions, vibe ticks, icon/manifest). Live: reaction tap returns 200 then 429 for the repeat, a captured SSE stream really carried the <code>stats</code> event, the mode toggle flipped vibe → manual and the public badge followed, and the admin password appears zero times in the public HTML.</p></div></details></section>
+<footer>Generated 2026-10-11 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>
