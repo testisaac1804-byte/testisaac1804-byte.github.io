@@ -17,6 +17,13 @@ window.HOME={
       "title": "🖥️ Web Apps",
       "items": [
         {
+          "icon": "📡",
+          "label": "Kwangmyong Network 3.0 — a single-file, fully offline simulator of the DPRK national intranet: a 136-site catalogue, 30 hand-built sites, a working command terminal, and a surveillance log that refuses to be erased. English build, with the Korean original alongside",
+          "url": "isaac1804.com/portfolio",
+          "href": "https://isaac1804.com/portfolio/demos/kwangmyong-sim.html",
+          "badge": "new"
+        },
+        {
           "icon": "🟤",
           "label": "The Brown Meter — a live brownness meter: one orb, a percentage, and a word for what the number means. It updates itself on every open screen the instant it changes — 64 words across 8 bands, peak records, a public reaction bar, and an hourly auto-drift mode",
           "url": "brown-meter.isaac1804.workers.dev",
