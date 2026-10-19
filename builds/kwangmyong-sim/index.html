@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kwangmyong Network 3.0 — DPRK Intranet Simulator — build log · Isaac Chan</title>
+<meta name="description" content="Single-file offline simulator of the DPRK national intranet (Kwangmyong): a 136-site catalogue, 30 hand-built sites, a real command terminal and a surveillance log — fully English.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#101a3a">
+<link rel="stylesheet" href="/builds/builds.css">
+</head>
+<body>
+<header><div class="wrap">
+  <p class="eyebrow">Build log · Software &amp; apps</p>
+  <h1>Kwangmyong Network 3.0 — DPRK Intranet Simulator</h1>
+  <div class="chips"><span class="chip">Software &amp; apps</span><span class="chip">done</span><span class="chip">1 versions</span><span class="chip soft">HTML</span><span class="chip soft">Simulator</span><span class="chip soft">DPRK</span><span class="chip soft">Single-file</span></div>
+  <div class="btns"><a class="btn live" href="/builds/kwangmyong-sim/" target="_blank" rel="noopener">▶ Build log</a><a class="btn" href="/portfolio/prompts/kwangmyong-sim-prompt.md" target="_blank" rel="noopener">📄 Raw spec (.md)</a><a class="btn" href="/portfolio/">📁 Portfolio</a></div>
+  <p class="prov">✅ reflection written · every fact below is generated from this project’s own spec and files</p>
+</div></header>
+<nav><div class="wrap"><a href="/builds/">← All build logs</a></div></nav>
+<main class="wrap">
+<section id="what"><h2>What it is</h2><p class="lead">Single-file offline simulator of the DPRK national intranet (Kwangmyong): a 136-site catalogue, 30 hand-built sites, a real command terminal and a surveillance log — fully English.</p></section><section id="versions"><h2>Version history</h2><p class="fine">Straight from the project’s own card data — what each version added.</p><div class="vers"><div class="ver"><div class="vn">V1</div><div class="vi"><p>English build — localised by 13 build-time fix batches; the sim’s own self-test scores 72/72.</p></div></div></div></section><section id="files"><h2>Files on the site</h2><ul class="files"><li><a href="/portfolio/prompts/kwangmyong-sim-prompt.md">Prompt</a> <span class="meta">49 lines · 3.2 KB</span></li></ul></section><section id="reflection"><h2>Full analysis</h2><div class="reflect on"><h3>The simulator, in full</h3><p>A working model of the Democratic People's Republic of Korea's national intranet — Kwangmyong — as one HTML file that runs with the network cable pulled out.</p>
+<p>It boots to a login gate with three accounts: a researcher with standard access, a lecturer at Kim Il Sung University, and a guest account in the reading room that can browse but cannot shop or send mail. Past that is a Windows-style desktop and a dock: a browser that resolves <code>.kp</code> hosts and internal <code>10.x</code> addresses, a national search engine, intranet mail, a site directory, document storage, a command terminal, a shop, a streaming app, and a help manual.</p>
+<p>Behind it are 136 catalogue entries. Thirty have real addresses and hand-built pages — news wires, an encyclopaedia, a university, bookshops, a cooking site, a weather service, a mail client, an online shop with carts and checkout. The other 106 are generated from their own catalogue rows, so the directory is never a dead end: every entry you click opens something.</p>
+<p>The part that makes it a simulation rather than a mock-up is the visit log. Every page you open is recorded with a timestamp, and the log is built so it refuses to be erased. That is the thing the sim is actually about: an intranet where the interesting fact is not what you can reach, but that reaching it is written down.</p>
+<p>Nothing loads from the network. All 411 KB arrive in one request and the app never makes another.</p><h3>How it&#x27;s put together</h3><p>No framework, no bundler, no dependencies. The source lives as separate modules under <code>parts/</code> — pages, apps, shops, the about section, the stylesheets — and a shell script concatenates them into a single file, then runs a syntax check. A second script builds the English version from the same parts.</p>
+<p>Five thousand seven hundred and ninety-one lines, 362 KB of it JavaScript. The clock and the Pyongyang date are real; the numbers are deterministic, seeded from the page key, so the same shop page shows the same prices on every reload instead of randomising itself into nonsense. Pages are built from a small set of primitives — a frame with tabs and an address bar, cards, side blocks, list rows — which is why 30 hand-written sites fit in a file this size.</p>
+<p>The self-test is inside the artefact. Seventy-two checks that walk the catalogue, open every page, resolve every host, run the terminal commands and re-do the shop arithmetic. It is not a test file next to the app; it ships in the app and runs in the same page, in either language, including inside an iframe on the deployed site.</p><h3>The English rewrite</h3><p>The original is Korean. Editing 400 KB of Korean by hand was not going to work, so I built a translation layer instead: an ordered table of exact source strings and their English replacements. Four hundred and sixty-five rows across thirteen batches, applied at build time, longest key first.</p>
+<p>That last detail is the whole game. Rows are sorted longest-first so a short string cannot eat the start of a longer one. It also means a later batch cannot override an earlier batch unless it carries the <em>entire</em> corrected string — a fragment in batch 13 loses to the full sentence in batch 9. I lost an afternoon to exactly that before I understood it.</p>
+<p>After every build I swept the result for residual Hangul: the terminal, every app, all eight site pages, the tutorial, the About section, the news desks. The English build ends at zero.</p>
+<p>Two things only became visible at the end:</p>
+<p><strong>The word dictionary is fine for chrome and fatal for prose.</strong> Chrome strings are short and self-contained, so a dictionary row works. Article bodies are not: they came out as "socialistconstruction achieved the results summary next year's outlook announced". That is not a translation problem you can fix with more rows — it is the wrong tool. Generated content had to be replaced as a block. The wire copy for Korean Central News Agency and Rodong Sinmun is now written in English directly, five reports each, and the block swap is the last step of the build.</p>
+<p><strong>The self-test is the only reason the rewrite was safe.</strong> Mid-way through, it fell from 72 to 68 because assertions were comparing Korean labels that had just been translated. Rewriting them to assert on stable IDs instead of rendered text is what let me keep translating without flying blind.</p><h3>What broke</h3><ul>
+<li><strong>68/72 on the self-test.</strong> Assertions matched displayed Korean text. Fix: assert on identifiers, not on what the user sees.</li>
+<li><strong>Batch precedence.</strong> A later batch silently losing to an earlier one, because both matched and the longer key went first. Documented, and now the reason the fix tables carry whole strings.</li>
+<li><strong>Service names drifted.</strong> The terminal called services one thing and the site directory another, because they were translated in different batches. Curated a single set of names for the terminal.</li>
+<li><strong>Three romanisations of one brand.</strong> The same word appeared three ways across pages. Unified to one spelling everywhere, last batch, full string each time.</li>
+<li><strong>The deploy raced the listing generator.</strong> The site script regenerates the build-log hub from the card list; running it while the generator was mid-write aborted the upload with no clear error. Re-running after the generator settled fixed it. Worth knowing that the deploy bundles whatever is on disk — including another session's unfinished cards.</li>
+<li><strong>Forty-two rows still match nothing.</strong> Leftovers from sentences I rewrote twice. They are dead weight rather than bugs, but I have not triaged them, and the build report is the only place they show up.</li>
+<li><strong>One tooling hole.</strong> The terminal-listing tool yields zero parseable rows because of a separator quirk in its own helper. I worked around it by hand instead of fixing it.</li>
+</ul><h3>What I&#x27;d change</h3><ul>
+<li><strong>Key the translations, do not match the text.</strong> Every row is a brittle exact-match against a Korean sentence. A message catalogue keyed by ID would have survived three rewrites without a single stale row, and the 42 orphans would not exist.</li>
+<li><strong>Separate chrome from content from day one.</strong> I learned this at the news desk, late. It should have been the first architectural decision, not the last fix.</li>
+<li><strong>Run the self-test at build time and fail the build.</strong> I read a board after each build; a non-zero exit would have caught the 68/72 regression the moment it happened.</li>
+<li><strong>Fewer generated pages, more depth.</strong> The 106 generated entries make the directory feel real, but they share one template. Ten richer pages would teach more than a hundred stubs.</li>
+<li><strong>Publish the Korean original alongside from the start.</strong> It is the honest reference for anyone who reads Korean, and it costs one button. It is there now.</li>
+</ul><h3>What I learned</h3><p>Exact-string replacement at this scale is only survivable with a report. Four hundred and sixty-five rows produce a list of what did not match, and that list — not the diff — is what found the precedence bug and the drifted service names. Without it I would have shipped a build that looked finished and said the wrong thing in a dozen places.</p>
+<p>Second: an app that tests itself is worth more than any harness around it. The same 72 checks ran standalone, in the deployed page, inside an iframe, in both languages, with no test infrastructure to maintain — and they are the reason I can claim the English build works rather than hoping it does.</p>
+<p>Third: translation strategy has to follow the shape of the text. Interface strings want a dictionary; prose wants a writer.</p><h3>By the numbers</h3><ul>
+<li>1 HTML file, 411 KB, 5,791 lines, 0 network requests after load</li>
+<li>136 catalogue sites: 30 hand-built with real addresses, 106 generated from their own rows</li>
+<li>8 tabbed page sets, one address bar that resolves <code>.kp</code> hosts and internal IPs</li>
+<li>72 self-test checks, green in both languages and inside the deployed iframe</li>
+<li>13 build-time fix batches, 465 rows, 42 unmatched</li>
+<li>English build: 0 Hangul on every screen, tab and article</li>
+<li>2 published builds: English and the Korean original, on the same card</li>
+</ul></div></section><section id="spec"><h2>Build spec</h2><p class="fine">The project’s own build notes, rendered. <a href="/portfolio/prompts/kwangmyong-sim-prompt.md" target="_blank" rel="noopener">Open the raw .md ↗</a></p><details class="spec" open><summary>Show the spec</summary><div class="md"><h2>Kwangmyong Network 3.0 — DPRK Intranet Simulator</h2>
+<p><strong>Prompt:</strong></p>
+<blockquote>Build a single-file, offline, educational simulator of the DPRK national intranet</blockquote>
+<blockquote>(Kwangmyong) — the browser, the shops, the mail, the terminal, the surveillance log,</blockquote>
+<blockquote>all of it. It has to run from one HTML file with no server and no network calls.</blockquote>
+<blockquote>Then produce an <strong>English</strong> build of it: every screen, menu, page, table, tutorial,</blockquote>
+<blockquote>article and terminal reply in English, with no residual Korean anywhere a player can</blockquote>
+<blockquote>reach.</blockquote>
+<p><strong>What it is:</strong></p>
+<div class="tbl">| part | what it is |</div>
+<div class="tbl">|---|---|</div>
+<div class="tbl">| login | 3 accounts — two standard users and one read-only visitor who cannot buy or send mail |</div>
+<div class="tbl">| desktop | Windows-style desktop, dock, start menus, clock, and a ◉ surveillance tray icon |</div>
+<div class="tbl">| 《My Country Explorer》 | the only browser. The address bar resolves <code>.kp</code> hosts, internal IPs (<code>10.76.1.11</code>), Korean names and shortcuts |</div>
+<div class="tbl">| site catalogue | <strong>136 sites</strong> transcribed from the Wikipedia article <em>Kwangmyong (network)</em> — the 2016 portal list plus sites reported after 2016 |</div>
+<div class="tbl">| 30 hand-built sites | shops with a working basket + Central Bank e-payment, intranet mail, search, dictionary, encyclopaedia, KCNA and Rodong Sinmun news, tele-education <strong>with a graded exam</strong>, two playable arcade games, a symptom checker, device registration, an editable filter list, an antivirus scan |</div>
+<div class="tbl">| 106 generated pages | each remaining catalogue entry renders a plausible database page built from its own row (name, domain, IP, holdings, cross-links) |</div>
+<div class="tbl">| blocked pages | any outside address (<code>google.com</code>, …) returns a "connection forbidden" page explaining the air gap, and writes an entry into the surveillance log |</div>
+<div class="tbl">| terminal | <code>help</code>, <code>list</code>, <code>radar</code>, <code>ping</code>, <code>netstat</code>, <code>sysinfo</code>, <code>log</code> — real replies computed from the sim's own state |</div>
+<div class="tbl">| Help → Contents | what is <strong>real</strong> (documented) vs what is <strong>invented</strong>, with sources |</div>
+<p><strong>Skills used:</strong></p>
+<ul>
+<li><code>kwangmyong-sim-en-build</code> — the build-time translation layer and the render-then-scan verification loop.</li>
+</ul>
+<p><strong>How the English build works:</strong></p>
+<p>The simulator is written as 20+ source modules under <code>parts/</code> and assembled into one self-contained HTML file. The English build keeps that structure and adds a <strong>translation layer applied at build time</strong>: 13 key→value batches (<code>fix5.tsv</code>–<code>fix15.tsv</code>), in which each row is a literal string from the source and its English replacement. Anything the batches miss is caught by a render-then-scan loop — headless Chrome opens the built file, walks the terminal, all 30 sites and the tutorial/About/news surfaces, and dumps their visible text; the Hangul residue is then found <strong>in Python</strong>, not by eyeballing screenshots.</p>
+<p><strong>Verified outcome:</strong></p>
+<ul>
+<li>The simulator ships <strong>its own self-test</strong> (36 checks). The original scores <strong>72/72</strong>,</li>
+<p>and the English build scores <strong>72/72</strong> as well — parity, not a lower bar.</p>
+<li>Terminal sweep, all-apps sweep and the site-pages sweep each report **0 lines</li>
+<p>containing Hangul**.</p>
+<li>Nothing in the sim calls the network: it is one HTML file, offline, no server.</li>
+<li><strong>Every article, price and page in it is invented for the simulation</strong> — the pages say</li>
+<p>so themselves, and the Help screen separates the documented parts (the catalogue, from Wikipedia) from the invented ones.</p>
+</ul></div></details></section>
+<footer>Generated 2026-10-19 by <code>gen-build-logs.py</code> ·
+<a href="/revision/">Revision hub</a> · <a href="/tools/">Workshop tools</a> · <a href="/portfolio/">Portfolio</a></footer>
+</main>
+</body>
+</html>

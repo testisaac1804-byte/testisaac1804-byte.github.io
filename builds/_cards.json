@@ -1,6 +1,100 @@
 [
  {
   "cat": "sw",
+  "t": "Universe Browser — the privacy browser owned by the network it was built for",
+  "s": "done",
+  "d": "ub66.com advertises the fastest, most private, safest browser — and sells it to people who need to get around a block. Infoblox and UNODC reverse-engineered the Windows build in October 2025 and found keylogging, silent background installs, disabled sandboxing and traffic routed through China. My own static analysis of the current build goes further: the Android package is literally bbin.mobile.browser, signed by a self-signed cert with O=bbin and CN=kingsley, shipped debuggable, and asking for contacts, accounts, credentials, precise location, silent downloads and permission to install further apps. The exclusive acceleration technology is a Go SSH tunnel with RC4 framing whose endpoints are distributed over DNS TXT records and hardcoded to Alibaba Cloud in Shenzhen. Includes an inert archive of the landing page with every network call cut.",
+  "pt": "prompts/ub66-teardown-prompt.md",
+  "a": [
+   {
+    "c": "ac",
+    "l": "Read the teardown",
+    "o": 7,
+    "u": "./demos/ub66-teardown.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Open the archive",
+    "o": 7,
+    "u": "./demos/ub66-teardown.html#mirror",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Build notes",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/ub66-teardown-prompt.md",
+    "vs": []
+   }
+  ],
+  "g": [
+   "Malware analysis",
+   "Android APK",
+   "DNS + WHOIS forensics",
+   "Static analysis",
+   "Site archive"
+  ],
+  "v": [
+   {
+    "n": "V1",
+    "i": "Keylogging and runtime behaviour are Infoblox/UNODC findings — I did static analysis only and never executed either binary.",
+    "L": true
+   }
+  ]
+ },
+ {
+  "cat": "sw",
+  "t": "Anatomy of a WhatsApp Linked-Device Phishing Kit",
+  "s": "done",
+  "d": "web.mis-ws.org serves 153 bytes to a desktop browser and a polished support chat to an iPhone — because the scam needs WhatsApp in the victim’s hand. The bot script walks them through Settings → Linked devices → Link with phone number and then hands them the 8-digit pairing code themselves: the victim authorises the operator’s server as a device on their own account. Teardown of the UA cloak, the obfuscated Vue bundle and the pairing protocol — plus an archived copy of the kit with every network call cut.",
+  "pt": "prompts/wa-kit-teardown-prompt.md",
+  "a": [
+   {
+    "c": "ac",
+    "l": "Read the teardown",
+    "o": 7,
+    "u": "./demos/wa-kit-teardown.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Open the mirror",
+    "o": 7,
+    "u": "./demos/wa-kit-teardown.html#mirror",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Build notes",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/wa-kit-teardown-prompt.md",
+    "vs": []
+   }
+  ],
+  "g": [
+   "Reverse engineering",
+   "Phishing analysis",
+   "Vue + obfuscator.io",
+   "Playwright",
+   "Site mirror"
+  ],
+  "v": [
+   {
+    "n": "V1",
+    "i": "Entry chunk rotates between visits (mrdoZ7… vs 6pHhaK…), so the archive is pinned to one build.",
+    "L": true
+   }
+  ]
+ },
+ {
+  "cat": "sw",
   "t": "Anatomy of a Fake “DNS Optimizer”",
   "s": "done",
   "d": "Teardown of DNS一键优化.exe — a “one-click DNS fix” handed out by an online gambling portal as a repair for “the game won’t open”. I unpacked the UPX-packed Qt binary, read its embedded manifest (requireAdministrator) and confirmed the whole program is four netsh commands that rewrite every adapter’s DNS to 8.8.8.8 — plus hidden --preferred-dns-server flags that let a launcher aim it at any resolver. No C2, no persistence, no payload: the real risk is an unsigned admin-level network tool published by the site you were trying to unblock. Full method, IOCs and how to revert included.",
@@ -327,29 +421,106 @@
   "cat": "sw",
   "t": "Hong Kong Tour",
   "s": "done",
-  "d": "Interactive Hong Kong tour guide app — Flask + HTML, native macOS .app bundle with photo gallery and tour routes.",
+  "d": "A Hong Kong tour guide with 143 real spots — Hong Kong Island, Kowloon and the New Territories, split into 27 neighbourhoods — each with an actual photograph of the place, a rating, description, tips and location, plus search and category filters. The same Python + HTML core ships as four installable apps: a macOS .app, a Windows installer, a Linux .deb and an Android APK, plus a portable ZIP, and it runs here in the browser as a static build with no server behind it. All five archives download straight from this page, and the transfer resumes if the link drops. On macOS the app is ad-hoc signed rather than notarised — there is no Apple Developer ID behind it — so the first launch needs right-click → Open (or System Settings → Privacy & Security → Open Anyway); after that it opens normally. There is also an iOS/iPadOS Xcode project, but building it needs full Xcode plus a signing identity, so it is source rather than a download. The packaging turned out to be the hard part: the .deb came out 96 bytes because macOS ar writes a ranlib symbol table and silently drops the members, and the .exe was a Mac binary because p7zip's SFX stub is Mach-O rather than a Windows PE.",
   "pt": "prompts/hongkong-tour-prompt.md",
   "a": [
    {
     "c": "ac",
+    "l": "Full analysis",
+    "o": 1,
+    "u": "/portfolio/analysis/hongkong-tour/",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
     "l": "Live Demo",
     "o": 7,
-    "u": "./demos/hongkong-tour.html",
+    "u": "./demos/hongkong-tour/",
     "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "macOS (.dmg) 295 MB",
+    "o": 1,
+    "u": "https://isaac1804.com/files/hongkong-tour/HongKongTour-macOS.dmg",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Windows (.exe) 292 MB",
+    "o": 1,
+    "u": "https://isaac1804.com/files/hongkong-tour/HongKongTour-Windows.exe",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Linux (.deb) 292 MB",
+    "o": 1,
+    "u": "https://isaac1804.com/files/hongkong-tour/HongKongTour-linux.deb",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Portable (.zip) 292 MB",
+    "o": 1,
+    "u": "https://isaac1804.com/files/hongkong-tour/HongKongTour-Portable.zip",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Android (.apk) 2.3 MB",
+    "o": 1,
+    "u": "https://isaac1804.com/files/hongkong-tour/HongKongTour-Android.apk",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Mirror (pages.dev)",
+    "o": 1,
+    "u": "https://hongkong-tour.pages.dev/",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Build notes",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/hongkong-tour-prompt.md",
     "vs": []
    }
   ],
   "g": [
-   "Flask",
+   "Python",
    "HTML",
-   "Tour",
-   "macOS .app"
+   "pywebview",
+   "Android APK",
+   "Windows",
+   "Linux .deb",
+   "iOS project"
   ],
   "v": [
    {
     "n": "V1",
-    "i": "Photo gallery, tour routes, ratings.",
+    "i": "Launcher, HTML UI, spots grouped by region and area, photo gallery.",
     "L": false
+   },
+   {
+    "n": "V2",
+    "i": "143 spots across 3 regions / 27 areas with real photos, search, category filters and ratings.",
+    "L": false
+   },
+   {
+    "n": "V3",
+    "i": "Shipped for desktop and Android — macOS .app, Windows .exe, Linux .deb, Android APK — plus a portable ZIP and this static browser build. The iPad build is delivered as an Xcode project: it needs full Xcode and a signing identity to produce an installable .ipa, so it is source, not a download. Fixed three packaging traps along the way: the macOS launcher now probes for a Python that actually has pywebview (Finder hands apps a minimal PATH), the .deb is written byte-by-byte instead of with macOS ar, and the Windows .exe uses a real PE SFX stub instead of p7zip's macOS one. The browser build drops the local server entirely: data.json + a local search index.",
+    "L": true
    }
   ]
  },
@@ -669,9 +840,9 @@
  },
  {
   "cat": "sw",
-  "t": "Multiplayer Game Server",
+  "t": "Arena — LAN Multiplayer Game",
   "s": "done",
-  "d": "WebSocket multiplayer backend - multi-room, sync, spectator.",
+  "d": "A top-down arena shooter that runs on your own Wi-Fi: one Mac hosts it and everyone else joins from a browser. Double-click Arena Server and it starts the match, prints the join address and shows a QR code; open Arena Join on any other Mac and it sweeps the local network, finds the host on its own and opens the game — no IP address to type, no internet, no account. Real-time WebSocket combat with a health bar, live scoreboard and kill feed, on a canvas arena that keeps running. Twin-stick: WASD and the mouse on a Mac, two separate thumb sticks on a phone so you can run one way and shoot the other. Both apps install from self-contained .pkg packages — the Python runtime, the server and the client are inside them, so there is nothing else to install. The last pass was about not breaking mid-match: hostile or malformed frames from a client can no longer freeze or kill the simulation, and a bad tick is counted and skipped rather than ending the match.",
   "pt": "prompts/multiplayer-game-server-prompt.md",
   "a": [
    {
@@ -681,28 +852,107 @@
     "u": "./demos/game-server.html",
     "p": "",
     "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "⬇ Download — join a game (.pkg)",
+    "o": 1,
+    "u": "https://isaac1804.com/files/installers/Arena-Join-1.0.1.pkg",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Host installer (.pkg · 27 MB)",
+    "o": 1,
+    "u": "https://isaac1804.com/files/installers/Arena-Server-1.0.1.pkg",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "How to install",
+    "o": 1,
+    "u": "./Desktop/arena/install.html",
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
    "WebSocket",
    "Python",
-   "FastAPI",
+   "Canvas",
+   "LAN",
+   "pkgbuild",
    "Real-time"
   ],
   "v": [
    {
     "n": "V1",
-    "i": "Single room.",
+    "i": "Single-room WebSocket arena: real-time movement, aiming, shooting, health and a scoreboard.",
     "L": false
    },
    {
     "n": "V2",
-    "i": "Multi-room with room codes.",
+    "i": "Phone support — a separate move stick and aim stick, so you can run one way and shoot another, plus a fire button.",
     "L": false
    },
    {
     "n": "V3",
-    "i": "Spectator mode + reconnect.",
+    "i": "LAN discovery in the join app: it sweeps the network for the host instead of being told an address, and the host page shows the join link plus a QR code.",
+    "L": false
+   },
+   {
+    "n": "V3.1",
+    "i": "Shipped as two double-click .pkg installers (host + join) and verified by running the packaged bytes rather than the build tree: 39 protocol, 21 hostile-frame and 20 headless-browser checks. Hostile frames can no longer freeze the sim, a bad tick is skipped instead of ending the match, and player names and chat are scrubbed before they reach anyone else's screen.",
+    "L": true
+   }
+  ]
+ },
+ {
+  "cat": "sw",
+  "t": "Password Game Solver",
+  "s": "done",
+  "d": "Beats all 36 rules of neal.fun's Password Game by reading the game's own runtime state, then composing a password that satisfies every rule at once.",
+  "pt": "prompts/password-game-solver-prompt.md",
+  "a": [
+   {
+    "c": "ac",
+    "l": "Open Folder",
+    "o": 1,
+    "u": "./projects/password-game-solver/",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Prompt",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/password-game-solver-prompt.md",
+    "vs": []
+   }
+  ],
+  "g": [
+   "Automation",
+   "Python",
+   "Playwright",
+   "Reverse Engineering"
+  ],
+  "v": [
+   {
+    "n": "V1",
+    "i": "DOM scraping + OCR.",
+    "L": false
+   },
+   {
+    "n": "V2",
+    "i": "Reads live app state: no OCR, no screenshot parsing.",
+    "L": false
+   },
+   {
+    "n": "V3",
+    "i": "Constraint composer: 36/36 rules, 211-char password.",
     "L": true
    }
   ]
@@ -865,7 +1115,7 @@
   "cat": "sw",
   "t": "218/213 騙局複刻模擬器",
   "s": "done",
-  "d": "逐頁複刻真實非法賭博網站 218.com（永誠貴賓會）與 213.com（PG娛樂）的反詐教學模擬器 —— 假 Loading 跳轉、備用線路、門戶、遊戲大廳、客服話術、加密啟動頁、代理後台，全部按鈕只連本地模擬。附 10 課深度導覽、12 條黑話術語表、10 題測驗與完整調查檔案。",
+  "d": "逐頁複刻兩個真實非法賭博網絡 —— 218.com（永誠貴賓會）與 213.com（PG娛樂）—— 的反詐教學模擬器，並附完整調查分析與兩站原版全資產鏡像。完整分析從入口鏈一路拆到後台：60+ 域名、47 個 IP、單一 Cloudflare 帳戶指紋、<code>*cne.com</code> 自建 NS 家族、AES-256-ECB API 加密、代理佣金追蹤、域名輪換 API，以及可投訴的打擊面排序。模擬器的按鈕只連本地頁面；鏡像保留原站外觀但已封鎖所有外部跳轉。附 10 課深度導覽、12 條黑話術語表與 10 題測驗。",
   "pt": "prompts/casino-scam-sim-prompt.md",
   "a": [
    {
@@ -873,6 +1123,14 @@
     "l": "Live Demo",
     "o": 7,
     "u": "./demos/casino-scam-sim/sim.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "🧭 完整分析",
+    "o": 7,
+    "u": "./demos/casino-scam-sim/analysis.html",
     "p": "",
     "vs": []
    },
@@ -886,7 +1144,15 @@
    },
    {
     "c": "ac",
-    "l": "🎰 原版鏡像",
+    "l": "🪞 213 鏡像",
+    "o": 7,
+    "u": "./demos/casino-scam-sim/door.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "🪞 218 鏡像",
     "o": 7,
     "u": "./demos/casino-scam-sim/hub.html",
     "p": "",
@@ -904,7 +1170,7 @@
   "g": [
    "Security",
    "Anti-Scam",
-   "Phishing",
+   "Infrastructure",
    "Evidence"
   ],
   "v": [
@@ -916,6 +1182,11 @@
    {
     "n": "V2",
     "i": "加入 213 門戶、遊戲大廳、客服練功房、App 加密頁、代理後台、10 課導覽與調查檔案。",
+    "L": true
+   },
+   {
+    "n": "V3",
+    "i": "新增完整調查分析頁（60+ 域名 / 47 IP / DNS 指紋 / API 加密 / 打擊面）與 213、218 兩站全資產鏡像。",
     "L": true
    }
   ]
@@ -958,7 +1229,7 @@
   "cat": "sw",
   "t": "IsaacKing Browser",
   "s": "done",
-  "d": "Whitelist-only browser. PyObjC + WKWebView .app.",
+  "d": "A whitelist-only macOS browser with NO search: the URL bar rejects anything containing a space, and every navigation is checked against a plain-text allowlist at ~/IsaacKing/whitelist.json that is re-read on every request — edit the file and it applies instantly, no restart, no in-app settings page. Ships as a self-contained 76 MB .app carrying its own Python + PyObjC/WKWebView, with an isaacking CLI (list / add / remove / launch).",
   "pt": "prompts/isaacking-browser-prompt.md",
   "a": [
    {
@@ -974,17 +1245,23 @@
    "macOS",
    "WKWebView",
    "PyObjC",
-   "Browser"
+   "Browser",
+   "Whitelist"
   ],
   "v": [
    {
     "n": "V1",
-    "i": "White screen bug.",
+    "i": "White screen when quitting and reopening.",
     "L": false
    },
    {
     "n": "V2",
-    "i": "Fixed: HTML string direct load.",
+    "i": "Fixed: the start page loads as an HTML string — no redirect chain, no white flash.",
+    "L": false
+   },
+   {
+    "n": "V3",
+    "i": "Self-contained 76 MB .app with its own Python and no PyObjCTools dependency, whitelist re-read live from the file, isaacking CLI, no-search guard, and zero system-proxy writes.",
     "L": true
    }
   ]
@@ -1318,29 +1595,53 @@
  {
   "cat": "sw",
   "t": "IsaacOS",
-  "s": "draft",
-  "d": "Custom OS concept - bootable with all Isaac tools.",
+  "s": "done",
+  "d": "A custom ARM64 operating system built from a package list and shipped as a bootable ISO: Alpine Linux under an XFCE desktop that deliberately mixes two conventions — a macOS-style bar along the top (app menu, tray, volume, clock) and a Windows-style dock along the bottom (app launchers, live taskbar, show-desktop). It boots in Parallels straight to a branded desktop with no login prompt and no setup wizard, logging itself in and configuring its own wallpaper, shortcuts and panels on first start. Assembled from a downloaded kernel and initramfs with a custom overlay shipped on the disc, then debugged from inside the running VM over TCP, because a guest console cannot be read remotely. Three bugs were worth the trouble: a panel launcher plugin that rendered only one of seven declared icons (fixed with one plugin per icon), a mouse that would not move because Alpine eudev ships no init script so udev never started — and libinput finds devices only through udev — and an invisible cursor that looked exactly like a broken mouse until the core cursor font was installed.",
   "pt": "prompts/isaacos-prompt.md",
   "a": [
    {
     "c": "ac",
-    "l": "Live Demo",
+    "l": "Download ISO (431 MB)",
+    "o": 1,
+    "u": "https://isaac1804.com/files/isaacos/IsaacOS-v1.0-arm64.iso",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Live Desktop Demo",
     "o": 7,
     "u": "./demos/isaacos.html",
     "p": "",
     "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Build notes",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/isaacos-prompt.md",
+    "vs": []
    }
   ],
   "g": [
-   "OS",
-   "Concept",
-   "System Design"
+   "Alpine Linux",
+   "ARM64",
+   "Bootable ISO",
+   "XFCE",
+   "Xorg",
+   "Parallels"
   ],
   "v": [
    {
     "n": "V1",
-    "i": "Concept phase.",
+    "i": "First attempt: a from-scratch kernel and boot chain, built by the repo’s own build script. The kernel booted, but the UEFI handoff could not be verified remotely and there was no way to read a guest console — scrapped for something that could be inspected from the inside.",
     "L": false
+   },
+   {
+    "n": "V2",
+    "i": "Rebuilt on Alpine Linux: boots to a branded XFCE desktop in Parallels with no login prompt, working mouse and keyboard, self-applied wallpaper and keyboard shortcuts, top menu bar + 7-icon dock. 431 MB ARM64 live ISO, resumable download.",
+    "L": true
    }
   ]
  },
@@ -2658,6 +2959,156 @@
   ]
  },
  {
+  "cat": "sw",
+  "t": "RemoteConnect",
+  "s": "done",
+  "d": "One-click remote control of other people's Macs and Android phones from a single Mac app. The far machine installs one silent .pkg that switches on macOS Screen Sharing (ARD) with zero dialogs; my side lists saved targets, and clicking a name opens Screen Sharing for a Mac or mirrors an Android phone with scrcpy. Wireless adb is auto-discovered, USB works as a fallback, and every failed connect returns a plain-language step log instead of a spinner — which is how I found out the real problem was a phone that had left the WiFi and taken a new IP, not the app.",
+  "pt": "prompts/remoteconnect-prompt.md",
+  "a": [
+   {
+    "c": "ac",
+    "l": "How it works",
+    "o": 7,
+    "u": "./demos/remoteconnect.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Build notes",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/remoteconnect-prompt.md",
+    "vs": []
+   }
+  ],
+  "g": [
+   "macOS",
+   "pkgbuild",
+   "ARD / VNC",
+   "scrcpy",
+   "adb",
+   "pywebview"
+  ],
+  "v": [
+   {
+    "n": "V1",
+    "i": "Mac targets: silent .pkg enables ARD with a baked shared password; controller opens Screen Sharing on click.",
+    "L": false
+   },
+   {
+    "n": "V2",
+    "i": "Android targets via scrcpy + wireless adb, with a Type field and a per-target port.",
+    "L": false
+   },
+   {
+    "n": "V3",
+    "i": "Self-diagnosing: ping/ARP/mDNS/subnet probes at /api/scan, a step log on every failure, auto-reconnect, always-on-top mirror window, USB fallback.",
+    "L": true
+   }
+  ]
+ },
+ {
+  "cat": "sw",
+  "t": "Isaac Browser",
+  "s": "done",
+  "d": "A working macOS web browser built from scratch in Python (PyObjC + WKWebView) — its own NSWindow and its own WebKit renderer process, not a shell around Chrome. Private by construction rather than by settings: an ephemeral WKWebsiteDataStore so history, cookies and cache exist only in RAM, a tracker/ad filter, anti-fingerprinting (UA, screen size and timezone spoofed), WebRTC and geolocation blocked, referrers stripped, HTTPS-only, stealth mode, one-click New Identity, and auto-burn of everything in memory on exit. Ships an ephemeral CONNECT proxy + DoH resolver that is strictly per-app — it never reads or writes the macOS system proxy, so Chrome and the rest of the system keep working whether the in-app proxy is on or off. (An earlier build did set the system proxy; that is what silently broke Chrome for other apps. That code is gone.) Packaged as a double-clickable .app with a universal Mach-O launcher and a CLI.",
+  "pt": "prompts/isaac-browser-prompt.md",
+  "a": [
+   {
+    "c": "ac",
+    "l": "Live Demo",
+    "o": 7,
+    "u": "./demos/isaac-browser.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "Build notes",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/isaac-browser-prompt.md",
+    "vs": []
+   },
+   {
+    "c": "ac",
+    "l": "🗂 Source files",
+    "o": 1,
+    "u": "./projects/isaac-browser/",
+    "p": "",
+    "vs": []
+   }
+  ],
+  "g": [
+   "macOS",
+   "PyObjC",
+   "WKWebView",
+   "Privacy"
+  ],
+  "v": [
+   {
+    "n": "V1",
+    "i": "Native macOS browser: ephemeral WKWebView data store (no history/cookies/cache on disk), tracker filter, anti-fingerprinting, leak surfaces closed, stealth mode, New Identity, auto-burn on exit, per-app CONNECT proxy + DoH, universal Mach-O launcher, CLI, and the start-page privacy shield. Fixed: system-proxy leak that broke Chrome, fatal port binds, and the macOS 26 shell-launcher crash.",
+    "L": true
+   }
+  ]
+ },
+ {
+  "cat": "sw",
+  "t": "Kwangmyong Network 3.0 — DPRK Intranet Simulator",
+  "s": "done",
+  "d": "Single-file offline simulator of the DPRK national intranet (Kwangmyong): a 136-site catalogue, 30 hand-built sites, a real command terminal and a surveillance log — fully English.",
+  "pt": "prompts/kwangmyong-sim-prompt.md",
+  "a": [
+   {
+    "c": "ac",
+    "l": "Live Demo",
+    "o": 7,
+    "u": "./demos/kwangmyong-sim.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Korean original",
+    "o": 7,
+    "u": "./demos/kwangmyong-sim-ko.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Build log",
+    "o": 1,
+    "u": "/builds/kwangmyong-sim/",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Prompt",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/kwangmyong-sim-prompt.md",
+    "vs": []
+   }
+  ],
+  "g": [
+   "HTML",
+   "Simulator",
+   "DPRK",
+   "Single-file"
+  ],
+  "v": [
+   {
+    "n": "V1",
+    "i": "English build — localised by 13 build-time fix batches; the sim’s own self-test scores 72/72.",
+    "L": true
+   }
+  ]
+ },
+ {
   "cat": "hw",
   "t": "Auto-Clamping Vise",
   "s": "wip",
@@ -2829,12 +3280,28 @@
   "cat": "hw",
   "t": "Harry Potter AI Diary",
   "s": "done",
-  "d": "ESP32-C3 Tom Riddle diary - makes its own WiFi AP with a captive portal, answers in-character through an AI API, OLED + typewriter effect.",
+  "d": "A physical Tom Riddle diary. V1: an ESP32-C3 makes its own WiFi AP, a captive portal opens a parchment page on any phone, and the reply types itself onto an OLED. V2 removes the phone and the buzzer: a 2.13″ e-paper book you write on with a stylus, where the answer stays on the page with the power off. Full build analysis of the firmware, the three-pass ink engine and the e-paper redesign, plus a byte-identical mirror.",
   "pt": "prompts/harry-potter-diary-prompt.md",
   "a": [
    {
+    "c": "ac",
+    "l": "Read the analysis",
+    "o": 7,
+    "u": "./demos/harry-potter-diary-analysis.html",
+    "p": "",
+    "vs": []
+   },
+   {
     "c": "",
-    "l": "Live Demo",
+    "l": "Full mirror",
+    "o": 7,
+    "u": "./demos/harry-potter-diary-mirror/",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Canned demo",
     "o": 7,
     "u": "./demos/harry-potter-diary.html",
     "p": "",
@@ -2842,20 +3309,32 @@
    },
    {
     "c": "",
-    "l": "📂 Files",
-    "o": 9,
-    "u": "./projects/harry-potter-diary/",
-    "p": "",
+    "l": "Build notes",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/harry-potter-diary-prompt.md",
     "vs": []
    }
   ],
   "g": [
    "ESP32",
-   "IoT",
+   "E-paper",
    "AI",
+   "Ink engine",
    "Harry Potter"
   ],
-  "v": []
+  "v": [
+   {
+    "n": "V1",
+    "i": "ESP32-C3 + OLED + captive portal. Compiles and flashed — firmware.bin 1,026,592 B.",
+    "L": false
+   },
+   {
+    "n": "V2",
+    "i": "LilyGO T5 V2.4 2.13″ e-paper port in progress: GxEPD2, partial refresh, stylus overlay, no phone, no buzzer.",
+    "L": true
+   }
+  ]
  },
  {
   "cat": "f3d",
