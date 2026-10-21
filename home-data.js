@@ -17,8 +17,15 @@ window.HOME={
       "title": "🖥️ Web Apps",
       "items": [
         {
+          "icon": "🧷",
+          "label": "Sticker wall — leave a note and a sticker on my guestbook (Workers + KV)",
+          "url": "/guestbook",
+          "href": "/guestbook",
+          "badge": "new"
+        },
+        {
           "icon": "📡",
-          "label": "Kwangmyong Network 3.0 — a single-file, fully offline simulator of the DPRK national intranet: a 136-site catalogue, 30 hand-built sites, a working command terminal, and a surveillance log that refuses to be erased. English build, with the Korean original alongside",
+          "label": "Kwangmyong Network 3.0 — the DPRK intranet, network only: one browser, a 136-site catalogue, 30 hand-built services, intranet mail, a shop with Central Bank e-payment, and a device log that refuses to be erased. No desktop, no login, no terminal — the machine is the Red Star OS build. Fully offline, fully English",
           "url": "isaac1804.com/portfolio",
           "href": "https://isaac1804.com/portfolio/demos/kwangmyong-sim.html",
           "badge": "new"

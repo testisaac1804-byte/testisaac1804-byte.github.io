@@ -1,6 +1,150 @@
 [
  {
   "cat": "sw",
+  "t": "붉은별 3.0 — a Red Star OS desktop simulator",
+  "s": "done",
+  "d": "A 2013 North Korean desktop rebuilt as one 304 KB offline HTML file: macOS-like menu bar and dock, 22 apps, a watermark that rewrites the copied file, and a guest account that genuinely cannot buy, send or save. Browses a 49-entry sample of the Kwangmyong address book — the full intranet is a separate project.",
+  "pt": "prompts/redstar-sim-prompt.md",
+  "a": [
+   {
+    "c": "ac",
+    "l": "Read the analysis",
+    "o": 7,
+    "u": "./demos/redstar-sim-analysis.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Run the simulator",
+    "o": 7,
+    "u": "./demos/redstar-sim.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Full mirror",
+    "o": 7,
+    "u": "./demos/redstar-sim-mirror/",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Companion: the network",
+    "o": 7,
+    "u": "./demos/kwangmyong-sim.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Build notes",
+    "o": 1,
+    "u": "/builds/redstar-sim/",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Build spec",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/redstar-sim-prompt.md",
+    "vs": []
+   }
+  ],
+  "g": [
+   "HTML",
+   "Simulator",
+   "OS",
+   "DPRK",
+   "Single-file"
+  ],
+  "v": [
+   {
+    "n": "V1",
+    "i": "49 entries, 24 page builders, 22 apps, 45/45 at three widths, zero console errors.",
+    "L": false
+   },
+   {
+    "n": "V1.1",
+    "i": "Separated from Kwangmyong Network 3.0 in title, scope and cross-links; companion project named in-app.",
+    "L": false
+   }
+  ]
+ },
+ {
+  "cat": "sw",
+  "t": "梗史 2000—2026 — a 27-year Chinese meme history",
+  "s": "done",
+  "d": "A meme history of China, 2000 to 2026: 250 entries across 27 year sections, each with where the meme came from and what it was doing — plus a long-form 'meme of the year' for every single year and five eras. One 120 KB HTML file, zero network requests, full-text search, tag filter, print-ready.",
+  "pt": "prompts/meme-history-prompt.md",
+  "a": [
+   {
+    "c": "ac",
+    "l": "Read the analysis",
+    "o": 7,
+    "u": "./demos/meme-history-analysis.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Open the history",
+    "o": 7,
+    "u": "./demos/meme-history.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "2026 detail",
+    "o": 7,
+    "u": "./demos/2026-meme-history.html",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Full mirror",
+    "o": 7,
+    "u": "./demos/meme-history-mirror/",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "",
+    "l": "Build notes",
+    "o": 6,
+    "u": "",
+    "p": "./prompts/meme-history-prompt.md",
+    "vs": []
+   }
+  ],
+  "g": [
+   "Chinese internet",
+   "27 years",
+   "250 memes",
+   "Single file",
+   "Search"
+  ],
+  "v": [
+   {
+    "n": "V1",
+    "i": "2026 only, 47 entries, month by month",
+    "L": false
+   },
+   {
+    "n": "V2",
+    "i": "27 years, 250 entries, 5 eras, one king per year — shipped",
+    "L": false
+   }
+  ]
+ },
+ {
+  "cat": "sw",
   "t": "Universe Browser — the privacy browser owned by the network it was built for",
   "s": "done",
   "d": "ub66.com advertises the fastest, most private, safest browser — and sells it to people who need to get around a block. Infoblox and UNODC reverse-engineered the Windows build in October 2025 and found keylogging, silent background installs, disabled sandboxing and traffic routed through China. My own static analysis of the current build goes further: the Android package is literally bbin.mobile.browser, signed by a self-signed cert with O=bbin and CN=kingsley, shipped debuggable, and asking for contacts, accounts, credentials, precise location, silent downloads and permission to install further apps. The exclusive acceleration technology is a Go SSH tunnel with RC4 framing whose endpoints are distributed over DNS TXT records and hardcoded to Alibaba Cloud in Shenzhen. Includes an inert archive of the landing page with every network call cut.",
@@ -2237,7 +2381,7 @@
     "c": "ac",
     "l": "Open Portal",
     "o": 1,
-    "u": "https://isaac1804.com/isaacmac",
+    "u": "https://isaac1804.com/portfolio/isaacmac",
     "p": "",
     "vs": []
    }
@@ -3056,9 +3200,9 @@
  },
  {
   "cat": "sw",
-  "t": "Kwangmyong Network 3.0 — DPRK Intranet Simulator",
+  "t": "Kwangmyong Network 3.0 — the DPRK intranet, network only",
   "s": "done",
-  "d": "Single-file offline simulator of the DPRK national intranet (Kwangmyong): a 136-site catalogue, 30 hand-built sites, a real command terminal and a surveillance log — fully English.",
+  "d": "A single-file, fully offline simulator of the DPRK national intranet with the desktop cut away: one browser, a 136-site catalogue, 30 hand-built services, intranet mail, a shop with Central Bank e-payment, and a device log that refuses to be erased. English build; the Korean full-desktop original sits beside it.",
   "pt": "prompts/kwangmyong-sim-prompt.md",
   "a": [
    {
@@ -3071,7 +3215,7 @@
    },
    {
     "c": "",
-    "l": "Korean original",
+    "l": "Korean original · full desktop build",
     "o": 7,
     "u": "./demos/kwangmyong-sim-ko.html",
     "p": "",
@@ -3092,6 +3236,14 @@
     "u": "",
     "p": "./prompts/kwangmyong-sim-prompt.md",
     "vs": []
+   },
+   {
+    "c": "",
+    "l": "Companion: Red Star OS desktop",
+    "o": 7,
+    "u": "./demos/redstar-sim.html",
+    "p": "",
+    "vs": []
    }
   ],
   "g": [
@@ -3103,7 +3255,12 @@
   "v": [
    {
     "n": "V1",
-    "i": "English build — localised by 13 build-time fix batches; the sim’s own self-test scores 72/72.",
+    "i": "English build — localised by 13 build-time fix batches; the sim’s own self-test scored 72/72.",
+    "L": true
+   },
+   {
+    "n": "V2",
+    "i": "Rescoped to the network: boot, login, desktop, dock, settings, document store and terminal removed; the suite is 41 checks and now asserts the machine is absent.",
     "L": true
    }
   ]
@@ -3115,6 +3272,14 @@
   "d": "Arduino Nano + NEMA 17 + ACS712 sensor. 3D printed. ~$32.",
   "pt": "prompts/auto-clamping-vise-prompt.md",
   "a": [
+   {
+    "c": "gr",
+    "l": "Build log",
+    "o": 1,
+    "u": "/builds/auto-clamping-vise/",
+    "p": "",
+    "vs": []
+   },
    {
     "c": "",
     "l": "Open Folder",
@@ -3156,6 +3321,14 @@
   "pt": "prompts/clip-thermometer-prompt.md",
   "a": [
    {
+    "c": "gr",
+    "l": "Build log",
+    "o": 1,
+    "u": "/builds/clip-thermometer/",
+    "p": "",
+    "vs": []
+   },
+   {
     "c": "",
     "l": "Open Folder",
     "o": 1,
@@ -3196,7 +3369,24 @@
   "s": "done",
   "d": "DIY $10 punch vs $30-60 commercial. 3D printed + lens.",
   "pt": "prompts/optical-center-punch-prompt.md",
-  "a": [],
+  "a": [
+   {
+    "c": "ac",
+    "l": "Build log",
+    "o": 1,
+    "u": "/builds/optical-center-punch/",
+    "p": "",
+    "vs": []
+   },
+   {
+    "c": "gr",
+    "l": "Build notes",
+    "o": 6,
+    "u": "",
+    "p": "prompts/optical-center-punch-prompt.md",
+    "vs": []
+   }
+  ],
   "g": [
    "3D Printed",
    "Precision",
@@ -3223,6 +3413,14 @@
   "d": "1/64-1/32 scale high-speed. No-solder Dupont build.",
   "pt": "prompts/micro-rc-car-prompt.md",
   "a": [
+   {
+    "c": "gr",
+    "l": "Build log",
+    "o": 1,
+    "u": "/builds/micro-rc-car/",
+    "p": "",
+    "vs": []
+   },
    {
     "c": "",
     "l": "Open Folder",
@@ -3254,6 +3452,14 @@
   "pt": "prompts/ble-scanner-prompt.md",
   "a": [
    {
+    "c": "gr",
+    "l": "Build log",
+    "o": 1,
+    "u": "/builds/ble-scanner/",
+    "p": "",
+    "vs": []
+   },
+   {
     "c": "",
     "l": "Open Folder",
     "o": 1,
@@ -3283,6 +3489,14 @@
   "d": "A physical Tom Riddle diary. V1: an ESP32-C3 makes its own WiFi AP, a captive portal opens a parchment page on any phone, and the reply types itself onto an OLED. V2 removes the phone and the buzzer: a 2.13″ e-paper book you write on with a stylus, where the answer stays on the page with the power off. Full build analysis of the firmware, the three-pass ink engine and the e-paper redesign, plus a byte-identical mirror.",
   "pt": "prompts/harry-potter-diary-prompt.md",
   "a": [
+   {
+    "c": "gr",
+    "l": "Build log",
+    "o": 1,
+    "u": "/builds/harry-potter-diary/",
+    "p": "",
+    "vs": []
+   },
    {
     "c": "ac",
     "l": "Read the analysis",
@@ -12825,7 +13039,7 @@
   "t": "a1d2.org — Link Compressor",
   "s": "done",
   "d": "Compress long links and optimise QR codes entirely in the browser — strips tracking parameters to shorten URLs, no backend needed. Live at a1d2.org with a bilingual projects page.",
-  "pt": "prompts/a1d2-link-compressor-prompt.md",
+  "pt": "prompts/link-compressor-prompt.md",
   "a": [
    {
     "c": "ac",

@@ -1,69 +1,72 @@
-# The simulator, in full
+# Kwangmyong — the network, not the machine
 
-A working model of the Democratic People's Republic of Korea's national intranet — Kwangmyong — as one HTML file that runs with the network cable pulled out.
+## The simulator, in full
 
-It boots to a login gate with three accounts: a researcher with standard access, a lecturer at Kim Il Sung University, and a guest account in the reading room that can browse but cannot shop or send mail. Past that is a Windows-style desktop and a dock: a browser that resolves `.kp` hosts and internal `10.x` addresses, a national search engine, intranet mail, a site directory, document storage, a command terminal, a shop, a streaming app, and a help manual.
+A working model of the Democratic People's Republic of Korea's national intranet, shipped as one HTML file that runs with the network cable pulled out. It opens straight onto the portal at `www.sciteco.aca.kp`: no boot sequence, no login, no desktop — a browser, filling the window, with a strip across the top that switches between the eight services the network actually offers.
 
-Behind it are 136 catalogue entries. Thirty have real addresses and hand-built pages — news wires, an encyclopaedia, a university, bookshops, a cooking site, a weather service, a mail client, an online shop with carts and checkout. The other 106 are generated from their own catalogue rows, so the directory is never a dead end: every entry you click opens something.
+Those eight are the whole product: the browser, a national search engine, intranet mail, the online shop with a working basket and Central Bank e-payment, Manbang streaming, the site catalogue, the device log, and the About panel that separates documented fact from invention.
 
-The part that makes it a simulation rather than a mock-up is the visit log. Every page you open is recorded with a timestamp, and the log is built so it refuses to be erased. That is the thing the sim is actually about: an intranet where the interesting fact is not what you can reach, but that reaching it is written down.
+Behind the browser are 136 catalogue entries. Thirty have real addresses and hand-built pages — news wires, an encyclopaedia, a university, bookshops, a cooking site, a weather service, an online shop, a graded tele-education exam. The other 106 are generated from their own catalogue rows, so the directory is never a dead end.
 
-Nothing loads from the network. All 411 KB arrive in one request and the app never makes another.
+What makes it a simulation rather than a mock-up is the log. Every page opened is recorded with a timestamp, including attempts to reach an outside address, and the log is built so it refuses to be erased. That is the point: on this network the interesting fact is not what you can reach, but that reaching it is written down.
 
-# How it's put together
+## Why the cut
 
-No framework, no bundler, no dependencies. The source lives as separate modules under `parts/` — pages, apps, shops, the about section, the stylesheets — and a shell script concatenates them into a single file, then runs a syntax check. A second script builds the English version from the same parts.
+The machine and the network were one product, and that was the mistake. A desktop simulator and an intranet simulator share a browser and nothing else: one is about files, windows, accounts and settings, the other is about what a closed network will and will not resolve.
 
-Five thousand seven hundred and ninety-one lines, 362 KB of it JavaScript. The clock and the Pyongyang date are real; the numbers are deterministic, seeded from the page key, so the same shop page shows the same prices on every reload instead of randomising itself into nonsense. Pages are built from a small set of primitives — a frame with tabs and an address bar, cards, side blocks, list rows — which is why 30 hand-written sites fit in a file this size.
+So the boundary is now explicit. This build owns the network. The desktop half belongs to the Red Star OS 3.0 simulator on the same site, which is a separate artefact with its own shell, apps and 49-address sample of the address book. Nothing is shared at runtime between them — no common file, no common script, no iframe.
 
-The self-test is inside the artefact. Seventy-two checks that walk the catalogue, open every page, resolve every host, run the terminal commands and re-do the shop arithmetic. It is not a test file next to the app; it ships in the app and runs in the same page, in either language, including inside an iframe on the deployed site.
+What that removed from this build: the boot splash, the login gate and its three accounts, the Windows-style desktop, the dock, the start menus, wallpapers and desktop icons, the settings panel, the document store, and the command terminal. Three applications were deleted from the registry outright, and the suite now asserts they are absent, because a feature you have "removed" by hiding a button is not removed.
 
-# The English rewrite
+The read-only visitor account went with the login gate. Its refusal behaviour — no payment, no mail — is still enforced, but the account is now a fixture rather than a choice: you are already on the network when the page loads, and the visitor role is what the log and the shop pages talk about.
 
-The original is Korean. Editing 400 KB of Korean by hand was not going to work, so I built a translation layer instead: an ordered table of exact source strings and their English replacements. Four hundred and sixty-five rows across thirteen batches, applied at build time, longest key first.
+## How the cut was made
 
-That last detail is the whole game. Rows are sorted longest-first so a short string cannot eat the start of a longer one. It also means a later batch cannot override an earlier batch unless it carries the *entire* corrected string — a fragment in batch 13 loses to the full sentence in batch 9. I lost an afternoon to exactly that before I understood it.
+The Korean original stays untouched. The English build is assembled by `build-en.sh` from the same parts, and the rescope is one extra module appended last: `parts/net_shell.js`. It
 
-After every build I swept the result for residual Hangul: the terminal, every app, all eight site pages, the tutorial, the About section, the news desks. The English build ends at zero.
+- hides the shell surfaces at CSS level and stacks the window layer under a 42-pixel strip, so every app window fills the frame instead of floating on a desktop;
+- disables `K.boot` and starts the session directly with a user already on the network;
+- deletes `set`, `files` and `term` from the app registry;
+- replaces the desktop single-window model: opening a service closes the previous one, so there is exactly one page on screen;
+- installs its own self-test, because the original suite was mostly assertions about the desktop.
 
-Two things only became visible at the end:
+Keeping the cut in one appended module means the Korean build still compiles from the same source, and the decision is reversible by removing one line from the build script.
 
-**The word dictionary is fine for chrome and fatal for prose.** Chrome strings are short and self-contained, so a dictionary row works. Article bodies are not: they came out as "socialistconstruction achieved the results summary next year's outlook announced". That is not a translation problem you can fix with more rows — it is the wrong tool. Generated content had to be replaced as a block. The wire copy for Korean Central News Agency and Rodong Sinmun is now written in English directly, five reports each, and the block swap is the last step of the build.
+## What broke
 
-**The self-test is the only reason the rewrite was safe.** Mid-way through, it fell from 72 to 68 because assertions were comparing Korean labels that had just been translated. Rewriting them to assert on stable IDs instead of rendered text is what let me keep translating without flying blind.
+**The test suite was the product.** Of the original 72 checks, most walked the desktop: login, dock, terminal commands, document storage, settings. Removing the machine removed the tests with it. The new suite is 41 checks, and the ones that matter most are assertions of absence — no boot screen, no login screen, no icons, no dock, no start menu, and three apps that must not exist in the registry. An absence is cheap to test and easy to regress.
 
-# What broke
+**The help panel still taught the desktop.** Two bullets in "How to use" told the reader to double-click desktop icons and to type `find` and `netstat` in the terminal, and a third bullet described signing in. The self-test passed the whole time. It was a text sweep of every Help tab, run after the fact, that found them: tests check behaviour, not whether the prose still describes the product.
 
-- **68/72 on the self-test.** Assertions matched displayed Korean text. Fix: assert on identifiers, not on what the user sees.
-- **Batch precedence.** A later batch silently losing to an earlier one, because both matched and the longer key went first. Documented, and now the reason the fix tables carry whole strings.
-- **Service names drifted.** The terminal called services one thing and the site directory another, because they were translated in different batches. Curated a single set of names for the terminal.
-- **Three romanisations of one brand.** The same word appeared three ways across pages. Unified to one spelling everywhere, last batch, full string each time.
-- **The deploy raced the listing generator.** The site script regenerates the build-log hub from the card list; running it while the generator was mid-write aborted the upload with no clear error. Re-running after the generator settled fixed it. Worth knowing that the deploy bundles whatever is on disk — including another session's unfinished cards.
-- **Forty-two rows still match nothing.** Leftovers from sentences I rewrote twice. They are dead weight rather than bugs, but I have not triaged them, and the build report is the only place they show up.
-- **One tooling hole.** The terminal-listing tool yields zero parseable rows because of a separator quirk in its own helper. I worked around it by hand instead of fixing it.
+**The strip overflowed by 330 pixels at 390 wide.** Eight labelled buttons plus a wordmark do not fit a phone. Labels collapse to icons under 960 pixels and the wordmark under 560, and the media queries are now part of the build rather than a later fix.
 
-# What I'd change
+**The language toggle had to go.** The English build translates at render time, so switching the UI back to Korean made the layer translate its own labels — `한` came back as the word "one". A switch that fights the translation layer is not a feature. This build is English; the Korean original is the button beside it.
 
-- **Key the translations, do not match the text.** Every row is a brittle exact-match against a Korean sentence. A message catalogue keyed by ID would have survived three rewrites without a single stale row, and the 42 orphans would not exist.
-- **Separate chrome from content from day one.** I learned this at the news desk, late. It should have been the first architectural decision, not the last fix.
-- **Run the self-test at build time and fail the build.** I read a board after each build; a non-zero exit would have caught the 68/72 regression the moment it happened.
-- **Fewer generated pages, more depth.** The 106 generated entries make the directory feel real, but they share one template. Ten richer pages would teach more than a hundred stubs.
-- **Publish the Korean original alongside from the start.** It is the honest reference for anyone who reads Korean, and it costs one button. It is there now.
+**One mail page promised a feature that no longer existed** — "uploaded files also appear in the document store." The store was gone; the sentence was not. Fixed in the same sweep.
 
-# What I learned
+**The self-test left visitors in the shop cart.** The suite drives the browser hard to prove the shop arithmetic, and it used to end wherever it finished. It now restores the portal before it prints its result.
 
-Exact-string replacement at this scale is only survivable with a report. Four hundred and sixty-five rows produce a list of what did not match, and that list — not the diff — is what found the precedence bug and the drifted service names. Without it I would have shipped a build that looked finished and said the wrong thing in a dozen places.
+## What I'd change
 
-Second: an app that tests itself is worth more than any harness around it. The same 72 checks ran standalone, in the deployed page, inside an iframe, in both languages, with no test infrastructure to maintain — and they are the reason I can claim the English build works rather than hoping it does.
+- Draw the boundary before the first line of chrome. Deciding late that a product is two products cost a rewrite of the test suite and every screen that mentioned a desktop.
+- Write absence assertions as soon as something is removed. They are one line each and they are the only thing that stops a removed feature leaking back.
+- Sweep the prose, not just the DOM. Behaviour tests cannot see a help page describing a terminal that no longer exists.
+- Do not ship two builds of the same idea without naming the boundary on the card. A visitor should be able to tell, before clicking, which one is the machine and which one is the network.
+- Check the strip at 390 pixels on the first day. It is the one piece of chrome every page inherits.
 
-Third: translation strategy has to follow the shape of the text. Interface strings want a dictionary; prose wants a writer.
+## What I learned
 
-# By the numbers
+A simulation is defined by what it refuses to include. The interesting part of Kwangmyong was never the desktop — it was the resolver, the catalogue, the blocked page and the log. Cutting the machine made that visible, and it made the artefact smaller in scope and larger in argument at the same time.
 
-- 1 HTML file, 411 KB, 5,791 lines, 0 network requests after load
+Second: a self-test that ships inside the artefact is only as good as the product it describes. When the product changes shape, the suite has to be rewritten with it, not merely made to pass — and the fastest way to rewrite it honestly is to turn the removals into assertions.
+
+Third: translation and scope interact. A render-time translation layer is a scope decision, not a formatting one, because it will translate whatever chrome you add and it cannot tell a retired feature from a live one.
+
+## By the numbers
+
+- 1 HTML file, 430 KB, 6,168 lines, 0 network requests after load
 - 136 catalogue sites: 30 hand-built with real addresses, 106 generated from their own rows
-- 8 tabbed page sets, one address bar that resolves `.kp` hosts and internal IPs
-- 72 self-test checks, green in both languages and inside the deployed iframe
-- 13 build-time fix batches, 465 rows, 42 unmatched
-- English build: 0 Hangul on every screen, tab and article
-- 2 published builds: English and the Korean original, on the same card
+- 8 services on the strip; 3 OS applications removed (settings, document store, terminal)
+- 41 in-artefact checks, all green, 0 Hangul on screen
+- 421 build-time translation rows across 13 batches, 42 unmatched
+- 2 published builds: this one, and the Korean full-desktop original
