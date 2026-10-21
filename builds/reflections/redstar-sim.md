@@ -1,6 +1,12 @@
 # What it is
 
-A Red Star OS 3.0 desktop — KDE-derived, KCC-built, macOS-aping — sitting on a simulated Kwangmyong intranet, as one 303,793-byte HTML file that never touches the network. 49 catalogue entries, 24 page builders, 22 apps, a 45-assertion self-test, and no assets: the icons are inline SVG and the wallpapers are CSS gradients.
+A Red Star OS 3.0 desktop — KDE-derived, KCC-built, macOS-aping — rebuilt as one 304,777-byte HTML file that never touches the network: 22 apps, 24 page builders, a 45-assertion self-test, and no assets at all, since the icons are inline SVG and the wallpapers are CSS gradients. It browses a 49-entry slice of the Kwangmyong address book; the intranet itself is a separate project.
+
+# Two projects, not one
+
+This is the second DPRK simulator on the site, and the two are kept apart on purpose. **Kwangmyong Network 3.0** owns the intranet: 136 catalogue entries, 106 generated pages, 30 hand-built services, a Windows-like taskbar, a graded tele-education exam, Korean and English builds, 72/72 on its own self-test. **붉은별 3.0** owns the machine that browses it: macOS-like menu bar and dock, Sogwang Office, Bokem, SamTaeSong, the media mark, the read-only guest, 45/45 on its self-test.
+
+The split is enforced, not just described. Different trees (`kwangmyong-sim/`, `redstar-sim/`), different build scripts, different artifacts, different data sizes — 136 catalogue entries against a 49-entry sample — and no shared file, script or iframe at runtime. Each project's About panel names the other so a reader who lands in either one knows which is which.
 
 # Where the content came from
 
